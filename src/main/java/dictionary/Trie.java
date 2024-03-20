@@ -4,7 +4,7 @@ import java.util.Map;
 import java.util.TreeMap;
 
 public class Trie {
-    static boolean isEndOfWord;
+    boolean isEndOfWord;
     Word res;
     TreeMap<Character,Trie>map;
     static Trie getNewNode() {
@@ -60,7 +60,7 @@ public class Trie {
         }
     }
     static void dfs(Trie root){
-        if(root.isEndOfWord){
+        if(root.isEndOfWord==true){
             System.out.println(root.res.getTarget()+" | "+root.res.getExplain());
         }
         if(root.map.isEmpty())return;
