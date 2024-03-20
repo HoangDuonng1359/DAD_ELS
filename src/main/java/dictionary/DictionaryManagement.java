@@ -3,6 +3,7 @@ package dictionary;
 import java.util.Scanner;
 
 public class DictionaryManagement {
+    static Trie root= Trie.getNewNode();
     public static void insertFromCommandline(){
         Scanner scan = new Scanner(System.in);
         int n = scan.nextInt();
@@ -10,11 +11,15 @@ public class DictionaryManagement {
             String target=scan.next();
             String explain= scan.nextLine();
             Word res= new Word(target,explain);
-            Dictionary.addWord(res);
+            Trie.insert(root,res);
         }
+    }
+    public static void showAllWords(){
+        Trie.dfs(root);
     }
 
     public static void main(String[] args) {
-        
+        insertFromCommandline();
+        showAllWords();
     }
 }
