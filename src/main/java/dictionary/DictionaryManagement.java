@@ -1,5 +1,6 @@
 package dictionary;
 
+import java.io.*;
 import java.util.Scanner;
 
 public class DictionaryManagement {
@@ -23,7 +24,21 @@ public class DictionaryManagement {
         Trie.insert(root,res);
     }
     public static void insertFromFile(){
-        
+
+        try{
+            BufferedReader in= new BufferedReader(new FileReader("src/Data/E_V.txt"));
+            String str=new String();
+            while ((str = in.readLine()) != null) {
+                String[] ans= str.split("<",2);
+                Word res = new Word(ans[0],"<"+ans[1]);
+                Trie.insert(root,res);
+            }
+        }catch (FileNotFoundException e) {
+            System.out.println("File not found");
+        }catch(IOException e){
+            System.out.println("IOException");
+        }
+
     }
     public static void showAllWords(){
         Trie.dfs(root);
@@ -51,4 +66,5 @@ public class DictionaryManagement {
     public static void remove(String target){
         Trie.remove(root,target);
     }
+    
 }
