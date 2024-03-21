@@ -16,12 +16,19 @@ public class DictionaryManagement {
             Trie.insert(root,res);
         }
     }
+    public static void insert(String target,String explain){
+        target = target.trim();
+        explain = explain.trim();
+        Word res= new Word(target,explain);
+        Trie.insert(root,res);
+    }
+    public static void insertFromFile(){
+        
+    }
     public static void showAllWords(){
         Trie.dfs(root);
     }
-    public static void prexSearch(){
-        Scanner scan = new Scanner(System.in);
-        String target= scan.next();
+    public static void prexSearch(String target){
         Trie ans= Trie.getNewNode();
         ans=Trie.search(root,target);
         if(ans==null){
@@ -31,9 +38,7 @@ public class DictionaryManagement {
             Trie.dfs(ans);
         }
     }
-    public static void Search(){
-        Scanner scan = new Scanner(System.in);
-        String target= scan.next();
+    public static void Search(String target){
         Trie ans= Trie.getNewNode();
         ans=Trie.search(root,target);
         if(ans==null){
@@ -43,9 +48,7 @@ public class DictionaryManagement {
             System.out.print(ans.res.getExplain());
         }
     }
-    public static void remove(){
-        Scanner scan = new Scanner(System.in);
-        String target= scan.next();
+    public static void remove(String target){
         Trie.remove(root,target);
     }
 }
