@@ -24,7 +24,6 @@ public class DictionaryManagement {
         Trie.insert(root,res);
     }
     public static void insertFromFile(){
-
         try{
             BufferedReader in= new BufferedReader(new FileReader("src/Data/E_V.txt"));
             String str=new String();
@@ -66,5 +65,4 @@ public class DictionaryManagement {
     public static void remove(String target){
         Trie.remove(root,target);
     }
-    
 }
