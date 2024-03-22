@@ -24,6 +24,8 @@ public class ELSController {
     @FXML
     private Button game_menu;
     @FXML
+    private Button edit_menu;
+    @FXML
     private Label dictionary_label;
     // khởi tạo thêm lable còn lại
     @FXML
@@ -31,8 +33,20 @@ public class ELSController {
     @FXML
     protected WebView definitionView;
     @FXML
-    public void openFormGoogle(ActionEvent event) throws IOException {
-        SceneManage.showScene(stage,scene,fxmlLoader,event,"google_translate.fxml");
+    public void openFormGoogle(ActionEvent event){
+        try {
+            SceneManage.showScene(stage,scene,fxmlLoader,event,"google_translate.fxml");
+        } catch (IOException e) {
+            System.out.println("lỗi không mở được form");
+        }
+    }
+    @FXML
+    public void openFormAddAndEdit(ActionEvent event){
+        try {
+            SceneManage.showScene(stage,scene,fxmlLoader,event,"addAndEdit.fxml");
+        } catch (IOException e) {
+            System.out.println("lỗi không mở được form");
+        }
     }
     @FXML
     public void initialize() {
@@ -48,5 +62,6 @@ public class ELSController {
     public void eventExitDictionary(MouseEvent event){
         dictionary_label.setVisible(false); // // khi rê chuột ra button thì lable ẩn đi
     }
+
     // thêm các eventHovergoogleTranslate_label ...
 }
