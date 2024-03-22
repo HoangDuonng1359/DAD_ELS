@@ -1,4 +1,5 @@
 package dictionary;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.TreeMap;
@@ -59,13 +60,13 @@ public class Trie {
             parrent.map.remove(str.charAt(str.length()-1));
         }
     }
-    static void dfs(Trie root){
+    static void dfs(Trie root, ArrayList<String> ans){
         if(root.isEndOfWord==true){
-            System.out.println(root.res.getTarget()+" | "+root.res.getExplain());
+            ans.add(root.res.getTarget());
         }
         if(root.map.isEmpty())return;
         for(Map.Entry<Character,Trie> entry:root.map.entrySet()){
-            dfs(entry.getValue());
+            dfs(entry.getValue(),ans);
         }
     }
 }
