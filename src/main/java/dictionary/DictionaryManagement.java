@@ -1,6 +1,10 @@
 package dictionary;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+
 import java.io.*;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class DictionaryManagement {
@@ -39,27 +43,32 @@ public class DictionaryManagement {
         }
 
     }
-    public static void showAllWords(){
-        Trie.dfs(root);
+    public static ObservableList showAllWords(){
+
+        ArrayList<String> res= new ArrayList<>();
+        Trie.dfs(root,res);
+        ObservableList<String> r= FXCollections.observableArrayList(res);
+        return r;
     }
-    public static void prexSearch(String target){
+    public static ObservableList prexSearch(String target){
         Trie ans= Trie.getNewNode();
         ans=Trie.search(root,target);
         if(ans==null){
-            System.out.print("No Found");
+            return null;
         }
-        else {
-            Trie.dfs(ans);
-        }
+        ArrayList<String> res= new ArrayList<>();
+        Trie.dfs(ans,res);
+        ObservableList<String> r= FXCollections.observableArrayList(res);
+        return r;
     }
-    public static void Search(String target){
+    public static String Search(String target){
         Trie ans= Trie.getNewNode();
         ans=Trie.search(root,target);
         if(ans==null){
-            System.out.print("No Found");
+            return new String("NO FOUND");
         }
         else {
-            System.out.print(ans.res.getExplain());
+           return ans.res.getExplain();
         }
     }
     public static void remove(String target){
