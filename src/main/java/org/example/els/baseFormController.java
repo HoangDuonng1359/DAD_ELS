@@ -74,7 +74,7 @@ public class baseFormController {
     @FXML
     public void  openFormDictionary(ActionEvent event) {
         try {
-            SceneManage.showScene(stage, scene,fxmlLoader, event, "dictionary.fxml");
+            SceneManage.showScene(stage, scene,fxmlLoader, event, "ELS-view.fxml");
         }
         catch (IOException var3) {
             System.out.println("lỗi không mở được form");

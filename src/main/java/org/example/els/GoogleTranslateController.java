@@ -12,7 +12,7 @@ import javafx.scene.layout.AnchorPane;
 import java.io.IOException;
 
 
-public class GoogleTranslateController{
+public class GoogleTranslateController extends baseFormController{
     @FXML
     private Button dictionary_menu;
     @FXML
