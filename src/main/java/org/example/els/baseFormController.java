@@ -74,6 +74,15 @@ public class baseFormController {
         }
 
     }
+    @FXML
+    public void  openFormDictionary(ActionEvent event) {
+        try {
+            SceneManage.showScene(stage, scene,fxmlLoader, event, "dictionary.fxml");
+        }
+        catch (IOException var3) {
+            System.out.println("lỗi không mở được form");
+        }
+    }
 
     @FXML
     public void initialize() {
