@@ -42,9 +42,6 @@ public class baseFormController {
     @FXML
     protected WebView definitionView;
 
-    public baseFormController() {
-    }
-
     @FXML
     public void openFormGoogle(ActionEvent event) {
         try {
