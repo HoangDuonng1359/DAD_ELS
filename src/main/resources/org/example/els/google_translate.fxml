@@ -12,10 +12,10 @@
       <ComboBox fx:id="comboBox_lang_out" layoutX="616.0" layoutY="133.0" prefHeight="26.0" prefWidth="143.0" promptText="Select language " />
       <Button fx:id="buttonTranslate" layoutX="373.0" layoutY="474.0" mnemonicParsing="false" onAction="#translateEvent" prefHeight="43.0" prefWidth="82.0" text="Translate" />
       <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#bec8d1" height="34.0" layoutX="291.0" layoutY="53.0" opacity="0.5" stroke="#56add1" strokeType="INSIDE" width="282.0" />
-      <Button fx:id="dictionary_menu" layoutX="317.0" layoutY="61.0" mnemonicParsing="false" onMouseEntered="#eventHoverDictionary" onMouseExited="#eventExitDictionary" prefHeight="52.0" prefWidth="52.0" stylesheets="@css/button.css" />
-      <Button fx:id="game_menu" layoutX="440.0" layoutY="61.0" mnemonicParsing="false" onMouseEntered="#eventHovergame" onMouseExited="#eventExitgame" prefHeight="52.0" prefWidth="52.0" stylesheets="@css/button.css" />
+      <Button fx:id="dictionary_menu" layoutX="317.0" layoutY="61.0" mnemonicParsing="false" onAction="#openFormDictionary" onMouseEntered="#eventHoverDictionary" onMouseExited="#eventExitDictionary" prefHeight="52.0" prefWidth="52.0" stylesheets="@css/button.css" />
+      <Button fx:id="game_menu" layoutX="440.0" layoutY="61.0" mnemonicParsing="false" onAction="#openFormGame" onMouseEntered="#eventHovergame" onMouseExited="#eventExitgame" prefHeight="52.0" prefWidth="52.0" stylesheets="@css/button.css" />
       <Button fx:id="google_translate_menu" layoutX="380.0" layoutY="61.0" mnemonicParsing="false" onMouseEntered="#eventHovergoogleTranslate" onMouseExited="#eventExitgoogleTranslate" prefHeight="52.0" prefWidth="52.0" stylesheets="@css/button.css" />
-      <Button fx:id="edit_menu" layoutX="502.0" layoutY="61.0" mnemonicParsing="false" onMouseEntered="#eventHoveraddEdit" onMouseExited="#eventExitaddEdit" prefHeight="52.0" prefWidth="52.0" stylesheets="@css/button.css" />
+      <Button fx:id="edit_menu" layoutX="502.0" layoutY="61.0" mnemonicParsing="false" onAction="#openFormAddAndEdit" onMouseEntered="#eventHoveraddEdit" onMouseExited="#eventExitaddEdit" prefHeight="52.0" prefWidth="52.0" stylesheets="@css/button.css" />
       <Label fx:id="dictionary_label" layoutX="317.0" layoutY="34.0" stylesheets="@css/button.css" text="Dictionary" />
       <Label fx:id="addEdit_label" layoutX="502.0" layoutY="34.0" stylesheets="@css/button.css" text="Add &amp; edit" />
       <Label fx:id="game_label" layoutX="440.0" layoutY="34.0" stylesheets="@css/button.css" text="Game" />

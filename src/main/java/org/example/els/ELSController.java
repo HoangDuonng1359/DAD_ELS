@@ -13,7 +13,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class ELSController {
+public class ELSController extends baseFormController {
     protected static Stage stage;
     protected static Scene scene;
     protected static FXMLLoader fxmlLoader;

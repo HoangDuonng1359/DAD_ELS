@@ -1,5 +1,5 @@
 package org.example.els;
 
-public class gameController{
+public class gameController extends baseFormController{
 
 }
