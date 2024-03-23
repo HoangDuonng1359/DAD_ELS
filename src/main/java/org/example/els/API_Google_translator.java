@@ -17,7 +17,18 @@ public class API_Google_translator {
         return UUID.randomUUID().toString().toUpperCase();
     }
     public static String createURL(String sourceLangage, String targetLanguage , String textInput){
-        return STR."http://translate.google.com/translate_a/t?client=gtrans&sl=\{sourceLangage}&tl=\{targetLanguage}&hl=\{targetLanguage}&tk=\{createNewToken()}&q=\{URLEncoder.encode(textInput, StandardCharsets.UTF_8)}";
+        StringBuilder str = new StringBuilder();
+        str.append("http://translate.google.com/translate_a/t?client=gtrans&sl=");
+        str.append(sourceLangage);
+        str.append("&tl=");
+        str.append(targetLanguage);
+        str.append("&hl=");
+        str.append(targetLanguage);
+        str.append("&tk=");
+        str.append(createNewToken());
+        str.append("&q=");
+        str.append(URLEncoder.encode(textInput, StandardCharsets.UTF_8));
+        return str.toString();
     }
     private static String makeResult(StringBuilder input){
         input.delete(0,2);
