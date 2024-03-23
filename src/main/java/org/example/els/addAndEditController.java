@@ -1,4 +1,4 @@
 package org.example.els;
 
-public class addAndEditController extends baseFormController {
+public class addAndEditController {
 }
