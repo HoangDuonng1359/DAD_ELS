@@ -27,8 +27,16 @@ public class ELSController {
     private Button edit_menu;
     @FXML
     private Label dictionary_label;
-    // khởi tạo thêm lable còn lại
+
     @FXML
+    private Label googleTranslate_label;
+    @FXML
+    private Label game_label;
+    @FXML
+    private Label addEdit_label;
+
+    @FXML
+
     private AnchorPane anchorPane;
     @FXML
     protected WebView definitionView;
@@ -50,17 +58,44 @@ public class ELSController {
     }
     @FXML
     public void initialize() {
-        dictionary_label.setVisible(false); // khởi tạo label này bị ẩn đi
+        dictionary_label.setVisible(false);
+        googleTranslate_label.setVisible(false);
+        game_label.setVisible(false);
+        addEdit_label.setVisible(false);
         // làm các lable còn lại Quang Anh nhá
     }
     @FXML
     public void eventHoverDictionary(MouseEvent event){
         dictionary_label.setVisible(true); // khi rê chuột vào button thì lable hiện lên
     }
+    @FXML
+    public void eventHovergoogleTranslate(MouseEvent event) {
+        googleTranslate_label.setVisible(true);
+    }
+    @FXML
+    public void eventHovergame(MouseEvent event) {
+        game_label.setVisible(true);
+    }
+    @FXML
+    public void eventHoveraddEdit(MouseEvent event) {
+        addEdit_label.setVisible(true);
+    }
 
     @FXML
     public void eventExitDictionary(MouseEvent event){
         dictionary_label.setVisible(false); // // khi rê chuột ra button thì lable ẩn đi
+    }
+    @FXML
+    public void eventExitgoogleTranslate(MouseEvent event) {
+        googleTranslate_label.setVisible(false);
+    }
+    @FXML
+    public void eventExitgame(MouseEvent event) {
+        game_label.setVisible(false);
+    }
+    @FXML
+    public void eventExitaddEdit(MouseEvent event) {
+        addEdit_label.setVisible(false);
     }
 
     // thêm các eventHovergoogleTranslate_label ...
