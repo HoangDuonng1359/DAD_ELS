@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Rectangle?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="850.0" stylesheets="@css/AnchorPane.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.els.MultiChoiceGameController">
+    <children>
+        <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#bec8d1" height="34.0" layoutX="281.0" layoutY="43.0" opacity="0.5" stroke="#56add1" strokeType="INSIDE" width="282.0" />
+        <Button fx:id="dictionary_menu" layoutX="307.0" layoutY="51.0" mnemonicParsing="false" onAction="#openFormDictionary" onMouseEntered="#eventHoverDictionary" onMouseExited="#eventExitDictionary" prefHeight="52.0" prefWidth="52.0" stylesheets="@css/button.css" />
+        <Button fx:id="game_menu" layoutX="430.0" layoutY="51.0" mnemonicParsing="false" onMouseEntered="#eventHovergame" onMouseExited="#eventExitgame" prefHeight="52.0" prefWidth="52.0" stylesheets="@css/button.css" />
+        <Button fx:id="google_translate_menu" layoutX="370.0" layoutY="51.0" mnemonicParsing="false" onAction="#openFormGoogle" onMouseEntered="#eventHovergoogleTranslate" onMouseExited="#eventExitgoogleTranslate" prefHeight="52.0" prefWidth="52.0" stylesheets="@css/button.css" />
+        <Button fx:id="edit_menu" layoutX="492.0" layoutY="51.0" mnemonicParsing="false" onAction="#openFormAddAndEdit" onMouseEntered="#eventHoveraddEdit" onMouseExited="#eventExitaddEdit" prefHeight="52.0" prefWidth="52.0" stylesheets="@css/button.css" />
+        <Label fx:id="dictionary_label" layoutX="307.0" layoutY="24.0" onMouseEntered="#eventHoverDictionary" onMouseExited="#eventExitDictionary" stylesheets="@css/button.css" text="Dictionary" visible="false" />
+        <Label fx:id="addEdit_label" layoutX="492.0" layoutY="24.0" onMouseEntered="#eventHoveraddEdit" onMouseExited="#eventExitaddEdit" stylesheets="@css/button.css" text="Add &amp; edit" visible="false" />
+        <Label fx:id="game_label" layoutX="430.0" layoutY="24.0" stylesheets="@css/button.css" text="Game" visible="false" />
+        <Label fx:id="googleTranslate_label" layoutX="370.0" layoutY="24.0" onMouseEntered="#eventHovergoogleTranslate" onMouseExited="#eventExitgoogleTranslate" stylesheets="@css/button.css" text="Google translate" visible="false" />
+        <Label fx:id="question_lable" alignment="TOP_LEFT" layoutX="247.0" layoutY="186.0" prefHeight="137.0" prefWidth="403.0" text="Question" />
+        <Label fx:id="score_lable" layoutX="631.0" layoutY="122.0" prefHeight="64.0" prefWidth="101.0" text="score" />
+      <GridPane hgap="20.0" layoutX="244.0" layoutY="343.0" prefHeight="153.0" prefWidth="403.0" vgap="20.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="80.0" minHeight="0.0" prefHeight="80.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="80.0" minHeight="4.799993896484374" prefHeight="80.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="answerA" mnemonicParsing="false" onAction="#checkAnswer" prefHeight="92.0" prefWidth="280.0" />
+            <Button fx:id="answerB" mnemonicParsing="false" onAction="#checkAnswer" prefHeight="102.0" prefWidth="245.0" GridPane.columnIndex="1" />
+            <Button fx:id="answerC" mnemonicParsing="false" onAction="#checkAnswer" prefHeight="126.0" prefWidth="411.0" GridPane.rowIndex="1" />
+            <Button fx:id="answerD" mnemonicParsing="false" onAction="#checkAnswer" prefHeight="94.0" prefWidth="220.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+    </children>
+</AnchorPane>
