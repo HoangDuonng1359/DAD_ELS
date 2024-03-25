@@ -3,6 +3,7 @@ package org.example.els;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -10,13 +11,12 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.web.WebView;
 import javafx.stage.Stage;
-
 import java.io.IOException;
 
 public class ELSController extends baseFormController {
     protected static Stage stage;
     protected static Scene scene;
-    protected static FXMLLoader fxmlLoader;
+    protected static Parent root;
     @FXML
     private Button dictionary_menu;
     @FXML
@@ -43,7 +43,7 @@ public class ELSController extends baseFormController {
     @FXML
     public void openFormGoogle(ActionEvent event){
         try {
-            SceneManage.showScene(stage,scene,fxmlLoader,event,"google_translate.fxml");
+            SceneManage.showScene(root,stage,scene,event,"google_translate.fxml");
         } catch (IOException e) {
             System.out.println("lỗi không mở được form");
         }
@@ -51,7 +51,7 @@ public class ELSController extends baseFormController {
     @FXML
     public void openFormAddAndEdit(ActionEvent event){
         try {
-            SceneManage.showScene(stage,scene,fxmlLoader,event,"addAndEdit.fxml");
+            SceneManage.showScene(root,stage,scene,event,"addAndEdit.fxml");
         } catch (IOException e) {
             System.out.println("lỗi không mở được form");
         }
