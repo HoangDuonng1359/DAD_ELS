@@ -96,3 +96,19 @@
     -fx-border-color: #7777d7;
     -fx-border-radius: 10%;
 }
+#answerA{
+    -fx-font-family: "Times New Roman";
+    -fx-font-size: 15px;
+}
+#answerB{
+    -fx-font-family: "Times New Roman";
+    -fx-font-size: 15px;
+}
+#answerC{
+    -fx-font-family: "Times New Roman";
+    -fx-font-size: 15px;
+}
+#answerD{
+    -fx-font-family: "Times New Roman";
+    -fx-font-size: 15px;
+}

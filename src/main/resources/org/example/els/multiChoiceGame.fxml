@@ -19,7 +19,7 @@
         <Label fx:id="addEdit_label" layoutX="492.0" layoutY="24.0" onMouseEntered="#eventHoveraddEdit" onMouseExited="#eventExitaddEdit" stylesheets="@css/button.css" text="Add &amp; edit" visible="false" />
         <Label fx:id="game_label" layoutX="430.0" layoutY="24.0" stylesheets="@css/button.css" text="Game" visible="false" />
         <Label fx:id="googleTranslate_label" layoutX="370.0" layoutY="24.0" onMouseEntered="#eventHovergoogleTranslate" onMouseExited="#eventExitgoogleTranslate" stylesheets="@css/button.css" text="Google translate" visible="false" />
-        <Label fx:id="question_lable" alignment="TOP_LEFT" layoutX="247.0" layoutY="186.0" prefHeight="137.0" prefWidth="403.0" text="Question" />
+        <Label fx:id="question_lable" alignment="TOP_LEFT" layoutX="247.0" layoutY="186.0" prefHeight="137.0" prefWidth="403.0" text="Question" wrapText="true" />
         <Label fx:id="score_lable" layoutX="631.0" layoutY="122.0" prefHeight="64.0" prefWidth="101.0" text="score" />
       <GridPane hgap="20.0" layoutX="244.0" layoutY="343.0" prefHeight="153.0" prefWidth="403.0" vgap="20.0">
         <columnConstraints>
@@ -31,10 +31,10 @@
           <RowConstraints maxHeight="80.0" minHeight="4.799993896484374" prefHeight="80.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button fx:id="answerA" mnemonicParsing="false" onAction="#checkAnswer" prefHeight="92.0" prefWidth="280.0" />
-            <Button fx:id="answerB" mnemonicParsing="false" onAction="#checkAnswer" prefHeight="102.0" prefWidth="245.0" GridPane.columnIndex="1" />
-            <Button fx:id="answerC" mnemonicParsing="false" onAction="#checkAnswer" prefHeight="126.0" prefWidth="411.0" GridPane.rowIndex="1" />
-            <Button fx:id="answerD" mnemonicParsing="false" onAction="#checkAnswer" prefHeight="94.0" prefWidth="220.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Button fx:id="answerA" mnemonicParsing="false" onAction="#checkAnswer" prefHeight="92.0" prefWidth="280.0" stylesheets="@css/button.css" />
+            <Button fx:id="answerB" mnemonicParsing="false" onAction="#checkAnswer" prefHeight="102.0" prefWidth="245.0" stylesheets="@css/button.css" GridPane.columnIndex="1" />
+            <Button fx:id="answerC" mnemonicParsing="false" onAction="#checkAnswer" prefHeight="126.0" prefWidth="411.0" stylesheets="@css/button.css" GridPane.rowIndex="1" />
+            <Button fx:id="answerD" mnemonicParsing="false" onAction="#checkAnswer" prefHeight="94.0" prefWidth="220.0" stylesheets="@css/button.css" GridPane.columnIndex="1" GridPane.rowIndex="1" />
          </children>
       </GridPane>
     </children>
