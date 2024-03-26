@@ -1,0 +1,10 @@
+CREATE TABLE Questions
+(
+    id        INT PRIMARY KEY,
+    quenstion VARCHAR(255),
+    choiceA   VARCHAR(255),
+    choiceB   VARCHAR(255),
+    choiceC   VARCHAR(255),
+    choiceD   VARCHAR(255),
+    answer    VARCHAR(255),
+);
