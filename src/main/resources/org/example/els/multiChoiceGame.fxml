@@ -7,6 +7,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="850.0" stylesheets="@css/AnchorPane.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.els.MultiChoiceGameController">
     <children>
@@ -19,7 +20,10 @@
         <Label fx:id="addEdit_label" layoutX="492.0" layoutY="24.0" onMouseEntered="#eventHoveraddEdit" onMouseExited="#eventExitaddEdit" stylesheets="@css/button.css" text="Add &amp; edit" visible="false" />
         <Label fx:id="game_label" layoutX="430.0" layoutY="24.0" stylesheets="@css/button.css" text="Game" visible="false" />
         <Label fx:id="googleTranslate_label" layoutX="370.0" layoutY="24.0" onMouseEntered="#eventHovergoogleTranslate" onMouseExited="#eventExitgoogleTranslate" stylesheets="@css/button.css" text="Google translate" visible="false" />
-        <Label fx:id="question_lable" alignment="TOP_LEFT" layoutX="247.0" layoutY="186.0" prefHeight="137.0" prefWidth="403.0" text="Question" wrapText="true" />
+        <Label fx:id="question_lable" alignment="TOP_LEFT" layoutX="247.0" layoutY="186.0" prefHeight="137.0" prefWidth="403.0" text="Question" wrapText="true">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
         <Label fx:id="score_lable" layoutX="631.0" layoutY="122.0" prefHeight="64.0" prefWidth="101.0" text="score" />
       <GridPane hgap="20.0" layoutX="244.0" layoutY="343.0" prefHeight="153.0" prefWidth="403.0" vgap="20.0">
         <columnConstraints>
