@@ -21,7 +21,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.web.WebView;
 import javafx.stage.Stage;
 
-public class baseFormController {
+public class baseFormController extends SceneManage {
     protected static Stage stage;
     protected static Scene scene;
     protected static Parent root;
@@ -49,7 +49,7 @@ public class baseFormController {
     @FXML
     public void openFormGoogle(ActionEvent event) {
         try {
-            SceneManage.showScene(root,stage, scene, event, "google_translate.fxml");
+            showScene(root,stage, scene, event, "google_translate.fxml");
         } catch (IOException var3) {
             System.out.println("lỗi không mở được form");
         }
@@ -59,7 +59,7 @@ public class baseFormController {
     @FXML
     public void openFormAddAndEdit(ActionEvent event) {
         try {
-            SceneManage.showScene(root,stage, scene, event,  "addAndEdit.fxml");
+            showScene(root,stage, scene, event,  "addAndEdit.fxml");
         } catch (IOException var3) {
             System.out.println("lỗi không mở được form");
         }
@@ -69,7 +69,7 @@ public class baseFormController {
     @FXML
     public void openFormGame(ActionEvent event) {
         try {
-            SceneManage.showScene(root,stage, scene, event,  "game.fxml");
+            showScene(root,stage, scene, event,  "game.fxml");
         } catch (IOException var3) {
             System.out.println("lỗi không mở được form");
         }
@@ -78,7 +78,7 @@ public class baseFormController {
     @FXML
     public void  openFormDictionary(ActionEvent event) {
         try {
-            SceneManage.showScene(root,stage, scene, event,  "ELS-view.fxml");
+            showScene(root,stage, scene, event,  "ELS-view.fxml");
         }
         catch (IOException var3) {
             System.out.println("lỗi không mở được form");

@@ -1,39 +1,40 @@
 package Game;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class Quiz {
     private List<Question> questionList;
     private int score;
     private int questionIndex;
-
-    public Quiz() {
-        this.questionList = new ArrayList<Question>();
-        this.score = 0;
-        this.questionIndex = 0;
-    }
+    private List<Integer> listRandom;
 
     public Quiz(List<Question> questionList) {
         this.questionList = questionList;
         this.score = 0;
-        this.questionIndex = 0;
+        listRandom = new ArrayList<Integer>();
+        for (int i = 0; i < getLengthQuestionList(); i++) {
+            listRandom.add(i);
+        }
+        this.questionIndex = random();
+
     }
 
+    private int random() {
+        Random ran = new Random();
+        int index = listRandom.get(ran.nextInt(listRandom.size()));
+        listRandom.remove(Integer.valueOf(index));
+        return index;
+    }
+    public int getQuestionNumber(){
+        return questionList.size() - listRandom.size();
+    }
     public void addQuestion(Question question) {
         questionList.addLast(question);
-    }
-
-    public List<Question> getQuestionList() {
-        return questionList;
+        listRandom.add(getLengthQuestionList());
     }
 
     public Question getCurrentQuestion() {
         return questionList.get(questionIndex);
-    }
-
-    public void setQuestionList(List<Question> questionList) {
-        this.questionList = questionList;
     }
 
     public int getScore() {
@@ -43,10 +44,16 @@ public class Quiz {
     public int getQuestionIndex() {
         return questionIndex;
     }
-    public void newQuiz(){
-        this.questionIndex = 0;
+
+    public void newQuiz() {
+        listRandom.clear();
+        for (int i = 0; i < getLengthQuestionList(); i++) {
+            listRandom.add(i);
+        }
+        this.questionIndex = random();
         this.score = 0;
     }
+
     public int getLengthQuestionList() {
         return questionList.size();
     }
@@ -60,10 +67,13 @@ public class Quiz {
         }
         return ans;
     }
-    public void nextQuestion(){
-        questionIndex += 1;
+
+    public void nextQuestion() {
+        questionIndex = random();
     }
+
     public boolean isFinished() {
-        return this.questionIndex >= (getLengthQuestionList()-1);
+        //return this.questionIndex >= (getLengthQuestionList() - 1);
+        return listRandom.isEmpty();
     }
 }
