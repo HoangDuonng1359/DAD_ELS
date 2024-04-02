@@ -39,6 +39,9 @@ public class Trie {
             }
             temp = temp.map.get(str.charAt(i));
         }
+        if(!temp.isEndOfWord){
+            return null;
+        }
         return temp;
     }
     static void remove(Trie root,String str){
