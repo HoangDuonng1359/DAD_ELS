@@ -19,7 +19,7 @@
       <Label fx:id="addEdit_label" layoutX="492.0" layoutY="24.0" stylesheets="@css/button.css" text="Add &amp; edit" />
       <Label fx:id="game_label" layoutX="430.0" layoutY="24.0" stylesheets="@css/button.css" text="Game" />
       <Label fx:id="googleTranslate_label" layoutX="370.0" layoutY="24.0" stylesheets="@css/button.css" text="Google translate" />
-      <TextField fx:id="e_Texfield" layoutX="347.0" layoutY="203.0" prefHeight="26.0" prefWidth="257.0" />
+      <TextField fx:id="e_Textfield" layoutX="347.0" layoutY="203.0" prefHeight="26.0" prefWidth="257.0" />
       <Label layoutX="248.0" layoutY="203.0" prefHeight="26.0" prefWidth="52.0" text="English" />
       <TextField fx:id="v_Textfield" layoutX="347.0" layoutY="246.0" prefHeight="26.0" prefWidth="257.0" />
       <Label layoutX="248.0" layoutY="246.0" prefHeight="26.0" prefWidth="67.0" text="Vietnamese" />

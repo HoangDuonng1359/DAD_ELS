@@ -34,7 +34,7 @@ public class addAndEditController extends baseFormController {
     private CheckBox check_Prep;
     public void addWord(ActionEvent event) {
         if(e_Textfield.getText()!=null&&v_Textfield.getText()!=null){
-            /*StringBuilder target=new StringBuilder(e_Textfield.getText());
+            StringBuilder target=new StringBuilder(e_Textfield.getText());
             StringBuilder explain=new StringBuilder(v_Textfield.getText());
             if(check_Noun.isSelected()){
                 explain.append("\n Danh từ: "+noun_Textfield.getText());
@@ -52,9 +52,7 @@ public class addAndEditController extends baseFormController {
                 explain.append("\n Giới từ: "+prep_Textfield.getText());
             }
             DictionaryManagement a = new DictionaryManagement();
-            a.insert(target.toString().trim().toLowerCase(),explain.toString());*/
-            System.out.println(e_Textfield.getText());
-            System.out.println(v_Textfield.);
+            a.insert(target.toString().trim().toLowerCase(),explain.toString());
         }
 
 
