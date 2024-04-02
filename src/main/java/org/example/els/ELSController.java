@@ -89,39 +89,4 @@ public class ELSController extends baseFormController {
         String target = new String(search_field.getText());
         definitionView.getEngine().loadContent(dictionaryManagement.Search(target));
     }
-    @FXML
-    public void eventHoverDictionary(MouseEvent event){
-        dictionary_label.setVisible(true); // khi rê chuột vào button thì lable hiện lên
-    }
-    @FXML
-    public void eventHovergoogleTranslate(MouseEvent event) {
-        googleTranslate_label.setVisible(true);
-    }
-    @FXML
-    public void eventHovergame(MouseEvent event) {
-        game_label.setVisible(true);
-    }
-    @FXML
-    public void eventHoveraddEdit(MouseEvent event) {
-        addEdit_label.setVisible(true);
-    }
-
-    @FXML
-    public void eventExitDictionary(MouseEvent event){
-        dictionary_label.setVisible(false); // // khi rê chuột ra button thì lable ẩn đi
-    }
-    @FXML
-    public void eventExitgoogleTranslate(MouseEvent event) {
-        googleTranslate_label.setVisible(false);
-    }
-    @FXML
-    public void eventExitgame(MouseEvent event) {
-        game_label.setVisible(false);
-    }
-    @FXML
-    public void eventExitaddEdit(MouseEvent event) {
-        addEdit_label.setVisible(false);
-    }
-
-
-}
+  }
