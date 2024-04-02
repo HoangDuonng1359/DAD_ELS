@@ -89,4 +89,5 @@ public class ELSController extends baseFormController {
         String target = new String(search_field.getText());
         definitionView.getEngine().loadContent(dictionaryManagement.Search(target));
     }
+
   }
