@@ -1,5 +1,6 @@
 package org.example.els;
 
+import dictionary.DictionaryManagement;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -7,6 +8,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.ListView;
+import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.web.WebView;
@@ -39,7 +42,15 @@ public class ELSController extends baseFormController {
 
     private AnchorPane anchorPane;
     @FXML
+    private Button button_search;
+    @FXML
     protected WebView definitionView;
+    @FXML
+    protected ListView listView;
+    @FXML
+    protected TextField search_field;
+    private DictionaryManagement dictionaryManagement = new DictionaryManagement();
+
     @FXML
     public void openFormGoogle(ActionEvent event){
         try {
@@ -62,41 +73,20 @@ public class ELSController extends baseFormController {
         googleTranslate_label.setVisible(false);
         game_label.setVisible(false);
         addEdit_label.setVisible(false);
+        dictionaryManagement.insertFromFile();
+        listView.setItems(dictionaryManagement.showAllWords());
         // làm các lable còn lại Quang Anh nhá
     }
     @FXML
-    public void eventHoverDictionary(MouseEvent event){
-        dictionary_label.setVisible(true); // khi rê chuột vào button thì lable hiện lên
+    public void handleMouseClickListView(MouseEvent event) {
+        StringBuilder target = new StringBuilder(listView.getSelectionModel(). getSelectedItems().toString());
+        target.delete(0,1);
+        target.deleteCharAt(target.length()- 1);
+        definitionView.getEngine().loadContent(dictionaryManagement.Search(target.toString()));
     }
     @FXML
-    public void eventHovergoogleTranslate(MouseEvent event) {
-        googleTranslate_label.setVisible(true);
+    public void handleMouseClickButtonSearch(MouseEvent event) {
+        String target = new String(search_field.getText());
+        definitionView.getEngine().loadContent(dictionaryManagement.Search(target));
     }
-    @FXML
-    public void eventHovergame(MouseEvent event) {
-        game_label.setVisible(true);
-    }
-    @FXML
-    public void eventHoveraddEdit(MouseEvent event) {
-        addEdit_label.setVisible(true);
-    }
-
-    @FXML
-    public void eventExitDictionary(MouseEvent event){
-        dictionary_label.setVisible(false); // // khi rê chuột ra button thì lable ẩn đi
-    }
-    @FXML
-    public void eventExitgoogleTranslate(MouseEvent event) {
-        googleTranslate_label.setVisible(false);
-    }
-    @FXML
-    public void eventExitgame(MouseEvent event) {
-        game_label.setVisible(false);
-    }
-    @FXML
-    public void eventExitaddEdit(MouseEvent event) {
-        addEdit_label.setVisible(false);
-    }
-
-    // thêm các eventHovergoogleTranslate_label ...
-}
+  }

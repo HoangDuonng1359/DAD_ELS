@@ -31,8 +31,8 @@ public class MultiChoiceGameController extends baseFormController {
     private Button answerC;
     @FXML
     private Button answerD;
-    private List<Question> questions = null;
-    private Quiz quiz = new Quiz();
+    private List<Question> questions;
+    private Quiz quiz ;
 
     @Override
     public void initialize() {
@@ -58,9 +58,7 @@ public class MultiChoiceGameController extends baseFormController {
     private String createQuestion(Quiz quiz) {
         StringBuilder str = new StringBuilder();
         str.append("Question ");
-        int index = quiz.getQuestionIndex();
-        index += 1;
-        str.append(index);
+        str.append(quiz.getQuestionNumber());
         str.append(": ");
         str.append(quiz.getCurrentQuestion().getQuestion());
         return str.toString();
