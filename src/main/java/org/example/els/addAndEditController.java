@@ -21,8 +21,6 @@ public class addAndEditController extends baseFormController {
     @FXML
     private TextField adv_Textfield;
     @FXML
-    private TextField prep_Textfield;
-    @FXML
     private CheckBox check_Noun;
     @FXML
     private CheckBox check_Verb;
@@ -30,8 +28,7 @@ public class addAndEditController extends baseFormController {
     private CheckBox check_Adj;
     @FXML
     private CheckBox check_Adv;
-    @FXML
-    private CheckBox check_Prep;
+
     public void addWord(ActionEvent event) {
         if(e_Textfield.getText()!=null&&v_Textfield.getText()!=null){
             StringBuilder target=new StringBuilder(e_Textfield.getText());
@@ -47,9 +44,6 @@ public class addAndEditController extends baseFormController {
             }
             if(check_Adv.isSelected()){
                 explain.append("\n Trạng từ: "+adv_Textfield.getText());
-            }
-            if(check_Prep.isSelected()){
-                explain.append("\n Giới từ: "+prep_Textfield.getText());
             }
             DictionaryManagement a = new DictionaryManagement();
             a.insert(target.toString().trim().toLowerCase(),explain.toString());
