@@ -3,7 +3,7 @@ public class Word {
     private String target;
     private String explain;
     public Word(String target,String explain){
-        this.explain=explain;
+        this.explain=explain.trim().toLowerCase();
         this.target=target;
     }
     public Word(){
