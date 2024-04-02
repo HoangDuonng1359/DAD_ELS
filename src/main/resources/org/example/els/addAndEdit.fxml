@@ -27,17 +27,15 @@
       <TextField fx:id="verb_Textfield" layoutX="347.0" layoutY="332.0" prefHeight="26.0" prefWidth="257.0" />
       <TextField fx:id="adj_Textfield" layoutX="347.0" layoutY="370.0" prefHeight="26.0" prefWidth="257.0" />
       <TextField fx:id="adv_Textfield" layoutX="347.0" layoutY="413.0" prefHeight="26.0" prefWidth="257.0" />
-      <TextField fx:id="prep_Textfield" layoutX="347.0" layoutY="458.0" prefHeight="26.0" prefWidth="257.0" />
       <CheckBox fx:id="check_Noun" layoutX="248.0" layoutY="294.0" mnemonicParsing="false" text="Danh từ" />
       <CheckBox fx:id="check_Verb" layoutX="248.0" layoutY="336.0" mnemonicParsing="false" text="Động từ" />
       <CheckBox fx:id="check_Adj" layoutX="248.0" layoutY="374.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="67.0" text="Tính từ" />
       <CheckBox fx:id="check_Adv" layoutX="248.0" layoutY="417.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="76.0" text="Trạng từ" />
-      <CheckBox fx:id="check_Prep" layoutX="248.0" layoutY="462.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="76.0" text="Giới từ" />
       <Label layoutX="343.0" layoutY="131.0" prefHeight="50.0" prefWidth="174.0" text="Add &amp; Edit">
          <font>
             <Font size="34.0" />
          </font>
       </Label>
-      <Button layoutX="436.0" layoutY="503.0" mnemonicParsing="false" onAction="#addWord" prefHeight="19.0" prefWidth="90.0" text="Save" />
+      <Button layoutX="411.0" layoutY="449.0" mnemonicParsing="false" onAction="#addWord" prefHeight="19.0" prefWidth="90.0" text="Save" />
    </children>
 </AnchorPane>
