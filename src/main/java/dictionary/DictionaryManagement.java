@@ -14,16 +14,12 @@ public class DictionaryManagement {
         int n = scan.nextInt();
         for(int i=0;i<n;i++){
             String target=scan.next();
-            target = target.trim();
             String explain= scan.nextLine();
-            explain = explain.trim();
             Word res= new Word(target,explain);
             Trie.insert(root,res);
         }
     }
-    public static void insert(String target,String explain){
-        target = target.trim();
-        explain = explain.trim();
+    public void insert(String target,String explain){
         Word res= new Word(target,explain);
         Trie.insert(root,res);
     }
@@ -52,7 +48,7 @@ public class DictionaryManagement {
     }
     public static ObservableList prexSearch(String target){
         Trie ans= Trie.getNewNode();
-        ans=Trie.search(root,target);
+        ans=Trie.search(root,target.trim().toLowerCase());
         if(ans==null){
             return null;
         }
@@ -63,7 +59,7 @@ public class DictionaryManagement {
     }
     public static String Search(String target){
         Trie ans= Trie.getNewNode();
-        ans=Trie.search(root,target);
+        ans=Trie.search(root,target.trim().toLowerCase());
         if(ans==null){
             return new String("NO FOUND");
         }
