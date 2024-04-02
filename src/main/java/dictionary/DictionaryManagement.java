@@ -27,7 +27,7 @@ public class DictionaryManagement {
         Word res= new Word(target,explain);
         Trie.insert(root,res);
     }
-    public static void insertFromFile(){
+    public  void insertFromFile(){
         try{
             BufferedReader in= new BufferedReader(new FileReader("src/Data/E_V.txt"));
             String str=new String();
@@ -43,7 +43,7 @@ public class DictionaryManagement {
         }
 
     }
-    public static ObservableList showAllWords(){
+    public  ObservableList showAllWords(){
 
         ArrayList<String> res= new ArrayList<>();
         Trie.dfs(root,res);
@@ -61,7 +61,7 @@ public class DictionaryManagement {
         ObservableList<String> r= FXCollections.observableArrayList(res);
         return r;
     }
-    public static String Search(String target){
+    public  String Search(String target){
         Trie ans= Trie.getNewNode();
         ans=Trie.search(root,target);
         if(ans==null){
