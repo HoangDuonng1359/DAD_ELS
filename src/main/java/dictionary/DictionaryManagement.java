@@ -68,6 +68,6 @@ public class DictionaryManagement {
         }
     }
     public static void remove(String target){
-        Trie.remove(root,target);
+        Trie.remove(root,target.trim().toLowerCase());
     }
 }
