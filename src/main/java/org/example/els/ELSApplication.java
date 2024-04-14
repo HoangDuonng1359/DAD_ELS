@@ -13,7 +13,7 @@ import java.io.IOException;
 public class ELSApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        Parent root = FXMLLoader.load(ELSApplication.class.getResource("ELS-view.fxml"));
+        Parent root = FXMLLoader.load(ELSApplication.class.getResource("Home.fxml"));
         Scene scene = new Scene(root, 850, 600);
         stage.setTitle("ELSApplication");
         stage.setScene(scene);

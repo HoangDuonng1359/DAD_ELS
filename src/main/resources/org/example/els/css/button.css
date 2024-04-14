@@ -27,6 +27,21 @@
     -fx-border-color: #7777d7;
     -fx-rotate: 5deg;
 }
+#homeButton{
+    -fx-background-color: transparent;
+    -fx-border-width: 1px;
+    -fx-border-color: #a332c5;
+    -fx-border-radius: 20%;
+    -fx-background-image: url("../image/home-button.png");
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+}
+#homeButton:hover{
+    -fx-scale-x: 1.2;
+    -fx-scale-y: 1.2;
+    -fx-border-color: #7777d7;
+    -fx-rotate: 5deg;
+}
 #google_translate_menu{
     -fx-background-color: transparent;
     -fx-border-width: 1px;

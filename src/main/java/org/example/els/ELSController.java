@@ -75,7 +75,6 @@ public class ELSController extends baseFormController {
         addEdit_label.setVisible(false);
         dictionaryManagement.insertFromFile();
         listView.setItems(dictionaryManagement.showAllWords());
-        // làm các lable còn lại Quang Anh nhá
     }
     @FXML
     public void handleMouseClickListView(MouseEvent event) {

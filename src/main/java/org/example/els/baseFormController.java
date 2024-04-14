@@ -42,6 +42,10 @@ public class baseFormController extends SceneManage {
     @FXML
     private Label addEdit_label;
     @FXML
+    private Label home_label;
+    @FXML
+    private Label more_label;
+    @FXML
     private AnchorPane anchorPane;
     @FXML
     protected WebView definitionView;
@@ -78,7 +82,16 @@ public class baseFormController extends SceneManage {
     @FXML
     public void  openFormDictionary(ActionEvent event) {
         try {
-            showScene(root,stage, scene, event,  "ELS-view.fxml");
+            showScene(root,stage, scene, event,  "dictionary.fxml");
+        }
+        catch (IOException var3) {
+            System.out.println("lỗi không mở được form");
+        }
+    }
+    @FXML
+    public void openFormHome(ActionEvent event){
+        try {
+            showScene(root,stage, scene, event,  "Home.fxml");
         }
         catch (IOException var3) {
             System.out.println("lỗi không mở được form");
@@ -128,6 +141,22 @@ public class baseFormController extends SceneManage {
         this.game_label.setVisible(false);
     }
 
+    @FXML
+    public void eventHoverHome(MouseEvent event){
+        this.home_label.setVisible(true);
+    }
+    @FXML
+    public void eventExitHome(MouseEvent event){
+        this.home_label.setVisible(false);
+    }
+    @FXML
+    public void eventHoverMore(MouseEvent event){
+        this.more_label.setVisible(true);
+    }
+    @FXML
+    public void eventExitMore(MouseEvent event){
+        this.more_label.setVisible(false);
+    }
     @FXML
     public void eventExitaddEdit(MouseEvent event) {
         this.addEdit_label.setVisible(false);

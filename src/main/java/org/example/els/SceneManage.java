@@ -40,4 +40,7 @@ public class SceneManage {
         stage.setScene(scene);
         stage.show();
     }
+    public static void changeButtonCssFile(Button button){
+        button.getStylesheets().add("../resources/org/example/els/css/v2/button.css");
+    }
 }
