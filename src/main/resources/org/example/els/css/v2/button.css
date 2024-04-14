@@ -64,11 +64,31 @@
 }
 #edit_menu{
     -fx-background-color: transparent;
-    -fx-background-image: url("../../image/edit_button.png");
+    -fx-background-image: url("../../image/add_button.png");
     -fx-background-size: cover;
     -fx-background-repeat: no-repeat;
 }
 #edit_menu:hover{
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}
+#edit_button{
+    -fx-background-color: transparent;
+    -fx-background-image: url("../../image/edit_button.png");
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+}
+#edit_button:hover{
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}
+#delete_button{
+    -fx-background-color: transparent;
+    -fx-background-image: url("../../image/delete_button.png");
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+}
+#delete_button:hover{
     -fx-scale-x: 1.1;
     -fx-scale-y: 1.1;
 }

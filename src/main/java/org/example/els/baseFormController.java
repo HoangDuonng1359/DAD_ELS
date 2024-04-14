@@ -63,7 +63,7 @@ public class baseFormController extends SceneManage {
     @FXML
     public void openFormAddAndEdit(ActionEvent event) {
         try {
-            showScene(root,stage, scene, event,  "addAndEdit.fxml");
+            showScene(root,stage, scene, event,  "addWord.fxml");
         } catch (IOException var3) {
             System.out.println("lỗi không mở được form");
         }
@@ -101,6 +101,24 @@ public class baseFormController extends SceneManage {
     public void openFormMore(ActionEvent event){
         try {
             showScene(root,stage, scene, event,  "more.fxml");
+        }
+        catch (IOException var3) {
+            System.out.println("lỗi không mở được form" + var3);
+        }
+    }
+    @FXML
+    public void openFormEdit(ActionEvent event){
+        try {
+            showScene(root,stage, scene, event,  "EditWord.fxml");
+        }
+        catch (IOException var3) {
+            System.out.println("lỗi không mở được form" + var3);
+        }
+    }
+    @FXML
+    public void openFormDelete(ActionEvent event){
+        try {
+            showScene(root,stage, scene, event,  "deleteWord.fxml");
         }
         catch (IOException var3) {
             System.out.println("lỗi không mở được form" + var3);

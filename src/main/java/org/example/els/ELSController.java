@@ -61,7 +61,7 @@ public class ELSController extends baseFormController {
     @FXML
     public void openFormAddAndEdit(ActionEvent event){
         try {
-            SceneManage.showScene(root,stage,scene,event,"addAndEdit.fxml");
+            SceneManage.showScene(root,stage,scene,event,"addWord.fxml");
         } catch (IOException e) {
             System.out.println("lỗi không mở được form");
         }

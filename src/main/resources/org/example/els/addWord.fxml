@@ -2,6 +2,7 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
@@ -13,12 +14,11 @@
       <Button fx:id="google_translate_menu" layoutX="376.0" layoutY="52.0" mnemonicParsing="false" onAction="#openFormGoogle" onMouseEntered="#eventHovergoogleTranslate" onMouseExited="#eventExitgoogleTranslate" prefHeight="40.0" prefWidth="40.0" stylesheets="@css/v2/button.css" />
       <Button fx:id="edit_menu" layoutX="499.0" layoutY="52.0" mnemonicParsing="false" onAction="#openFormAddAndEdit" onMouseEntered="#eventHoveraddEdit" onMouseExited="#eventExitaddEdit" prefHeight="40.0" prefWidth="40.0" stylesheets="@css/v2/button.css" />
       <Label fx:id="dictionary_label" layoutX="312.0" layoutY="92.0" stylesheets="@css/v2/button.css" text="Dictionary" visible="false" />
-      <Label fx:id="addEdit_label" layoutX="492.0" layoutY="92.0" stylesheets="@css/v2/button.css" text="Add &amp; edit" visible="false" />
+      <Label fx:id="addEdit_label" layoutX="507.0" layoutY="92.0" stylesheets="@css/v2/button.css" text="Add" visible="false" />
       <Label fx:id="game_label" layoutX="443.0" layoutY="92.0" stylesheets="@css/v2/button.css" text="Game" visible="false" />
       <Label fx:id="googleTranslate_label" layoutX="355.0" layoutY="92.0" stylesheets="@css/v2/button.css" text="Google translate" visible="false" />
       <Button fx:id="moreButton" layoutX="559.0" layoutY="52.0" mnemonicParsing="false" onAction="#openFormMore" onMouseEntered="#eventHoverMore" onMouseExited="#eventExitMore" prefHeight="40.0" prefWidth="40.0" stylesheets="@css/v2/button.css" />
       <Button fx:id="homeButton" layoutX="263.0" layoutY="52.0" mnemonicParsing="false" onAction="#openFormHome" onMouseEntered="#eventHoverHome" onMouseExited="#eventExitHome" prefHeight="40.0" prefWidth="40.0" stylesheets="@css/v2/button.css" />
-      <Label fx:id="label_information" layoutX="111.0" layoutY="132.0" prefHeight="403.0" prefWidth="600.0" text="Label" visible="false" />
       <Label fx:id="home_label" layoutX="270.0" layoutY="93.0" stylesheets="@css/v2/button.css" text="Home" visible="false" />
       <Label fx:id="more_label" layoutX="566.0" layoutY="93.0" stylesheets="@css/v2/button.css" text="More" visible="false" />
       <TextField fx:id="e_Textfield" layoutX="347.0" layoutY="203.0" prefHeight="26.0" prefWidth="257.0" />
@@ -33,11 +33,26 @@
       <CheckBox fx:id="check_Verb" layoutX="248.0" layoutY="336.0" mnemonicParsing="false" text="Động từ" />
       <CheckBox fx:id="check_Adj" layoutX="248.0" layoutY="374.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="67.0" text="Tính từ" />
       <CheckBox fx:id="check_Adv" layoutX="248.0" layoutY="417.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="76.0" text="Trạng từ" />
-      <Label layoutX="343.0" layoutY="131.0" prefHeight="50.0" prefWidth="174.0" text="Add &amp; Edit">
+      <Label fx:id="label_information" alignment="CENTER" layoutX="341.0" layoutY="111.0" prefHeight="82.0" prefWidth="168.0" text="Add word" textAlignment="CENTER">
          <font>
-            <Font size="34.0" />
+            <Font name="MS Outlook" size="32.0" />
          </font>
-      </Label>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.15299999713897705" green="0.4990088939666748" blue="0.8999999761581421" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.1610526293516159" green="0.7143157720565796" blue="0.8526315689086914" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill></Label>
       <Button layoutX="411.0" layoutY="449.0" mnemonicParsing="false" onAction="#addWord" prefHeight="19.0" prefWidth="90.0" text="Save" />
    </children>
 </AnchorPane>
