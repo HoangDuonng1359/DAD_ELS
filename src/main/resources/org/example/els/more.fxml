@@ -11,7 +11,7 @@
 <AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="850.0" stylesheets="@css/v2/anchorPane.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.els.moreController">
     <children>
         <Label fx:id="home_label" layoutX="139.0" layoutY="132.0" stylesheets="@css/v2/button.css" text="Home" />
-      <GridPane alignment="CENTER" layoutX="301.0" layoutY="216.0" prefHeight="167.0" prefWidth="303.0">
+      <GridPane alignment="CENTER" hgap="10.0" layoutX="299.0" layoutY="150.0" prefHeight="274.0" prefWidth="257.0" vgap="10.0">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -21,17 +21,26 @@
           <RowConstraints minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
             <RowConstraints minHeight="60.0" prefHeight="60.0" vgrow="SOMETIMES" />
           <RowConstraints minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="60.0" prefHeight="60.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-              <Button fx:id="dictionary_menu" mnemonicParsing="false" onAction="#openFormDictionary" onMouseEntered="#eventHoverDictionary" onMouseExited="#eventExitDictionary" prefHeight="60.0" prefWidth="60.0" stylesheets="@css/v2/button.css" />
-              <Button fx:id="google_translate_menu" mnemonicParsing="false" onAction="#openFormGoogle" onMouseEntered="#eventHovergoogleTranslate" onMouseExited="#eventExitgoogleTranslate" prefHeight="60.0" prefWidth="60.0" stylesheets="@css/v2/button.css" GridPane.columnIndex="1" />
-              <Button fx:id="game_menu" mnemonicParsing="false" onAction="#openFormGame" onMouseEntered="#eventHovergame" onMouseExited="#eventExitgame" prefHeight="60.0" prefWidth="60.0" stylesheets="@css/v2/button.css" GridPane.rowIndex="2" />
-              <Button fx:id="edit_menu" mnemonicParsing="false" onAction="#openFormAddAndEdit" onMouseEntered="#eventHoveraddEdit" onMouseExited="#eventExitaddEdit" prefHeight="60.0" prefWidth="60.0" stylesheets="@css/v2/button.css" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+              <Button fx:id="dictionary_menu" mnemonicParsing="false" onAction="#openFormDictionary" prefHeight="60.0" prefWidth="60.0" stylesheets="@css/v2/button.css" />
+              <Button fx:id="google_translate_menu" mnemonicParsing="false" onAction="#openFormGoogle" prefHeight="60.0" prefWidth="60.0" stylesheets="@css/v2/button.css" GridPane.columnIndex="1" />
+              <Button fx:id="game_menu" mnemonicParsing="false" onAction="#openFormGame" prefHeight="60.0" prefWidth="60.0" stylesheets="@css/v2/button.css" GridPane.rowIndex="2" />
+              <Button fx:id="edit_menu" mnemonicParsing="false" onAction="#openFormAddAndEdit" prefHeight="60.0" prefWidth="60.0" stylesheets="@css/v2/button.css" GridPane.columnIndex="1" GridPane.rowIndex="2" />
               <Label fx:id="dictionary_label" stylesheets="@css/v2/button.css" text="Dictionary" GridPane.rowIndex="1" />
               <Label fx:id="googleTranslate_label" stylesheets="@css/v2/button.css" text="Google translate" GridPane.columnIndex="1" GridPane.rowIndex="1" />
               <Label fx:id="game_label" stylesheets="@css/v2/button.css" text="Game" GridPane.rowIndex="3" />
-              <Label fx:id="addEdit_label" stylesheets="@css/v2/button.css" text="Add &amp; edit" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+              <Label fx:id="addEdit_label" stylesheets="@css/v2/button.css" text="Add word" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Button fx:id="edit_button" mnemonicParsing="false" onAction="#openFormEdit" prefHeight="60.0" prefWidth="60.0" stylesheets="@css/v2/button.css" GridPane.rowIndex="4" />
+            <Label fx:id="Edit_label" stylesheets="@css/v2/button.css" text="Edit word" GridPane.rowIndex="5" />
+            <Button fx:id="delete_button" mnemonicParsing="false" onAction="#openFormDelete" prefHeight="60.0" prefWidth="60.0" stylesheets="@css/v2/button.css" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Label stylesheets="@css/v2/button.css" text="Delete word" GridPane.columnIndex="1" GridPane.rowIndex="5" />
          </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
       </GridPane>
         <Button fx:id="homeButton" layoutX="135.0" layoutY="86.0" mnemonicParsing="false" onAction="#openFormHome" onMouseEntered="#eventHoverHome" onMouseExited="#eventExitHome" prefHeight="40.0" prefWidth="40.0" stylesheets="@css/v2/button.css" />
     </children>
