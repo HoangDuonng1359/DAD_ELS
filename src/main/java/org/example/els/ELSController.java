@@ -49,7 +49,6 @@ public class ELSController extends baseFormController {
     protected ListView listView;
     @FXML
     protected TextField search_field;
-    private DictionaryManagement dictionaryManagement = new DictionaryManagement();
 
     @FXML
     public void openFormGoogle(ActionEvent event){
@@ -73,7 +72,6 @@ public class ELSController extends baseFormController {
         googleTranslate_label.setVisible(false);
         game_label.setVisible(false);
         addEdit_label.setVisible(false);
-        dictionaryManagement.insertFromFile();
         listView.setItems(dictionaryManagement.showAllWords());
     }
     @FXML
