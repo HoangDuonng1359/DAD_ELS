@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="850.0" stylesheets="@css/v2/anchorPane.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.els.moreController">
+    <children>
+        <Label fx:id="home_label" layoutX="139.0" layoutY="132.0" stylesheets="@css/v2/button.css" text="Home" />
+      <GridPane alignment="CENTER" layoutX="301.0" layoutY="216.0" prefHeight="167.0" prefWidth="303.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="60.0" prefHeight="60.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="60.0" prefHeight="60.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+              <Button fx:id="dictionary_menu" mnemonicParsing="false" onAction="#openFormDictionary" onMouseEntered="#eventHoverDictionary" onMouseExited="#eventExitDictionary" prefHeight="60.0" prefWidth="60.0" stylesheets="@css/v2/button.css" />
+              <Button fx:id="google_translate_menu" mnemonicParsing="false" onAction="#openFormGoogle" onMouseEntered="#eventHovergoogleTranslate" onMouseExited="#eventExitgoogleTranslate" prefHeight="60.0" prefWidth="60.0" stylesheets="@css/v2/button.css" GridPane.columnIndex="1" />
+              <Button fx:id="game_menu" mnemonicParsing="false" onAction="#openFormGame" onMouseEntered="#eventHovergame" onMouseExited="#eventExitgame" prefHeight="60.0" prefWidth="60.0" stylesheets="@css/v2/button.css" GridPane.rowIndex="2" />
+              <Button fx:id="edit_menu" mnemonicParsing="false" onAction="#openFormAddAndEdit" onMouseEntered="#eventHoveraddEdit" onMouseExited="#eventExitaddEdit" prefHeight="60.0" prefWidth="60.0" stylesheets="@css/v2/button.css" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+              <Label fx:id="dictionary_label" stylesheets="@css/v2/button.css" text="Dictionary" GridPane.rowIndex="1" />
+              <Label fx:id="googleTranslate_label" stylesheets="@css/v2/button.css" text="Google translate" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+              <Label fx:id="game_label" stylesheets="@css/v2/button.css" text="Game" GridPane.rowIndex="3" />
+              <Label fx:id="addEdit_label" stylesheets="@css/v2/button.css" text="Add &amp; edit" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+         </children>
+      </GridPane>
+        <Button fx:id="homeButton" layoutX="135.0" layoutY="86.0" mnemonicParsing="false" onAction="#openFormHome" onMouseEntered="#eventHoverHome" onMouseExited="#eventExitHome" prefHeight="40.0" prefWidth="40.0" stylesheets="@css/v2/button.css" />
+    </children>
+   <padding>
+      <Insets top="10.0" />
+   </padding>
+</AnchorPane>

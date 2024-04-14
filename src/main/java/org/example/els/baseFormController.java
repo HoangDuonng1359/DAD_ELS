@@ -97,7 +97,15 @@ public class baseFormController extends SceneManage {
             System.out.println("lỗi không mở được form");
         }
     }
-
+    @FXML
+    public void openFormMore(ActionEvent event){
+        try {
+            showScene(root,stage, scene, event,  "more.fxml");
+        }
+        catch (IOException var3) {
+            System.out.println("lỗi không mở được form" + var3);
+        }
+    }
     @FXML
     public void initialize() {
         this.dictionary_label.setVisible(false);
