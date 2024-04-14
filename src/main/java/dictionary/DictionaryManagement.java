@@ -37,7 +37,6 @@ public class DictionaryManagement {
         }catch(IOException e){
             System.out.println("IOException");
         }
-
     }
     public  ObservableList showAllWords(){
 
