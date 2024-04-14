@@ -7,6 +7,7 @@ package org.example.els;
 
 import java.io.IOException;
 
+import dictionary.DictionaryManagement;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -49,7 +50,7 @@ public class baseFormController extends SceneManage {
     private AnchorPane anchorPane;
     @FXML
     protected WebView definitionView;
-
+    protected static DictionaryManagement dictionaryManagement = new DictionaryManagement();
     @FXML
     public void openFormGoogle(ActionEvent event) {
         try {
@@ -57,7 +58,6 @@ public class baseFormController extends SceneManage {
         } catch (IOException var3) {
             System.out.println("lỗi không mở được form");
         }
-
     }
 
     @FXML
