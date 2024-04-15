@@ -8,6 +8,9 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class DictionaryManagement {
+    public DictionaryManagement(){
+        insertFromFile();
+    }
     static Trie root= Trie.getNewNode();
     public static void insertFromCommandline(){
         Scanner scan = new Scanner(System.in);
@@ -37,7 +40,6 @@ public class DictionaryManagement {
         }catch(IOException e){
             System.out.println("IOException");
         }
-
     }
     public  ObservableList showAllWords(){
 

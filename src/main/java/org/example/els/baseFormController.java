@@ -7,6 +7,7 @@ package org.example.els;
 
 import java.io.IOException;
 
+import dictionary.DictionaryManagement;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -42,10 +43,14 @@ public class baseFormController extends SceneManage {
     @FXML
     private Label addEdit_label;
     @FXML
+    private Label home_label;
+    @FXML
+    private Label more_label;
+    @FXML
     private AnchorPane anchorPane;
     @FXML
     protected WebView definitionView;
-
+    protected static DictionaryManagement dictionaryManagement = new DictionaryManagement();
     @FXML
     public void openFormGoogle(ActionEvent event) {
         try {
@@ -53,13 +58,12 @@ public class baseFormController extends SceneManage {
         } catch (IOException var3) {
             System.out.println("lỗi không mở được form");
         }
-
     }
 
     @FXML
     public void openFormAddAndEdit(ActionEvent event) {
         try {
-            showScene(root,stage, scene, event,  "addAndEdit.fxml");
+            showScene(root,stage, scene, event,  "addWord.fxml");
         } catch (IOException var3) {
             System.out.println("lỗi không mở được form");
         }
@@ -78,13 +82,48 @@ public class baseFormController extends SceneManage {
     @FXML
     public void  openFormDictionary(ActionEvent event) {
         try {
-            showScene(root,stage, scene, event,  "ELS-view.fxml");
+            showScene(root,stage, scene, event,  "dictionary.fxml");
         }
         catch (IOException var3) {
             System.out.println("lỗi không mở được form");
         }
     }
-
+    @FXML
+    public void openFormHome(ActionEvent event){
+        try {
+            showScene(root,stage, scene, event,  "Home.fxml");
+        }
+        catch (IOException var3) {
+            System.out.println("lỗi không mở được form");
+        }
+    }
+    @FXML
+    public void openFormMore(ActionEvent event){
+        try {
+            showScene(root,stage, scene, event,  "more.fxml");
+        }
+        catch (IOException var3) {
+            System.out.println("lỗi không mở được form" + var3);
+        }
+    }
+    @FXML
+    public void openFormEdit(ActionEvent event){
+        try {
+            showScene(root,stage, scene, event,  "EditWord.fxml");
+        }
+        catch (IOException var3) {
+            System.out.println("lỗi không mở được form" + var3);
+        }
+    }
+    @FXML
+    public void openFormDelete(ActionEvent event){
+        try {
+            showScene(root,stage, scene, event,  "deleteWord.fxml");
+        }
+        catch (IOException var3) {
+            System.out.println("lỗi không mở được form" + var3);
+        }
+    }
     @FXML
     public void initialize() {
         this.dictionary_label.setVisible(false);
@@ -128,6 +167,22 @@ public class baseFormController extends SceneManage {
         this.game_label.setVisible(false);
     }
 
+    @FXML
+    public void eventHoverHome(MouseEvent event){
+        this.home_label.setVisible(true);
+    }
+    @FXML
+    public void eventExitHome(MouseEvent event){
+        this.home_label.setVisible(false);
+    }
+    @FXML
+    public void eventHoverMore(MouseEvent event){
+        this.more_label.setVisible(true);
+    }
+    @FXML
+    public void eventExitMore(MouseEvent event){
+        this.more_label.setVisible(false);
+    }
     @FXML
     public void eventExitaddEdit(MouseEvent event) {
         this.addEdit_label.setVisible(false);

@@ -49,7 +49,6 @@ public class ELSController extends baseFormController {
     protected ListView listView;
     @FXML
     protected TextField search_field;
-    private DictionaryManagement dictionaryManagement = new DictionaryManagement();
 
     @FXML
     public void openFormGoogle(ActionEvent event){
@@ -62,7 +61,7 @@ public class ELSController extends baseFormController {
     @FXML
     public void openFormAddAndEdit(ActionEvent event){
         try {
-            SceneManage.showScene(root,stage,scene,event,"addAndEdit.fxml");
+            SceneManage.showScene(root,stage,scene,event,"addWord.fxml");
         } catch (IOException e) {
             System.out.println("lỗi không mở được form");
         }
@@ -73,9 +72,7 @@ public class ELSController extends baseFormController {
         googleTranslate_label.setVisible(false);
         game_label.setVisible(false);
         addEdit_label.setVisible(false);
-        dictionaryManagement.insertFromFile();
         listView.setItems(dictionaryManagement.showAllWords());
-        // làm các lable còn lại Quang Anh nhá
     }
     @FXML
     public void handleMouseClickListView(MouseEvent event) {

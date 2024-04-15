@@ -1,5 +1,6 @@
 package org.example.els;
 
+import dictionary.DictionaryManagement;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -39,5 +40,8 @@ public class SceneManage {
         stage.setTitle("ELSApplication");
         stage.setScene(scene);
         stage.show();
+    }
+    public static void changeButtonCssFile(Button button){
+        button.getStylesheets().add("../resources/org/example/els/css/v2/button.css");
     }
 }
