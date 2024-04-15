@@ -50,7 +50,7 @@ public class DictionaryManagement {
     }
     public static ObservableList prexSearch(String target){
         Trie ans= Trie.getNewNode();
-        ans=Trie.search(root,target.trim().toLowerCase());
+        ans=Trie.search(root,target);
         if(ans==null){
             return null;
         }
@@ -61,7 +61,7 @@ public class DictionaryManagement {
     }
     public  String Search(String target){
         Trie ans= Trie.getNewNode();
-        ans=Trie.search(root,target.trim().toLowerCase());
+        ans=Trie.search(root,target);
         if(ans==null){
             return new String("NO FOUND");
         }
