@@ -125,7 +125,7 @@ public class baseFormController extends SceneManage {
         }
     }
     @FXML
-    public void initialize() {
+    public void initialize() throws IOException {
         this.dictionary_label.setVisible(false);
         this.googleTranslate_label.setVisible(false);
         this.game_label.setVisible(false);
