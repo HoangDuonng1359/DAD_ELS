@@ -26,6 +26,8 @@ public class addAndEditController extends baseFormController {
                 dictionaryManagement.insert(e, v);
                 bookwriter.append("+ "+e+" "+v+"\n");
                 newAlert(stage,"AddWord","","Thêm từ thành công");
+                e_Textfield.setText("");
+                v_Textfield.setHtmlText("");
             } else {
                 newAlert(stage,"AddWord","","Vui lòng nhập đủ thông tin từ");
             }
