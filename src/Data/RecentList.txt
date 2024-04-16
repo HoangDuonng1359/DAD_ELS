@@ -6,6 +6,7 @@ Car
 2D Module = Two-dimensional Module
 3D (three Dimension) Calculation
 A Except B Gate
+<<<<<<< HEAD
 1Abnormal Profits
 1Crock
 Crofter
@@ -19,4 +20,6 @@ Cropper
 1-byte Character Code
 2-way Device
 1hhjk
+=======
+>>>>>>> a2e5577b36f0da1f04f785c9de5691cb374d0fb0
 1

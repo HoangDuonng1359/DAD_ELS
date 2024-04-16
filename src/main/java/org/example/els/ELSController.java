@@ -2,6 +2,8 @@ package org.example.els;
 
 import Game.FlashCard.RecentW;
 import dictionary.DictionaryManagement;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -74,9 +76,16 @@ public class ELSController extends baseFormController {
         game_label.setVisible(false);
         addEdit_label.setVisible(false);
         listView.setItems(dictionaryManagement.showAllWords());
+        search_field.textProperty().addListener((observable, oldText, newText) -> {
+            // Nếu nội dung của trường tìm kiếm thay đổi, thực hiện đề xuất tìm kiếm
+            handleSearch(newText.trim());
+        });
     }
     @FXML
+
+
     public void handleMouseClickListView (MouseEvent event) {
+
         StringBuilder target = new StringBuilder(listView.getSelectionModel(). getSelectedItems().toString());
         target.delete(0,1);
         target.deleteCharAt(target.length()- 1);
@@ -89,5 +98,23 @@ public class ELSController extends baseFormController {
         definitionView.getEngine().loadContent(dictionaryManagement.Search(target));
         RecentW.add(target);
     }
+    public void handleSearch(String searchTerm) {
+        if (!searchTerm.isEmpty()) {
+            ObservableList<String> searchResult = DictionaryManagement.prexSearch(searchTerm);
+            if (searchResult != null && !searchResult.isEmpty()) {
+                listView.setItems(searchResult);
+            } else {
+                listView.getItems().clear();
+                ObservableList<String> items = FXCollections.observableArrayList("");
+                listView.setItems(items);
+            }
+        } else {
+            listView.getItems().clear();
+            ObservableList<String> items = FXCollections.observableArrayList("");
+            listView.setItems(items);
+        }
+    }
 
-  }
+}
+
+
