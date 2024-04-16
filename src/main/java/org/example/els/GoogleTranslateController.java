@@ -149,11 +149,20 @@ public class GoogleTranslateController extends baseFormController {
         }
     }
     @FXML
-    public void playAudio(ActionEvent event) throws IOException, JavaLayerException {
+    public void playAudioOut(ActionEvent event) throws IOException, JavaLayerException {
         lang_out = API_Google_translator.getLanguage(comboBox_lang_out.getValue());
         String text = Text_area_out.getText();
         if(!text.isEmpty()){
             get_Audio(text,lang_out);
+        }
+    }
+
+    @FXML
+    public void playAudioIn(ActionEvent event) throws IOException, JavaLayerException {
+        lang_input = API_Google_translator.getLanguage(comboBox_lang_out.getValue());
+        String text = Text_area_input.getText();
+        if(!text.isEmpty()){
+            get_Audio(text,lang_input);
         }
     }
 }
