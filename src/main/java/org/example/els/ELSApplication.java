@@ -1,5 +1,6 @@
 package org.example.els;
 
+import Game.FlashCard.RecentW;
 import dictionary.DictionaryManagement;
 import javafx.application.Application;
 import javafx.fxml.FXML;
@@ -18,6 +19,7 @@ public class ELSApplication extends Application {
     public void start(Stage stage) throws IOException {
         Parent root = FXMLLoader.load(ELSApplication.class.getResource("Home.fxml"));
         Scene scene = new Scene(root, 850, 600);
+        RecentW.init();
         stage.setTitle("ELSApplication");
         stage.setScene(scene);
         stage.show();

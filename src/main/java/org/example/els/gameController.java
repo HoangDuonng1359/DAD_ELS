@@ -41,6 +41,14 @@ public class gameController extends baseFormController{
             System.out.println("lỗi không mở được form");
         }
     }
+    @FXML
+    public void openFormFlashCard(ActionEvent event){
+        try {
+            SceneManage.showScene(root,stage,scene,event,"FlashCard.fxml");
+        } catch (IOException e) {
+            System.out.println("lỗi không mở được form");
+        }
+    }
     private String createQuestion(Quiz quiz){
         StringBuilder str = new StringBuilder();
         str.append("Question: ");
