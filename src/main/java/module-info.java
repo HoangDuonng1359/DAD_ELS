@@ -4,6 +4,7 @@ module org.example.els {
     requires com.dlsc.formsfx;
     requires javafx.web;
     requires com.opencsv;
+    requires jlayer;
     opens org.example.els to javafx.fxml;
     exports org.example.els;
 

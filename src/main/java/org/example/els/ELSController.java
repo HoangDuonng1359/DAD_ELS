@@ -1,5 +1,6 @@
 package org.example.els;
 
+import Game.FlashCard.RecentW;
 import dictionary.DictionaryManagement;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -75,16 +76,22 @@ public class ELSController extends baseFormController {
         listView.setItems(dictionaryManagement.showAllWords());
     }
     @FXML
+<<<<<<< HEAD
     public void handleMouseClickListView(MouseEvent event) {
+=======
+    public void handleMouseClickListView (MouseEvent event) {
+>>>>>>> 69061ec82eaef2dda8d78110bd6bf68a200461da
         StringBuilder target = new StringBuilder(listView.getSelectionModel(). getSelectedItems().toString());
         target.delete(0,1);
         target.deleteCharAt(target.length()- 1);
         definitionView.getEngine().loadContent(dictionaryManagement.Search(target.toString()));
+        RecentW.add(target.toString());
     }
     @FXML
     public void handleMouseClickButtonSearch(MouseEvent event) {
         String target = new String(search_field.getText());
         definitionView.getEngine().loadContent(dictionaryManagement.Search(target));
+        RecentW.add(target);
     }
 
   }
