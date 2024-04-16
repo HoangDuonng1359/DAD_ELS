@@ -26,6 +26,7 @@ public class deleteWord extends baseFormController{
                 dictionaryManagement.remove(s);
                 newAlert(stage,"Delete Word","","Xóa từ thành công");
                 bookwriter.append("- "+s+"\n");
+                word.setText("");
             }
         } catch (IOException e) {
             System.out.println("IOException in deleteWord: " + e.getMessage());

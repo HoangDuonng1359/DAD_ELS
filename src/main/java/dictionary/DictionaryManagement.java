@@ -69,6 +69,16 @@ public class DictionaryManagement {
            return ans.res.getExplain();
         }
     }
+    public void setExplain(String target, String explain){
+        Trie ans= Trie.getNewNode();
+        ans=Trie.search(root,target);
+        if(ans==null){
+            return;
+        }
+        else {
+            ans.res.setExplain(explain);
+        }
+    }
     public static void remove(String target){
         Trie.remove(root,target.trim().toLowerCase());
     }

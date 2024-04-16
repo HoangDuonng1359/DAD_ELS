@@ -46,11 +46,11 @@
          </textFill></Label>
       <Label fx:id="home_label" layoutX="270.0" layoutY="93.0" stylesheets="@css/v2/button.css" text="Home" visible="false" />
       <Label fx:id="more_label" layoutX="566.0" layoutY="93.0" stylesheets="@css/v2/button.css" text="More" visible="false" />
-      <TextField layoutX="173.0" layoutY="229.0" prefHeight="40.0" prefWidth="258.0" />
+      <TextField fx:id="e_word" layoutX="173.0" layoutY="229.0" prefHeight="40.0" prefWidth="258.0" />
       <Label layoutX="90.0" layoutY="240.0" prefHeight="18.0" prefWidth="81.0" text="English" />
-      <HTMLEditor htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" layoutX="172.0" layoutY="285.0" prefHeight="200.0" prefWidth="506.0" />
+      <HTMLEditor fx:id="v_word" htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" layoutX="172.0" layoutY="285.0" prefHeight="200.0" prefWidth="506.0" />
       <Label layoutX="90.0" layoutY="376.0" text="Vietnamese" />
-      <Button layoutX="450.0" layoutY="236.0" mnemonicParsing="false" text="Find" />
-      <Button layoutX="368.0" layoutY="504.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="135.0" text="Commit" />
+      <Button layoutX="450.0" layoutY="236.0" mnemonicParsing="false" onAction="#findWord" text="Find" />
+      <Button fx:id="commit" layoutX="368.0" layoutY="504.0" mnemonicParsing="false" onAction="#editWord" prefHeight="40.0" prefWidth="135.0" text="Commit" />
     </children>
 </AnchorPane>

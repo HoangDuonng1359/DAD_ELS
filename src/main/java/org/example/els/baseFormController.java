@@ -5,9 +5,7 @@
 
 package org.example.els;
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 
 import dictionary.DictionaryManagement;
 import javafx.application.Platform;
@@ -58,6 +56,14 @@ public class baseFormController extends SceneManage {
     static {
         try {
             bookwriter = new BufferedWriter(new FileWriter("src/Data/BookmarkList.txt",true));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+    protected static BufferedReader bookreader;
+    static {
+        try {
+            bookreader = new BufferedReader(new FileReader("src/Data/BookmarkList.txt"));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -142,6 +148,27 @@ public class baseFormController extends SceneManage {
         this.googleTranslate_label.setVisible(false);
         this.game_label.setVisible(false);
         this.addEdit_label.setVisible(false);
+        syncBookData();
+    }
+    public void syncBookData(){
+        try {
+            String str=new String();
+            while ((str = bookreader.readLine()) != null) {
+                String[] save = new String[5];
+                save = str.split(" ",3);
+                if(save[0].equals("+")){
+                    dictionaryManagement.insert(save[1],save[2]);
+                }
+                else if(save[0].equals("-")){
+                    dictionaryManagement.remove(save[1]);
+                }
+                else if(save[0].equals("#")){
+                    dictionaryManagement.setExplain(save[1],save[2]);
+                }
+            }
+        } catch (IOException e) {
+            System.out.println("Failed to sync");
+        }
     }
     public static void closefile(){
         try {
