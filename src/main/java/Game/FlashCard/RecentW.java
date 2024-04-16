@@ -49,6 +49,15 @@ public class RecentW {
         Random random = new Random();
         return random.nextInt(max - min) + min;
     }
+    public static void closefile() {
+        try{
+            out.close();
+            in.close();
+        }
+        catch(IOException e){
+            System.out.println("IOException");
+        }
+    }
     public static String getWord(){
         return history.get(randomNum(0, history.size()-1));
     }

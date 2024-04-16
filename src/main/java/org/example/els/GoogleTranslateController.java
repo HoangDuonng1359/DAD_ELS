@@ -11,6 +11,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javazoom.jl.decoder.JavaLayerException;
 
 import java.io.IOException;
 //import java.util.concurrent.Executor;
@@ -18,6 +19,7 @@ import java.io.IOException;
 //import java.util.concurrent.ScheduledExecutorService;
 //import java.util.concurrent.TimeUnit;
 
+import static googleTranslate.sound.get_Audio;
 
 public class GoogleTranslateController extends baseFormController {
     @FXML
@@ -146,5 +148,12 @@ public class GoogleTranslateController extends baseFormController {
             throw new RuntimeException(e);
         }
     }
-
+    @FXML
+    public void playAudio(ActionEvent event) throws IOException, JavaLayerException {
+        lang_out = API_Google_translator.getLanguage(comboBox_lang_out.getValue());
+        String text = Text_area_out.getText();
+        if(!text.isEmpty()){
+            get_Audio(text,lang_out);
+        }
+    }
 }
