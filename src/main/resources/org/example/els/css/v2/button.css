@@ -1,0 +1,110 @@
+#button_search{
+    -fx-background-color: transparent; /* bỏ đi màu của button cũ*/
+    -fx-border-width: 1px;
+    -fx-border-color: #a332c5;
+    -fx-border-radius: 100%;
+    -fx-background-size: cover; /* Kích thước của hình ảnh theo tỷ lệ */
+    -fx-background-repeat: no-repeat; /* Ngăn lặp lại hình ảnh */
+    -fx-background-position: center center; /* Căn giữa hình ảnh */
+    -fx-background-image: url("../../image/search_button.png");
+}
+#button_search:hover{
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}
+#dictionary_menu{
+    -fx-background-color: transparent;
+    -fx-background-image: url("../../image/dictionary_button.png");
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+}
+#dictionary_menu:hover{
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}
+#homeButton{
+    -fx-background-color: transparent;
+    -fx-background-image: url("../../image/home-button.png");
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+}
+#homeButton:hover{
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}
+#google_translate_menu{
+    -fx-background-color: transparent;
+    -fx-background-image: url("../../image/Google_Translate_button_v2.png");
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+}
+#google_translate_menu:hover{
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}
+#moreButton{
+    -fx-background-color: transparent;
+    -fx-background-image: url("../../image/more.png");
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+}
+#moreButton:hover{
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}
+#game_menu{
+    -fx-background-color: transparent;
+    -fx-background-image: url("../../image/game_menu_button_v2.png");
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+}
+#game_menu:hover{
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}
+#edit_menu{
+    -fx-background-color: transparent;
+    -fx-background-image: url("../../image/add_button.png");
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+}
+#edit_menu:hover{
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}
+#edit_button{
+    -fx-background-color: transparent;
+    -fx-background-image: url("../../image/edit_button.png");
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+}
+#edit_button:hover{
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}
+#delete_button{
+    -fx-background-color: transparent;
+    -fx-background-image: url("../../image/delete_button.png");
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+}
+#delete_button:hover{
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}
+#answerA{
+    -fx-font-family: "Times New Roman";
+    -fx-font-size: 15px;
+}
+#answerB{
+    -fx-font-family: "Times New Roman";
+    -fx-font-size: 15px;
+}
+#answerC{
+    -fx-font-family: "Times New Roman";
+    -fx-font-size: 15px;
+}
+#answerD{
+    -fx-font-family: "Times New Roman";
+    -fx-font-size: 15px;
+}

@@ -8,22 +8,21 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class DictionaryManagement {
+    public DictionaryManagement(){
+        insertFromFile();
+    }
     static Trie root= Trie.getNewNode();
     public static void insertFromCommandline(){
         Scanner scan = new Scanner(System.in);
         int n = scan.nextInt();
         for(int i=0;i<n;i++){
             String target=scan.next();
-            target = target.trim();
             String explain= scan.nextLine();
-            explain = explain.trim();
             Word res= new Word(target,explain);
             Trie.insert(root,res);
         }
     }
-    public static void insert(String target,String explain){
-        target = target.trim();
-        explain = explain.trim();
+    public void insert(String target,String explain){
         Word res= new Word(target,explain);
         Trie.insert(root,res);
     }
@@ -41,7 +40,6 @@ public class DictionaryManagement {
         }catch(IOException e){
             System.out.println("IOException");
         }
-
     }
     public  ObservableList showAllWords(){
 
@@ -72,6 +70,6 @@ public class DictionaryManagement {
         }
     }
     public static void remove(String target){
-        Trie.remove(root,target);
+        Trie.remove(root,target.trim().toLowerCase());
     }
 }

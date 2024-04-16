@@ -17,7 +17,7 @@ public class Trie {
     }
     static void insert(Trie root,Word w){
         Trie temp = root;
-        String save=w.getTarget();
+        String save=w.getTarget().trim().toLowerCase();
         for(int i=0;i<save.length();i++){
             char x= save.charAt(i);
             if(temp.map.isEmpty()||!temp.map.containsKey(x)){
@@ -32,12 +32,16 @@ public class Trie {
         if(root==null){
             return null;
         }
+        str= str.trim().toLowerCase();
         Trie temp=root;
         for(int i=0;i<str.length();i++){
             if(temp.map.isEmpty()||!temp.map.containsKey((str.charAt(i)))){
                 return null;
             }
             temp = temp.map.get(str.charAt(i));
+        }
+        if(!temp.isEndOfWord){
+            return null;
         }
         return temp;
     }
@@ -47,6 +51,7 @@ public class Trie {
         }
         Trie temp=root;
         Trie parrent= getNewNode();
+        str=str.trim().toLowerCase();
         for(int i=0;i<str.length();i++){
             if(temp.map.isEmpty()||!temp.map.containsKey((str.charAt(i)))){
                 return;
