@@ -1,8 +1,7 @@
 package org.example.els;
 
+import googleTranslate.API_Google_translator;
 import javafx.application.Platform;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -72,7 +71,7 @@ public class GoogleTranslateController extends baseFormController {
 //            if(!oldValue.equals(newValue)){
 //                new Thread(() -> {
 //                    try {
-//                        Thread.sleep(3000);
+//                        Thread.sleep(100);
 //                    } catch (InterruptedException e) {
 //                        e.printStackTrace();
 //                    }
@@ -159,7 +158,7 @@ public class GoogleTranslateController extends baseFormController {
 
     @FXML
     public void playAudioIn(ActionEvent event) throws IOException, JavaLayerException {
-        lang_input = API_Google_translator.getLanguage(comboBox_lang_out.getValue());
+        lang_input = API_Google_translator.getLanguage(comboBox_lang_input.getValue());
         String text = Text_area_input.getText();
         if(!text.isEmpty()){
             get_Audio(text,lang_input);
