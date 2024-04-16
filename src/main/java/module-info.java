@@ -7,5 +7,7 @@ module org.example.els {
     requires jlayer;
     opens org.example.els to javafx.fxml;
     exports org.example.els;
+    exports googleTranslate;
+    opens googleTranslate to javafx.fxml;
 
 }

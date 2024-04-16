@@ -1,4 +1,4 @@
-package org.example.els;
+package googleTranslate;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -12,9 +12,14 @@ import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 import java.util.UUID;
 
+import static googleTranslate.sound.base64Encoder;
+import static googleTranslate.sound.secureRandom;
+
 public class API_Google_translator {
     public static String createNewToken(){
-        return UUID.randomUUID().toString().toUpperCase();
+        byte[] randomBytes = new byte[24];
+        secureRandom.nextBytes(randomBytes);
+        return base64Encoder.encodeToString(randomBytes);
     }
     public static String createURL(String sourceLangage, String targetLanguage , String textInput){
         StringBuilder str = new StringBuilder();
@@ -52,7 +57,7 @@ public class API_Google_translator {
         in.close();
         return makeResult(response);
     }
-    protected static ObservableList<String> listLANGUAGE = FXCollections.observableArrayList(
+    public static ObservableList<String> listLANGUAGE = FXCollections.observableArrayList(
             "English",
             "Vietnamese",
             "Afrikaans",
@@ -182,9 +187,10 @@ public class API_Google_translator {
             "Yiddish",
             "Yoruba",
             "Zulu");
-    protected static String getLanguage(String in){
+    public static String getLanguage(String in){
         switch (in){
             case "English":
+            case null:
                 return "en";
             case "Afrikaans":
                 return "af";
