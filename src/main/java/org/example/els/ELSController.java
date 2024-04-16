@@ -55,8 +55,7 @@ public class ELSController extends baseFormController {
     protected ListView listView;
     @FXML
     protected TextField search_field;
-    @FXML
-    private ListView<String> searchResultList;
+
 
 
     private DictionaryManagement dictionaryManagement = new DictionaryManagement();
@@ -107,6 +106,7 @@ public class ELSController extends baseFormController {
         String target = new String(search_field.getText());
         definitionView.getEngine().loadContent(dictionaryManagement.Search(target));
     }
+
     public void handleSearch(String searchTerm) {
         if (!searchTerm.isEmpty()) {
             ObservableList<String> searchResult = DictionaryManagement.prexSearch(searchTerm);
