@@ -92,7 +92,13 @@
     -fx-scale-x: 1.1;
     -fx-scale-y: 1.1;
 }
-#audio_button{
+#audio_button_out{
+    -fx-background-color: transparent;
+    -fx-background-image: url("../../image/sound.png");
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+}
+#audio_button_in{
     -fx-background-color: transparent;
     -fx-background-image: url("../../image/sound.png");
     -fx-background-size: cover;

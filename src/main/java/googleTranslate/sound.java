@@ -15,8 +15,8 @@ import java.util.Base64;
 
 public class sound {
     public static final String GOOGLE_TRANSLATE_AUDIO = "http://translate.google.com/translate_tts?";
-    private static final SecureRandom secureRandom = new SecureRandom();
-    private static final Base64.Encoder base64Encoder = Base64.getUrlEncoder();
+    static final SecureRandom secureRandom = new SecureRandom();
+    static final Base64.Encoder base64Encoder = Base64.getUrlEncoder();
     private static sound audio;
 
     private sound() {

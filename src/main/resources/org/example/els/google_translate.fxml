@@ -28,6 +28,7 @@
       <Label fx:id="label_information" layoutX="111.0" layoutY="132.0" prefHeight="403.0" prefWidth="600.0" text="Label" visible="false" />
       <Label fx:id="home_label" layoutX="270.0" layoutY="93.0" stylesheets="@css/v2/button.css" text="Home" visible="false" />
       <Label fx:id="more_label" layoutX="566.0" layoutY="93.0" stylesheets="@css/v2/button.css" text="More" visible="false" />
-      <Button fx:id="audio_button" layoutX="394.0" layoutY="295.0" mnemonicParsing="false" onAction="#playAudio" prefHeight="40.0" prefWidth="40.0" stylesheets="@css/v2/button.css" />
+      <Button fx:id="audio_button_out" layoutX="720.0" layoutY="426.0" mnemonicParsing="false" onAction="#playAudioOut" prefHeight="40.0" prefWidth="40.0" stylesheets="@css/v2/button.css" />
+      <Button fx:id="audio_button_in" layoutX="346.0" layoutY="422.0" mnemonicParsing="false" onAction="#playAudioIn" prefHeight="40.0" prefWidth="40.0" stylesheets="@css/v2/button.css" />
    </children>
 </AnchorPane>
