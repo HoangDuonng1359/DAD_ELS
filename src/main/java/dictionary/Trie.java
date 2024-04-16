@@ -8,7 +8,7 @@ public class Trie {
     boolean isEndOfWord;
     Word res;
     TreeMap<Character,Trie>map;
-    static Trie getNewNode() {
+     static Trie getNewNode() {
         Trie node = new Trie();
         node.isEndOfWord= false;
         node.res = new Word();
@@ -28,7 +28,7 @@ public class Trie {
         temp.isEndOfWord = true;
         temp.res=w;
     }
-    static Trie search(Trie root,String str){
+     static Trie search(Trie root, String str){
         if(root==null){
             return null;
         }
@@ -60,7 +60,7 @@ public class Trie {
             parrent.map.remove(str.charAt(str.length()-1));
         }
     }
-    static void dfs(Trie root, ArrayList<String> ans){
+     static void dfs(Trie root, ArrayList<String> ans){
         if(root.isEndOfWord==true){
             ans.add(root.res.getTarget());
         }
