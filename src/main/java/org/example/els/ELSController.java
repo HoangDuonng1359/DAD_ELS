@@ -3,6 +3,7 @@ package org.example.els;
 import dictionary.DictionaryManagement;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
+import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -106,23 +107,23 @@ public class ELSController extends baseFormController {
         String target = new String(search_field.getText());
         definitionView.getEngine().loadContent(dictionaryManagement.Search(target));
     }
-    @FXML
     public void handleSearch(String searchTerm) {
         if (!searchTerm.isEmpty()) {
             ObservableList<String> searchResult = DictionaryManagement.prexSearch(searchTerm);
-            if(searchResult != null && !searchResult.isEmpty()) {
-                searchResultList.setItems(searchResult);
+            if (searchResult != null && !searchResult.isEmpty()) {
+                listView.setItems(searchResult);
+            } else {
+                listView.getItems().clear();
+                ObservableList<String> items = FXCollections.observableArrayList("");
+                listView.setItems(items);
             }
-            else {
-                searchResultList.getItems().clear();
-            }
-
-
-        }
-        else {
-            searchResultList.getItems().clear();
+        } else {
+            listView.getItems().clear();
+            ObservableList<String> items = FXCollections.observableArrayList("");
+            listView.setItems(items);
         }
     }
+
 }
 
 
