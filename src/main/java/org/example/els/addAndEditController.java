@@ -1,54 +1,40 @@
 package org.example.els;
 
 import dictionary.DictionaryManagement;
+import dictionary.Word;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.web.HTMLEditor;
+
+import java.io.IOException;
 
 public class addAndEditController extends baseFormController {
     @FXML
     private TextField e_Textfield;
     @FXML
-    private TextField v_Textfield;
+    private HTMLEditor v_Textfield;
     @FXML
-    private TextField noun_Textfield;
-    @FXML
-    private TextField verb_Textfield;
-    @FXML
-    private TextField adj_Textfield;
-    @FXML
-    private TextField adv_Textfield;
-    @FXML
-    private CheckBox check_Noun;
-    @FXML
-    private CheckBox check_Verb;
-    @FXML
-    private CheckBox check_Adj;
-    @FXML
-    private CheckBox check_Adv;
-
+    private Label label;
     public void addWord(ActionEvent event) {
-        if(e_Textfield.getText()!=null&&v_Textfield.getText()!=null){
-            StringBuilder target=new StringBuilder(e_Textfield.getText());
-            StringBuilder explain=new StringBuilder(v_Textfield.getText());
-            if(check_Noun.isSelected()){
-                explain.append("\n Danh từ: "+noun_Textfield.getText());
+        try{
+            String e = e_Textfield.getText();
+            String v = v_Textfield.getHtmlText();
+            if (!dictionaryManagement.Search(e).equals("NO FOUND")) {
+                label.setText("Từ đã tồn tại");
+            } else if (!e.isEmpty() && !v.isEmpty()) {
+                dictionaryManagement.insert(e, v);
+                bookwriter.append("+ "+e+" "+v+"\n");
+                label.setText("Thêm từ thành công");
+            } else {
+                label.setText("Vui lòng nhập đầy đủ thông tin");
             }
-            if(check_Verb.isSelected()){
-                explain.append("\n Động từ: "+verb_Textfield.getText());
-            }
-            if(check_Adj.isSelected()){
-                explain.append("\n Tính từ: "+adj_Textfield.getText());
-            }
-            if(check_Adv.isSelected()){
-                explain.append("\n Trạng từ: "+adv_Textfield.getText());
-            }
-            DictionaryManagement a = new DictionaryManagement();
-            a.insert(target.toString().trim().toLowerCase(),explain.toString());
         }
-
-
+        catch (IOException e){
+            System.out.println("IOException: " + e.getMessage());
+        }
     }
 }

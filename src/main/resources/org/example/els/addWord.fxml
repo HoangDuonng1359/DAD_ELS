@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.paint.*?>
-<?import javafx.scene.shape.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.web.HTMLEditor?>
 
-<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="850.0" stylesheets="@css/AnchorPane.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.els.addAndEditController">
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="850.0" stylesheets="@css/AnchorPane.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.els.addAndEditController">
    <children>
       <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#bec8d1" height="68.0" layoutX="230.0" layoutY="40.0" opacity="0.5" stroke="#56add1" strokeType="INSIDE" width="390.0" />
       <Button fx:id="dictionary_menu" layoutX="317.0" layoutY="52.0" mnemonicParsing="false" onAction="#openFormDictionary" onMouseEntered="#eventHoverDictionary" onMouseExited="#eventExitDictionary" prefHeight="40.0" prefWidth="40.0" stylesheets="@css/v2/button.css" />
@@ -21,19 +26,10 @@
       <Button fx:id="homeButton" layoutX="263.0" layoutY="52.0" mnemonicParsing="false" onAction="#openFormHome" onMouseEntered="#eventHoverHome" onMouseExited="#eventExitHome" prefHeight="40.0" prefWidth="40.0" stylesheets="@css/v2/button.css" />
       <Label fx:id="home_label" layoutX="270.0" layoutY="93.0" stylesheets="@css/v2/button.css" text="Home" visible="false" />
       <Label fx:id="more_label" layoutX="566.0" layoutY="93.0" stylesheets="@css/v2/button.css" text="More" visible="false" />
-      <TextField fx:id="e_Textfield" layoutX="347.0" layoutY="203.0" prefHeight="26.0" prefWidth="257.0" />
-      <Label layoutX="248.0" layoutY="203.0" prefHeight="26.0" prefWidth="52.0" text="English" />
-      <TextField fx:id="v_Textfield" layoutX="347.0" layoutY="246.0" prefHeight="26.0" prefWidth="257.0" />
-      <Label layoutX="248.0" layoutY="246.0" prefHeight="26.0" prefWidth="67.0" text="Vietnamese" />
-      <TextField fx:id="noun_Textfield" layoutX="347.0" layoutY="290.0" prefHeight="26.0" prefWidth="257.0" />
-      <TextField fx:id="verb_Textfield" layoutX="347.0" layoutY="332.0" prefHeight="26.0" prefWidth="257.0" />
-      <TextField fx:id="adj_Textfield" layoutX="347.0" layoutY="370.0" prefHeight="26.0" prefWidth="257.0" />
-      <TextField fx:id="adv_Textfield" layoutX="347.0" layoutY="413.0" prefHeight="26.0" prefWidth="257.0" />
-      <CheckBox fx:id="check_Noun" layoutX="248.0" layoutY="294.0" mnemonicParsing="false" text="Danh từ" />
-      <CheckBox fx:id="check_Verb" layoutX="248.0" layoutY="336.0" mnemonicParsing="false" text="Động từ" />
-      <CheckBox fx:id="check_Adj" layoutX="248.0" layoutY="374.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="67.0" text="Tính từ" />
-      <CheckBox fx:id="check_Adv" layoutX="248.0" layoutY="417.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="76.0" text="Trạng từ" />
-      <Label fx:id="label_information" alignment="CENTER" layoutX="341.0" layoutY="111.0" prefHeight="82.0" prefWidth="168.0" text="Add word" textAlignment="CENTER">
+      <TextField fx:id="e_Textfield" layoutX="205.0" layoutY="229.0" prefHeight="26.0" prefWidth="257.0" />
+      <Label layoutX="115.0" layoutY="229.0" prefHeight="26.0" prefWidth="52.0" text="English" />
+      <Label layoutX="115.0" layoutY="345.0" prefHeight="26.0" prefWidth="67.0" text="Vietnamese" />
+      <Label fx:id="label_information" alignment="CENTER" layoutX="341.0" layoutY="137.0" prefHeight="82.0" prefWidth="168.0" text="Add word" textAlignment="CENTER">
          <font>
             <Font name="MS Outlook" size="32.0" />
          </font>
@@ -53,6 +49,8 @@
                </stops>
             </LinearGradient>
          </textFill></Label>
-      <Button layoutX="411.0" layoutY="449.0" mnemonicParsing="false" onAction="#addWord" prefHeight="19.0" prefWidth="90.0" text="Save" />
+      <Button layoutX="430.0" layoutY="510.0" mnemonicParsing="false" onAction="#addWord" prefHeight="19.0" prefWidth="90.0" text="Save" />
+      <HTMLEditor fx:id="v_Textfield" htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" layoutX="205.0" layoutY="272.0" prefHeight="200.0" prefWidth="506.0" />
+      <Label fx:id="label" layoutX="208.0" layoutY="479.0" prefHeight="18.0" prefWidth="498.0" text="Label" />
    </children>
 </AnchorPane>
