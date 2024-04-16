@@ -29,6 +29,7 @@ public class ELSApplication extends Application {
             @Override
             public void handle(WindowEvent event) {
                 RecentW.closefile();
+                baseFormController.closefile();
             }
         });
     }

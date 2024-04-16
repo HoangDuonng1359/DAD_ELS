@@ -5,6 +5,8 @@
 
 package org.example.els;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 import java.io.IOException;
 
 import dictionary.DictionaryManagement;
@@ -51,6 +53,16 @@ public class baseFormController extends SceneManage {
     @FXML
     protected WebView definitionView;
     protected static DictionaryManagement dictionaryManagement = new DictionaryManagement();
+    protected static BufferedWriter bookwriter;
+
+    static {
+        try {
+            bookwriter = new BufferedWriter(new FileWriter("src/Data/BookmarkList.txt",true));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
     @FXML
     public void openFormGoogle(ActionEvent event) {
         try {
@@ -131,7 +143,13 @@ public class baseFormController extends SceneManage {
         this.game_label.setVisible(false);
         this.addEdit_label.setVisible(false);
     }
-
+    public static void closefile(){
+        try {
+            bookwriter.close();
+        } catch (IOException e) {
+            System.out.println("baseFormController closefile IOException");
+        }
+    }
     @FXML
     public void eventHoverDictionary(MouseEvent event) {
         this.dictionary_label.setVisible(true);

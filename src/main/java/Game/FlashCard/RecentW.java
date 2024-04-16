@@ -36,7 +36,6 @@ public class RecentW {
                 history.add(str);
                 check.add(str);
             }
-            out.write("1");
         }
     catch (FileNotFoundException e) {
         System.out.println("File not found");
