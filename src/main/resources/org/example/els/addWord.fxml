@@ -51,6 +51,6 @@
          </textFill></Label>
       <Button layoutX="430.0" layoutY="510.0" mnemonicParsing="false" onAction="#addWord" prefHeight="19.0" prefWidth="90.0" text="Save" />
       <HTMLEditor fx:id="v_Textfield" htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" layoutX="205.0" layoutY="272.0" prefHeight="200.0" prefWidth="506.0" />
-      <Label fx:id="label" layoutX="208.0" layoutY="479.0" prefHeight="18.0" prefWidth="498.0" text="Label" />
+      <Label fx:id="label" layoutX="208.0" layoutY="479.0" prefHeight="18.0" prefWidth="498.0" />
    </children>
 </AnchorPane>
