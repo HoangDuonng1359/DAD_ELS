@@ -74,8 +74,6 @@ public class Quiz {
     }
 
     public boolean isFinished() {
-        //return this.questionIndex >= (getLengthQuestionList() - 1);
         return listRandom.isEmpty();
     }
-
 }
