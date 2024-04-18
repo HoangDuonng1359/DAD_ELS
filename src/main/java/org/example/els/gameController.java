@@ -49,24 +49,12 @@ public class gameController extends baseFormController{
             System.out.println("lỗi không mở được form");
         }
     }
-    private String createQuestion(Quiz quiz){
-        StringBuilder str = new StringBuilder();
-        str.append("Question: ");
-        str.append(quiz.getQuestionIndex() + 1);
-        str.append(": ");
-        str.append(quiz.getCurrentQuestion().getQuestion());
-        String[] choice = quiz.getCurrentQuestion().getChoice();
-        for(String cho:choice){
-            str.append("\n");
-            str.append(cho);
-        }
-        return str.toString();
-    }
-    public void nextQuetion(ActionEvent event){
-
-    }
     @FXML
-    public void startGame(ActionEvent event){
-
+    public void openFormPGG(ActionEvent event){
+        try {
+            SceneManage.showScene(root,stage,scene,event,"PictureGuessingGame.fxml");
+        } catch (IOException e) {
+            System.out.println("lỗi không mở được form");
+        }
     }
 }

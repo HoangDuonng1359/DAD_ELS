@@ -68,26 +68,27 @@ public class GoogleTranslateController extends baseFormController {
         addEdit_label.setVisible(false);
         // làm các lable còn lại Quang Anh nhá
         Text_area_input.textProperty().addListener((observable, oldValue, newValue) -> {
-            if(!oldValue.equals(newValue)){
-                new Thread(() -> {
-                    try {
-                        Thread.sleep(100);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
-                    Platform.runLater(() -> {
-                        lang_input = API_Google_translator.getLanguage(comboBox_lang_input.getValue());
-                        lang_out = API_Google_translator.getLanguage(comboBox_lang_out.getValue());
+            if(newValue.charAt(newValue.length()-1) != ' ' && !newValue.isEmpty() && !newValue.equals(oldValue)) {
+                if (!oldValue.equals(newValue)) {
+                    new Thread(() -> {
                         try {
-                            String output=API_Google_translator.translate(Text_area_input.getText(),lang_input,lang_out);
-                            Text_area_out.setText(output);
-                        } catch (IOException e) {
-                            throw new RuntimeException(e);
+                            Thread.sleep(100);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
                         }
-                    });
-                }).start();
+                        Platform.runLater(() -> {
+                            lang_input = API_Google_translator.getLanguage(comboBox_lang_input.getValue());
+                            lang_out = API_Google_translator.getLanguage(comboBox_lang_out.getValue());
+                            try {
+                                String output = API_Google_translator.translate(Text_area_input.getText(), lang_input, lang_out);
+                                Text_area_out.setText(output);
+                            } catch (IOException e) {
+                                throw new RuntimeException(e);
+                            }
+                        });
+                    }).start();
+                }
             }
-
         });
     }
 // Add a listener to the textProperty
