@@ -26,7 +26,7 @@
          <children>
             <Button fx:id="multichoice" mnemonicParsing="false" onAction="#openFormMultichoice" prefHeight="65.0" prefWidth="194.0" text="Multiple Choice" />
             <Button mnemonicParsing="false" onAction="#openFormFlashCard" prefHeight="76.0" prefWidth="211.0" text="FlashCard" />
-            <Button mnemonicParsing="false" prefHeight="78.0" prefWidth="205.0" text="Button" />
+            <Button mnemonicParsing="false" onAction="#openFormPGG" prefHeight="78.0" prefWidth="205.0" text="Picture Guessing Game" />
          </children>
       </VBox>
    </children>

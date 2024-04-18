@@ -8,3 +8,8 @@ CREATE TABLE Questions
     choiceD   VARCHAR(255),
     answer    VARCHAR(255),
 );
+CREATE TABLE pgg (
+                     id INTEGER PRIMARY KEY AUTOINCREMENT ,
+                     images BLOB,
+                     results CHAR(255)
+);
