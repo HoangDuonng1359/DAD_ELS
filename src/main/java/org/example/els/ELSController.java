@@ -2,6 +2,7 @@ package org.example.els;
 
 import Game.FlashCard.RecentW;
 import dictionary.DictionaryManagement;
+import dictionary.DictionaryManagementDatabase;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -18,6 +19,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.web.WebView;
 import javafx.stage.Stage;
 import java.io.IOException;
+import java.sql.SQLException;
 
 public class ELSController extends baseFormController {
     protected static Stage stage;
@@ -58,7 +60,7 @@ public class ELSController extends baseFormController {
         try {
             SceneManage.showScene(root,stage,scene,event,"google_translate.fxml");
         } catch (IOException e) {
-            System.out.println("lỗi không mở được form");
+            System.out.println("lỗi không mở được form: " + e.getMessage());
         }
     }
     @FXML
@@ -82,14 +84,13 @@ public class ELSController extends baseFormController {
         });
     }
     @FXML
-
-
-    public void handleMouseClickListView (MouseEvent event) {
+    public void handleMouseClickListView (MouseEvent event) throws SQLException {
 
         StringBuilder target = new StringBuilder(listView.getSelectionModel(). getSelectedItems().toString());
         target.delete(0,1);
         target.deleteCharAt(target.length()- 1);
-        definitionView.getEngine().loadContent(dictionaryManagement.Search(target.toString()));
+       // definitionView.getEngine().loadContent(dictionaryManagement.Search(target.toString()));
+         definitionView.getEngine().loadContent(DictionaryManagementDatabase.Search(target.toString(),true));
         RecentW.add(target.toString());
     }
     @FXML
@@ -100,7 +101,8 @@ public class ELSController extends baseFormController {
     }
     public void handleSearch(String searchTerm) {
         if (!searchTerm.isEmpty()) {
-            ObservableList<String> searchResult = DictionaryManagement.prexSearch(searchTerm);
+            ObservableList<String> searchResult = DictionaryManagementDatabase.prexSearch(searchTerm,true);
+            //ObservableList<String> searchResult = DictionaryManagement.prexSearch(searchTerm);
             if (searchResult != null && !searchResult.isEmpty()) {
                 listView.setItems(searchResult);
             } else {
