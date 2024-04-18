@@ -2,6 +2,7 @@ package org.example.els;
 
 import Game.FlashCard.RecentW;
 import dictionary.DictionaryManagement;
+import dictionary.DictionaryManagementDatabase;
 import javafx.application.Application;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -13,6 +14,7 @@ import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 
 import java.io.IOException;
+import java.sql.Connection;
 
 
 public class ELSApplication extends Application {
@@ -32,6 +34,7 @@ public class ELSApplication extends Application {
                 baseFormController.closefile();
             }
         });
+
     }
 
     public static void main(String[] args) {
