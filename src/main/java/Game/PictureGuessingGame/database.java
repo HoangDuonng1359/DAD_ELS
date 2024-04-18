@@ -2,10 +2,9 @@ package Game.PictureGuessingGame;
 
 import javafx.scene.image.Image;
 
-import java.io.ByteArrayInputStream;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -38,9 +37,10 @@ public class database {
             e.printStackTrace();
         }
     }
-    public static List<Question> getAllQuestion(String DB_URL){
+
+    public static List<Question> getAllQuestion(String DB_URL) {
         List<Question> res = new ArrayList<Question>();
-        Question question = new Question();
+
         try (Connection conn = DriverManager.getConnection(DB_URL);
              Statement stmt = conn.createStatement();
              ResultSet rs = stmt.executeQuery("SELECT images, results FROM pgg")) {
@@ -52,6 +52,7 @@ public class database {
                 Image image = new Image(is);
                 // lấy câu trả lời tương ứng
                 String result = rs.getString("results");
+                Question question = new Question();
                 question.setImage(image);
                 question.setResult(result);
                 res.add(question);
@@ -61,6 +62,7 @@ public class database {
         }
         return res;
     }
+
     public static List<Image> getAllImage(String DB_URL) throws SQLException {
         List<Image> images = new ArrayList<Image>();
         // Kết nối đến cơ sở dữ liệu SQLite
@@ -81,8 +83,55 @@ public class database {
         }
         return images;
     }
+
+    public static void insertSoundToDB(String DB_URL, String URL_FILE, String NAME_FILE) {
+        String url = DB_URL;
+        String sql = "INSERT INTO sounds_table (sounds,name) VALUES (?,?)";
+
+        try (Connection conn = DriverManager.getConnection(url);
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+
+            // Đọc dữ liệu âm thanh từ tệp và chuyển đổi thành mảng byte
+            File soundFile = new File(URL_FILE); // Thay đổi đường dẫn đến tệp âm thanh của bạn
+            byte[] soundData = new byte[(int) soundFile.length()];
+            FileInputStream fis = new FileInputStream(soundFile);
+            fis.read(soundData);
+            fis.close();
+
+            // Thêm dữ liệu âm thanh vào cơ sở dữ liệu
+            pstmt.setBytes(1, soundData);
+            pstmt.setString(2, NAME_FILE);
+            pstmt.executeUpdate();
+            System.out.println("Dữ liệu âm thanh đã được thêm vào cơ sở dữ liệu.");
+
+        } catch (SQLException | IOException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
     static final String DB_URL = "jdbc:sqlite:database.db";
+    public static void updateDatabaseWithImages(String folderPath) {
+        try (Connection connection = DriverManager.getConnection(DB_URL)) {
+            File folder = new File(folderPath);
+            File[] files = folder.listFiles();
+            if (files != null) {
+                for (File file : files) {
+                    if (file.isFile()) {
+                        String fileName = file.getName();
+                        String result = fileName.substring(0, fileName.lastIndexOf('.')); // Remove file extension
+                        // Insert image and result into the database
+                        insertToDatabase(Paths.get(file.getAbsolutePath()).toString(), result,DB_URL);
+                    }
+                }
+                System.out.println("Images added to the database successfully.");
+            } else {
+                System.out.println("No files found in the specified folder.");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
     public static void main(String[] args) {
-        insertToDatabase("src/main/resources/org/example/els/image/1.png","dog",DB_URL);
+        updateDatabaseWithImages("C:\\Users\\hoang\\OneDrive\\desktop\\pic");
     }
 }
