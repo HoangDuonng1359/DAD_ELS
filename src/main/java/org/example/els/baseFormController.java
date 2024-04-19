@@ -6,6 +6,7 @@
 package org.example.els;
 
 import java.io.*;
+import java.sql.SQLException;
 
 import dictionary.DictionaryManagement;
 import javafx.application.Platform;
@@ -14,18 +15,23 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
+import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.web.WebView;
 import javafx.stage.Stage;
+import user.User;
 
 public class baseFormController extends SceneManage {
     protected static Stage stage;
     protected static Scene scene;
     protected static Parent root;
+    @FXML
+    protected WebView definitionView;
+    @FXML
+    protected ListView listView;
+    @FXML
+    protected TextField search_field;
     @FXML
     private Button dictionary_menu;
     @FXML
@@ -48,18 +54,17 @@ public class baseFormController extends SceneManage {
     private Label more_label;
     @FXML
     private AnchorPane anchorPane;
-    @FXML
-    protected WebView definitionView;
-    protected static DictionaryManagement dictionaryManagement = new DictionaryManagement();
+   // protected static DictionaryManagement dictionaryManagement = null;
     protected static BufferedWriter bookwriter;
 
-    static {
-        try {
-            bookwriter = new BufferedWriter(new FileWriter("src/Data/BookmarkList.txt",true));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-    }
+    public static User user = null;
+//    static {
+//        try {
+//            bookwriter = new BufferedWriter(new FileWriter("src/Data/BookmarkList.txt",true));
+//        } catch (IOException e) {
+//            throw new RuntimeException(e);
+//        }
+//    }
     protected static BufferedReader bookreader;
     static {
         try {
@@ -143,12 +148,12 @@ public class baseFormController extends SceneManage {
         }
     }
     @FXML
-    public void initialize() throws IOException {
+    public void initialize() throws IOException, SQLException {
         this.dictionary_label.setVisible(false);
         this.googleTranslate_label.setVisible(false);
         this.game_label.setVisible(false);
         this.addEdit_label.setVisible(false);
-        syncBookData();
+        //syncBookData();
     }
     public void syncBookData(){
         try {
@@ -157,13 +162,13 @@ public class baseFormController extends SceneManage {
                 String[] save = new String[5];
                 save = str.split(" ",3);
                 if(save[0].equals("+")){
-                    dictionaryManagement.insert(save[1],save[2]);
+                    //dictionaryManagement.insert(save[1],save[2]);
                 }
                 else if(save[0].equals("-")){
-                    dictionaryManagement.remove(save[1]);
+                    //dictionaryManagement.remove(save[1]);
                 }
                 else if(save[0].equals("#")){
-                    dictionaryManagement.setExplain(save[1],save[2]);
+                   // dictionaryManagement.setExplain(save[1],save[2]);
                 }
             }
         } catch (IOException e) {
@@ -232,7 +237,7 @@ public class baseFormController extends SceneManage {
     public void eventExitaddEdit(MouseEvent event) {
         this.addEdit_label.setVisible(false);
     }
-    public void newAlert(Stage stage, String title , String headerText , String contentText ){
+    public static void newAlert(Stage stage, String title , String headerText , String contentText ){
         Platform.runLater(()->{ // đảm bảo rằng Alert luôn được chạy trên luồng chính
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.initOwner(stage); // khởi tạo trên stage hiện tại
