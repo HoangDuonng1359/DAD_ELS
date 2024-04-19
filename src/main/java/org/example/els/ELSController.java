@@ -91,13 +91,13 @@ public class ELSController extends baseFormController {
         target.deleteCharAt(target.length()- 1);
        // definitionView.getEngine().loadContent(dictionaryManagement.Search(target.toString()));
          definitionView.getEngine().loadContent(DictionaryManagementDatabase.Search(target.toString(),true));
-        RecentW.add(target.toString());
+        RecentW.addDB(target.toString(),true);
     }
     @FXML
-    public void handleMouseClickButtonSearch(MouseEvent event) {
+    public void handleMouseClickButtonSearch(MouseEvent event) throws SQLException {
         String target = new String(search_field.getText());
         definitionView.getEngine().loadContent(dictionaryManagement.Search(target));
-        RecentW.add(target);
+        RecentW.addDB(target, true);
     }
     public void handleSearch(String searchTerm) {
         if (!searchTerm.isEmpty()) {

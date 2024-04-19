@@ -12,29 +12,30 @@ import javafx.scene.Scene;
 import javafx.scene.web.WebView;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
+import user.User;
 
 import java.io.IOException;
 import java.sql.Connection;
+import java.sql.SQLException;
 
 
 public class ELSApplication extends Application {
-
     @Override
-    public void start(Stage stage) throws IOException {
-        Parent root = FXMLLoader.load(ELSApplication.class.getResource("login.fxml"));
+    public void start(Stage stage) throws IOException, SQLException {
+        Parent root = FXMLLoader.load(ELSApplication.class.getResource("signin.fxml"));
         Scene scene = new Scene(root);
-        RecentW.init();
+        //RecentW.init();
+        //RecentW.initDB();
         stage.setTitle("ELSApplication");
         stage.setScene(scene);
         stage.show();
         stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
             @Override
             public void handle(WindowEvent event) {
-                RecentW.closefile();
-                baseFormController.closefile();
+               // RecentW.closefile();
+                //baseFormController.closefile();
             }
         });
-
     }
 
     public static void main(String[] args) {

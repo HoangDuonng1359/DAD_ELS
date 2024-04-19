@@ -41,7 +41,7 @@ public class SignUpController extends baseFormController {
             pt.executeUpdate();
             conn.close();
             newAlert(stage, "Sign Up", "", "Sign up success!");
-            SceneManage.showScene(root, stage, scene, event, "login.fxml");
+            SceneManage.showScene(root, stage, scene, event, "signin.fxml");
         }
         conn.close();
     }

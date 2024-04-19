@@ -22,6 +22,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.web.WebView;
 import javafx.stage.Stage;
+import user.User;
 
 public class baseFormController extends SceneManage {
     protected static Stage stage;
@@ -54,6 +55,7 @@ public class baseFormController extends SceneManage {
     protected static DictionaryManagement dictionaryManagement = new DictionaryManagement();
     protected static BufferedWriter bookwriter;
 
+    public static User user = null;
     static {
         try {
             bookwriter = new BufferedWriter(new FileWriter("src/Data/BookmarkList.txt",true));
@@ -233,7 +235,7 @@ public class baseFormController extends SceneManage {
     public void eventExitaddEdit(MouseEvent event) {
         this.addEdit_label.setVisible(false);
     }
-    public void newAlert(Stage stage, String title , String headerText , String contentText ){
+    public static void newAlert(Stage stage, String title , String headerText , String contentText ){
         Platform.runLater(()->{ // đảm bảo rằng Alert luôn được chạy trên luồng chính
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.initOwner(stage); // khởi tạo trên stage hiện tại

@@ -4,10 +4,9 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane prefHeight="356.0" prefWidth="317.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.els.LoginController">
+<AnchorPane prefHeight="356.0" prefWidth="317.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.els.SigninController">
    <children>
-      <Button layoutX="131.0" layoutY="203.0" mnemonicParsing="false" onAction="#login_submit" prefHeight="26.0" prefWidth="66.0" text="Login" />
+      <Button layoutX="131.0" layoutY="203.0" mnemonicParsing="false" onAction="#sign_submit" prefHeight="26.0" prefWidth="66.0" text="Sign in" />
       <TextField fx:id="name" layoutX="90.0" layoutY="97.0" promptText="name" />
       <TextField fx:id="password" layoutX="89.0" layoutY="152.0" promptText="password" />
       <Button layoutX="134.0" layoutY="248.0" mnemonicParsing="false" onAction="#openFormSignUp" prefHeight="26.0" prefWidth="66.0" text="Sign up " />
