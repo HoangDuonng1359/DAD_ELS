@@ -31,7 +31,7 @@ public class PictureGuessingGameController extends baseFormController {
     private ImageView image_View;
     @FXML
     private Label score;
-    private List<Question> questionList = database.getAllQuestion("jdbc:sqlite:database.db");
+    private List<Question> questionList = database.getAllQuestion("jdbc:sqlite:src\\Data\\database.db");
     private Quiz quiz = new Quiz(questionList);
     //private List<Image> images = database.getAllImage("jdbc:sqlite:database.db");
 

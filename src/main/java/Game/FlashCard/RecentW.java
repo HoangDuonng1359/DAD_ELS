@@ -1,63 +1,111 @@
 package Game.FlashCard;
 
+import dictionary.DatabaseConnection;
+import dictionary.DictionaryManagementDatabase;
 import dictionary.Trie;
 import dictionary.Word;
+import org.example.els.SceneManage;
+import org.example.els.baseFormController;
 
 import java.io.*;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Random;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.*;
 
 public class RecentW {
-    private static List<String> history = new ArrayList<String>();
-    private static HashSet<String> check= new HashSet<String>();
+    private static List<String> history ;
+    private static HashSet<String> check = new HashSet<String>();
     private static BufferedReader in;
     private static BufferedWriter out;
-
+    private static HashMap<String, String> historyDB = new HashMap<>();
     public static void add(String s) {
-        try{
-            if(check.isEmpty()||!check.contains(s)){
+        try {
+            if (check.isEmpty() || !check.contains(s)) {
                 history.add(s);
                 check.add(s);
-                out.append(s+"\n");
+                out.append(s + "\n");
             }
-        }
-        catch(IOException e){
+        } catch (IOException e) {
             System.out.println("IOException");
         }
     }
-    public static void init(){
-        try{
+
+    public static void addDB(String s, boolean av) throws SQLException {
+        String ex = DictionaryManagementDatabase.Search(s, av);
+        if (!ex.equals("NO FOUND") && !ex.equals("you have deleted this word")) {
+            Connection conn = null;
+            PreparedStatement ps = null;
+            try {
+                conn = DatabaseConnection.connect("jdbc:sqlite:src\\Data\\database.db");
+                String sql = "INSERT INTO RecentList (user_id, target, explain) SELECT ?, ?, ? WHERE NOT EXISTS (SELECT 1 FROM RecentList WHERE target = ?)";
+                ps = conn.prepareStatement(sql);
+                ps.setInt(1, baseFormController.user.getId());
+                ps.setString(2, s);
+                ps.setString(3, ex);
+                ps.setString(4, s);
+                ps.executeUpdate();
+            } finally {
+                // Đảm bảo rằng kết nối và PreparedStatement được đóng bất kể có lỗi xảy ra hay không
+                if (ps != null) {
+                    ps.close();
+                }
+                if (conn != null) {
+                    conn.close();
+                }
+            }
+        }
+    }
+
+
+    public static void init() {
+        try {
             in = new BufferedReader(new FileReader("src/Data/RecentList.txt"));
-            out = new BufferedWriter(new FileWriter("src/Data/RecentList.txt",true));
-            String str=new String();
+            out = new BufferedWriter(new FileWriter("src/Data/RecentList.txt", true));
+            String str = new String();
             while ((str = in.readLine()) != null) {
                 history.add(str);
                 check.add(str);
             }
+        } catch (FileNotFoundException e) {
+            System.out.println("File not found");
+        } catch (IOException e) {
+            System.out.println("IOException");
         }
-    catch (FileNotFoundException e) {
-        System.out.println("File not found");
-    }catch(IOException e){
-        System.out.println("IOException");
     }
 
+    public static void initDB() throws SQLException {
+        Connection conn = DatabaseConnection.connect("jdbc:sqlite:src\\Data\\database.db");
+        String sql = "SELECT user_id, target, explain FROM RecentList WHERE user_id = ?";
+        PreparedStatement ps = conn.prepareStatement(sql);
+        ps.setInt(1, baseFormController.user.getId());
+        ResultSet rs = ps.executeQuery();
+        while (rs.next()) {
+            historyDB.put(rs.getString("target"), rs.getString("explain"));
+        }
+        conn.close();
+        history = new ArrayList<>(historyDB.keySet());
     }
+
     private static int randomNum(int min, int max) {
         Random random = new Random();
         return random.nextInt(max - min) + min;
     }
+
     public static void closefile() {
-        try{
+        try {
             out.close();
             in.close();
-        }
-        catch(IOException e){
+        } catch (IOException e) {
             System.out.println("IOException");
         }
     }
-    public static String getWord(){
-        return history.get(randomNum(0, history.size()-1));
+
+    public static String getWord() {
+        return history.get(randomNum(0, history.size()));
+    }
+    public static String getExplain(String s){
+        return historyDB.get(s);
     }
 }
