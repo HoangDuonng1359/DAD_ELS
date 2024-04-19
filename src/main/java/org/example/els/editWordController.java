@@ -1,5 +1,6 @@
 package org.example.els;
 
+import Bookmark.bookmarkmanagement;
 import dictionary.DatabaseConnection;
 import dictionary.DictionaryManagementDatabase;
 import javafx.event.ActionEvent;
@@ -40,25 +41,11 @@ public class editWordController extends baseFormController{
             v_word.setHtmlText(meaning);
         }
     }
+
     public void editWord(ActionEvent event){
-        try {
-            //bookwriter.append("- "+s+"\n");
-            Connection conn = DatabaseConnection.connect("jdbc:sqlite:src\\Data\\database.db");
-            String sql = "INSERT INTO bookmark (user_id,target,explain,type) VALUES (?,?,?,?)";
-            PreparedStatement pr = conn.prepareStatement(sql);
-            pr.setInt(1,user.getId());
-            pr.setString(2,e_word.getText());
-            pr.setString(3,v_word.getHtmlText());
-            pr.setString(4,"#");
-            pr.executeUpdate();
-            conn.close();
-            //dictionaryManagement.setExplain(e_word.getText(),v_word.getHtmlText());
-            //bookwriter.append("# "+e_word.getText()+" "+v_word.getHtmlText()+"\n");
-            newAlert(stage,"Edit word","","Đã sửa thành công");
-            e_word.setText("");
-            v_word.setHtmlText("");
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
+        //bookwriter.append("- "+s+"\n");
+        bookmarkmanagement.editWord(e_word.getText(),v_word.getHtmlText(),user);
+        e_word.setText("");
+        v_word.setHtmlText("");
     }
 }

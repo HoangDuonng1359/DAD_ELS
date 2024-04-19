@@ -15,9 +15,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
+import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.web.WebView;
@@ -28,6 +26,12 @@ public class baseFormController extends SceneManage {
     protected static Stage stage;
     protected static Scene scene;
     protected static Parent root;
+    @FXML
+    protected WebView definitionView;
+    @FXML
+    protected ListView listView;
+    @FXML
+    protected TextField search_field;
     @FXML
     private Button dictionary_menu;
     @FXML
@@ -50,19 +54,17 @@ public class baseFormController extends SceneManage {
     private Label more_label;
     @FXML
     private AnchorPane anchorPane;
-    @FXML
-    protected WebView definitionView;
-    protected static DictionaryManagement dictionaryManagement = new DictionaryManagement();
+   // protected static DictionaryManagement dictionaryManagement = null;
     protected static BufferedWriter bookwriter;
 
     public static User user = null;
-    static {
-        try {
-            bookwriter = new BufferedWriter(new FileWriter("src/Data/BookmarkList.txt",true));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-    }
+//    static {
+//        try {
+//            bookwriter = new BufferedWriter(new FileWriter("src/Data/BookmarkList.txt",true));
+//        } catch (IOException e) {
+//            throw new RuntimeException(e);
+//        }
+//    }
     protected static BufferedReader bookreader;
     static {
         try {
@@ -151,7 +153,7 @@ public class baseFormController extends SceneManage {
         this.googleTranslate_label.setVisible(false);
         this.game_label.setVisible(false);
         this.addEdit_label.setVisible(false);
-        syncBookData();
+        //syncBookData();
     }
     public void syncBookData(){
         try {
@@ -160,13 +162,13 @@ public class baseFormController extends SceneManage {
                 String[] save = new String[5];
                 save = str.split(" ",3);
                 if(save[0].equals("+")){
-                    dictionaryManagement.insert(save[1],save[2]);
+                    //dictionaryManagement.insert(save[1],save[2]);
                 }
                 else if(save[0].equals("-")){
-                    dictionaryManagement.remove(save[1]);
+                    //dictionaryManagement.remove(save[1]);
                 }
                 else if(save[0].equals("#")){
-                    dictionaryManagement.setExplain(save[1],save[2]);
+                   // dictionaryManagement.setExplain(save[1],save[2]);
                 }
             }
         } catch (IOException e) {

@@ -4,6 +4,7 @@ import dictionary.DatabaseConnection;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
 import java.io.IOException;
@@ -21,7 +22,7 @@ public class SignUpController extends baseFormController {
     @FXML
     private TextField name;
     @FXML
-    private TextField password;
+    private PasswordField password;
     final String DB = "jdbc:sqlite:src\\Data\\database.db";
 
     @FXML
