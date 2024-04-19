@@ -1,0 +1,6 @@
+#labelH1{
+    -fx-font-size: 25px;
+    -fx-effect: dropshadow(one-pass-box,white,10,1,3,0);
+    -fx-font-family: "Lucida Handwriting";
+    -fx-text-fill: #017f8d;
+}
