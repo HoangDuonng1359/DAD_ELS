@@ -34,17 +34,30 @@ public class RecentW {
 
     public static void addDB(String s, boolean av) throws SQLException {
         String ex = DictionaryManagementDatabase.Search(s, av);
-        if (!ex.equals("NO FOUND")) {
-            Connection conn = DatabaseConnection.connect("jdbc:sqlite:src\\Data\\database.db");
-            String sql = "INSERT INTO RecentList (user_id,target,explain) VALUES (? , ? ,?)";
-            PreparedStatement ps = conn.prepareStatement(sql);
-            ps.setInt(1, baseFormController.user.getId());
-            ps.setString(2,s);
-            ps.setString(3,ex);
-            ps.executeUpdate();
-            conn.close();
+        if (!ex.equals("NO FOUND") && !ex.equals("you have deleted this word")) {
+            Connection conn = null;
+            PreparedStatement ps = null;
+            try {
+                conn = DatabaseConnection.connect("jdbc:sqlite:src\\Data\\database.db");
+                String sql = "INSERT INTO RecentList (user_id, target, explain) SELECT ?, ?, ? WHERE NOT EXISTS (SELECT 1 FROM RecentList WHERE target = ?)";
+                ps = conn.prepareStatement(sql);
+                ps.setInt(1, baseFormController.user.getId());
+                ps.setString(2, s);
+                ps.setString(3, ex);
+                ps.setString(4, s);
+                ps.executeUpdate();
+            } finally {
+                // Đảm bảo rằng kết nối và PreparedStatement được đóng bất kể có lỗi xảy ra hay không
+                if (ps != null) {
+                    ps.close();
+                }
+                if (conn != null) {
+                    conn.close();
+                }
+            }
         }
     }
+
 
     public static void init() {
         try {
