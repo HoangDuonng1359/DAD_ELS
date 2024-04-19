@@ -9,16 +9,6 @@ import java.util.List;
 
 public class DictionaryManagementDatabase {
     private static final String DATABASE_URL = "jdbc:sqlite:src\\Data\\dict_hh.db";
-    public static Connection connect(){
-        Connection connection = null;
-        try {
-            connection = DriverManager.getConnection(DATABASE_URL);
-            //System.out.println("Kết nối đến cơ sở dữ liệu thành công.");
-        } catch (SQLException e) {
-            System.out.println("Lỗi khi kết nối đến cơ sở dữ liệu: " + e.getMessage());
-        }
-        return connection;
-    }
     public static ObservableList prexSearch(String text, boolean av) {
         String NAME_TABLE = null;
         if(av){
@@ -29,7 +19,7 @@ public class DictionaryManagementDatabase {
         }
         String sql = "SELECT word FROM " + NAME_TABLE + " WHERE word LIKE ?";
         List<String> res = new ArrayList<String>();
-        try (Connection conn = connect();
+        try (Connection conn = DatabaseConnection.connect(DATABASE_URL);
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
             pstmt.setString(1, "%" + text + "%");// đối tượng thực thi truy vấn
             ResultSet rs = pstmt.executeQuery(); // lấy kết quả
@@ -52,13 +42,17 @@ public class DictionaryManagementDatabase {
             NAME_TABLE = new String("va");
         }
         String sql = "SELECT word, html FROM "+ NAME_TABLE +" WHERE word = ?";
-        PreparedStatement pstmt = connect().prepareStatement(sql);
+        Connection conn = DatabaseConnection.connect(DATABASE_URL);
+        PreparedStatement pstmt = conn.prepareStatement(sql);
         pstmt.setString(1,text);
         ResultSet rs = pstmt.executeQuery();
         String res = new String();
         if(rs.next()){
             res = rs.getString("html");
+        } else {
+            return "NO FOUND";
         }
+        conn.close();
         return res;
     }
     public static void main(String[] args) {

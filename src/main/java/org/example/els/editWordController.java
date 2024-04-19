@@ -7,6 +7,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.web.HTMLEditor;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 public class editWordController extends baseFormController{
     @FXML
@@ -15,7 +16,7 @@ public class editWordController extends baseFormController{
     private HTMLEditor v_word;
     @FXML
     private Button commit;
-    public void initialize() throws IOException {
+    public void initialize() throws IOException, SQLException {
         super.initialize();
         commit.setVisible(false);
     }

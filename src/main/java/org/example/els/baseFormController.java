@@ -6,6 +6,7 @@
 package org.example.els;
 
 import java.io.*;
+import java.sql.SQLException;
 
 import dictionary.DictionaryManagement;
 import javafx.application.Platform;
@@ -143,7 +144,7 @@ public class baseFormController extends SceneManage {
         }
     }
     @FXML
-    public void initialize() throws IOException {
+    public void initialize() throws IOException, SQLException {
         this.dictionary_label.setVisible(false);
         this.googleTranslate_label.setVisible(false);
         this.game_label.setVisible(false);
