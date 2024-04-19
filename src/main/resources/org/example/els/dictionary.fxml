@@ -14,7 +14,7 @@
         <ListView fx:id="listView" layoutX="40.0" layoutY="160.0" onMouseClicked="#handleMouseClickListView" prefHeight="338.0" prefWidth="270.0" stylesheets="@css/v2/listview.css" />
         <Button fx:id="button_search" layoutX="270.0" layoutY="113.0" mnemonicParsing="false" onMouseClicked="#handleMouseClickButtonSearch" prefHeight="34.0" prefWidth="34.0" stylesheets="@css/button.css" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="340.0" layoutX="338.0" layoutY="159.0" stroke="#37b8a5" strokeType="INSIDE" width="395.0" />
-        <WebView fx:id="definitionView" layoutX="339.0" layoutY="160.0" prefHeight="338.0" prefWidth="393.0" stylesheets="@css/v2/webview.css" />
+        <WebView fx:id="definitionView" layoutX="339.0" layoutY="160.0" opacity="0.69" prefHeight="338.0" prefWidth="393.0" stylesheets="@css/v2/webview.css" />
         <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#bec8d1" height="68.0" layoutX="230.0" layoutY="40.0" opacity="0.5" stroke="#56add1" strokeType="INSIDE" width="390.0" />
         <Button fx:id="dictionary_menu" layoutX="317.0" layoutY="52.0" mnemonicParsing="false" onAction="#openFormDictionary" onMouseEntered="#eventHoverDictionary" onMouseExited="#eventExitDictionary" prefHeight="40.0" prefWidth="40.0" stylesheets="@css/v2/button.css" />
         <Button fx:id="game_menu" layoutX="436.0" layoutY="52.0" mnemonicParsing="false" onAction="#openFormGame" onMouseEntered="#eventHovergame" onMouseExited="#eventExitgame" prefHeight="40.0" prefWidth="40.0" stylesheets="@css/v2/button.css" />
