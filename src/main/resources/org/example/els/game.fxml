@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
 
-<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="850.0" stylesheets="@css/AnchorPane.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.els.gameController">
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="850.0" stylesheets="@css/AnchorPane.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.els.gameController">
    <children>
       <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#bec8d1" height="68.0" layoutX="230.0" layoutY="40.0" opacity="0.5" stroke="#56add1" strokeType="INSIDE" width="390.0" />
       <Button fx:id="dictionary_menu" layoutX="317.0" layoutY="52.0" mnemonicParsing="false" onAction="#openFormDictionary" onMouseEntered="#eventHoverDictionary" onMouseExited="#eventExitDictionary" prefHeight="40.0" prefWidth="40.0" stylesheets="@css/v2/button.css" />
@@ -22,11 +20,11 @@
       <Label fx:id="label_information" layoutX="111.0" layoutY="132.0" prefHeight="403.0" prefWidth="600.0" text="Label" visible="false" />
       <Label fx:id="home_label" layoutX="270.0" layoutY="93.0" stylesheets="@css/v2/button.css" text="Home" visible="false" />
       <Label fx:id="more_label" layoutX="566.0" layoutY="93.0" stylesheets="@css/v2/button.css" text="More" visible="false" />
-      <VBox layoutX="335.0" layoutY="200.0" prefHeight="200.0" prefWidth="179.0">
+      <VBox layoutX="310.0" layoutY="178.0" prefHeight="222.0" prefWidth="202.0">
          <children>
-            <Button fx:id="multichoice" mnemonicParsing="false" onAction="#openFormMultichoice" prefHeight="65.0" prefWidth="194.0" text="Multiple Choice" />
+            <Button fx:id="multichoice" mnemonicParsing="false" onAction="#openFormMultichoice" prefHeight="66.0" prefWidth="206.0" text="Multiple Choice" />
             <Button mnemonicParsing="false" onAction="#openFormFlashCard" prefHeight="76.0" prefWidth="211.0" text="FlashCard" />
-            <Button mnemonicParsing="false" onAction="#openFormPGG" prefHeight="78.0" prefWidth="205.0" text="Picture Guessing Game" />
+            <Button mnemonicParsing="false" onAction="#openFormPGG" prefHeight="78.0" prefWidth="202.0" text="Picture Guessing Game" />
          </children>
       </VBox>
    </children>
