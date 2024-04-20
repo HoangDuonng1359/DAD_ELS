@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.PasswordField?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="356.0" prefWidth="317.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.els.SigninController">
+<AnchorPane fx:id="sign_in" prefHeight="356.0" prefWidth="317.0" stylesheets="@css/AnchorPane.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.els.SigninController">
    <children>
       <Button layoutX="131.0" layoutY="203.0" mnemonicParsing="false" onAction="#sign_submit" prefHeight="26.0" prefWidth="66.0" text="Sign in" />
       <TextField fx:id="name" layoutX="90.0" layoutY="97.0" promptText="name" />
