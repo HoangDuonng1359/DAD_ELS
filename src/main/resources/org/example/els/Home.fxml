@@ -8,16 +8,16 @@
 
 <AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="850.0" stylesheets="@css/AnchorPane.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.els.HomeController">
     <children>
-        <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#bec8d1" height="387.0" layoutX="51.0" layoutY="119.0" opacity="0.5" stroke="#56add1" strokeType="INSIDE" width="88.0" />
-        <Button fx:id="dictionary_menu" layoutX="73.0" layoutY="389.0" mnemonicParsing="false" onAction="#openFormDictionary" onMouseEntered="#eventHoverDictionary" onMouseExited="#eventExitDictionary" prefHeight="40.0" prefWidth="40.0" stylesheets="@css/v2/button.css" />
+        <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#bec8d1" height="387.0" layoutX="29.0" layoutY="119.0" opacity="0.5" stroke="#56add1" strokeType="INSIDE" width="131.0" />
+        <Button fx:id="dictionary_menu" layoutX="75.0" layoutY="378.0" mnemonicParsing="false" onAction="#openFormDictionary" onMouseEntered="#eventHoverDictionary" onMouseExited="#eventExitDictionary" prefHeight="40.0" prefWidth="40.0" stylesheets="@css/v2/button.css" />
         <Button fx:id="game_menu" layoutX="73.0" layoutY="260.0" mnemonicParsing="false" onAction="#openFormGame" onMouseEntered="#eventHovergame" onMouseExited="#eventExitgame" prefHeight="40.0" prefWidth="40.0" stylesheets="@css/v2/button.css" />
-        <Button fx:id="google_translate_menu" layoutX="73.0" layoutY="199.0" mnemonicParsing="false" onAction="#openFormGoogle" onMouseEntered="#eventHovergoogleTranslate" onMouseExited="#eventExitgoogleTranslate" prefHeight="40.0" prefWidth="40.0" stylesheets="@css/v2/button.css" />
-        <Button fx:id="edit_menu" layoutX="73.0" layoutY="329.0" mnemonicParsing="false" onAction="#openFormAddAndEdit" onMouseEntered="#eventHoveraddEdit" onMouseExited="#eventExitaddEdit" prefHeight="40.0" prefWidth="40.0" stylesheets="@css/v2/button.css" />
+        <Button fx:id="google_translate_menu" layoutX="73.0" layoutY="198.0" mnemonicParsing="false" onAction="#openFormGoogle" onMouseEntered="#eventHovergoogleTranslate" onMouseExited="#eventExitgoogleTranslate" prefHeight="40.0" prefWidth="40.0" stylesheets="@css/v2/button.css" />
+        <Button fx:id="edit_menu" layoutX="74.0" layoutY="320.0" mnemonicParsing="false" onAction="#openFormAddAndEdit" onMouseEntered="#eventHoveraddEdit" onMouseExited="#eventExitaddEdit" prefHeight="40.0" prefWidth="40.0" stylesheets="@css/v2/button.css" />
         <Label fx:id="dictionary_label" layoutX="67.0" layoutY="429.0" stylesheets="@css/v2/button.css" text="Dictionary" visible="false" />
         <Label fx:id="addEdit_label" layoutX="67.0" layoutY="360.0" prefHeight="18.0" prefWidth="72.0" stylesheets="@css/v2/button.css" text="Add word " visible="false" />
         <Label fx:id="game_label" layoutX="78.0" layoutY="300.0" stylesheets="@css/v2/button.css" text="Game" visible="false" />
         <Label fx:id="googleTranslate_label" layoutX="50.0" layoutY="239.0" stylesheets="@css/v2/button.css" text="Google translate" visible="false" />
-        <Button fx:id="moreButton" layoutX="73.0" layoutY="447.0" mnemonicParsing="false" onAction="#openFormMore" onMouseEntered="#eventHoverMore" onMouseExited="#eventExitMore" prefHeight="40.0" prefWidth="40.0" stylesheets="@css/v2/button.css" />
+        <Button fx:id="moreButton" layoutX="75.0" layoutY="438.0" mnemonicParsing="false" onAction="#openFormMore" onMouseEntered="#eventHoverMore" onMouseExited="#eventExitMore" prefHeight="40.0" prefWidth="40.0" stylesheets="@css/v2/button.css" />
         <Button fx:id="homeButton" layoutX="73.0" layoutY="132.0" mnemonicParsing="false" onAction="#openFormHome" onMouseEntered="#eventHoverHome" onMouseExited="#eventExitHome" prefHeight="40.0" prefWidth="40.0" stylesheets="@css/v2/button.css" />
       <Label fx:id="label_information" layoutX="113.0" layoutY="132.0" prefHeight="403.0" prefWidth="600.0" text="Label" visible="false">
          <graphic>
