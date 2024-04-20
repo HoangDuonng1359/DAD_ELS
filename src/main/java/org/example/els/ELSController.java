@@ -25,16 +25,6 @@ public class ELSController extends baseFormController {
     protected static Stage stage;
     protected static Scene scene;
     protected static Parent root;
-    @FXML
-    private Label dictionary_label;
-
-    @FXML
-    private Label googleTranslate_label;
-    @FXML
-    private Label game_label;
-    @FXML
-    private Label addEdit_label;
-
 
     @FXML
     public void openFormGoogle(ActionEvent event){
@@ -54,10 +44,6 @@ public class ELSController extends baseFormController {
     }
     @FXML
     public void initialize() {
-        dictionary_label.setVisible(false);
-        googleTranslate_label.setVisible(false);
-        game_label.setVisible(false);
-        addEdit_label.setVisible(false);
        // listView.setItems(dictionaryManagement.showAllWords());
         search_field.textProperty().addListener((observable, oldText, newText) -> {
             // Nếu nội dung của trường tìm kiếm thay đổi, thực hiện đề xuất tìm kiếm
