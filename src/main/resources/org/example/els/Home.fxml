@@ -5,22 +5,19 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="850.0" stylesheets="@css/AnchorPane.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.els.HomeController">
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="682.0" prefWidth="1000.0" stylesheets="@css/AnchorPane.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.els.HomeController">
     <children>
-        <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#bec8d1" height="382.0" layoutX="51.0" layoutY="55.0" opacity="0.5" stroke="#56add1" strokeType="INSIDE" width="103.0" />
-        <Button fx:id="dictionary_menu" layoutX="82.0" layoutY="121.0" mnemonicParsing="false" onAction="#openFormDictionary" onMouseEntered="#eventHoverDictionary" onMouseExited="#eventExitDictionary" prefHeight="40.0" prefWidth="40.0" stylesheets="@css/v2/button.css" />
-        <Button fx:id="game_menu" layoutX="83.0" layoutY="246.0" mnemonicParsing="false" onAction="#openFormGame" onMouseEntered="#eventHovergame" onMouseExited="#eventExitgame" prefHeight="40.0" prefWidth="40.0" stylesheets="@css/v2/button.css" />
-        <Button fx:id="google_translate_menu" layoutX="83.0" layoutY="188.0" mnemonicParsing="false" onAction="#openFormGoogle" onMouseEntered="#eventHovergoogleTranslate" onMouseExited="#eventExitgoogleTranslate" prefHeight="40.0" prefWidth="40.0" stylesheets="@css/v2/button.css" />
-        <Button fx:id="edit_menu" layoutX="83.0" layoutY="310.0" mnemonicParsing="false" onAction="#openFormAddAndEdit" onMouseEntered="#eventHoveraddEdit" onMouseExited="#eventExitaddEdit" prefHeight="40.0" prefWidth="40.0" stylesheets="@css/v2/button.css" />
+      <ImageView fitHeight="394.0" fitWidth="29.0" layoutX="166.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/line.png" />
+         </image>
+      </ImageView>
         <Label fx:id="dictionary_label" layoutX="76.0" layoutY="170.0" stylesheets="@css/v2/button.css" text="Dictionary" visible="false" />
         <Label fx:id="addEdit_label" layoutX="75.0" layoutY="350.0" stylesheets="@css/v2/button.css" text="Add word " visible="false" />
         <Label fx:id="game_label" layoutX="87.0" layoutY="291.0" stylesheets="@css/v2/button.css" text="Game" visible="false" />
         <Label fx:id="googleTranslate_label" layoutX="59.0" layoutY="228.0" stylesheets="@css/v2/button.css" text="Google translate" visible="false" />
-        <Button fx:id="moreButton" layoutX="82.0" layoutY="369.0" mnemonicParsing="false" onAction="#openFormMore" onMouseEntered="#eventHoverMore" onMouseExited="#eventExitMore" prefHeight="40.0" prefWidth="40.0" stylesheets="@css/v2/button.css" />
-        <Button fx:id="homeButton" layoutX="83.0" layoutY="62.0" mnemonicParsing="false" onAction="#openFormHome" onMouseEntered="#eventHoverHome" onMouseExited="#eventExitHome" prefHeight="40.0" prefWidth="40.0" stylesheets="@css/v2/button.css" />
       <Label fx:id="label_information" layoutX="113.0" layoutY="132.0" prefHeight="403.0" prefWidth="600.0" text="Label" visible="false" />
       <Label fx:id="more_label" layoutX="88.0" layoutY="411.0" stylesheets="@css/v2/button.css" text="More" visible="false" />
       <ImageView fitHeight="219.0" fitWidth="197.0" layoutX="654.0" layoutY="-28.0" pickOnBounds="true" preserveRatio="true" rotate="41.1">
@@ -29,44 +26,50 @@
          </image>
       </ImageView>
       <Label fx:id="home_label" layoutX="86.0" layoutY="103.0" stylesheets="@css/v2/button.css" text="Home" visible="false" />
-      <Label fx:id="labelH1" layoutX="202.0" layoutY="-30.0" prefHeight="122.0" prefWidth="536.0" stylesheets="@css/LabelH1.css" text="ENGLISH  LEARNING  SUPPORT (ELS)">
+      <Label fx:id="labelH1" layoutX="325.0" layoutY="41.0" prefHeight="122.0" prefWidth="536.0" stylesheets="@css/LabelH1.css" text="ENGLISH  LEARNING  SUPPORT (ELS)">
          <font>
             <Font size="19.0" />
          </font></Label>
-      <Label layoutX="202.0" layoutY="61.0" prefHeight="370.0" prefWidth="462.0" text="Một ứng dụng hỗ trợ học Tiếng Anh được " />
-      <ImageView fitHeight="122.0" fitWidth="584.0" layoutX="270.0" layoutY="506.0" pickOnBounds="true" preserveRatio="true">
+      <Label layoutX="302.0" layoutY="129.0" prefHeight="326.0" prefWidth="572.0" text="Một ứng dụng hỗ trợ học Tiếng Anh được " />
+      <ImageView fitHeight="210.0" fitWidth="1018.0" layoutX="2.0" layoutY="526.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@image/Template%202%20elment/grass.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="179.0" fitWidth="408.0" layoutX="584.0" layoutY="420.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@image/Template%202%20elment/mountain.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="244.0" fitWidth="654.0" layoutX="-384.0" layoutY="492.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@image/Template%202%20elment/Signup_signin/grass.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="621.0" layoutY="523.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="665.0" layoutY="578.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@image/Template%202%20elment/road.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="170.0" layoutY="564.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="226.0" layoutY="614.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@image/Template%202%20elment/pond.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="-12.0" layoutY="436.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="130.0" fitWidth="216.0" layoutX="7.0" layoutY="504.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@image/Template%202%20elment/camp.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="658.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="781.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@image/Template%202%20elment/cloud.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="394.0" fitWidth="31.0" layoutX="35.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/line.png" />
+         </image>
+      </ImageView>
+        <Button fx:id="homeButton" layoutX="15.0" layoutY="22.0" mnemonicParsing="false" onAction="#openFormHome" onMouseEntered="#eventHoverHome" onMouseExited="#eventExitHome" prefHeight="47.0" prefWidth="184.0" stylesheets="@css/v2/button.css" />
+        <Button fx:id="dictionary_menu" layoutX="17.0" layoutY="79.0" mnemonicParsing="false" onAction="#openFormDictionary" onMouseEntered="#eventHoverDictionary" onMouseExited="#eventExitDictionary" prefHeight="47.0" prefWidth="200.0" stylesheets="@css/v2/button.css" />
+        <Button fx:id="google_translate_menu" layoutX="17.0" layoutY="143.0" mnemonicParsing="false" onAction="#openFormGoogle" onMouseEntered="#eventHovergoogleTranslate" onMouseExited="#eventExitgoogleTranslate" prefHeight="47.0" prefWidth="200.0" stylesheets="@css/v2/button.css" />
+        <Button fx:id="edit_menu" layoutX="15.0" layoutY="267.0" mnemonicParsing="false" onAction="#openFormAddAndEdit" onMouseEntered="#eventHoveraddEdit" onMouseExited="#eventExitaddEdit" prefHeight="47.0" prefWidth="184.0" stylesheets="@css/v2/button.css" />
+        <Button fx:id="moreButton" layoutX="15.0" layoutY="335.0" mnemonicParsing="false" onAction="#openFormMore" onMouseEntered="#eventHoverMore" onMouseExited="#eventExitMore" prefHeight="47.0" prefWidth="184.0" stylesheets="@css/v2/button.css" />
+        <Button fx:id="game_menu" layoutX="15.0" layoutY="204.0" mnemonicParsing="false" onAction="#openFormGame" onMouseEntered="#eventHovergame" onMouseExited="#eventExitgame" prefHeight="47.0" prefWidth="184.0" stylesheets="@css/v2/button.css" />
+      <ImageView fitHeight="122.0" fitWidth="434.0" layoutX="593.0" layoutY="476.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/Template%202%20elment/mountain.png" />
          </image>
       </ImageView>
     </children>
