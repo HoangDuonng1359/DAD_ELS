@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="850.0" stylesheets="@css/AnchorPane.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.els.HomeController">
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="682.0" prefWidth="1000.0" stylesheets="@css/AnchorPane.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.els.HomeController">
     <children>
       <ImageView fitHeight="394.0" fitWidth="29.0" layoutX="166.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -26,42 +26,32 @@
          </image>
       </ImageView>
       <Label fx:id="home_label" layoutX="86.0" layoutY="103.0" stylesheets="@css/v2/button.css" text="Home" visible="false" />
-      <Label fx:id="labelH1" layoutX="245.0" prefHeight="122.0" prefWidth="536.0" stylesheets="@css/LabelH1.css" text="ENGLISH  LEARNING  SUPPORT (ELS)">
+      <Label fx:id="labelH1" layoutX="325.0" layoutY="41.0" prefHeight="122.0" prefWidth="536.0" stylesheets="@css/LabelH1.css" text="ENGLISH  LEARNING  SUPPORT (ELS)">
          <font>
             <Font size="19.0" />
          </font></Label>
-      <Label layoutX="245.0" layoutY="93.0" prefHeight="370.0" prefWidth="462.0" text="Một ứng dụng hỗ trợ học Tiếng Anh được " />
-      <ImageView fitHeight="122.0" fitWidth="584.0" layoutX="270.0" layoutY="506.0" pickOnBounds="true" preserveRatio="true">
+      <Label layoutX="302.0" layoutY="129.0" prefHeight="326.0" prefWidth="572.0" text="Một ứng dụng hỗ trợ học Tiếng Anh được " />
+      <ImageView fitHeight="210.0" fitWidth="1018.0" layoutX="2.0" layoutY="526.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@image/Template%202%20elment/grass.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="179.0" fitWidth="408.0" layoutX="584.0" layoutY="420.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@image/Template%202%20elment/mountain.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="244.0" fitWidth="654.0" layoutX="-384.0" layoutY="492.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@image/Template%202%20elment/Signup_signin/grass.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="621.0" layoutY="523.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="665.0" layoutY="578.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@image/Template%202%20elment/road.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="170.0" layoutY="564.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="226.0" layoutY="614.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@image/Template%202%20elment/pond.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="-12.0" layoutY="436.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="130.0" fitWidth="216.0" layoutX="7.0" layoutY="504.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@image/Template%202%20elment/camp.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="681.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="781.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@image/Template%202%20elment/cloud.png" />
          </image>
@@ -77,5 +67,10 @@
         <Button fx:id="edit_menu" layoutX="15.0" layoutY="267.0" mnemonicParsing="false" onAction="#openFormAddAndEdit" onMouseEntered="#eventHoveraddEdit" onMouseExited="#eventExitaddEdit" prefHeight="47.0" prefWidth="184.0" stylesheets="@css/v2/button.css" />
         <Button fx:id="moreButton" layoutX="15.0" layoutY="335.0" mnemonicParsing="false" onAction="#openFormMore" onMouseEntered="#eventHoverMore" onMouseExited="#eventExitMore" prefHeight="47.0" prefWidth="184.0" stylesheets="@css/v2/button.css" />
         <Button fx:id="game_menu" layoutX="15.0" layoutY="204.0" mnemonicParsing="false" onAction="#openFormGame" onMouseEntered="#eventHovergame" onMouseExited="#eventExitgame" prefHeight="47.0" prefWidth="184.0" stylesheets="@css/v2/button.css" />
+      <ImageView fitHeight="122.0" fitWidth="434.0" layoutX="593.0" layoutY="476.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/Template%202%20elment/mountain.png" />
+         </image>
+      </ImageView>
     </children>
 </AnchorPane>
