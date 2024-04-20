@@ -1,15 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<<<<<<< HEAD
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="sign_in" prefHeight="356.0" prefWidth="317.0" stylesheets="@css/AnchorPane.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.els.SigninController">
+=======
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="356.0" prefWidth="317.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.els.SigninController">
+<AnchorPane fx:id="anchorPane" prefHeight="393.0" prefWidth="643.0" stylesheets="@css/AnchorPane.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.els.SigninController">
+>>>>>>> f8bd0149efad545e068e2369e25f41a3005b7031
    <children>
-      <Button layoutX="131.0" layoutY="203.0" mnemonicParsing="false" onAction="#sign_submit" prefHeight="26.0" prefWidth="66.0" text="Sign in" />
-      <TextField fx:id="name" layoutX="90.0" layoutY="97.0" promptText="name" />
-      <Button layoutX="134.0" layoutY="248.0" mnemonicParsing="false" onAction="#openFormSignUp" prefHeight="26.0" prefWidth="66.0" text="Sign up " />
-      <PasswordField fx:id="password" layoutX="92.0" layoutY="139.0" promptText="password" />
+      <ImageView fitHeight="255.0" fitWidth="243.0" layoutY="65.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/Template%202%20elment/Signup_signin/tree2.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="110.0" fitWidth="659.0" layoutX="-2.0" layoutY="287.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/Template%202%20elment/Signup_signin/grass.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="265.0" fitWidth="255.0" layoutX="399.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/Template%202%20elment/Signup_signin/tree2.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="53.0" fitWidth="170.0" layoutX="173.0" layoutY="314.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/Template%202%20elment/Signup_signin/stone.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="281.0" fitWidth="298.0" layoutX="174.0" layoutY="110.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/Template%202%20elment/wooden_label.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="nor_button" layoutX="331.0" layoutY="259.0" mnemonicParsing="false" onAction="#openFormSignUp" stylesheets="@css/nor_label.css" text="SIGN UP" />
+      <PasswordField fx:id="password" layoutX="292.0" layoutY="206.0" promptText="Enter your password" stylesheets="@css/Signin.css" />
+      <TextField fx:id="name" layoutX="292.0" layoutY="148.0" promptText="Enter your username" stylesheets="@css/Signin.css" />
+      <Label fx:id="nor_label" layoutX="198.0" layoutY="149.0" prefHeight="22.0" prefWidth="90.0" stylesheets="@css/nor_label.css" text="Username" />
+      <Label fx:id="nor_label" layoutX="198.0" layoutY="207.0" prefHeight="22.0" prefWidth="90.0" stylesheets="@css/nor_label.css" text="Password" />
+      <ImageView fitHeight="99.0" fitWidth="111.0" layoutX="271.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/APP%20LOGO.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="nor_button" layoutX="242.0" layoutY="259.0" mnemonicParsing="false" onAction="#sign_submit" stylesheets="@css/nor_label.css" text="SIGN IN" />
    </children>
 </AnchorPane>
