@@ -11,6 +11,21 @@
 
 <AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="682.0" prefWidth="1000.0" stylesheets="@css/AnchorPane.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.els.ELSController">
     <children>
+      <ImageView fitHeight="88.0" fitWidth="892.0" layoutX="351.0" layoutY="607.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/Template%20element/dictionary/water.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="265.0" fitWidth="876.0" layoutX="-48.0" layoutY="507.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/Template%20element/dictionary/grass.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="242.0" fitWidth="565.0" layoutX="-304.0" layoutY="405.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/Template%20element/dictionary/mountain.png" />
+         </image>
+      </ImageView>
         <ImageView fitHeight="394.0" fitWidth="31.0" layoutX="35.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@image/line.png" />
@@ -27,10 +42,25 @@
         <Button fx:id="edit_menu" layoutX="15.0" layoutY="267.0" mnemonicParsing="false" onAction="#openFormAddAndEdit" prefHeight="47.0" prefWidth="184.0" stylesheets="@css/v2/button.css" />
         <Button fx:id="moreButton" layoutX="15.0" layoutY="335.0" mnemonicParsing="false" onAction="#openFormMore" prefHeight="47.0" prefWidth="184.0" stylesheets="@css/v2/button.css" />
         <Button fx:id="game_menu" layoutX="15.0" layoutY="204.0" mnemonicParsing="false" onAction="#openFormGame" prefHeight="47.0" prefWidth="184.0" stylesheets="@css/v2/button.css" />
-        <TextField fx:id="search_field" layoutX="217.0" layoutY="113.0" prefHeight="34.0" prefWidth="220.0" stylesheets="@css/v2/textField.css" />
-        <ListView fx:id="listView" layoutX="217.0" layoutY="160.0" onMouseClicked="#handleMouseClickListView" prefHeight="338.0" prefWidth="270.0" stylesheets="@css/v2/listview.css" />
-        <Button fx:id="button_search" layoutX="452.0" layoutY="113.0" mnemonicParsing="false" onMouseClicked="#handleMouseClickButtonSearch" prefHeight="34.0" prefWidth="34.0" stylesheets="@css/button.css" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="340.0" layoutX="499.0" layoutY="159.0" stroke="#37b8a5" strokeType="INSIDE" width="395.0" />
-        <WebView fx:id="definitionView" layoutX="500.0" layoutY="160.0" opacity="0.69" prefHeight="338.0" prefWidth="393.0" stylesheets="@css/v2/webview.css" />
+        <TextField fx:id="search_field" layoutX="280.0" layoutY="96.0" prefHeight="34.0" prefWidth="220.0" stylesheets="@css/v2/textField.css" />
+        <ListView fx:id="listView" layoutX="275.0" layoutY="145.0" onMouseClicked="#handleMouseClickListView" prefHeight="338.0" prefWidth="270.0" stylesheets="@css/v2/listview.css" />
+        <Button fx:id="button_search" layoutX="510.0" layoutY="96.0" mnemonicParsing="false" onMouseClicked="#handleMouseClickButtonSearch" prefHeight="34.0" prefWidth="34.0" stylesheets="@css/button.css" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="340.0" layoutX="558.0" layoutY="144.0" stroke="#37b8a5" strokeType="INSIDE" width="395.0" />
+        <WebView fx:id="definitionView" layoutX="559.0" layoutY="147.0" opacity="0.69" prefHeight="338.0" prefWidth="393.0" stylesheets="@css/v2/webview.css" />
+      <ImageView fitHeight="230.0" fitWidth="200.0" layoutX="99.0" layoutY="462.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/Template%20element/dictionary/finding.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="120.0" fitWidth="338.0" layoutX="739.0" layoutY="512.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/Template%20element/dictionary/ship.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="81.0" fitWidth="184.0" layoutX="797.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/Template%20element/dictionary/bird.png" />
+         </image>
+      </ImageView>
     </children>
 </AnchorPane>
