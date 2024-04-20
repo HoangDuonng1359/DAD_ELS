@@ -1,0 +1,14 @@
+#nor_label{
+    -fx-font-family: "Lucida Handwriting";
+    -fx-text-fill: #90594b;
+    -fx-background-color: #ffe759;
+    -fx-background-radius: 8px;
+    -fx-alignment: center;
+}
+#nor_button{
+    -fx-font-family: "Lucida Handwriting";
+    -fx-text-fill: #90594b;
+    -fx-background-color: #bfb666;
+    -fx-background-radius: 8px;
+    -fx-alignment: center;
+}
