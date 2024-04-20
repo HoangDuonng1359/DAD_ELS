@@ -9,8 +9,8 @@
 
 <AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="850.0" stylesheets="@css/AnchorPane.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.els.GoogleTranslateController">
    <children>
-      <TextArea fx:id="Text_area_input" layoutX="69.0" layoutY="167.0" prefHeight="295.0" prefWidth="317.0" />
-      <TextArea fx:id="Text_area_out" layoutX="442.0" layoutY="171.0" prefHeight="295.0" prefWidth="317.0" wrapText="true" />
+      <TextArea fx:id="Text_area_input" layoutX="158.0" layoutY="167.0" prefHeight="295.0" prefWidth="317.0" />
+      <TextArea fx:id="Text_area_out" layoutX="499.0" layoutY="167.0" prefHeight="295.0" prefWidth="317.0" wrapText="true" />
       <ComboBox fx:id="comboBox_lang_input" layoutX="243.0" layoutY="133.0" onAction="#comboBoxChanged" prefHeight="26.0" prefWidth="143.0" promptText="Select language" />
       <ComboBox fx:id="comboBox_lang_out" layoutX="616.0" layoutY="133.0" prefHeight="26.0" prefWidth="143.0" promptText="Select language " />
       <Button fx:id="buttonTranslate" layoutX="373.0" layoutY="474.0" mnemonicParsing="false" onAction="#translateEvent" prefHeight="43.0" prefWidth="82.0" text="Translate" />
