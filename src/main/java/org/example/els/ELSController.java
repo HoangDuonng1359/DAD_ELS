@@ -26,14 +26,6 @@ public class ELSController extends baseFormController {
     protected static Scene scene;
     protected static Parent root;
     @FXML
-    private Button dictionary_menu;
-    @FXML
-    private Button google_translate_menu;
-    @FXML
-    private Button game_menu;
-    @FXML
-    private Button edit_menu;
-    @FXML
     private Label dictionary_label;
 
     @FXML
@@ -43,17 +35,6 @@ public class ELSController extends baseFormController {
     @FXML
     private Label addEdit_label;
 
-    @FXML
-
-    private AnchorPane anchorPane;
-    @FXML
-    private Button button_search;
-    @FXML
-    protected WebView definitionView;
-    @FXML
-    protected ListView listView;
-    @FXML
-    protected TextField search_field;
 
     @FXML
     public void openFormGoogle(ActionEvent event){
@@ -77,7 +58,7 @@ public class ELSController extends baseFormController {
         googleTranslate_label.setVisible(false);
         game_label.setVisible(false);
         addEdit_label.setVisible(false);
-        listView.setItems(dictionaryManagement.showAllWords());
+       // listView.setItems(dictionaryManagement.showAllWords());
         search_field.textProperty().addListener((observable, oldText, newText) -> {
             // Nếu nội dung của trường tìm kiếm thay đổi, thực hiện đề xuất tìm kiếm
             handleSearch(newText.trim());
@@ -91,13 +72,13 @@ public class ELSController extends baseFormController {
         target.deleteCharAt(target.length()- 1);
        // definitionView.getEngine().loadContent(dictionaryManagement.Search(target.toString()));
          definitionView.getEngine().loadContent(DictionaryManagementDatabase.Search(target.toString(),true));
-        RecentW.add(target.toString());
+        RecentW.addDB(target.toString(),true);
     }
     @FXML
-    public void handleMouseClickButtonSearch(MouseEvent event) {
+    public void handleMouseClickButtonSearch(MouseEvent event) throws SQLException {
         String target = new String(search_field.getText());
-        definitionView.getEngine().loadContent(dictionaryManagement.Search(target));
-        RecentW.add(target);
+        definitionView.getEngine().loadContent(DictionaryManagementDatabase.Search(target,true));
+        RecentW.addDB(target, true);
     }
     public void handleSearch(String searchTerm) {
         if (!searchTerm.isEmpty()) {

@@ -109,7 +109,7 @@ public class database {
         }
     }
 
-    static final String DB_URL = "jdbc:sqlite:database.db";
+    static final String DB_URL = "jdbc:sqlite:src\\Data\\database.db";
     public static void updateDatabaseWithImages(String folderPath) {
         try (Connection connection = DriverManager.getConnection(DB_URL)) {
             File folder = new File(folderPath);
