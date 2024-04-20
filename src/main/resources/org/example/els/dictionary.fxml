@@ -8,7 +8,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.web.WebView?>
 
-<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="850.0" stylesheets="@css/AnchorPane.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.els.ELSController">
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="682.0" prefWidth="1000.0" stylesheets="@css/AnchorPane.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.els.ELSController">
     <children>
         <TextField fx:id="search_field" layoutX="46.0" layoutY="113.0" prefHeight="34.0" prefWidth="220.0" stylesheets="@css/v2/textField.css" />
         <ListView fx:id="listView" layoutX="40.0" layoutY="160.0" onMouseClicked="#handleMouseClickListView" prefHeight="338.0" prefWidth="270.0" stylesheets="@css/v2/listview.css" />

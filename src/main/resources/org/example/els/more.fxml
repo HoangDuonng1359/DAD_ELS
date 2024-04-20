@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="850.0" stylesheets="@css/AnchorPane.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.els.moreController">
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="682.0" prefWidth="1000.0" stylesheets="@css/AnchorPane.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.els.moreController">
     <children>
         <Label fx:id="home_label" layoutX="139.0" layoutY="132.0" stylesheets="@css/v2/button.css" text="Home" />
       <GridPane alignment="CENTER" hgap="10.0" layoutX="299.0" layoutY="150.0" prefHeight="274.0" prefWidth="257.0" vgap="10.0">
