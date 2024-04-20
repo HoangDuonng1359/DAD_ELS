@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.web.WebView?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="850.0" stylesheets="@css/AnchorPane.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.els.ELSController">
+    <children>
+      <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#bec8d1" height="67.0" layoutX="237.0" layoutY="36.0" opacity="0.5" stroke="#56add1" strokeType="INSIDE" width="376.0" />
+        <Button fx:id="dictionary_menu" layoutX="306.0" layoutY="49.0" mnemonicParsing="false" onMouseEntered="#eventHoverDictionary" onMouseExited="#eventExitDictionary" prefHeight="40.0" prefWidth="40.0" stylesheets="@css/v2/button.css" />
+        <Button fx:id="game_menu" layoutX="425.0" layoutY="49.0" mnemonicParsing="false" onAction="#openFormGame" onMouseEntered="#eventHovergame" onMouseExited="#eventExitgame" prefHeight="40.0" prefWidth="40.0" stylesheets="@css/v2/button.css" />
+        <Button fx:id="google_translate_menu" layoutX="365.0" layoutY="49.0" mnemonicParsing="false" onAction="#openFormGoogle" onMouseEntered="#eventHovergoogleTranslate" onMouseExited="#eventExitgoogleTranslate" prefHeight="40.0" prefWidth="40.0" stylesheets="@css/v2/button.css" />
+      <TextField fx:id="search_field" layoutX="46.0" layoutY="113.0" prefHeight="34.0" prefWidth="220.0" stylesheets="@css/textField.css" />
+      <ListView fx:id="listView" layoutX="40.0" layoutY="160.0" prefHeight="338.0" prefWidth="270.0" stylesheets="@css/listview.css" />
+      <Button fx:id="button_search" layoutX="270.0" layoutY="113.0" mnemonicParsing="false" onMouseClicked="#handleMouseClickButtonSearch" prefHeight="34.0" prefWidth="34.0" stylesheets="@css/button.css" />
+      <WebView fx:id="definitionView" layoutX="339.0" layoutY="160.0" prefHeight="338.0" prefWidth="393.0" stylesheets="@css/webview.css" />
+      <Button fx:id="edit_menu" layoutX="488.0" layoutY="49.0" mnemonicParsing="false" onAction="#openFormAddAndEdit" onMouseEntered="#eventHoveraddEdit" onMouseExited="#eventExitaddEdit" prefHeight="40.0" prefWidth="40.0" stylesheets="@css/v2/button.css" />
+      <Label fx:id="dictionary_label" layoutX="298.0" layoutY="93.0" stylesheets="@css/button.css" text="Dictionary" />
+      <Label fx:id="addEdit_label" layoutX="478.0" layoutY="93.0" stylesheets="@css/button.css" text="Add &amp; edit" />
+      <Label fx:id="game_label" layoutX="429.0" layoutY="93.0" stylesheets="@css/button.css" text="Game" />
+      <Label fx:id="googleTranslate_label" layoutX="341.0" layoutY="93.0" stylesheets="@css/button.css" text="Google translate" />
+      <Button fx:id="moreButton" layoutX="548.0" layoutY="49.0" mnemonicParsing="false" onMouseEntered="#eventHoveraddEdit" onMouseExited="#eventExitaddEdit" prefHeight="40.0" prefWidth="40.0" stylesheets="@css/v2/button.css" />
+      <Button fx:id="homeButton" layoutX="252.0" layoutY="49.0" mnemonicParsing="false" onMouseEntered="#eventHoveraddEdit" onMouseExited="#eventExitaddEdit" prefHeight="40.0" prefWidth="40.0" stylesheets="@css/v2/button.css" />
+    </children>
+</AnchorPane>
