@@ -41,18 +41,6 @@ public class baseFormController extends SceneManage {
     @FXML
     private Button edit_menu;
     @FXML
-    private Label dictionary_label;
-    @FXML
-    private Label googleTranslate_label;
-    @FXML
-    private Label game_label;
-    @FXML
-    private Label addEdit_label;
-    @FXML
-    private Label home_label;
-    @FXML
-    private Label more_label;
-    @FXML
     private AnchorPane anchorPane;
    // protected static DictionaryManagement dictionaryManagement = null;
     protected static BufferedWriter bookwriter;
@@ -149,10 +137,6 @@ public class baseFormController extends SceneManage {
     }
     @FXML
     public void initialize() throws IOException, SQLException {
-        this.dictionary_label.setVisible(false);
-        this.googleTranslate_label.setVisible(false);
-        this.game_label.setVisible(false);
-        this.addEdit_label.setVisible(false);
         //syncBookData();
     }
     public void syncBookData(){
@@ -181,61 +165,6 @@ public class baseFormController extends SceneManage {
         } catch (IOException e) {
             System.out.println("baseFormController closefile IOException");
         }
-    }
-    @FXML
-    public void eventHoverDictionary(MouseEvent event) {
-        this.dictionary_label.setVisible(true);
-    }
-
-    @FXML
-    public void eventHovergoogleTranslate(MouseEvent event) {
-        this.googleTranslate_label.setVisible(true);
-    }
-
-    @FXML
-    public void eventHovergame(MouseEvent event) {
-        this.game_label.setVisible(true);
-    }
-
-    @FXML
-    public void eventHoveraddEdit(MouseEvent event) {
-        this.addEdit_label.setVisible(true);
-    }
-
-    @FXML
-    public void eventExitDictionary(MouseEvent event) {
-        this.dictionary_label.setVisible(false);
-    }
-
-    @FXML
-    public void eventExitgoogleTranslate(MouseEvent event) {
-        this.googleTranslate_label.setVisible(false);
-    }
-
-    @FXML
-    public void eventExitgame(MouseEvent event) {
-        this.game_label.setVisible(false);
-    }
-
-    @FXML
-    public void eventHoverHome(MouseEvent event){
-        this.home_label.setVisible(true);
-    }
-    @FXML
-    public void eventExitHome(MouseEvent event){
-        this.home_label.setVisible(false);
-    }
-    @FXML
-    public void eventHoverMore(MouseEvent event){
-        this.more_label.setVisible(true);
-    }
-    @FXML
-    public void eventExitMore(MouseEvent event){
-        this.more_label.setVisible(false);
-    }
-    @FXML
-    public void eventExitaddEdit(MouseEvent event) {
-        this.addEdit_label.setVisible(false);
     }
     public static void newAlert(Stage stage, String title , String headerText , String contentText ){
         Platform.runLater(()->{ // đảm bảo rằng Alert luôn được chạy trên luồng chính

@@ -39,14 +39,6 @@ public class GoogleTranslateController extends baseFormController {
     private TextArea Text_area_input;
     @FXML
     private TextArea Text_area_out;
-    @FXML
-    private Label dictionary_label;
-    @FXML
-    private Label googleTranslate_label;
-    @FXML
-    private Label game_label;
-    @FXML
-    private Label addEdit_label;
     // khai báo thêm lable còn lại
     protected String lang_input;
     protected String lang_out;
@@ -62,10 +54,6 @@ public class GoogleTranslateController extends baseFormController {
     public void initialize() {
         comboBox_lang_input.setItems(API_Google_translator.listLANGUAGE);
         comboBox_lang_out.setItems(API_Google_translator.listLANGUAGE);
-        dictionary_label.setVisible(false); // khởi tạo label này bị ẩn đi
-        game_label.setVisible(false);
-        googleTranslate_label.setVisible(false);
-        addEdit_label.setVisible(false);
         // làm các lable còn lại Quang Anh nhá
         Text_area_input.textProperty().addListener((observable, oldValue, newValue) -> {
             if(newValue.charAt(newValue.length()-1) != ' ' && !newValue.isEmpty() && !newValue.equals(oldValue)) {
@@ -92,47 +80,6 @@ public class GoogleTranslateController extends baseFormController {
         });
     }
 // Add a listener to the textProperty
-
-    @FXML
-    public void eventHoverDictionary(MouseEvent event) {
-        dictionary_label.setVisible(true); // khi rê chuột vào button thì lable hiện lên
-    }
-
-    @FXML
-    public void eventHovergoogleTranslate(MouseEvent event) {
-        googleTranslate_label.setVisible(true);
-    }
-
-    @FXML
-    public void eventHovergame(MouseEvent event) {
-        game_label.setVisible(true);
-    }
-
-    @FXML
-    public void eventHoveraddEdit(MouseEvent event) {
-        addEdit_label.setVisible(true);
-    }
-
-
-    @FXML
-    public void eventExitDictionary(MouseEvent event) {
-        dictionary_label.setVisible(false); // // khi rê chuột ra button thì lable ẩn đi
-    }
-
-    @FXML
-    public void eventExitgoogleTranslate(MouseEvent event) {
-        googleTranslate_label.setVisible(false);
-    }
-
-    @FXML
-    public void eventExitgame(MouseEvent event) {
-        game_label.setVisible(false);
-    }
-
-    @FXML
-    public void eventExitaddEdit(MouseEvent event) {
-        addEdit_label.setVisible(false);
-    }
 
     public void comboBoxChanged(ActionEvent event) {
         lang_input = comboBox_lang_input.getValue();
