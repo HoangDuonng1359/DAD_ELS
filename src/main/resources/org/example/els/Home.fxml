@@ -14,11 +14,11 @@
             <Image url="@image/Template%20element/plane1.png" />
          </image>
       </ImageView>
-      <Label fx:id="labelH1" layoutX="325.0" layoutY="41.0" prefHeight="122.0" prefWidth="536.0" stylesheets="@css/LabelH1.css" text="ENGLISH  LEARNING  SUPPORT (ELS)">
+      <Label fx:id="labelH1" layoutX="262.0" layoutY="-16.0" prefHeight="122.0" prefWidth="536.0" stylesheets="@css/LabelH1.css" text="ENGLISH  LEARNING  SUPPORT (ELS)">
          <font>
             <Font size="19.0" />
          </font></Label>
-      <Label layoutX="302.0" layoutY="129.0" prefHeight="326.0" prefWidth="572.0" text="Một ứng dụng hỗ trợ học Tiếng Anh được " />
+      <Label layoutX="226.0" layoutY="103.0" prefHeight="326.0" prefWidth="572.0" text="Một ứng dụng hỗ trợ học Tiếng Anh được " />
       <ImageView fitHeight="210.0" fitWidth="1018.0" layoutX="2.0" layoutY="526.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@image/Template%202%20elment/grass.png" />
@@ -29,12 +29,12 @@
             <Image url="@image/Template%202%20elment/road.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="226.0" layoutY="614.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="81.0" fitWidth="252.0" layoutX="242.0" layoutY="628.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@image/Template%202%20elment/pond.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="130.0" fitWidth="216.0" layoutX="7.0" layoutY="504.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="167.0" fitWidth="283.0" layoutY="455.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@image/Template%202%20elment/camp.png" />
          </image>
@@ -63,6 +63,11 @@
       <ImageView fitHeight="122.0" fitWidth="434.0" layoutX="593.0" layoutY="476.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@image/Template%202%20elment/mountain.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="-32.0" layoutY="401.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/Template%202%20elment/tree.png" />
          </image>
       </ImageView>
     </children>
