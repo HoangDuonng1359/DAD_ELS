@@ -1,7 +1,7 @@
 #labelH1{
     -fx-font-size: 25px;
-    -fx-effect: dropshadow(one-pass-box,sandybrown,10,1,3,0);
-    -fx-font-family: "More Sugar";
+    -fx-effect: dropshadow(one-pass-box,lightsalmon,5,1,3,0);
+    -fx-font-family: "Lucida Handwriting";
     -fx-text-fill: #90594b;
 }
 #heading_label{

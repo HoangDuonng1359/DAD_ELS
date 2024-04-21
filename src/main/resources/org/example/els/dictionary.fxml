@@ -58,7 +58,7 @@
          <children>
               <ListView fx:id="listView" layoutX="21.0" layoutY="75.0" onMouseClicked="#handleMouseClickListView" prefHeight="338.0" prefWidth="270.0" stylesheets="@css/listview.css" />
               <Button fx:id="button_search" layoutX="252.0" layoutY="15.0" minWidth="42.0" mnemonicParsing="false" onMouseClicked="#handleMouseClickButtonSearch" prefHeight="54.0" prefWidth="54.0" stylesheets="@css/button.css" />
-            <TextField fx:id="search_field" layoutX="21.0" layoutY="22.0" prefHeight="39.0" prefWidth="226.0" stylesheets="@css/textField.css" text="ha">
+            <TextField fx:id="search_field" layoutX="21.0" layoutY="22.0" prefHeight="39.0" prefWidth="226.0" stylesheets="@css/textField.css">
                <font>
                   <Font size="1.0" />
                </font></TextField>

@@ -9,37 +9,31 @@
 
 <AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="682.0" prefWidth="1000.0" stylesheets="@css/AnchorPane.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.els.HomeController">
     <children>
-      <ImageView fitHeight="219.0" fitWidth="197.0" layoutX="654.0" layoutY="-28.0" pickOnBounds="true" preserveRatio="true" rotate="41.1">
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="68.0" layoutY="409.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@image/Template%20element/plane1.png" />
+            <Image url="@image/Template%202%20elment/tree.png" />
          </image>
       </ImageView>
-      <Label fx:id="labelH1" layoutX="262.0" layoutY="-16.0" prefHeight="122.0" prefWidth="536.0" stylesheets="@css/LabelH1.css" text="ENGLISH  LEARNING  SUPPORT (ELS)">
+      <Label fx:id="labelH1" layoutX="348.0" layoutY="27.0" prefHeight="90.0" prefWidth="454.0" stylesheets="@css/LabelH1.css" text="English Learning Support (ELS)">
          <font>
             <Font size="19.0" />
          </font></Label>
-      <Label layoutX="226.0" layoutY="103.0" prefHeight="326.0" prefWidth="572.0" text="Một ứng dụng hỗ trợ học Tiếng Anh được " />
       <ImageView fitHeight="210.0" fitWidth="1018.0" layoutX="2.0" layoutY="526.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@image/Template%202%20elment/grass.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="665.0" layoutY="578.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="757.0" layoutY="586.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@image/Template%202%20elment/road.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="81.0" fitWidth="252.0" layoutX="242.0" layoutY="628.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="81.0" fitWidth="252.0" layoutX="304.0" layoutY="609.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@image/Template%202%20elment/pond.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="167.0" fitWidth="283.0" layoutY="455.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@image/Template%202%20elment/camp.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="781.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="258.0" layoutY="-12.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@image/Template%202%20elment/cloud.png" />
          </image>
@@ -60,14 +54,34 @@
         <Button fx:id="edit_menu" layoutX="15.0" layoutY="267.0" mnemonicParsing="false" onAction="#openFormAddAndEdit" prefHeight="47.0" prefWidth="184.0" stylesheets="@css/v2/button.css" />
         <Button fx:id="moreButton" layoutX="15.0" layoutY="335.0" mnemonicParsing="false" onAction="#openFormMore" prefHeight="47.0" prefWidth="184.0" stylesheets="@css/v2/button.css" />
         <Button fx:id="game_menu" layoutX="15.0" layoutY="204.0" mnemonicParsing="false" onAction="#openFormGame" prefHeight="47.0" prefWidth="184.0" stylesheets="@css/v2/button.css" />
-      <ImageView fitHeight="122.0" fitWidth="434.0" layoutX="593.0" layoutY="476.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="136.0" fitWidth="488.0" layoutX="605.0" layoutY="484.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@image/Template%202%20elment/mountain.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="-32.0" layoutY="401.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="-14.0" layoutY="401.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@image/Template%202%20elment/tree.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="167.0" fitWidth="283.0" layoutY="483.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/Template%202%20elment/camp.png" />
+         </image>
+      </ImageView>
+        <ImageView fitHeight="81.0" fitWidth="72.0" layoutX="920.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@image/APP%20LOGO.png" />
+            </image>
+        </ImageView>
+      <ImageView fitHeight="394.0" fitWidth="689.0" layoutX="231.0" layoutY="97.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/Template%20element/App_detail.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="81.0" fitWidth="249.0" layoutX="590.0" layoutY="-27.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/Template%202%20elment/cloud.png" />
          </image>
       </ImageView>
     </children>
