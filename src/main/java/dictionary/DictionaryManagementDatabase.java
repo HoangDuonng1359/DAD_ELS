@@ -20,11 +20,13 @@ public class DictionaryManagementDatabase {
         } else {
             NAME_TABLE = new String("va");
         }
-        String sql = "SELECT word FROM " + NAME_TABLE + " WHERE word LIKE ?";
+        String sql = "SELECT word FROM " + NAME_TABLE + " WHERE word LIKE ? ORDER BY (CASE  WHEN word = ? THEN 1 ELSE 0 END ) DESC ";
+        //SELECT * FROM av WHERE text LIKE ? ORDER BY (CASE WHEN text = ? THEN 1 ELSE 0 END) DESC"
         List<String> res = new ArrayList<String>();
         try (Connection conn = DatabaseConnection.connect(dict_hh_URL);
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
             pstmt.setString(1, "%" + text + "%");// đối tượng thực thi truy vấn
+            pstmt.setString(2,text);
             ResultSet rs = pstmt.executeQuery(); // lấy kết quả
             while (rs.next()) {
                 res.add(rs.getString("word"));
