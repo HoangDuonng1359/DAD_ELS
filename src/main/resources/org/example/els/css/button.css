@@ -1,7 +1,7 @@
 #button_search{
     -fx-background-color: transparent; /* bỏ đi màu của button cũ*/
-    -fx-border-width: 1px;
-    -fx-border-color: #a332c5;
+    -fx-border-width: 2px;
+    -fx-border-color: #d07328;;
     -fx-border-radius: 100%;
     -fx-background-size: cover; /* Kích thước của hình ảnh theo tỷ lệ */
     -fx-background-repeat: no-repeat; /* Ngăn lặp lại hình ảnh */
