@@ -39,13 +39,8 @@ public class GoogleTranslateController extends baseFormController {
     private TextArea Text_area_input;
     @FXML
     private TextArea Text_area_out;
-    // khai báo thêm lable còn lại
     protected String lang_input;
     protected String lang_out;
-
-    protected String textInput;
-    protected String textOutput;
-    //  private ScheduledExecutorService executorService;
 
     /**
      * khởi tạo combobox
@@ -54,9 +49,10 @@ public class GoogleTranslateController extends baseFormController {
     public void initialize() {
         comboBox_lang_input.setItems(API_Google_translator.listLANGUAGE);
         comboBox_lang_out.setItems(API_Google_translator.listLANGUAGE);
-        // làm các lable còn lại Quang Anh nhá
+        comboBox_lang_input.setValue("English");
+        comboBox_lang_out.setValue("Vietnamese");
         Text_area_input.textProperty().addListener((observable, oldValue, newValue) -> {
-            if(newValue.charAt(newValue.length()-1) != ' ' && !newValue.isEmpty() && !newValue.equals(oldValue)) {
+            if (!newValue.isEmpty() && newValue.charAt(newValue.length() - 1) != ' ' && !newValue.equals(oldValue)) {
                 if (!oldValue.equals(newValue)) {
                     new Thread(() -> {
                         try {
@@ -95,12 +91,13 @@ public class GoogleTranslateController extends baseFormController {
             throw new RuntimeException(e);
         }
     }
+
     @FXML
     public void playAudioOut(ActionEvent event) throws IOException, JavaLayerException {
         lang_out = API_Google_translator.getLanguage(comboBox_lang_out.getValue());
         String text = Text_area_out.getText();
-        if(!text.isEmpty()){
-            get_Audio(text,lang_out);
+        if (!text.isEmpty()) {
+            get_Audio(text, lang_out);
         }
     }
 
@@ -108,8 +105,8 @@ public class GoogleTranslateController extends baseFormController {
     public void playAudioIn(ActionEvent event) throws IOException, JavaLayerException {
         lang_input = API_Google_translator.getLanguage(comboBox_lang_input.getValue());
         String text = Text_area_input.getText();
-        if(!text.isEmpty()){
-            get_Audio(text,lang_input);
+        if (!text.isEmpty()) {
+            get_Audio(text, lang_input);
         }
     }
 }
