@@ -39,12 +39,13 @@ public class RecentW {
             PreparedStatement ps = null;
             try {
                 conn = DatabaseConnection.connect("jdbc:sqlite:src\\Data\\database.db");
-                String sql = "INSERT INTO RecentList (user_id, target, explain) SELECT ?, ?, ? WHERE NOT EXISTS (SELECT 1 FROM RecentList WHERE target = ?)";
+                String sql = "INSERT INTO RecentList (user_id, target, explain) SELECT ?, ?, ? WHERE NOT EXISTS (SELECT 1 FROM RecentList WHERE target = ? AND user_id = ?)";
                 ps = conn.prepareStatement(sql);
                 ps.setInt(1, baseFormController.user.getId());
                 ps.setString(2, s);
                 ps.setString(3, ex);
                 ps.setString(4, s);
+                ps.setInt(5,baseFormController.user.getId());
                 ps.executeUpdate();
             } finally {
                 // Đảm bảo rằng kết nối và PreparedStatement được đóng bất kể có lỗi xảy ra hay không

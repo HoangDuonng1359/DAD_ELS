@@ -9,6 +9,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.scene.web.WebView;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
@@ -28,6 +29,7 @@ public class ELSApplication extends Application {
         //RecentW.initDB();
         stage.setTitle("ELSApplication");
         stage.setScene(scene);
+        stage.getIcons().add(new Image(ELSApplication.class.getResourceAsStream("/org/example/els/image/APP LOGO.png")));
         stage.show();
         stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
             @Override
