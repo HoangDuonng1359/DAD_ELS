@@ -37,7 +37,7 @@
             <Image url="@image/Template%20element/water1.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="47.0" fitWidth="211.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true" />
       <ImageView fitHeight="275.0" fitWidth="279.0" layoutX="760.0" layoutY="438.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@image/Template%20element/water2.png" />
