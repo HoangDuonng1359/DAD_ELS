@@ -31,17 +31,17 @@
                 <Image url="@image/Template%20element/beach.png" />
             </image>
         </ImageView>
-        <ImageView fitHeight="227.0" fitWidth="235.0" layoutX="45.0" layoutY="479.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="227.0" fitWidth="235.0" layoutX="86.0" layoutY="504.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@image/Template%20element/boat.png" />
             </image>
         </ImageView>
-        <ImageView fitHeight="376.0" fitWidth="384.0" layoutY="321.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="314.0" fitWidth="367.0" layoutX="-7.0" layoutY="363.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@image/Template%20element/moutain.png" />
             </image>
         </ImageView>
-        <ImageView fitHeight="376.0" fitWidth="354.0" layoutX="347.0" layoutY="332.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="306.0" fitWidth="354.0" layoutX="371.0" layoutY="382.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@image/Template%20element/bridge.png" />
             </image>
@@ -51,7 +51,7 @@
                 <Image url="@image/Template%20element/cano.png" />
             </image>
         </ImageView>
-        <ImageView fitHeight="176.0" fitWidth="176.0" layoutX="63.0" layoutY="382.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="176.0" fitWidth="176.0" layoutX="77.0" layoutY="382.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@image/Template%20element/coconut.png" />
             </image>
