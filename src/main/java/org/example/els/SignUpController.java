@@ -27,23 +27,32 @@ public class SignUpController extends baseFormController {
 
     @FXML
     public void signup_submit(ActionEvent event) throws SQLException, IOException {
-        Connection conn = DatabaseConnection.connect(DB);
-        String sql2 = "SELECT name FROM user_table WHERE name = ?";
-        PreparedStatement pt2 = conn.prepareStatement(sql2);
-        pt2.setString(1, name.getText());
-        ResultSet rs = pt2.executeQuery();
-        if (rs.next()) {
-            newAlert(stage, "Sign Up", "", "name already exists!");
-        } else {
-            String sql = "INSERT INTO user_table (name , password) VALUES (?,?)";
-            PreparedStatement pt = conn.prepareStatement(sql);
-            pt.setString(1, name.getText());
-            pt.setString(2, password.getText());
-            pt.executeUpdate();
-            conn.close();
-            newAlert(stage, "Sign Up", "", "Sign up success!");
-            SceneManage.showScene(root, stage, scene, event, "signin.fxml");
+        if(name.getText().isEmpty()){
+            newAlert(stage,"Sign Up","","name isn't empty");
         }
-        conn.close();
+        else if(password.getText().isEmpty()){
+            newAlert(stage,"Sign Up","","password isn't empty");
+        }
+        else
+        {
+            Connection conn = DatabaseConnection.connect(DB);
+            String sql2 = "SELECT name FROM user_table WHERE name = ?";
+            PreparedStatement pt2 = conn.prepareStatement(sql2);
+            pt2.setString(1, name.getText());
+            ResultSet rs = pt2.executeQuery();
+            if (rs.next()) {
+                newAlert(stage, "Sign Up", "", "name already exists!");
+            } else {
+                String sql = "INSERT INTO user_table (name , password) VALUES (?,?)";
+                PreparedStatement pt = conn.prepareStatement(sql);
+                pt.setString(1, name.getText());
+                pt.setString(2, password.getText());
+                pt.executeUpdate();
+                conn.close();
+                newAlert(stage, "Sign Up", "", "Sign up success!");
+                SceneManage.showScene(root, stage, scene, event, "signin.fxml");
+            }
+            conn.close();
+        }
     }
 }

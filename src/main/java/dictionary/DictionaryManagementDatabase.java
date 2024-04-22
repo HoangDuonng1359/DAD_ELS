@@ -20,11 +20,13 @@ public class DictionaryManagementDatabase {
         } else {
             NAME_TABLE = new String("va");
         }
-        String sql = "SELECT word FROM " + NAME_TABLE + " WHERE word LIKE ?";
+        String sql = "SELECT word FROM " + NAME_TABLE + " WHERE word LIKE ? ORDER BY (CASE  WHEN word = ? THEN 1 ELSE 0 END ) DESC ";
+        //SELECT * FROM av WHERE text LIKE ? ORDER BY (CASE WHEN text = ? THEN 1 ELSE 0 END) DESC"
         List<String> res = new ArrayList<String>();
         try (Connection conn = DatabaseConnection.connect(dict_hh_URL);
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
             pstmt.setString(1, "%" + text + "%");// đối tượng thực thi truy vấn
+            pstmt.setString(2, text);
             ResultSet rs = pstmt.executeQuery(); // lấy kết quả
             while (rs.next()) {
                 res.add(rs.getString("word"));
@@ -58,12 +60,12 @@ public class DictionaryManagementDatabase {
         ResultSet resultSet = pr.executeQuery();
         if (resultSet.next()) {
             String type = resultSet.getString("type");
-            if (type.equals("-")){
+            if (type.equals("-")) {
                 conn1.close();
                 return "you have deleted this word";
             }
 
-            if (type.equals("+") || type.equals("#")){
+            if (type.equals("+") || type.equals("#")) {
                 String res = resultSet.getString("explain");
                 conn1.close();
                 return res;
@@ -84,6 +86,21 @@ public class DictionaryManagementDatabase {
         }
         conn.close();
         return res;
+    }
+
+    public static int numberChange(String type) throws SQLException {
+        Connection conn = DatabaseConnection.connect(DATABASE_URL);
+        String sql = "SELECT COUNT(*) FROM bookmark WHERE user_id=? and type = ?";
+        PreparedStatement pr = conn.prepareStatement(sql);
+        pr.setInt(1, baseFormController.user.getId());
+        pr.setString(2,type);
+        ResultSet rs = pr.executeQuery();
+        int count = 0;
+        if (rs.next()) {
+            count = rs.getInt(1);
+        }
+        conn.close();
+        return count;
     }
 
     public static void main(String[] args) {

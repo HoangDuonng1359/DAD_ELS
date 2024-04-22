@@ -99,6 +99,7 @@
     -fx-border-color: #7777d7;
     -fx-border-radius: 10%;
 }
+
 #game_label{
     -fx-background-color: #bec8d1;
     -fx-background-radius: 10%;
@@ -127,6 +128,7 @@
     -fx-font-family: "Times New Roman";
     -fx-font-size: 15px;
 }
+
 #multiple_game {
     -fx-background-color: transparent;
     -fx-background-size: cover;
@@ -138,14 +140,21 @@
 #picture_game {
     -fx-background-color: transparent;
     -fx-background-size: cover;
-    -fx-background-image: url("../image/game3.png");
+    -fx-background-image: url("../image/game2.png");
     -fx-background-repeat: no-repeat;
     -fx-background-position: center center;
 }
 #flash_game {
     -fx-background-color: transparent;
     -fx-background-size: cover;
-    -fx-background-image: url("../image/game2.png");
+    -fx-background-image: url("../image/game3.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+}
+#buttonTranslate {
+    -fx-background-color: transparent;
+    -fx-background-size: cover;
+    -fx-background-image: url("../image/translate.png") ;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center center;
 }
