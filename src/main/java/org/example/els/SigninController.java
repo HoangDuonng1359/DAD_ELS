@@ -42,9 +42,11 @@ public class SigninController extends baseFormController {
             byte[] imageData = rs.getBytes("avata");
 
             // Chuyển đổi dữ liệu ảnh thành đối tượng hình ảnh (Image)
-            InputStream is = new ByteArrayInputStream(imageData);
-            Image image = new Image(is);
-            user.setAvata(image);
+            if(imageData!=null){
+                InputStream is = new ByteArrayInputStream(imageData);
+                Image image = new Image(is);
+                user.setAvata(image);
+            }
             openFormHome(event);
         } else {
             newAlert(stage, "Login", "", "Logged in failed");
