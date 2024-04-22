@@ -14,6 +14,14 @@ public class User {
         this.name = name;
     }
 
+    public Image getAvata() {
+        return avata;
+    }
+
+    public void setAvata(Image avata) {
+        this.avata = avata;
+    }
+
     public int getId() {
         return id;
     }
