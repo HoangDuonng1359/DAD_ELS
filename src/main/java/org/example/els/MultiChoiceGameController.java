@@ -1,7 +1,8 @@
 package org.example.els;
 
-import Game.MultiChoice.Question;
-import Game.MultiChoice.Quiz;
+import Game.Question;
+import Game.Quiz;
+import Game.importData;
 import javafx.animation.KeyFrame;
 import javafx.animation.KeyValue;
 import javafx.animation.Timeline;
@@ -11,11 +12,11 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.util.Duration;
 
-import java.sql.SQLException;
+import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
-import static Game.MultiChoice.importData.importFormFileCSV;
-import static Game.MultiChoice.importData.insertFromDB;
+import static Game.importData.importFormFileCSV;
 
 public class MultiChoiceGameController extends baseFormController {
     @FXML
@@ -34,14 +35,13 @@ public class MultiChoiceGameController extends baseFormController {
     private Quiz quiz ;
 
     @Override
-    public void initialize() throws SQLException {
+    public void initialize() {
         Import_data_form_file();
         initgame();
     }
 
-    private void Import_data_form_file() throws SQLException {
-        //questions = importFormFileCSV("src/Data/questions.csv");
-        questions = insertFromDB(DATABASE_URL);
+    private void Import_data_form_file() {
+        questions = importFormFileCSV("src/Data/questions.csv");
     }
 
     private void initgame() {

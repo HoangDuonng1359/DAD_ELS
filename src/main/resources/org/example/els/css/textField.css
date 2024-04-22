@@ -1,13 +1,11 @@
 #search_field{
-    -fx-border-color: #d07328; ;
+    -fx-border-color: #a332c5 ;
     -fx-border-radius: 10%;
     -fx-background-color: transparent;
-    -fx-border-width: 2px;
-    -fx-font-family: Lucida Console;
 }
 #search_field:hover{
-    -fx-border-color: #e76c0e;
+    -fx-border-color: #3a3ae1;
 }
 #search_field:focused{
-    -fx-border-color: #e76c0e;
+    -fx-border-color: #3a3ae1;
 }

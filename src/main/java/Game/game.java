@@ -1,4 +1,4 @@
-package Game.MultiChoice;
+package Game;
 
 public class game {
     private String player;
