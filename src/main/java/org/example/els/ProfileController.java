@@ -28,8 +28,8 @@ public class ProfileController extends  baseFormController{
 
     }
     @FXML
-    public void changePassword(ActionEvent event){
-
+    public void changePassword(ActionEvent event) throws IOException {
+        SceneManage.showScene(root,stage,scene,event,"changePassword.fxml");
     }
 
 }
