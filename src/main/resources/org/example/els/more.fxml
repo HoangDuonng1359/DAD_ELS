@@ -25,17 +25,17 @@
          <children>
               <Button fx:id="dictionary_menu" mnemonicParsing="false" onAction="#openFormDictionary" prefHeight="60.0" prefWidth="60.0" stylesheets="@css/v2/button.css" />
               <Button fx:id="google_translate_menu" mnemonicParsing="false" onAction="#openFormGoogle" prefHeight="60.0" prefWidth="60.0" stylesheets="@css/v2/button.css" GridPane.columnIndex="1" />
-              <Button fx:id="game_menu" mnemonicParsing="false" onAction="#openFormGame" prefHeight="60.0" prefWidth="60.0" stylesheets="@css/v2/button.css" GridPane.rowIndex="2" />
-              <Button fx:id="edit_menu" mnemonicParsing="false" onAction="#openFormAddAndEdit" prefHeight="60.0" prefWidth="60.0" stylesheets="@css/v2/button.css" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <Button fx:id="edit_button" mnemonicParsing="false" onAction="#openFormEdit" prefHeight="60.0" prefWidth="60.0" stylesheets="@css/v2/button.css" GridPane.rowIndex="4" />
-            <Button fx:id="delete_button" mnemonicParsing="false" onAction="#openFormDelete" prefHeight="60.0" prefWidth="60.0" stylesheets="@css/v2/button.css" GridPane.columnIndex="1" GridPane.rowIndex="4" />
             <Button fx:id="Profile" mnemonicParsing="false" onAction="#openFormProfile" prefHeight="60.0" prefWidth="60.0" stylesheets="@css/v2/button.css" text="profile" GridPane.rowIndex="5" />
          </children>
          <padding>
             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
          </padding>
       </GridPane>
-        <Button fx:id="homeButton" layoutX="135.0" layoutY="86.0" mnemonicParsing="false" onAction="#openFormHome" prefHeight="40.0" prefWidth="40.0" stylesheets="@css/v2/button.css" />
+        <Button fx:id="homeButton" layoutX="72.0" layoutY="197.0" mnemonicParsing="false" onAction="#openFormHome" prefHeight="60.0" prefWidth="228.0" stylesheets="@css/v2/button.css" />
+      <Button fx:id="edit_button" layoutX="72.0" layoutY="500.0" mnemonicParsing="false" onAction="#openFormEdit" prefHeight="60.0" prefWidth="228.0" stylesheets="@css/v2/button.css" />
+        <Button fx:id="game_menu" layoutX="72.0" layoutY="424.0" mnemonicParsing="false" onAction="#openFormGame" prefHeight="60.0" prefWidth="228.0" stylesheets="@css/v2/button.css" />
+      <Button fx:id="delete_button" layoutX="72.0" layoutY="341.0" mnemonicParsing="false" onAction="#openFormDelete" prefHeight="60.0" prefWidth="228.0" stylesheets="@css/v2/button.css" />
+        <Button fx:id="edit_menu" layoutX="72.0" layoutY="269.0" mnemonicParsing="false" onAction="#openFormAddAndEdit" prefHeight="60.0" prefWidth="228.0" stylesheets="@css/v2/button.css" />
     </children>
    <padding>
       <Insets top="10.0" />
