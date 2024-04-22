@@ -35,4 +35,20 @@ public class user_management {
         user.setName(name);
         return user;
     }
+    public User Change_password(String currentpass,String newpass) throws SQLException {
+        if(user.getPass().equals(currentpass)){
+            Connection connection = DatabaseConnection.connect(baseFormController.DATABASE_URL);
+            String sql = "UPDATE user_table SET password = ? WHERE id = ? ";
+            PreparedStatement pr = connection.prepareStatement(sql);
+            pr.setString(1,newpass);
+            pr.setInt(2,user.getId());
+            pr.executeUpdate();
+            connection.close();
+            user.setPass(newpass);
+            return user;
+        }
+        else {
+            return null;
+        }
+    }
 }
