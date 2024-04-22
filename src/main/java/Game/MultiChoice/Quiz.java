@@ -1,4 +1,4 @@
-package Game;
+package Game.MultiChoice;
 
 import java.util.*;
 
