@@ -5,9 +5,12 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import user.User;
 
+import java.io.ByteArrayInputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -28,7 +31,7 @@ public class SigninController extends baseFormController {
     @FXML
     private void sign_submit(ActionEvent event) throws SQLException {
         Connection conn = DatabaseConnection.connect(DB);
-        String sql = "SELECT id , name ,password FROM user_table WHERE name = ? AND password = ?";
+        String sql = "SELECT id , name ,password, avata FROM user_table WHERE name = ? AND password = ?";
         PreparedStatement pt = conn.prepareStatement(sql);
         pt.setString(1, name.getText());
         pt.setString(2, password.getText());
@@ -36,6 +39,12 @@ public class SigninController extends baseFormController {
         if (rs.next()) {
             newAlert(stage, "Login", "", "Logged in successfully");
             user = new User(rs.getInt("id"), rs.getString("password"), rs.getString("name"));
+            byte[] imageData = rs.getBytes("avata");
+
+            // Chuyển đổi dữ liệu ảnh thành đối tượng hình ảnh (Image)
+            InputStream is = new ByteArrayInputStream(imageData);
+            Image image = new Image(is);
+            user.setAvata(image);
             openFormHome(event);
         } else {
             newAlert(stage, "Login", "", "Logged in failed");

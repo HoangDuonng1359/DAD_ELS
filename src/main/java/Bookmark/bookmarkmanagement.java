@@ -91,7 +91,7 @@ public class bookmarkmanagement {
                     String insertQuery = "INSERT INTO bookmark (target, type, explain,user_id) VALUES (?, ?, ?,?)";
                     PreparedStatement insertStatement = connection.prepareStatement(insertQuery);
                     insertStatement.setString(1, target);
-                    insertStatement.setString(2, "+");
+                    insertStatement.setString(2, "#");
                     insertStatement.setString(3, explain);
                     insertStatement.setInt(4, user.getId());
                     insertStatement.executeUpdate();
