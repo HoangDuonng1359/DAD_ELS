@@ -16,9 +16,9 @@
          </image>
       </ImageView>
       <Label fx:id="name_label" layoutX="163.0" layoutY="61.0" prefHeight="34.0" prefWidth="80.0" text="Name" />
-      <Label layoutX="236.0" layoutY="179.0" text="Số từ đã sửa " />
-      <Label layoutX="233.0" layoutY="197.0" text="Số từ đã thêm" />
-      <Label layoutX="237.0" layoutY="215.0" text="Số từ đã xóa" />
+      <Label fx:id="numberEdit" layoutX="236.0" layoutY="179.0" text="Số từ đã sửa " />
+      <Label fx:id="numberAdd" layoutX="233.0" layoutY="197.0" text="Số từ đã thêm" />
+      <Label fx:id="numberRemove" layoutX="237.0" layoutY="215.0" text="Số từ đã xóa" />
       <Button layoutX="66.0" layoutY="127.0" mnemonicParsing="false" onAction="#changeAvata" text="Change Avata" />
       <TableView layoutX="73.0" layoutY="280.0" prefHeight="94.0" prefWidth="456.0">
         <columns>

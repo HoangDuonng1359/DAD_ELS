@@ -29,10 +29,10 @@
       <TextArea fx:id="Text_area_out" layoutX="598.0" layoutY="155.0" prefHeight="295.0" prefWidth="318.0" stylesheets="@css/textArea.css" wrapText="true" />
       <ComboBox fx:id="comboBox_lang_input" layoutX="321.0" layoutY="103.0" onAction="#comboBoxChanged" prefHeight="26.0" prefWidth="158.0" promptText="Select language" stylesheets="@css/comboBox.css" />
       <ComboBox fx:id="comboBox_lang_out" layoutX="678.0" layoutY="102.0" prefHeight="30.0" prefWidth="158.0" promptText="Select language " stylesheets="@css/comboBox.css" />
-      <Button fx:id="buttonTranslate" layoutX="479.0" layoutY="450.0" mnemonicParsing="false" onAction="#translateEvent" prefHeight="171.0" prefWidth="200.0" stylesheets="@css/button.css" />
+      <Button fx:id="buttonTranslate" layoutX="538.0" layoutY="471.0" mnemonicParsing="false" onAction="#translateEvent" prefHeight="43.0" prefWidth="82.0" text="Translate" />
       <Button fx:id="audio_button_out" layoutX="877.0" layoutY="405.0" mnemonicParsing="false" onAction="#playAudioOut" prefHeight="40.0" prefWidth="40.0" stylesheets="@css/v2/button.css" />
       <Button fx:id="audio_button_in" layoutX="512.0" layoutY="405.0" mnemonicParsing="false" onAction="#playAudioIn" prefHeight="40.0" prefWidth="40.0" stylesheets="@css/v2/button.css" />
-      <ImageView fitHeight="306.0" fitWidth="294.0" layoutY="429.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="306.0" fitWidth="294.0" layoutY="393.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@image/Template%20element/water1.png" />
          </image>

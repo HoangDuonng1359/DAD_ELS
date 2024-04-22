@@ -151,10 +151,3 @@
     -fx-background-repeat: no-repeat;
     -fx-background-position: center center;
 }
-#buttonTranslate {
-    -fx-background-color: transparent;
-    -fx-background-size: cover;
-    -fx-background-image: url("../image/translate.png") ;
-    -fx-background-repeat: no-repeat;
-    -fx-background-position: center center;
-}
