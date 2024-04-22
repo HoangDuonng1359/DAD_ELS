@@ -25,8 +25,26 @@ public class ELSController extends baseFormController {
     protected static Stage stage;
     protected static Scene scene;
     protected static Parent root;
+
+    @FXML
+    public void openFormGoogle(ActionEvent event){
+        try {
+            SceneManage.showScene(root,stage,scene,event,"google_translate.fxml");
+        } catch (IOException e) {
+            System.out.println("lỗi không mở được form: " + e.getMessage());
+        }
+    }
+    @FXML
+    public void openFormAddAndEdit(ActionEvent event){
+        try {
+            SceneManage.showScene(root,stage,scene,event,"addWord.fxml");
+        } catch (IOException e) {
+            System.out.println("lỗi không mở được form");
+        }
+    }
     @FXML
     public void initialize() {
+       // listView.setItems(dictionaryManagement.showAllWords());
         search_field.textProperty().addListener((observable, oldText, newText) -> {
             // Nếu nội dung của trường tìm kiếm thay đổi, thực hiện đề xuất tìm kiếm
             handleSearch(newText.trim());

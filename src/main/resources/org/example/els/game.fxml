@@ -23,9 +23,9 @@
       <Button fx:id="edit_menu" layoutX="15.0" layoutY="267.0" mnemonicParsing="false" onAction="#openFormAddAndEdit" prefHeight="47.0" prefWidth="184.0" stylesheets="@css/v2/button.css" />
       <Button fx:id="moreButton" layoutX="15.0" layoutY="335.0" mnemonicParsing="false" onAction="#openFormMore" prefHeight="47.0" prefWidth="184.0" stylesheets="@css/v2/button.css" />
       <Button fx:id="game_menu" layoutX="15.0" layoutY="204.0" mnemonicParsing="false" onAction="#openFormGame" prefHeight="47.0" prefWidth="184.0" stylesheets="@css/v2/button.css" />
-      <Button fx:id="multiple_game" layoutX="346.0" layoutY="228.0" mnemonicParsing="false" onAction="#openFormMultichoice" prefHeight="186.0" prefWidth="338.0" stylesheets="@css/button.css" />
-      <Button fx:id="picture_game" layoutX="346.0" layoutY="142.0" mnemonicParsing="false" onAction="#openFormPGG" prefHeight="218.0" prefWidth="322.0" stylesheets="@css/button.css" />
-      <Button fx:id="flash_game" layoutX="307.0" layoutY="39.0" mnemonicParsing="false" onAction="#openFormFlashCard" prefHeight="227.0" prefWidth="354.0" stylesheets="@css/button.css" />
+      <Button fx:id="multiple_game" layoutX="321.0" layoutY="305.0" mnemonicParsing="false" onAction="#openFormMultichoice" prefHeight="150.0" prefWidth="386.0" stylesheets="@css/button.css" />
+      <Button fx:id="picture_game" layoutX="304.0" layoutY="167.0" mnemonicParsing="false" onAction="#openFormPGG" prefHeight="138.0" prefWidth="405.0" stylesheets="@css/button.css" />
+      <Button fx:id="flash_game" layoutX="323.0" layoutY="39.0" mnemonicParsing="false" onAction="#openFormFlashCard" prefHeight="138.0" prefWidth="364.0" stylesheets="@css/button.css" />
       <ImageView fitHeight="1057.0" fitWidth="1068.0" layoutX="-7.0" layoutY="553.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@image/Template%20element/beach.png" />
@@ -41,7 +41,7 @@
             <Image url="@image/Template%20element/moutain.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="376.0" fitWidth="354.0" layoutX="347.0" layoutY="332.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="376.0" fitWidth="354.0" layoutX="337.0" layoutY="344.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@image/Template%20element/bridge.png" />
          </image>

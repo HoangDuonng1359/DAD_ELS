@@ -1,5 +1,7 @@
 package org.example.els;
 
+import Game.Question;
+import Game.Quiz;
 import dictionary.DatabaseConnection;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -14,6 +16,9 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
 
 public class gameController extends baseFormController{
     protected static Stage stage;
