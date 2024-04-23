@@ -10,3 +10,30 @@
     -fx-font-family: "Lucida Console";
     -fx-text-fill: #23a29b;
 }
+#label_information {
+    -fx-font-size: 40px;
+    -fx-effect: dropshadow(one-pass-box,lightsalmon,5,1,3,0);
+    -fx-font-family: "Lucida Handwriting";
+    -fx-text-fill: #90594b;
+}
+#label_target {
+
+    -fx-border-color: #ebb721;/* Màu viền */
+    -fx-font-size: 15px;
+    -fx-text-fill: #23a29b;
+    -fx-background-size: cover;
+    -fx-border-width: 5px; /* Độ rộng viền */
+    -fx-padding: 10px; /* Khoảng cách giữa viền và nội dung */
+    -fx-font-family: "Lucida Handwriting";
+    -fx-alignment: center;
+}
+#label_explain {
+    -fx-border-color: #ebb721;/* Màu viền */
+    -fx-font-size: 15px;
+    -fx-text-fill: #23a29b;
+    -fx-background-size: cover;
+    -fx-border-width: 5px; /* Độ rộng viền */
+    -fx-padding: 10px; /* Khoảng cách giữa viền và nội dung */
+    -fx-font-family: "Lucida Handwriting";
+    -fx-alignment: center;
+}

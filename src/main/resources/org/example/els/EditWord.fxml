@@ -15,6 +15,11 @@
 
 <AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="682.0" prefWidth="1000.0" stylesheets="@css/AnchorPane.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.els.editWordController">
     <children>
+      <ImageView fitHeight="243.0" fitWidth="239.0" layoutX="-6.0" layoutY="391.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/Template%20element/coconut.png" />
+         </image>
+      </ImageView>
         <ImageView fitHeight="394.0" fitWidth="31.0" layoutX="35.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@image/line.png" />
@@ -31,7 +36,7 @@
         <Button fx:id="edit_menu" layoutX="15.0" layoutY="267.0" mnemonicParsing="false" onAction="#openFormAddAndEdit" prefHeight="47.0" prefWidth="184.0" stylesheets="@css/v2/button.css" />
         <Button fx:id="moreButton" layoutX="15.0" layoutY="335.0" mnemonicParsing="false" onAction="#openFormMore" prefHeight="47.0" prefWidth="184.0" stylesheets="@css/v2/button.css" />
         <Button fx:id="game_menu" layoutX="15.0" layoutY="204.0" mnemonicParsing="false" onAction="#openFormGame" prefHeight="47.0" prefWidth="184.0" stylesheets="@css/v2/button.css" />
-      <Label fx:id="label_information" alignment="CENTER" layoutX="468.0" layoutY="119.0" prefHeight="82.0" prefWidth="168.0" text="Edit word" textAlignment="CENTER">
+      <Label fx:id="label_information" alignment="CENTER" layoutX="369.0" layoutY="-14.0" prefHeight="120.0" prefWidth="451.0" stylesheets="@css/LabelH1.css" text="Edit word" textAlignment="CENTER">
          <font>
             <Font name="MS Outlook" size="25.0" />
          </font>
@@ -51,13 +56,47 @@
                </stops>
             </LinearGradient>
          </textFill></Label>
-      <TextField fx:id="e_word" layoutX="300.0" layoutY="237.0" prefHeight="40.0" prefWidth="258.0" />
-      <HTMLEditor fx:id="v_word" htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" layoutX="299.0" layoutY="293.0" prefHeight="200.0" prefWidth="506.0" />
-      <Button layoutX="577.0" layoutY="244.0" mnemonicParsing="false" onAction="#findWord" text="Find" />
-      <Button fx:id="commit" layoutX="495.0" layoutY="512.0" mnemonicParsing="false" onAction="#editWord" prefHeight="40.0" prefWidth="135.0" text="Commit" />
-      <Label fx:id="label_target" layoutX="237.0" layoutY="243.0" prefHeight="26.0" prefWidth="52.0" text="English" />
-      <Label fx:id="label_explain" layoutX="217.0" layoutY="410.0" prefHeight="26.0" prefWidth="67.0" text="Vietnamese" />
-      <CheckBox fx:id="av" layoutX="299.0" layoutY="520.0" mnemonicParsing="false" onAction="#setmodeav" prefHeight="18.0" prefWidth="94.0" text="Anh - Việt" />
-      <CheckBox fx:id="va" layoutX="392.0" layoutY="520.0" mnemonicParsing="false" onAction="#setmodeva" prefHeight="18.0" prefWidth="94.0" text="Việt - Anh" />
+      <AnchorPane fx:id="edit_word" layoutX="237.0" layoutY="91.0" prefHeight="445.0" prefWidth="729.0" stylesheets="@css/AnchorPane.css">
+         <children>
+            <HTMLEditor fx:id="v_word" htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" layoutX="187.0" layoutY="139.0" prefHeight="206.0" prefWidth="511.0" stylesheets="@css/HTMLeditor.css" />
+            <CheckBox fx:id="av" layoutX="195.0" layoutY="394.0" mnemonicParsing="false" onAction="#setmodeav" prefHeight="18.0" prefWidth="94.0" text="Anh - Việt" />
+            <CheckBox fx:id="va" layoutX="608.0" layoutY="385.0" mnemonicParsing="false" onAction="#setmodeva" prefHeight="18.0" prefWidth="94.0" text="Việt - Anh" />
+            <Button fx:id="commit" layoutX="385.0" layoutY="374.0" mnemonicParsing="false" onAction="#editWord" prefHeight="40.0" prefWidth="135.0" text="Commit" />
+            <TextField fx:id="e_word" layoutX="274.0" layoutY="63.0" prefHeight="47.0" prefWidth="286.0" stylesheets="@css/textField.css" />
+            <Button fx:id="find" layoutX="608.0" layoutY="55.0" mnemonicParsing="false" onAction="#findWord" prefHeight="63.0" prefWidth="62.0" stylesheets="@css/button.css" />
+            <Label fx:id="label_target" layoutX="7.0" layoutY="63.0" prefHeight="63.0" prefWidth="135.0" stylesheets="@css/LabelH1.css" text="English" />
+            <Label fx:id="label_explain" layoutX="8.0" layoutY="242.0" prefHeight="72.0" prefWidth="145.0" stylesheets="@css/LabelH1.css" text="Vietnamese" />
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="81.0" fitWidth="222.0" layoutX="798.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/Template%202%20elment/cloud.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="75.0" fitWidth="173.0" layoutX="273.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/Template%20element/dictionary/bird.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="81.0" fitWidth="832.0" layoutX="261.0" layoutY="608.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/Template%20element/bien.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="158.0" fitWidth="559.0" layoutX="-80.0" layoutY="577.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/Template%20element/dao.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="281.0" fitWidth="164.0" layoutX="65.0" layoutY="453.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/Template%20element/people.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="152.0" fitWidth="362.0" layoutX="642.0" layoutY="512.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/Template%20element/everyone.png" />
+         </image>
+      </ImageView>
     </children>
 </AnchorPane>
