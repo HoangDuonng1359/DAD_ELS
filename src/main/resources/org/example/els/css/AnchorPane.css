@@ -10,3 +10,13 @@
     -fx-background-radius: 50px;
 
 }
+#left_profile{
+    -fx-background-color: #f1e194;
+    -fx-background-radius: 15px;
+
+}
+#right_profile {
+    -fx-background-color: #cfdb6a;
+    -fx-background-radius: 15px;
+}
+

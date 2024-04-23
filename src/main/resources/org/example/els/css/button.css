@@ -169,3 +169,19 @@
     -fx-background-position: center center; /* Căn giữa hình ảnh */
     -fx-background-image: url("../image/search_button.png");
 }
+#profile_button{
+    -fx-background-color: #fcd24f;
+    -fx-border-color: #1f1347;
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+    -fx-font-family: "Lucida Console";
+    -fx-effect: dropshadow(one-pass-box,#ea8439,5,1,3,2);
+}
+#profile_home{
+    -fx-background-color: #fc5658;
+    -fx-border-color: #1f1347;
+    -fx-background-radius: 11px;
+    -fx-border-radius: 10px;
+    -fx-font-family: "Lucida Console";
+    -fx-effect: dropshadow(one-pass-box,#1f1347,5,1,0,2);
+}
