@@ -25,20 +25,20 @@
       <Button fx:id="edit_menu" layoutX="15.0" layoutY="267.0" mnemonicParsing="false" onAction="#openFormAddAndEdit" prefHeight="47.0" prefWidth="184.0" stylesheets="@css/v2/button.css" />
       <Button fx:id="moreButton" layoutX="15.0" layoutY="335.0" mnemonicParsing="false" onAction="#openFormMore" prefHeight="47.0" prefWidth="184.0" stylesheets="@css/v2/button.css" />
       <Button fx:id="game_menu" layoutX="15.0" layoutY="204.0" mnemonicParsing="false" onAction="#openFormGame" prefHeight="47.0" prefWidth="184.0" stylesheets="@css/v2/button.css" />
-      <TextArea fx:id="Text_area_input" layoutX="234.0" layoutY="155.0" prefHeight="295.0" prefWidth="317.0" stylesheets="@css/textArea.css" />
-      <TextArea fx:id="Text_area_out" layoutX="598.0" layoutY="155.0" prefHeight="295.0" prefWidth="318.0" stylesheets="@css/textArea.css" wrapText="true" />
-      <ComboBox fx:id="comboBox_lang_input" layoutX="321.0" layoutY="103.0" onAction="#comboBoxChanged" prefHeight="26.0" prefWidth="158.0" promptText="Select language" stylesheets="@css/comboBox.css" />
-      <ComboBox fx:id="comboBox_lang_out" layoutX="678.0" layoutY="102.0" prefHeight="30.0" prefWidth="158.0" promptText="Select language " stylesheets="@css/comboBox.css" />
-      <Button fx:id="buttonTranslate" layoutX="479.0" layoutY="450.0" mnemonicParsing="false" onAction="#translateEvent" prefHeight="171.0" prefWidth="200.0" stylesheets="@css/button.css" />
-      <Button fx:id="audio_button_out" layoutX="877.0" layoutY="405.0" mnemonicParsing="false" onAction="#playAudioOut" prefHeight="40.0" prefWidth="40.0" stylesheets="@css/v2/button.css" />
-      <Button fx:id="audio_button_in" layoutX="512.0" layoutY="405.0" mnemonicParsing="false" onAction="#playAudioIn" prefHeight="40.0" prefWidth="40.0" stylesheets="@css/v2/button.css" />
-      <ImageView fitHeight="306.0" fitWidth="294.0" layoutY="429.0" pickOnBounds="true" preserveRatio="true">
+      <TextArea fx:id="Text_area_input" layoutX="233.0" layoutY="119.0" prefHeight="295.0" prefWidth="318.0" stylesheets="@css/textArea.css" />
+      <TextArea fx:id="Text_area_out" layoutX="598.0" layoutY="119.0" prefHeight="295.0" prefWidth="318.0" stylesheets="@css/textArea.css" wrapText="true" />
+      <ComboBox fx:id="comboBox_lang_input" layoutX="313.0" layoutY="64.0" onAction="#comboBoxChanged" prefHeight="26.0" prefWidth="158.0" promptText="Select language" stylesheets="@css/comboBox.css" />
+      <ComboBox fx:id="comboBox_lang_out" layoutX="678.0" layoutY="71.0" prefHeight="30.0" prefWidth="158.0" promptText="Select language " stylesheets="@css/comboBox.css" />
+      <Button fx:id="buttonTranslate" cancelButton="true" layoutX="491.0" layoutY="373.0" mnemonicParsing="false" onAction="#translateEvent" prefHeight="126.0" prefWidth="158.0" stylesheets="@css/button.css" />
+      <Button fx:id="audio_button_out" layoutX="876.0" layoutY="373.0" mnemonicParsing="false" onAction="#playAudioOut" prefHeight="40.0" prefWidth="40.0" stylesheets="@css/v2/button.css" />
+      <Button fx:id="audio_button_in" layoutX="233.0" layoutY="373.0" mnemonicParsing="false" onAction="#playAudioIn" prefHeight="40.0" prefWidth="40.0" stylesheets="@css/v2/button.css" />
+      <ImageView fitHeight="267.0" fitWidth="826.0" layoutY="414.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@image/Template%20element/water1.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="47.0" fitWidth="211.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true" />
-      <ImageView fitHeight="275.0" fitWidth="279.0" layoutX="760.0" layoutY="438.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="312.0" fitWidth="336.0" layoutX="668.0" layoutY="413.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@image/Template%20element/water2.png" />
          </image>
@@ -48,14 +48,9 @@
             <Image url="@image/Template%20element/saobien.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="190.0" fitWidth="213.0" layoutX="122.0" layoutY="465.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="205.0" fitWidth="300.0" layoutX="151.0" layoutY="429.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@image/Template%20element/dep.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="241.0" fitWidth="294.0" layoutX="699.0" layoutY="450.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@image/Template%20element/boy.png" />
          </image>
       </ImageView>
    </children>

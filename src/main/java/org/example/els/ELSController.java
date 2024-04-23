@@ -10,10 +10,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.ListView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.web.WebView;
@@ -25,13 +22,18 @@ public class ELSController extends baseFormController {
     protected static Stage stage;
     protected static Scene scene;
     protected static Parent root;
+
+
     @FXML
     public void initialize() {
         search_field.textProperty().addListener((observable, oldText, newText) -> {
             // Nếu nội dung của trường tìm kiếm thay đổi, thực hiện đề xuất tìm kiếm
             handleSearch(newText.trim());
         });
+        av.setSelected(true);
+        va.setSelected(false);
     }
+
     @FXML
     public void handleMouseClickListView (MouseEvent event) throws SQLException {
 
@@ -39,18 +41,18 @@ public class ELSController extends baseFormController {
         target.delete(0,1);
         target.deleteCharAt(target.length()- 1);
        // definitionView.getEngine().loadContent(dictionaryManagement.Search(target.toString()));
-         definitionView.getEngine().loadContent(DictionaryManagementDatabase.Search(target.toString(),true));
-        RecentW.addDB(target.toString(),true);
+         definitionView.getEngine().loadContent(DictionaryManagementDatabase.Search(target.toString(),getmode(av,va)));
+        RecentW.addDB(target.toString(),getmode(av,va));
     }
     @FXML
     public void handleMouseClickButtonSearch(MouseEvent event) throws SQLException {
         String target = new String(search_field.getText());
-        definitionView.getEngine().loadContent(DictionaryManagementDatabase.Search(target,true));
-        RecentW.addDB(target, true);
+        definitionView.getEngine().loadContent(DictionaryManagementDatabase.Search(target,getmode(av,va)));
+        RecentW.addDB(target, getmode(av,va));
     }
     public void handleSearch(String searchTerm) {
         if (!searchTerm.isEmpty()) {
-            ObservableList<String> searchResult = DictionaryManagementDatabase.prexSearch(searchTerm,true);
+            ObservableList<String> searchResult = DictionaryManagementDatabase.prexSearch(searchTerm,getmode(av,va));
             //ObservableList<String> searchResult = DictionaryManagement.prexSearch(searchTerm);
             if (searchResult != null && !searchResult.isEmpty()) {
                 listView.setItems(searchResult);
