@@ -59,9 +59,9 @@
       <AnchorPane fx:id="edit_word" layoutX="237.0" layoutY="91.0" prefHeight="445.0" prefWidth="729.0" stylesheets="@css/AnchorPane.css">
          <children>
             <HTMLEditor fx:id="v_word" htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" layoutX="187.0" layoutY="139.0" prefHeight="206.0" prefWidth="511.0" stylesheets="@css/HTMLeditor.css" />
-            <CheckBox fx:id="av" layoutX="195.0" layoutY="372.0" mnemonicParsing="false" onAction="#setmodeav" prefHeight="40.0" prefWidth="114.0" stylesheets="@css/Checkbox.css" text="Anh - Việt" />
-            <CheckBox fx:id="va" layoutX="602.0" layoutY="372.0" mnemonicParsing="false" onAction="#setmodeva" prefHeight="40.0" prefWidth="97.0" stylesheets="@css/Checkbox.css" text="Việt - Anh" />
-            <Button fx:id="commit" layoutX="343.0" layoutY="372.0" mnemonicParsing="false" onAction="#editWord" prefHeight="40.0" prefWidth="227.0" stylesheets="@css/button.css" text="Commit" />
+            <CheckBox fx:id="av" layoutX="195.0" layoutY="394.0" mnemonicParsing="false" onAction="#setmodeav" prefHeight="18.0" prefWidth="94.0" text="Anh - Việt" />
+            <CheckBox fx:id="va" layoutX="608.0" layoutY="385.0" mnemonicParsing="false" onAction="#setmodeva" prefHeight="18.0" prefWidth="94.0" text="Việt - Anh" />
+            <Button fx:id="commit" layoutX="385.0" layoutY="374.0" mnemonicParsing="false" onAction="#editWord" prefHeight="40.0" prefWidth="135.0" text="Commit" />
             <TextField fx:id="e_word" layoutX="274.0" layoutY="63.0" prefHeight="47.0" prefWidth="286.0" stylesheets="@css/textField.css" />
             <Button fx:id="find" layoutX="608.0" layoutY="55.0" mnemonicParsing="false" onAction="#findWord" prefHeight="63.0" prefWidth="62.0" stylesheets="@css/button.css" />
             <Label fx:id="label_target" layoutX="7.0" layoutY="63.0" prefHeight="63.0" prefWidth="135.0" stylesheets="@css/LabelH1.css" text="English" />
