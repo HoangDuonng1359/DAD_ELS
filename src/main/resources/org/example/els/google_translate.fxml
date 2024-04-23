@@ -32,13 +32,13 @@
       <Button fx:id="buttonTranslate" cancelButton="true" layoutX="491.0" layoutY="373.0" mnemonicParsing="false" onAction="#translateEvent" prefHeight="126.0" prefWidth="158.0" stylesheets="@css/button.css" />
       <Button fx:id="audio_button_out" layoutX="876.0" layoutY="373.0" mnemonicParsing="false" onAction="#playAudioOut" prefHeight="40.0" prefWidth="40.0" stylesheets="@css/v2/button.css" />
       <Button fx:id="audio_button_in" layoutX="233.0" layoutY="373.0" mnemonicParsing="false" onAction="#playAudioIn" prefHeight="40.0" prefWidth="40.0" stylesheets="@css/v2/button.css" />
-      <ImageView fitHeight="307.0" fitWidth="329.0" layoutY="416.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="267.0" fitWidth="826.0" layoutY="414.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@image/Template%20element/water1.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="47.0" fitWidth="211.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true" />
-      <ImageView fitHeight="318.0" fitWidth="349.0" layoutX="692.0" layoutY="405.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="312.0" fitWidth="336.0" layoutX="668.0" layoutY="413.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@image/Template%20element/water2.png" />
          </image>
@@ -48,14 +48,9 @@
             <Image url="@image/Template%20element/saobien.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="205.0" fitWidth="300.0" layoutX="122.0" layoutY="450.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="205.0" fitWidth="300.0" layoutX="151.0" layoutY="429.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@image/Template%20element/dep.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="335.0" fitWidth="337.0" layoutX="634.0" layoutY="413.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@image/Template%20element/boy.png" />
          </image>
       </ImageView>
    </children>

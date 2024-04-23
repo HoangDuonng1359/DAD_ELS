@@ -32,9 +32,14 @@ public class baseFormController extends SceneManage {
     protected ListView listView;
     @FXML
     protected TextField search_field;
+    @FXML
+    public CheckBox av;
+    @FXML
+    public CheckBox va;
     public static String DATABASE_URL = "jdbc:sqlite:src\\Data\\database.db";
    // protected static DictionaryManagement dictionaryManagement = null;
     protected static BufferedWriter bookwriter;
+    public static boolean avmode = true;
 
     public static User user = null;
 //    static {
@@ -128,7 +133,6 @@ public class baseFormController extends SceneManage {
     }
     @FXML
     public void initialize() throws IOException, SQLException {
-        //syncBookData();
     }
 //    public void syncBookData(){
 //        try {
@@ -166,5 +170,29 @@ public class baseFormController extends SceneManage {
             alert.setContentText(contentText);
             alert.showAndWait();
         });
+    }
+    public static boolean getmode(CheckBox av, CheckBox va){
+        if(av.isSelected()) return true;
+        else return false;
+    }
+    @FXML
+    public void setmodeav(ActionEvent event){
+        if(av.isSelected()){
+            va.setSelected(false);
+        }
+        else {
+            va.setSelected(true);
+        }
+        av.setSelected(true);
+        va.setSelected(false);
+    }
+    @FXML
+    public void setmodeva(ActionEvent event){
+        if(va.isSelected()){
+            av.setSelected(false);
+        }
+        else {
+            av.setSelected(true);
+        }
     }
 }

@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.paint.LinearGradient?>
@@ -10,8 +13,6 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.web.HTMLEditor?>
 
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.image.Image?>
 <AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="682.0" prefWidth="1000.0" stylesheets="@css/AnchorPane.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.els.editWordController">
     <children>
         <ImageView fitHeight="394.0" fitWidth="31.0" layoutX="35.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
@@ -30,7 +31,7 @@
         <Button fx:id="edit_menu" layoutX="15.0" layoutY="267.0" mnemonicParsing="false" onAction="#openFormAddAndEdit" prefHeight="47.0" prefWidth="184.0" stylesheets="@css/v2/button.css" />
         <Button fx:id="moreButton" layoutX="15.0" layoutY="335.0" mnemonicParsing="false" onAction="#openFormMore" prefHeight="47.0" prefWidth="184.0" stylesheets="@css/v2/button.css" />
         <Button fx:id="game_menu" layoutX="15.0" layoutY="204.0" mnemonicParsing="false" onAction="#openFormGame" prefHeight="47.0" prefWidth="184.0" stylesheets="@css/v2/button.css" />
-      <Label fx:id="label_information" alignment="CENTER" layoutX="341.0" layoutY="111.0" prefHeight="82.0" prefWidth="168.0" text="Edit word" textAlignment="CENTER">
+      <Label fx:id="label_information" alignment="CENTER" layoutX="468.0" layoutY="119.0" prefHeight="82.0" prefWidth="168.0" text="Edit word" textAlignment="CENTER">
          <font>
             <Font name="MS Outlook" size="25.0" />
          </font>
@@ -50,11 +51,13 @@
                </stops>
             </LinearGradient>
          </textFill></Label>
-      <TextField fx:id="e_word" layoutX="173.0" layoutY="229.0" prefHeight="40.0" prefWidth="258.0" />
-      <Label layoutX="90.0" layoutY="240.0" prefHeight="18.0" prefWidth="81.0" text="English" />
-      <HTMLEditor fx:id="v_word" htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" layoutX="172.0" layoutY="285.0" prefHeight="200.0" prefWidth="506.0" />
-      <Label layoutX="90.0" layoutY="376.0" text="Vietnamese" />
-      <Button layoutX="450.0" layoutY="236.0" mnemonicParsing="false" onAction="#findWord" text="Find" />
-      <Button fx:id="commit" layoutX="368.0" layoutY="504.0" mnemonicParsing="false" onAction="#editWord" prefHeight="40.0" prefWidth="135.0" text="Commit" />
+      <TextField fx:id="e_word" layoutX="300.0" layoutY="237.0" prefHeight="40.0" prefWidth="258.0" />
+      <HTMLEditor fx:id="v_word" htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" layoutX="299.0" layoutY="293.0" prefHeight="200.0" prefWidth="506.0" />
+      <Button layoutX="577.0" layoutY="244.0" mnemonicParsing="false" onAction="#findWord" text="Find" />
+      <Button fx:id="commit" layoutX="495.0" layoutY="512.0" mnemonicParsing="false" onAction="#editWord" prefHeight="40.0" prefWidth="135.0" text="Commit" />
+      <Label fx:id="label_target" layoutX="237.0" layoutY="243.0" prefHeight="26.0" prefWidth="52.0" text="English" />
+      <Label fx:id="label_explain" layoutX="217.0" layoutY="410.0" prefHeight="26.0" prefWidth="67.0" text="Vietnamese" />
+      <CheckBox fx:id="av" layoutX="299.0" layoutY="520.0" mnemonicParsing="false" onAction="#setmodeav" prefHeight="18.0" prefWidth="94.0" text="Anh - Việt" />
+      <CheckBox fx:id="va" layoutX="392.0" layoutY="520.0" mnemonicParsing="false" onAction="#setmodeva" prefHeight="18.0" prefWidth="94.0" text="Việt - Anh" />
     </children>
 </AnchorPane>
