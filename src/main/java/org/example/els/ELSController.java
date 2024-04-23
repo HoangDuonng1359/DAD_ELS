@@ -22,10 +22,7 @@ public class ELSController extends baseFormController {
     protected static Stage stage;
     protected static Scene scene;
     protected static Parent root;
-    @FXML
-    public CheckBox av;
-    @FXML
-    public CheckBox va;
+
 
     @FXML
     public void initialize() {
@@ -36,25 +33,7 @@ public class ELSController extends baseFormController {
         av.setSelected(true);
         va.setSelected(false);
     }
-    @FXML
-    public void setmodeav(ActionEvent event){
-        if(av.isSelected()){
-            va.setSelected(false);
-        }
-        else {
-            va.setSelected(true);
-        }
 
-    }
-    @FXML
-    public void setmodeva(ActionEvent event){
-        if(va.isSelected()){
-            av.setSelected(false);
-        }
-        else {
-            av.setSelected(true);
-        }
-    }
     @FXML
     public void handleMouseClickListView (MouseEvent event) throws SQLException {
 

@@ -17,6 +17,34 @@ import java.sql.SQLException;
 public class deleteWord extends baseFormController{
     @FXML
     private TextField word;
+    @FXML
+    private Label label_target;
+    public void initialize() throws IOException, SQLException {
+        av.setSelected(true);
+        va.setSelected(false);
+    }
+    @Override
+    public void setmodeav(ActionEvent event){
+        if(av.isSelected()){
+            va.setSelected(false);
+            label_target.setText("English");
+        }
+        else {
+            va.setSelected(true);
+            label_target.setText("Tiếng việt");
+        }
+    }
+    @Override
+    public void setmodeva(ActionEvent event){
+        if(va.isSelected()){
+            av.setSelected(false);
+            label_target.setText("Tiếng việt");
+        }
+        else {
+            av.setSelected(true);
+            label_target.setText("English");
+        }
+    }
     public void deleteWord(ActionEvent event) {
 
         try {
@@ -25,7 +53,7 @@ public class deleteWord extends baseFormController{
                 newAlert(stage,"Delete Word","","Vui lòng nhập từ");
             }
             //else if(dictionaryManagement.Search(s).equals("NO FOUND")){
-            else if(DictionaryManagementDatabase.Search(s,true).equals("NO FOUND")){
+            else if(DictionaryManagementDatabase.Search(s,getmode(av,va)).equals("NO FOUND")){
                 newAlert(stage,"Delete Word","","Không tìm thấy từ");
             }
             else {
