@@ -1,0 +1,46 @@
+package org.example.els;
+
+import Game.FlashCard.RecentW;
+import dictionary.DictionaryManagement;
+import dictionary.DictionaryManagementDatabase;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.control.Label;
+import javafx.scene.web.WebView;
+
+import java.io.IOException;
+import java.sql.SQLException;
+
+import static Game.FlashCard.RecentW.getWord;
+
+public class FlashCardController extends baseFormController{
+    @FXML
+    private Label E_word;
+    @FXML
+    private WebView V_word;
+    //static DictionaryManagement a= new DictionaryManagement();
+    public void initialize() throws IOException, SQLException {
+        initgame();
+    }
+    public void initgame() throws SQLException {
+        RecentW.initDB();
+        String target= RecentW.getWord();
+        System.out.println(target);
+        E_word.setText(target);
+        V_word.getEngine().loadContent(RecentW.getExplain(target));
+        //V_word.getEngine().loadContent(DictionaryManagementDatabase.Search(target,true));
+        E_word.setVisible(true);
+        V_word.setVisible(false);
+    }
+    @FXML
+    public void handleMouseClickLabel(ActionEvent event){
+        if(E_word.isVisible()==true){
+            E_word.setVisible(false);
+            V_word.setVisible(true);
+        }
+        else{
+            E_word.setVisible(true);
+            V_word.setVisible(false);
+        }
+    }
+}

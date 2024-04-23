@@ -1,5 +1,14 @@
 #listView{
-    -fx-background-color: transparent;
-    -fx-border-color: #a332c5;
-    -fx-border-radius: 10%;
+    -fx-background-color: white;
+    -fx-border-color: #d27028;
+    -fx-border-width: 4px;
+    -fx-font-family: "Lucida Console";
+}
+.list-cell:filled:selected:focused, .list-cell:filled:selected {
+    -fx-background-color: linear-gradient(#328BDB 0%, #207BCF 25%, #1973C9 75%, #1c84ec 100%);
+    -fx-text-fill: white;
+}
+.list-cell:hover{
+    -fx-background-color: linear-gradient(#a0c5ea 0%, #8eb9e0 25%, #9bbad9 75%, #90b5d5 100%);
+    -fx-text-fill: white;
 }

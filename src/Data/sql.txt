@@ -1,0 +1,20 @@
+CREATE TABLE Questions
+(
+    id        INT PRIMARY KEY,
+    quenstion VARCHAR(255),
+    choiceA   VARCHAR(255),
+    choiceB   VARCHAR(255),
+    choiceC   VARCHAR(255),
+    choiceD   VARCHAR(255),
+    answer    VARCHAR(255),
+);
+CREATE TABLE pgg (
+                     id INTEGER PRIMARY KEY AUTOINCREMENT ,
+                     images BLOB,
+                     results CHAR(255)
+);
+CREATE TABLE IF NOT EXISTS sounds_table (
+                                        id INTEGER PRIMARY KEY AUTOINCREMENT ,
+                                        name TEXT NOT NULL,
+                                        sounds BLOB
+);

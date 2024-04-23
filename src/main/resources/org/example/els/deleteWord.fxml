@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="682.0" prefWidth="1000.0" stylesheets="@css/AnchorPane.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.els.deleteWord">
+    <children>
+        <ImageView fitHeight="394.0" fitWidth="31.0" layoutX="35.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@image/line.png" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="394.0" fitWidth="29.0" layoutX="166.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@image/line.png" />
+            </image>
+        </ImageView>
+        <Button fx:id="homeButton" layoutX="15.0" layoutY="22.0" mnemonicParsing="false" onAction="#openFormHome" prefHeight="47.0" prefWidth="184.0" stylesheets="@css/v2/button.css" />
+        <Button fx:id="dictionary_menu" layoutX="17.0" layoutY="79.0" mnemonicParsing="false" onAction="#openFormDictionary" prefHeight="47.0" prefWidth="200.0" stylesheets="@css/v2/button.css" />
+        <Button fx:id="google_translate_menu" layoutX="17.0" layoutY="143.0" mnemonicParsing="false" onAction="#openFormGoogle" prefHeight="47.0" prefWidth="200.0" stylesheets="@css/v2/button.css" />
+        <Button fx:id="edit_menu" layoutX="15.0" layoutY="267.0" mnemonicParsing="false" onAction="#openFormAddAndEdit" prefHeight="47.0" prefWidth="184.0" stylesheets="@css/v2/button.css" />
+        <Button fx:id="moreButton" layoutX="15.0" layoutY="335.0" mnemonicParsing="false" onAction="#openFormMore" prefHeight="47.0" prefWidth="184.0" stylesheets="@css/v2/button.css" />
+        <Button fx:id="game_menu" layoutX="15.0" layoutY="204.0" mnemonicParsing="false" onAction="#openFormGame" prefHeight="47.0" prefWidth="184.0" stylesheets="@css/v2/button.css" />
+      <Label fx:id="label_information" alignment="CENTER" layoutX="341.0" layoutY="111.0" prefHeight="82.0" prefWidth="168.0" text="Delete word" textAlignment="CENTER">
+         <font>
+            <Font name="MS Outlook" size="25.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.15299999713897705" green="0.4990088939666748" blue="0.8999999761581421" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.1610526293516159" green="0.7143157720565796" blue="0.8526315689086914" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill></Label>
+      <TextField fx:id="word" layoutX="322.0" layoutY="235.0" prefHeight="40.0" prefWidth="205.0" />
+      <Button layoutX="399.0" layoutY="287.0" mnemonicParsing="false" onAction="#deleteWord" text="Delete" />
+      <Label fx:id="label_target" layoutX="250.0" layoutY="245.0" prefHeight="26.0" prefWidth="52.0" text="English" />
+      <CheckBox fx:id="av" layoutX="341.0" layoutY="204.0" mnemonicParsing="false" onAction="#setmodeav" prefHeight="18.0" prefWidth="94.0" text="Anh - Việt" />
+      <CheckBox fx:id="va" layoutX="434.0" layoutY="204.0" mnemonicParsing="false" onAction="#setmodeva" prefHeight="18.0" prefWidth="94.0" text="Việt - Anh" />
+    </children>
+</AnchorPane>

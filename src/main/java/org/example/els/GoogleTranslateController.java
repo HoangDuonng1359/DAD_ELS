@@ -1,10 +1,7 @@
 package org.example.els;
 
-import javafx.beans.property.StringProperty;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
+import googleTranslate.API_Google_translator;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -13,13 +10,17 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
+import javazoom.jl.decoder.JavaLayerException;
 
 import java.io.IOException;
+//import java.util.concurrent.Executor;
+//import java.util.concurrent.Executors;
+//import java.util.concurrent.ScheduledExecutorService;
+//import java.util.concurrent.TimeUnit;
 
+import static googleTranslate.sound.get_Audio;
 
-public class GoogleTranslateController {
+public class GoogleTranslateController extends baseFormController {
     @FXML
     private Button dictionary_menu;
     @FXML
@@ -38,21 +39,8 @@ public class GoogleTranslateController {
     private TextArea Text_area_input;
     @FXML
     private TextArea Text_area_out;
-    @FXML
-    private Label dictionary_label;
-    @FXML
-    private Label googleTranslate_label;
-    @FXML
-    private Label game_label;
-    @FXML
-    private Label addEdit_label;
-    // khai báo thêm lable còn lại
     protected String lang_input;
     protected String lang_out;
-
-    protected String textInput;
-    protected String textOutput;
-
 
     /**
      * khởi tạo combobox
@@ -61,63 +49,64 @@ public class GoogleTranslateController {
     public void initialize() {
         comboBox_lang_input.setItems(API_Google_translator.listLANGUAGE);
         comboBox_lang_out.setItems(API_Google_translator.listLANGUAGE);
-        dictionary_label.setVisible(false); // khởi tạo label này bị ẩn đi
-        game_label.setVisible(false);
-        googleTranslate_label.setVisible(false);
-        addEdit_label.setVisible(false);
-        // làm các lable còn lại Quang Anh nhá
+        comboBox_lang_input.setValue("English");
+        comboBox_lang_out.setValue("Vietnamese");
+        Text_area_input.textProperty().addListener((observable, oldValue, newValue) -> {
+            if (!newValue.isEmpty() && newValue.charAt(newValue.length() - 1) != ' ' && !newValue.equals(oldValue)) {
+                if (!oldValue.equals(newValue)) {
+                    new Thread(() -> {
+                        try {
+                            Thread.sleep(100);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                        Platform.runLater(() -> {
+                            lang_input = API_Google_translator.getLanguage(comboBox_lang_input.getValue());
+                            lang_out = API_Google_translator.getLanguage(comboBox_lang_out.getValue());
+                            try {
+                                String output = API_Google_translator.translate(Text_area_input.getText(), lang_input, lang_out);
+                                Text_area_out.setText(output);
+                            } catch (IOException e) {
+                                throw new RuntimeException(e);
+                            }
+                        });
+                    }).start();
+                }
+            }
+        });
     }
-    @FXML
-    public void eventHoverDictionary(MouseEvent event){
-        dictionary_label.setVisible(true); // khi rê chuột vào button thì lable hiện lên
-    }
-    @FXML
-    public void eventHovergoogleTranslate(MouseEvent event) {
-        googleTranslate_label.setVisible(true);
-    }
-    @FXML
-    public void eventHovergame(MouseEvent event) {
-        game_label.setVisible(true);
-    }
-    @FXML
-    public void eventHoveraddEdit(MouseEvent event) {
-        addEdit_label.setVisible(true);
-    }
+// Add a listener to the textProperty
 
-
-    @FXML
-    public void eventExitDictionary(MouseEvent event){
-        dictionary_label.setVisible(false); // // khi rê chuột ra button thì lable ẩn đi
-    }
-    @FXML
-    public void eventExitgoogleTranslate(MouseEvent event) {
-        googleTranslate_label.setVisible(false);
-    }
-    @FXML
-    public void eventExitgame(MouseEvent event) {
-        game_label.setVisible(false);
-    }
-    @FXML
-    public void eventExitaddEdit(MouseEvent event) {
-        addEdit_label.setVisible(false);
-    }
-
-    // thêm các eventHovergoogleTranslate_label ...
-    public void comboBoxChanged(ActionEvent event){
-            lang_input = comboBox_lang_input.getValue();
+    public void comboBoxChanged(ActionEvent event) {
+        lang_input = comboBox_lang_input.getValue();
     }
 
     public void translateEvent(ActionEvent event) {
         lang_input = API_Google_translator.getLanguage(comboBox_lang_input.getValue());
         lang_out = API_Google_translator.getLanguage(comboBox_lang_out.getValue());
         try {
-            String output=API_Google_translator.translate(Text_area_input.getText(),lang_input,lang_out);
+            String output = API_Google_translator.translate(Text_area_input.getText(), lang_input, lang_out);
             Text_area_out.setText(output);
-           // Text_area_out.setStyle("-fx-font-size: 2em;");
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-        // System.out.println("hello");
     }
 
+    @FXML
+    public void playAudioOut(ActionEvent event) throws IOException, JavaLayerException {
+        lang_out = API_Google_translator.getLanguage(comboBox_lang_out.getValue());
+        String text = Text_area_out.getText();
+        if (!text.isEmpty()) {
+            get_Audio(text, lang_out);
+        }
+    }
+
+    @FXML
+    public void playAudioIn(ActionEvent event) throws IOException, JavaLayerException {
+        lang_input = API_Google_translator.getLanguage(comboBox_lang_input.getValue());
+        String text = Text_area_input.getText();
+        if (!text.isEmpty()) {
+            get_Audio(text, lang_input);
+        }
+    }
 }
