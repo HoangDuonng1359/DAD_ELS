@@ -1,0 +1,12 @@
+#av {
+    -fx-alignment: center; /* Căn chữ vào giữa */
+    -fx-border-color: #ebb721; /* Màu viền */
+    -fx-border-width: 5px; /* Độ rộng viền */
+    -fx-border-radius: 5px;
+}
+#va {
+    -fx-alignment: center; /* Căn chữ vào giữa */
+    -fx-border-color: #ebb721; /* Màu viền */
+    -fx-border-width: 5px; /* Độ rộng viền */
+    -fx-border-radius: 5px;
+}
