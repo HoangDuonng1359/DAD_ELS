@@ -47,7 +47,7 @@
     -fx-border-width: 1px;
     -fx-border-color: #a332c5;
     -fx-border-radius: 20%;
-    -fx-background-image: url("../image/Google_Translate_button.png");
+    -fx-background-image: url("../image/Google_Translate_button_v2.png");
     -fx-background-size: cover;
     -fx-background-repeat: no-repeat;
 }
@@ -62,7 +62,7 @@
     -fx-border-width: 1px;
     -fx-border-color: #a332c5;
     -fx-border-radius: 20%;
-    -fx-background-image: url("../image/game_menu_button.png");
+    -fx-background-image: url("../image/game_menu_button_v2.png");
     -fx-background-size: cover;
     -fx-background-repeat: no-repeat;
 }
