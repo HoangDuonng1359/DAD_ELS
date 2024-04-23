@@ -18,3 +18,31 @@
     -fx-border-width: 2px;
     -fx-font-family: Lucida Console;
 }
+#newName{
+    -fx-border-color: #2cbbaa; ;
+    -fx-border-radius: 10%;
+    -fx-background-color: transparent;
+    -fx-border-width: 2px;
+    -fx-font-family: Lucida Console;
+}
+#password{
+    -fx-border-color: #2cbbaa; ;
+    -fx-border-radius: 10%;
+    -fx-background-color: transparent;
+    -fx-border-width: 2px;
+    -fx-font-family: Lucida Console;
+}
+#new_password{
+    -fx-border-color: #2cbbaa; ;
+    -fx-border-radius: 10%;
+    -fx-background-color: transparent;
+    -fx-border-width: 2px;
+    -fx-font-family: Lucida Console;
+}
+#Current_password{
+    -fx-border-color: #2cbbaa; ;
+    -fx-border-radius: 10%;
+    -fx-background-color: transparent;
+    -fx-border-width: 2px;
+    -fx-font-family: Lucida Console;
+}

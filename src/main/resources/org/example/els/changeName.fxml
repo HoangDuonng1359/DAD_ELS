@@ -1,16 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="315.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.els.changeNameController">
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="381.0" stylesheets="@css/AnchorPane.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.els.changeNameController">
    <children>
-      <TextField fx:id="newName" layoutX="83.0" layoutY="121.0" promptText="new name" />
-      <PasswordField fx:id="password" layoutX="83.0" layoutY="174.0" promptText="password" />
-      <Button layoutX="129.0" layoutY="231.0" mnemonicParsing="false" onAction="#changeName" text="Change" />
-      <Button layoutX="31.0" layoutY="36.0" mnemonicParsing="false" onAction="#backProfile" text="Back" />
+      <ImageView fitHeight="189.0" fitWidth="423.0" layoutX="-20.0" layoutY="257.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/Template%20element/change/Wave_right.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="180.0" fitWidth="403.0" layoutY="-26.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/Template%20element/change/Wave_left.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="95.0" fitWidth="57.0" layoutX="312.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/Template%20element/change/so.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="71.0" fitWidth="81.0" layoutX="23.0" layoutY="281.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/Template%20element/change/dep.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="81.0" fitWidth="81.0" layoutX="155.0" layoutY="61.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/APP%20LOGO.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="sea_label" layoutX="16.0" layoutY="178.0" prefHeight="26.0" prefWidth="170.0" stylesheets="@css/nor_label.css" text="Enter your password:" />
+      <Label fx:id="sea_label" layoutX="15.0" layoutY="215.0" prefHeight="30.0" prefWidth="169.0" stylesheets="@css/nor_label.css" text="Enter your new name:" />
+      <TextField fx:id="newName" layoutX="191.0" layoutY="213.0" prefHeight="8.0" prefWidth="150.0" promptText="New name" stylesheets="@css/textField.css" />
+      <Button fx:id="sea_button" layoutX="207.0" layoutY="255.0" mnemonicParsing="false" onAction="#changeName" stylesheets="@css/button.css" text="Change" />
+      <Button fx:id="sea_button" layoutX="134.0" layoutY="255.0" mnemonicParsing="false" onAction="#backProfile" stylesheets="@css/button.css" text="Back" />
+      <PasswordField fx:id="password" layoutX="191.0" layoutY="176.0" promptText="Password" stylesheets="@css/textField.css" />
    </children>
 </AnchorPane>
