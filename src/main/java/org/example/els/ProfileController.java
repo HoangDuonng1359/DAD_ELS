@@ -32,9 +32,9 @@ public class ProfileController extends baseFormController {
         if (user.getImage() != null) {
             avata_image.setImage(user.getImage());
         }
-        numberEdit.setText("Bạn đã sửa " + DictionaryManagementDatabase.numberChange("#") + " từ");
-        numberAdd.setText("Bạn đã thêm " + DictionaryManagementDatabase.numberChange("+") + " từ");
-        numberRemove.setText("Bạn đã xóa " + DictionaryManagementDatabase.numberChange("-") + " từ");
+        numberEdit.setText("Word added:" + DictionaryManagementDatabase.numberChange("#") + "words");
+        numberAdd.setText("Word edited:" + DictionaryManagementDatabase.numberChange("+") + " words");
+        numberRemove.setText("Word removed:" + DictionaryManagementDatabase.numberChange("-") + " words");
         if(user.getAvata()!=null){
             avata_image.setImage(user.getImage());
         }
