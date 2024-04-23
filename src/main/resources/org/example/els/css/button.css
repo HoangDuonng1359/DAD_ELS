@@ -159,3 +159,13 @@
     -fx-background-position: center center;
     -fx-background-image: url("../image/translate.png") ;
 }
+#find {
+    -fx-background-color: transparent; /* bỏ đi màu của button cũ*/
+    -fx-border-width: 2px;
+    -fx-border-color: #d07328;;
+    -fx-border-radius: 100%;
+    -fx-background-size: cover; /* Kích thước của hình ảnh theo tỷ lệ */
+    -fx-background-repeat: no-repeat; /* Ngăn lặp lại hình ảnh */
+    -fx-background-position: center center; /* Căn giữa hình ảnh */
+    -fx-background-image: url("../image/search_button.png");
+}

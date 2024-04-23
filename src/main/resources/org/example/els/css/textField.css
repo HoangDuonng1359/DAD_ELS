@@ -11,3 +11,10 @@
 #search_field:focused{
     -fx-border-color: #e76c0e;
 }
+#e_word {
+    -fx-border-color: #ebb721; ;
+    -fx-border-radius: 10%;
+    -fx-background-color: transparent;
+    -fx-border-width: 2px;
+    -fx-font-family: Lucida Console;
+}
