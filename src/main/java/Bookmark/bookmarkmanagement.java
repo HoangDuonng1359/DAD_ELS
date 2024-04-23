@@ -36,9 +36,9 @@ public class bookmarkmanagement {
         return false;
     }
 
-    public static void addWord(String target, String explain, User user) {
+    public static void addWord(String target, String explain, User user,boolean av) {
         try {
-            String se = DictionaryManagementDatabase.Search(target, true);
+            String se = DictionaryManagementDatabase.Search(target, av);
             if (!se.equals("NO FOUND") && !se.equals("you have deleted this word")) {
                 //return 0;
                 newAlert("AddWord", "", "Từ đã tồn tại");
@@ -71,9 +71,9 @@ public class bookmarkmanagement {
         }
     }
 
-    public static void editWord(String target, String explain, User user) {
+    public static void editWord(String target, String explain, User user,boolean av) {
         try {
-            String se = DictionaryManagementDatabase.Search(target, true);
+            String se = DictionaryManagementDatabase.Search(target, av);
             if (!target.isEmpty() && !explain.isEmpty()) {
                 //dictionaryManagement.insert(e, v);
                 //bookwriter.append("+ "+e+" "+v+"\n");

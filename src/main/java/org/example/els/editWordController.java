@@ -6,6 +6,7 @@ import dictionary.DictionaryManagementDatabase;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.web.HTMLEditor;
 
@@ -21,9 +22,40 @@ public class editWordController extends baseFormController{
     private HTMLEditor v_word;
     @FXML
     private Button commit;
+    @FXML
+    private Label label_target;
+    @FXML
+    private Label label_explain;
     public void initialize() throws IOException, SQLException {
-        super.initialize();
         commit.setVisible(false);
+        av.setSelected(true);
+        va.setSelected(false);
+    }
+    @Override
+    public void setmodeav(ActionEvent event){
+        if(av.isSelected()){
+            va.setSelected(false);
+            label_target.setText("English");
+            label_explain.setText("Vietnamese");
+        }
+        else {
+            va.setSelected(true);
+            label_target.setText("Tiếng việt");
+            label_explain.setText("Tiếng anh");
+        }
+    }
+    @Override
+    public void setmodeva(ActionEvent event){
+        if(va.isSelected()){
+            av.setSelected(false);
+            label_target.setText("Tiếng việt");
+            label_explain.setText("Tiếng anh");
+        }
+        else {
+            av.setSelected(true);
+            label_target.setText("English");
+            label_explain.setText("Vietnamese");
+        }
     }
     public void findWord(ActionEvent event) throws SQLException {
         String word = e_word.getText();
@@ -32,7 +64,7 @@ public class editWordController extends baseFormController{
             return;
         }
         //String meaning= dictionaryManagement.Search(word);
-        String meaning= DictionaryManagementDatabase.Search(word,true);
+        String meaning= DictionaryManagementDatabase.Search(word,getmode(av,va));
         if(meaning.equals("NO FOUND")){
             newAlert(stage,"Find word","","Không tìm thấy từ");
         }
@@ -44,7 +76,7 @@ public class editWordController extends baseFormController{
 
     public void editWord(ActionEvent event){
         //bookwriter.append("- "+s+"\n");
-        bookmarkmanagement.editWord(e_word.getText(),v_word.getHtmlText(),user);
+        bookmarkmanagement.editWord(e_word.getText(),v_word.getHtmlText(),user,getmode(av,va));
         e_word.setText("");
         v_word.setHtmlText("");
     }
