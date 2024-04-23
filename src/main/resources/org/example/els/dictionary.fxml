@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.TextField?>
@@ -96,5 +97,7 @@
             <Image url="@image/Template%20element/cloud2.png" />
          </image>
       </ImageView>
+      <CheckBox fx:id="av" layoutX="500.0" layoutY="526.0" mnemonicParsing="false" onAction="#setmodeav" prefHeight="18.0" prefWidth="94.0" text="Anh - Việt" />
+      <CheckBox fx:id="va" layoutX="599.0" layoutY="526.0" mnemonicParsing="false" onAction="#setmodeva" prefHeight="18.0" prefWidth="94.0" text="Việt - Anh" />
     </children>
 </AnchorPane>
