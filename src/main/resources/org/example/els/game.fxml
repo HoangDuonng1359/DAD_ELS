@@ -18,8 +18,8 @@
             </image>
         </ImageView>
         <Button fx:id="homeButton" layoutX="15.0" layoutY="22.0" mnemonicParsing="false" onAction="#openFormHome" prefHeight="47.0" prefWidth="184.0" stylesheets="@css/v2/button.css" />
-        <Button fx:id="dictionary_menu" layoutX="17.0" layoutY="79.0" mnemonicParsing="false" onAction="#openFormDictionary" prefHeight="47.0" prefWidth="200.0" stylesheets="@css/v2/button.css" />
-        <Button fx:id="google_translate_menu" layoutX="17.0" layoutY="143.0" mnemonicParsing="false" onAction="#openFormGoogle" prefHeight="47.0" prefWidth="200.0" stylesheets="@css/v2/button.css" />
+        <Button fx:id="dictionary_menu" layoutX="17.0" layoutY="79.0" mnemonicParsing="false" onAction="#openFormDictionary" prefHeight="47.0" prefWidth="184.0" stylesheets="@css/v2/button.css" />
+        <Button fx:id="google_translate_menu" layoutX="17.0" layoutY="143.0" mnemonicParsing="false" onAction="#openFormGoogle" prefHeight="47.0" prefWidth="184.0" stylesheets="@css/v2/button.css" />
         <Button fx:id="edit_menu" layoutX="15.0" layoutY="267.0" mnemonicParsing="false" onAction="#openFormAddAndEdit" prefHeight="47.0" prefWidth="184.0" stylesheets="@css/v2/button.css" />
         <Button fx:id="moreButton" layoutX="15.0" layoutY="335.0" mnemonicParsing="false" onAction="#openFormMore" prefHeight="47.0" prefWidth="184.0" stylesheets="@css/v2/button.css" />
         <Button fx:id="game_menu" layoutX="15.0" layoutY="204.0" mnemonicParsing="false" onAction="#openFormGame" prefHeight="47.0" prefWidth="184.0" stylesheets="@css/v2/button.css" />
@@ -36,40 +36,41 @@
                 <Image url="@image/Template%20element/boat.png" />
             </image>
         </ImageView>
-        <ImageView fitHeight="314.0" fitWidth="367.0" layoutX="-7.0" layoutY="363.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="297.0" fitWidth="322.0" layoutX="1.0" layoutY="380.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@image/Template%20element/moutain.png" />
             </image>
         </ImageView>
-        <ImageView fitHeight="306.0" fitWidth="354.0" layoutX="371.0" layoutY="382.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="347.0" fitWidth="369.0" layoutX="348.0" layoutY="346.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@image/Template%20element/bridge.png" />
             </image>
         </ImageView>
-        <ImageView fitHeight="323.0" fitWidth="332.0" layoutX="676.0" layoutY="359.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="314.0" fitWidth="329.0" layoutX="711.0" layoutY="382.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@image/Template%20element/cano.png" />
             </image>
         </ImageView>
-        <ImageView fitHeight="176.0" fitWidth="176.0" layoutX="77.0" layoutY="382.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="176.0" fitWidth="176.0" layoutX="100.0" layoutY="391.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@image/Template%20element/coconut.png" />
             </image>
         </ImageView>
-        <ImageView fitHeight="241.0" fitWidth="322.0" layoutX="758.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="241.0" fitWidth="322.0" layoutX="689.0" layoutY="-33.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@image/Template%202%20elment/cloud.png" />
             </image>
         </ImageView>
-        <ImageView fitHeight="276.0" fitWidth="301.0" layoutX="758.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="276.0" fitWidth="301.0" layoutX="754.0" layoutY="113.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@image/Template%20element/plane1.png" />
             </image>
         </ImageView>
-        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="214.0" layoutY="-9.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="223.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@image/Template%20element/plane2.png" />
+                <Image url="@image/Template%202%20elment/cloud.png" />
             </image>
         </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
     </children>
 </AnchorPane>

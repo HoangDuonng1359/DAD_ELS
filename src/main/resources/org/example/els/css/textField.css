@@ -11,3 +11,45 @@
 #search_field:focused{
     -fx-border-color: #e76c0e;
 }
+#e_word {
+    -fx-border-color: #ebb721; ;
+    -fx-border-radius: 10%;
+    -fx-background-color: transparent;
+    -fx-border-width: 2px;
+    -fx-font-family: Lucida Console;
+}
+#newName{
+    -fx-border-color: #2cbbaa; ;
+    -fx-border-radius: 10%;
+    -fx-background-color: transparent;
+    -fx-border-width: 2px;
+    -fx-font-family: Lucida Console;
+}
+#password{
+    -fx-border-color: #2cbbaa; ;
+    -fx-border-radius: 10%;
+    -fx-background-color: transparent;
+    -fx-border-width: 2px;
+    -fx-font-family: Lucida Console;
+}
+#new_password{
+    -fx-border-color: #2cbbaa; ;
+    -fx-border-radius: 10%;
+    -fx-background-color: transparent;
+    -fx-border-width: 2px;
+    -fx-font-family: Lucida Console;
+}
+#Current_password{
+    -fx-border-color: #2cbbaa; ;
+    -fx-border-radius: 10%;
+    -fx-background-color: transparent;
+    -fx-border-width: 2px;
+    -fx-font-family: Lucida Console;
+}
+#e_Textfield {
+    -fx-border-color: #ebb721; ;
+    -fx-border-radius: 10%;
+    -fx-background-color: transparent;
+    -fx-border-width: 2px;
+    -fx-font-family: Lucida Console;
+}
