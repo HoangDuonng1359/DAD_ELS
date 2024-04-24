@@ -39,8 +39,6 @@ public class baseFormController extends SceneManage {
     public static String DATABASE_URL = "jdbc:sqlite:src\\Data\\database.db";
    // protected static DictionaryManagement dictionaryManagement = null;
     protected static BufferedWriter bookwriter;
-    public static boolean avmode = true;
-
     public static User user = null;
 //    static {
 //        try {
