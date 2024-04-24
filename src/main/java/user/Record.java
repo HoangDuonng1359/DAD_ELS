@@ -18,6 +18,8 @@ public class Record {
                 if (rs.next()) {
                     result = rs.getInt(gameColumn);
                 }
+            } finally {
+                conn.close();
             }
         } catch (SQLException e) {
             e.printStackTrace();
