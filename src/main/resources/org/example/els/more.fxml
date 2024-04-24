@@ -14,7 +14,7 @@
             <Image url="@image/Template%202%20elment/tree2.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="509.0" fitWidth="319.0" layoutX="-92.0" layoutY="72.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="543.0" fitWidth="314.0" layoutX="-92.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@image/Template%202%20elment/tree1.png" />
          </image>
@@ -29,19 +29,19 @@
             <Image url="@image/Template%202%20elment/camp1.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="263.0" fitWidth="419.0" layoutX="202.0" layoutY="473.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="250.0" fitWidth="450.0" layoutX="202.0" layoutY="455.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@image/Template%202%20elment/people1.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="151.0" fitWidth="326.0" layoutX="702.0" layoutY="548.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="181.0" fitWidth="346.0" layoutX="681.0" layoutY="521.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@image/Template%202%20elment/buicay.png" />
          </image>
       </ImageView>
       <AnchorPane fx:id="more" layoutX="331.0" layoutY="102.0" prefHeight="363.0" prefWidth="660.0">
          <children>
-            <Label fx:id="menu_more" layoutX="223.0" layoutY="14.0" prefHeight="70.0" prefWidth="225.0" stylesheets="@css/LabelH1.css" text="MENU" />
+            <Label fx:id="menu_more" layoutX="280.0" layoutY="28.0" prefHeight="72.0" prefWidth="128.0" stylesheets="@css/LabelH1.css" text="MENU" />
               <Button fx:id="homeButton" layoutX="23.0" layoutY="108.0" mnemonicParsing="false" onAction="#openFormHome" prefHeight="51.0" prefWidth="191.0" stylesheets="@css/v2/button.css" />
               <Button fx:id="dictionary_menu" layoutX="248.0" layoutY="108.0" mnemonicParsing="false" onAction="#openFormDictionary" prefHeight="51.0" prefWidth="191.0" stylesheets="@css/v2/button.css" />
               <Button fx:id="edit_menu" layoutX="465.0" layoutY="108.0" mnemonicParsing="false" onAction="#openFormAddAndEdit" prefHeight="51.0" prefWidth="191.0" stylesheets="@css/v2/button.css" />
@@ -51,7 +51,17 @@
               <Button fx:id="game_menu" layoutX="248.0" layoutY="281.0" mnemonicParsing="false" onAction="#openFormGame" prefHeight="51.0" prefWidth="191.0" stylesheets="@css/v2/button.css" />
          </children>
       </AnchorPane>
-      <ImageView fitHeight="151.0" fitWidth="583.0" layoutX="395.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="151.0" fitWidth="583.0" layoutX="466.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/Template%20element/cloud2.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="81.0" fitWidth="72.0" layoutX="928.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/APP%20LOGO.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="124.0" fitWidth="410.0" layoutX="271.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@image/Template%20element/cloud2.png" />
          </image>

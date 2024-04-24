@@ -50,7 +50,7 @@
             <Image url="@image/Template%20element/dictionary/finding.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="81.0" fitWidth="72.0" layoutX="920.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="81.0" fitWidth="72.0" layoutX="928.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@image/APP%20LOGO.png" />
          </image>
@@ -77,6 +77,7 @@
             </Label>
             <CheckBox fx:id="va" layoutX="291.0" layoutY="424.0" mnemonicParsing="false" onAction="#setmodeva" prefHeight="18.0" prefWidth="94.0" text="Việt - Anh" />
             <CheckBox fx:id="av" layoutX="176.0" layoutY="424.0" mnemonicParsing="false" onAction="#setmodeav" prefHeight="18.0" prefWidth="94.0" text="Anh - Việt" />
+            <Button fx:id="ava_button" layoutX="643.0" layoutY="15.0" mnemonicParsing="false" onAction="#openProfile" prefHeight="54.0" prefWidth="54.0" stylesheets="@css/button.css" />
          </children>
       </AnchorPane>
       <ImageView fitHeight="94.0" fitWidth="184.0" layoutX="206.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">

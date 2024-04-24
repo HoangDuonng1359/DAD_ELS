@@ -7,6 +7,11 @@
 
 <AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="682.0" prefWidth="1000.0" stylesheets="@css/AnchorPane.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.els.gameController">
     <children>
+        <ImageView fitHeight="241.0" fitWidth="322.0" layoutX="642.0" layoutY="-20.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@image/Template%202%20elment/cloud.png" />
+            </image>
+        </ImageView>
         <ImageView fitHeight="394.0" fitWidth="31.0" layoutX="35.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@image/line.png" />
@@ -56,11 +61,6 @@
                 <Image url="@image/Template%20element/coconut.png" />
             </image>
         </ImageView>
-        <ImageView fitHeight="241.0" fitWidth="322.0" layoutX="689.0" layoutY="-33.0" pickOnBounds="true" preserveRatio="true">
-            <image>
-                <Image url="@image/Template%202%20elment/cloud.png" />
-            </image>
-        </ImageView>
         <ImageView fitHeight="276.0" fitWidth="301.0" layoutX="754.0" layoutY="113.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@image/Template%20element/plane1.png" />
@@ -71,6 +71,10 @@
                 <Image url="@image/Template%202%20elment/cloud.png" />
             </image>
         </ImageView>
-      <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="81.0" fitWidth="72.0" layoutX="928.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/APP%20LOGO.png" />
+         </image>
+      </ImageView>
     </children>
 </AnchorPane>
