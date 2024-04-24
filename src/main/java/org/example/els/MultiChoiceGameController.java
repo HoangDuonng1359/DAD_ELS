@@ -10,6 +10,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.util.Duration;
+import user.Record;
 
 import java.sql.SQLException;
 import java.util.List;
@@ -22,6 +23,8 @@ public class MultiChoiceGameController extends baseFormController {
     private Label question_lable;
     @FXML
     private Label score_lable;
+    @FXML
+    private Label max_score_label;
     @FXML
     private Button answerA;
     @FXML
@@ -44,11 +47,15 @@ public class MultiChoiceGameController extends baseFormController {
         questions = insertFromDB(DATABASE_URL);
     }
 
-    private void initgame() {
+    private void initgame() throws SQLException {
         quiz = new Quiz(questions);
         setQuestion(quiz);
         setChoice(quiz.getCurrentQuestion().getChoice());
         setScore(quiz);
+        int x = Record.getScore("multichoice",user);
+        if(x!=-1){
+            max_score_label.setText("max score: " + x);
+        }
         answerA.setStyle("-fx-background-color: WHITE");
         answerB.setStyle("-fx-background-color: WHITE");
         answerC.setStyle("-fx-background-color: WHITE");
@@ -82,7 +89,7 @@ public class MultiChoiceGameController extends baseFormController {
         score_lable.setText(score.toString());
     }
 
-    private void newTurn() {
+    private void newTurn() throws SQLException {
         if (!quiz.isFinished()) {
             quiz.nextQuestion();
             setQuestion(quiz);
@@ -96,6 +103,7 @@ public class MultiChoiceGameController extends baseFormController {
         } else {
             StringBuilder str = new StringBuilder("End Game!\n Your score: ");
             str.append(quiz.getScore());
+            Record.updateMaxScore("multichoice",quiz.getScore(),user);
             newAlert(stage, "Notification", "", str.toString());
             quiz.newQuiz();
             initgame();
@@ -115,7 +123,13 @@ public class MultiChoiceGameController extends baseFormController {
                         new KeyValue(button.styleProperty(), "-fx-background-color: #1eda5f"))
         );
         timeline.setCycleCount(2); // lặp lại 2 lần
-        timeline.setOnFinished(event -> newTurn());
+        timeline.setOnFinished(event -> {
+            try {
+                newTurn();
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
+        });
         timeline.play();
     }
 
@@ -135,7 +149,13 @@ public class MultiChoiceGameController extends baseFormController {
                         new KeyValue(correct.styleProperty(), "-fx-background-color: GREEN; -fx-text-fill: BLACK"))
         );
         timeline.setCycleCount(2); // lặp lại 2 lần
-        timeline.setOnFinished(event -> newTurn()); // sau khi nhấp nháy thì lượt chơi mới
+        timeline.setOnFinished(event -> {
+            try {
+                newTurn();
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
+        }); // sau khi nhấp nháy thì lượt chơi mới
         timeline.play();
     }
 
