@@ -3,10 +3,10 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<?import javafx.scene.image.Image?>
 <AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="682.0" prefWidth="1000.0" stylesheets="@css/AnchorPane.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.els.PictureGuessingGameController">
     <children>
       <ImageView fitHeight="394.0" fitWidth="31.0" layoutX="35.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
@@ -20,8 +20,8 @@
         </image>
       </ImageView>
       <Button fx:id="homeButton" layoutX="15.0" layoutY="22.0" mnemonicParsing="false" onAction="#openFormHome" prefHeight="47.0" prefWidth="184.0" stylesheets="@css/v2/button.css" />
-      <Button fx:id="dictionary_menu" layoutX="17.0" layoutY="79.0" mnemonicParsing="false" onAction="#openFormDictionary" prefHeight="47.0" prefWidth="200.0" stylesheets="@css/v2/button.css" />
-      <Button fx:id="google_translate_menu" layoutX="17.0" layoutY="143.0" mnemonicParsing="false" onAction="#openFormGoogle" prefHeight="47.0" prefWidth="200.0" stylesheets="@css/v2/button.css" />
+      <Button fx:id="dictionary_menu" layoutX="17.0" layoutY="79.0" mnemonicParsing="false" onAction="#openFormDictionary" prefHeight="47.0" prefWidth="184.0" stylesheets="@css/v2/button.css" />
+      <Button fx:id="google_translate_menu" layoutX="17.0" layoutY="143.0" mnemonicParsing="false" onAction="#openFormGoogle" prefHeight="47.0" prefWidth="184.0" stylesheets="@css/v2/button.css" />
       <Button fx:id="edit_menu" layoutX="15.0" layoutY="267.0" mnemonicParsing="false" onAction="#openFormAddAndEdit" prefHeight="47.0" prefWidth="184.0" stylesheets="@css/v2/button.css" />
       <Button fx:id="moreButton" layoutX="15.0" layoutY="335.0" mnemonicParsing="false" onAction="#openFormMore" prefHeight="47.0" prefWidth="184.0" stylesheets="@css/v2/button.css" />
       <Button fx:id="game_menu" layoutX="15.0" layoutY="204.0" mnemonicParsing="false" onAction="#openFormGame" prefHeight="47.0" prefWidth="184.0" stylesheets="@css/v2/button.css" />
@@ -32,7 +32,7 @@
       <Button fx:id="start_game_button" layoutX="249.0" layoutY="522.0" mnemonicParsing="false" onAction="#startGame" text="Start game" />
       <Button layoutX="531.0" layoutY="522.0" mnemonicParsing="false" onAction="#endGame" text="End game" />
       <Label fx:id="score" layoutX="683.0" layoutY="143.0" prefHeight="18.0" prefWidth="40.0" text="Score: " />
-      <Label layoutX="684.0" layoutY="161.0" text="Max score" />
-      <Label layoutX="683.0" layoutY="124.0" prefHeight="18.0" prefWidth="40.0" text="Player" />
+      <Label fx:id="player_lable" layoutX="683.0" layoutY="124.0" prefHeight="18.0" prefWidth="40.0" text="Player" />
+      <Label fx:id="max_score_label" layoutX="683.0" layoutY="159.0" prefHeight="26.0" prefWidth="102.0" text="max score" />
     </children>
 </AnchorPane>

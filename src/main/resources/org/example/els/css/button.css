@@ -47,7 +47,7 @@
     -fx-border-width: 1px;
     -fx-border-color: #a332c5;
     -fx-border-radius: 20%;
-    -fx-background-image: url("../image/Google_Translate_button.png");
+    -fx-background-image: url("../image/Google_Translate_button_v2.png");
     -fx-background-size: cover;
     -fx-background-repeat: no-repeat;
 }
@@ -62,7 +62,7 @@
     -fx-border-width: 1px;
     -fx-border-color: #a332c5;
     -fx-border-radius: 20%;
-    -fx-background-image: url("../image/game_menu_button.png");
+    -fx-background-image: url("../image/game_menu_button_v2.png");
     -fx-background-size: cover;
     -fx-background-repeat: no-repeat;
 }
@@ -184,4 +184,12 @@
     -fx-border-radius: 10px;
     -fx-font-family: "Lucida Console";
     -fx-effect: dropshadow(one-pass-box,#1f1347,5,1,0,2);
+}
+#sea_button{
+    -fx-background-color: #31d4cb;
+    -fx-border-color: #1f1347;
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+    -fx-font-family: "Lucida Console";
+    -fx-effect: dropshadow(one-pass-box,#0b91a0,5,1,3,2);
 }

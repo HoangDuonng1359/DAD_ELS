@@ -31,8 +31,8 @@
             </image>
         </ImageView>
         <Button fx:id="homeButton" layoutX="15.0" layoutY="22.0" mnemonicParsing="false" onAction="#openFormHome" prefHeight="47.0" prefWidth="184.0" stylesheets="@css/v2/button.css" />
-        <Button fx:id="dictionary_menu" layoutX="17.0" layoutY="79.0" mnemonicParsing="false" onAction="#openFormDictionary" prefHeight="47.0" prefWidth="200.0" stylesheets="@css/v2/button.css" />
-        <Button fx:id="google_translate_menu" layoutX="17.0" layoutY="143.0" mnemonicParsing="false" onAction="#openFormGoogle" prefHeight="47.0" prefWidth="200.0" stylesheets="@css/v2/button.css" />
+        <Button fx:id="dictionary_menu" layoutX="17.0" layoutY="79.0" mnemonicParsing="false" onAction="#openFormDictionary" prefHeight="47.0" prefWidth="184.0" stylesheets="@css/v2/button.css" />
+        <Button fx:id="google_translate_menu" layoutX="17.0" layoutY="143.0" mnemonicParsing="false" onAction="#openFormGoogle" prefHeight="47.0" prefWidth="184.0" stylesheets="@css/v2/button.css" />
         <Button fx:id="edit_menu" layoutX="15.0" layoutY="267.0" mnemonicParsing="false" onAction="#openFormAddAndEdit" prefHeight="47.0" prefWidth="184.0" stylesheets="@css/v2/button.css" />
         <Button fx:id="moreButton" layoutX="15.0" layoutY="335.0" mnemonicParsing="false" onAction="#openFormMore" prefHeight="47.0" prefWidth="184.0" stylesheets="@css/v2/button.css" />
         <Button fx:id="game_menu" layoutX="15.0" layoutY="204.0" mnemonicParsing="false" onAction="#openFormGame" prefHeight="47.0" prefWidth="184.0" stylesheets="@css/v2/button.css" />

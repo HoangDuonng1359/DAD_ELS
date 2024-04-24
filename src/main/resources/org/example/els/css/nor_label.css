@@ -46,3 +46,12 @@
     -fx-scale-x: 1.1;
     -fx-scale-y: 1.1;
 }
+#sea_label{
+    -fx-font-family: "Lucida Handwriting";
+    -fx-text-fill: black;
+    -fx-border-color: #1f1347;
+    -fx-border-radius: 15px;
+    -fx-background-color: #31d4cb;
+    -fx-background-radius: 15px;
+    -fx-alignment: center;
+}
