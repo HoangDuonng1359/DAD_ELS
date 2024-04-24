@@ -34,5 +34,11 @@
       <Label fx:id="score" layoutX="683.0" layoutY="143.0" prefHeight="18.0" prefWidth="40.0" text="Score: " />
       <Label fx:id="player_lable" layoutX="683.0" layoutY="124.0" prefHeight="18.0" prefWidth="40.0" text="Player" />
       <Label fx:id="max_score_label" layoutX="683.0" layoutY="159.0" prefHeight="26.0" prefWidth="102.0" text="max score" />
+      <Button fx:id="ava_button" layoutX="846.0" layoutY="55.0" mnemonicParsing="false" onAction="#openProfile" prefHeight="47.0" prefWidth="48.0" stylesheets="@css/button.css" />
+      <ImageView fitHeight="81.0" fitWidth="72.0" layoutX="928.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/APP%20LOGO.png" />
+         </image>
+      </ImageView>
     </children>
 </AnchorPane>

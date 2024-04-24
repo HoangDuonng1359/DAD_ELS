@@ -9,6 +9,11 @@
 
 <AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="682.0" prefWidth="1000.0" stylesheets="@css/AnchorPane.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.els.GoogleTranslateController">
    <children>
+      <ImageView fitHeight="158.0" fitWidth="190.0" layoutX="828.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/Template%20element/saobien.png" />
+         </image>
+      </ImageView>
       <ImageView fitHeight="394.0" fitWidth="31.0" layoutX="35.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@image/line.png" />
@@ -43,14 +48,15 @@
             <Image url="@image/Template%20element/water2.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="158.0" fitWidth="190.0" layoutX="861.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@image/Template%20element/saobien.png" />
-         </image>
-      </ImageView>
       <ImageView fitHeight="205.0" fitWidth="300.0" layoutX="151.0" layoutY="429.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@image/Template%20element/dep.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="ava_button" layoutX="551.0" layoutY="24.0" mnemonicParsing="false" onAction="#openProfile" prefHeight="47.0" prefWidth="48.0" stylesheets="@css/button.css" />
+      <ImageView fitHeight="81.0" fitWidth="72.0" layoutX="928.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/APP%20LOGO.png" />
          </image>
       </ImageView>
    </children>
