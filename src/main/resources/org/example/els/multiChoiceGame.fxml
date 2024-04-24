@@ -49,5 +49,6 @@
             <Button fx:id="answerD" mnemonicParsing="false" onAction="#checkAnswer" prefHeight="94.0" prefWidth="220.0" stylesheets="@css/button.css" GridPane.columnIndex="1" GridPane.rowIndex="1" />
          </children>
       </GridPane>
+      <Label fx:id="max_score_label" layoutX="631.0" layoutY="158.0" prefHeight="64.0" prefWidth="101.0" text="max score" />
     </children>
 </AnchorPane>

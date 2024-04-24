@@ -46,3 +46,10 @@
     -fx-border-width: 2px;
     -fx-font-family: Lucida Console;
 }
+#e_Textfield {
+    -fx-border-color: #ebb721; ;
+    -fx-border-radius: 10%;
+    -fx-background-color: transparent;
+    -fx-border-width: 2px;
+    -fx-font-family: Lucida Console;
+}

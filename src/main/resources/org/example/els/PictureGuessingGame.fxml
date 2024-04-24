@@ -32,7 +32,7 @@
       <Button fx:id="start_game_button" layoutX="249.0" layoutY="522.0" mnemonicParsing="false" onAction="#startGame" text="Start game" />
       <Button layoutX="531.0" layoutY="522.0" mnemonicParsing="false" onAction="#endGame" text="End game" />
       <Label fx:id="score" layoutX="683.0" layoutY="143.0" prefHeight="18.0" prefWidth="40.0" text="Score: " />
-      <Label layoutX="684.0" layoutY="161.0" text="Max score" />
-      <Label layoutX="683.0" layoutY="124.0" prefHeight="18.0" prefWidth="40.0" text="Player" />
+      <Label fx:id="player_lable" layoutX="683.0" layoutY="124.0" prefHeight="18.0" prefWidth="40.0" text="Player" />
+      <Label fx:id="max_score_label" layoutX="683.0" layoutY="159.0" prefHeight="26.0" prefWidth="102.0" text="max score" />
     </children>
 </AnchorPane>
