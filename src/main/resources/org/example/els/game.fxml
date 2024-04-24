@@ -1,17 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
 <AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="682.0" prefWidth="1000.0" stylesheets="@css/AnchorPane.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.els.gameController">
     <children>
-        <ImageView fitHeight="241.0" fitWidth="322.0" layoutX="642.0" layoutY="-20.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="142.0" fitWidth="382.0" layoutX="348.0" layoutY="-30.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/Template%20element/cloud2.png" />
+         </image>
+      </ImageView>
+        <ImageView fitHeight="1057.0" fitWidth="1068.0" layoutX="-7.0" layoutY="553.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@image/Template%202%20elment/cloud.png" />
+                <Image url="@image/Template%20element/beach.png" />
             </image>
         </ImageView>
+        <ImageView fitHeight="307.0" fitWidth="314.0" layoutY="386.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@image/Template%20element/moutain.png" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="190.0" fitWidth="178.0" layoutX="100.0" layoutY="377.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@image/Template%20element/coconut.png" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="276.0" fitWidth="301.0" layoutX="669.0" layoutY="-104.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@image/Template%20element/plane1.png" />
+            </image>
+        </ImageView>
+      <ImageView fitHeight="57.0" fitWidth="219.0" layoutX="182.0" layoutY="98.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/Template%20element/cloud2.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="57.0" fitWidth="219.0" layoutX="176.0" layoutY="286.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/Template%20element/cloud2.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="57.0" fitWidth="219.0" layoutX="139.0" layoutY="341.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/Template%20element/cloud2.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="84.0" fitWidth="314.0" layoutX="775.0" layoutY="349.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/Template%20element/cloud2.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="84.0" fitWidth="314.0" layoutX="762.0" layoutY="148.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/Template%20element/cloud2.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="96.0" fitWidth="368.0" layoutX="658.0" layoutY="232.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/Template%20element/cloud2.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="116.0" fitWidth="213.0" layoutX="200.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/Template%20element/bigplane.png" />
+         </image>
+      </ImageView>
         <ImageView fitHeight="394.0" fitWidth="31.0" layoutX="35.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@image/line.png" />
@@ -28,47 +84,19 @@
         <Button fx:id="edit_menu" layoutX="15.0" layoutY="267.0" mnemonicParsing="false" onAction="#openFormAddAndEdit" prefHeight="47.0" prefWidth="184.0" stylesheets="@css/v2/button.css" />
         <Button fx:id="moreButton" layoutX="15.0" layoutY="335.0" mnemonicParsing="false" onAction="#openFormMore" prefHeight="47.0" prefWidth="184.0" stylesheets="@css/v2/button.css" />
         <Button fx:id="game_menu" layoutX="15.0" layoutY="204.0" mnemonicParsing="false" onAction="#openFormGame" prefHeight="47.0" prefWidth="184.0" stylesheets="@css/v2/button.css" />
-        <Button fx:id="multiple_game" layoutX="323.0" layoutY="293.0" mnemonicParsing="false" onAction="#openFormMultichoice" prefHeight="84.0" prefWidth="402.0" stylesheets="@css/button.css" />
-        <Button fx:id="picture_game" layoutX="323.0" layoutY="186.0" mnemonicParsing="false" onAction="#openFormPGG" prefHeight="84.0" prefWidth="402.0" stylesheets="@css/button.css" />
-        <Button fx:id="flash_game" layoutX="320.0" layoutY="79.0" mnemonicParsing="false" onAction="#openFormFlashCard" prefHeight="84.0" prefWidth="402.0" stylesheets="@css/button.css" />
-        <ImageView fitHeight="1057.0" fitWidth="1068.0" layoutX="-7.0" layoutY="553.0" pickOnBounds="true" preserveRatio="true">
-            <image>
-                <Image url="@image/Template%20element/beach.png" />
-            </image>
-        </ImageView>
         <ImageView fitHeight="227.0" fitWidth="235.0" layoutX="86.0" layoutY="504.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@image/Template%20element/boat.png" />
             </image>
         </ImageView>
-        <ImageView fitHeight="297.0" fitWidth="322.0" layoutX="1.0" layoutY="380.0" pickOnBounds="true" preserveRatio="true">
-            <image>
-                <Image url="@image/Template%20element/moutain.png" />
-            </image>
-        </ImageView>
-        <ImageView fitHeight="347.0" fitWidth="369.0" layoutX="348.0" layoutY="346.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="347.0" fitWidth="369.0" layoutX="348.0" layoutY="366.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@image/Template%20element/bridge.png" />
             </image>
         </ImageView>
-        <ImageView fitHeight="314.0" fitWidth="329.0" layoutX="711.0" layoutY="382.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="314.0" fitWidth="329.0" layoutX="711.0" layoutY="383.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@image/Template%20element/cano.png" />
-            </image>
-        </ImageView>
-        <ImageView fitHeight="176.0" fitWidth="176.0" layoutX="100.0" layoutY="391.0" pickOnBounds="true" preserveRatio="true">
-            <image>
-                <Image url="@image/Template%20element/coconut.png" />
-            </image>
-        </ImageView>
-        <ImageView fitHeight="276.0" fitWidth="301.0" layoutX="754.0" layoutY="113.0" pickOnBounds="true" preserveRatio="true">
-            <image>
-                <Image url="@image/Template%20element/plane1.png" />
-            </image>
-        </ImageView>
-        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="223.0" pickOnBounds="true" preserveRatio="true">
-            <image>
-                <Image url="@image/Template%202%20elment/cloud.png" />
             </image>
         </ImageView>
       <ImageView fitHeight="81.0" fitWidth="72.0" layoutX="928.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
@@ -76,5 +104,14 @@
             <Image url="@image/APP%20LOGO.png" />
          </image>
       </ImageView>
+      <ImageView fitHeight="142.0" fitWidth="382.0" layoutX="725.0" layoutY="61.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/Template%20element/cloud2.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="game_label" layoutX="393.0" layoutY="56.0" prefHeight="57.0" prefWidth="279.0" stylesheets="@css/nor_label.css" text="GAME ZONE" />
+        <Button fx:id="multiple_game" layoutX="332.0" layoutY="340.0" mnemonicParsing="false" onAction="#openFormMultichoice" prefHeight="84.0" prefWidth="402.0" stylesheets="@css/button.css" text="MULTIPLE CHOICE" />
+        <Button fx:id="picture_game" layoutX="332.0" layoutY="232.0" mnemonicParsing="false" onAction="#openFormPGG" prefHeight="84.0" prefWidth="402.0" stylesheets="@css/button.css" text="PICTURE GUESSING" />
+        <Button fx:id="flash_game" layoutX="332.0" layoutY="125.0" mnemonicParsing="false" onAction="#openFormFlashCard" prefHeight="84.0" prefWidth="402.0" stylesheets="@css/button.css" text="FLASH CARD" />
     </children>
 </AnchorPane>

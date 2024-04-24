@@ -3,7 +3,7 @@
     -fx-border-radius: 10%;
     -fx-background-color: transparent;
     -fx-border-width: 2px;
-    -fx-font-family: Lucida Console;
+    -fx-font-family: "Courier New";
 }
 #search_field:hover{
     -fx-border-color: #e76c0e;
