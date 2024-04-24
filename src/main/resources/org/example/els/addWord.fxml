@@ -16,6 +16,11 @@
 
 <AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="682.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.els.addAndEditController">
    <children>
+      <ImageView fitHeight="249.0" fitWidth="228.0" layoutX="-9.0" layoutY="393.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/Template%20element/coconut.png" />
+         </image>
+      </ImageView>
       <ImageView fitHeight="394.0" fitWidth="31.0" layoutX="35.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@image/line.png" />
@@ -32,10 +37,7 @@
       <Button fx:id="edit_menu" layoutX="15.0" layoutY="267.0" mnemonicParsing="false" onAction="#openFormAddAndEdit" prefHeight="47.0" prefWidth="184.0" stylesheets="@css/v2/button.css" />
       <Button fx:id="moreButton" layoutX="15.0" layoutY="335.0" mnemonicParsing="false" onAction="#openFormMore" prefHeight="47.0" prefWidth="184.0" stylesheets="@css/v2/button.css" />
       <Button fx:id="game_menu" layoutX="15.0" layoutY="204.0" mnemonicParsing="false" onAction="#openFormGame" prefHeight="47.0" prefWidth="184.0" stylesheets="@css/v2/button.css" />
-      <TextField fx:id="e_Textfield" layoutX="455.0" layoutY="167.0" prefHeight="26.0" prefWidth="257.0" />
-      <Label fx:id="label_target" layoutX="385.0" layoutY="167.0" prefHeight="26.0" prefWidth="52.0" text="English" />
-      <Label fx:id="label_explain" layoutX="249.0" layoutY="345.0" prefHeight="26.0" prefWidth="67.0" text="Vietnamese" />
-      <Label fx:id="label_information" alignment="CENTER" layoutX="500.0" layoutY="85.0" prefHeight="82.0" prefWidth="168.0" text="Add word" textAlignment="CENTER">
+      <Label fx:id="label_information" alignment="CENTER" layoutX="488.0" layoutY="4.0" prefHeight="82.0" prefWidth="322.0" stylesheets="@css/LabelH1.css" text="Add word" textAlignment="CENTER">
          <font>
             <Font name="MS Outlook" size="32.0" />
          </font>
@@ -55,11 +57,47 @@
                </stops>
             </LinearGradient>
          </textFill></Label>
-      <Button layoutX="584.0" layoutY="440.0" mnemonicParsing="false" onAction="#addWord" prefHeight="19.0" prefWidth="90.0" text="Save" />
-      <HTMLEditor fx:id="v_Textfield" htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" layoutX="351.0" layoutY="228.0" prefHeight="200.0" prefWidth="506.0" />
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="136.0" layoutY="454.0" pickOnBounds="true" preserveRatio="true" />
-      <CheckBox fx:id="av" layoutX="358.0" layoutY="444.0" mnemonicParsing="false" onAction="#setmodeav" prefHeight="18.0" prefWidth="94.0" text="Anh - Việt" />
-      <CheckBox fx:id="va" layoutX="457.0" layoutY="444.0" mnemonicParsing="false" onAction="#setmodeva" prefHeight="18.0" prefWidth="94.0" text="Việt - Anh" />
+      <AnchorPane fx:id="add_word" layoutX="231.0" layoutY="108.0" prefHeight="412.0" prefWidth="754.0" stylesheets="@css/AnchorPane.css">
+         <children>
+            <HTMLEditor fx:id="v_Textfield" htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" layoutX="187.0" layoutY="86.0" prefHeight="200.0" prefWidth="506.0" stylesheets="@css/HTMLeditor.css" />
+            <CheckBox fx:id="va" layoutX="201.0" layoutY="324.0" mnemonicParsing="false" onAction="#setmodeva" prefHeight="26.0" prefWidth="106.0" text="Việt - Anh" />
+            <Button layoutX="377.0" layoutY="321.0" mnemonicParsing="false" onAction="#addWord" prefHeight="36.0" prefWidth="121.0" text="Save" />
+            <CheckBox fx:id="av" layoutX="587.0" layoutY="325.0" mnemonicParsing="false" onAction="#setmodeav" prefHeight="26.0" prefWidth="106.0" text="Anh - Việt" />
+            <Label fx:id="label_target" layoutX="29.0" layoutY="30.0" prefHeight="56.0" prefWidth="130.0" stylesheets="@css/LabelH1.css" text="English" />
+            <TextField fx:id="e_Textfield" layoutX="283.0" layoutY="28.0" prefHeight="47.0" prefWidth="304.0" stylesheets="@css/textField.css" />
+            <Label fx:id="label_explain" layoutX="29.0" layoutY="196.0" prefHeight="56.0" prefWidth="130.0" stylesheets="@css/LabelH1.css" text="Vietnamese" />
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="116.0" fitWidth="856.0" layoutX="221.0" layoutY="613.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/Template%20element/bien.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="214.0" fitWidth="609.0" layoutX="-143.0" layoutY="572.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/Template%20element/dao.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="267.0" fitWidth="173.0" layoutX="88.0" layoutY="479.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/Template%20element/people.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="364.0" fitWidth="354.0" layoutX="632.0" layoutY="508.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/Template%20element/everyone.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="222.0" layoutY="-19.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/Template%20element/dictionary/bird.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="128.0" fitWidth="184.0" layoutX="886.0" layoutY="-19.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/Template%20element/plane1.png" />
+         </image>
+      </ImageView>
    </children>
    <stylesheets>
       <URL value="@css/AnchorPane.css" />
