@@ -50,7 +50,7 @@ public class ProfileController extends baseFormController {
         if (user.getImage() != null) {
             avata_image.setImage(user.getImage());
         }
-        numberEdit.setText("Word added:" + DictionaryManagementDatabase.numberChange("#") + "words");
+        numberEdit.setText("Word added:" + DictionaryManagementDatabase.numberChange("#") + " words");
         numberAdd.setText("Word edited:" + DictionaryManagementDatabase.numberChange("+") + " words");
         numberRemove.setText("Word removed:" + DictionaryManagementDatabase.numberChange("-") + " words");
         if(user.getAvata()!=null){

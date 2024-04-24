@@ -37,7 +37,7 @@
       <Button fx:id="edit_menu" layoutX="15.0" layoutY="267.0" mnemonicParsing="false" onAction="#openFormAddAndEdit" prefHeight="47.0" prefWidth="184.0" stylesheets="@css/v2/button.css" />
       <Button fx:id="moreButton" layoutX="15.0" layoutY="335.0" mnemonicParsing="false" onAction="#openFormMore" prefHeight="47.0" prefWidth="184.0" stylesheets="@css/v2/button.css" />
       <Button fx:id="game_menu" layoutX="15.0" layoutY="204.0" mnemonicParsing="false" onAction="#openFormGame" prefHeight="47.0" prefWidth="184.0" stylesheets="@css/v2/button.css" />
-      <Label fx:id="label_information" alignment="CENTER" layoutX="488.0" layoutY="4.0" prefHeight="82.0" prefWidth="322.0" stylesheets="@css/LabelH1.css" text="Add word" textAlignment="CENTER">
+      <Label fx:id="label_information" alignment="CENTER" layoutX="447.0" layoutY="14.0" prefHeight="82.0" prefWidth="322.0" stylesheets="@css/LabelH1.css" text="Add word" textAlignment="CENTER">
          <font>
             <Font name="MS Outlook" size="32.0" />
          </font>
@@ -88,14 +88,20 @@
             <Image url="@image/Template%20element/everyone.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="222.0" layoutY="-19.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="221.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@image/Template%20element/dictionary/bird.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="128.0" fitWidth="184.0" layoutX="886.0" layoutY="-19.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="128.0" fitWidth="184.0" layoutX="809.0" layoutY="-33.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@image/Template%20element/plane1.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="ava_button" layoutX="745.0" layoutY="31.0" mnemonicParsing="false" onAction="#openProfile" prefHeight="47.0" prefWidth="48.0" stylesheets="@css/button.css" />
+      <ImageView fitHeight="81.0" fitWidth="72.0" layoutX="923.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/APP%20LOGO.png" />
          </image>
       </ImageView>
    </children>

@@ -55,7 +55,14 @@ public class baseFormController extends SceneManage {
 //            throw new RuntimeException(e);
 //        }
 //    }
-
+    @FXML
+    public void openProfile(ActionEvent event) {
+        try {
+            showScene(root,stage, scene, event, "profile.fxml");
+        } catch (IOException var3) {
+            System.out.println("lỗi không mở được form");
+        }
+    }
     @FXML
     public void openFormGoogle(ActionEvent event) {
         try {
