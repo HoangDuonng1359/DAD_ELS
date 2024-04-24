@@ -39,19 +39,19 @@
             <Image url="@image/Template%202%20elment/buicay.png" />
          </image>
       </ImageView>
-      <AnchorPane fx:id="more" layoutX="331.0" layoutY="102.0" prefHeight="363.0" prefWidth="660.0">
+      <AnchorPane fx:id="more" layoutX="314.0" layoutY="72.0" prefHeight="363.0" prefWidth="660.0">
          <children>
-            <Label fx:id="menu_more" layoutX="223.0" layoutY="14.0" prefHeight="70.0" prefWidth="225.0" stylesheets="@css/LabelH1.css" text="MENU" />
+            <Label fx:id="menu_more" layoutX="243.0" layoutY="14.0" prefHeight="70.0" prefWidth="225.0" stylesheets="@css/LabelH1.css" text="MENU" />
               <Button fx:id="homeButton" layoutX="23.0" layoutY="99.0" mnemonicParsing="false" onAction="#openFormHome" prefHeight="51.0" prefWidth="191.0" stylesheets="@css/v2/button.css" />
-              <Button fx:id="dictionary_menu" layoutX="256.0" layoutY="99.0" mnemonicParsing="false" onAction="#openFormDictionary" prefHeight="51.0" prefWidth="182.0" stylesheets="@css/v2/button.css" />
-              <Button fx:id="edit_menu" layoutX="469.0" layoutY="99.0" mnemonicParsing="false" onAction="#openFormAddAndEdit" prefHeight="51.0" prefWidth="174.0" stylesheets="@css/v2/button.css" />
+              <Button fx:id="dictionary_menu" layoutX="256.0" layoutY="99.0" mnemonicParsing="false" onAction="#openFormDictionary" prefHeight="51.0" prefWidth="191.0" stylesheets="@css/v2/button.css" />
+              <Button fx:id="edit_menu" layoutX="469.0" layoutY="99.0" mnemonicParsing="false" onAction="#openFormAddAndEdit" prefHeight="51.0" prefWidth="191.0" stylesheets="@css/v2/button.css" />
             <Button fx:id="edit_button" layoutX="23.0" layoutY="196.0" mnemonicParsing="false" onAction="#openFormEdit" prefHeight="51.0" prefWidth="191.0" stylesheets="@css/v2/button.css" />
-            <Button fx:id="delete_button" layoutX="256.0" layoutY="196.0" mnemonicParsing="false" onAction="#openFormDelete" prefHeight="51.0" prefWidth="181.0" stylesheets="@css/v2/button.css" />
-              <Button fx:id="google_translate_menu" layoutX="464.0" layoutY="196.0" mnemonicParsing="false" onAction="#openFormGoogle" prefHeight="44.0" prefWidth="174.0" stylesheets="@css/v2/button.css" />
-              <Button fx:id="game_menu" layoutX="256.0" layoutY="282.0" mnemonicParsing="false" onAction="#openFormGame" prefHeight="51.0" prefWidth="182.0" stylesheets="@css/v2/button.css" />
+            <Button fx:id="delete_button" layoutX="256.0" layoutY="196.0" mnemonicParsing="false" onAction="#openFormDelete" prefHeight="51.0" prefWidth="191.0" stylesheets="@css/v2/button.css" />
+              <Button fx:id="google_translate_menu" layoutX="464.0" layoutY="196.0" mnemonicParsing="false" onAction="#openFormGoogle" prefHeight="51.0" prefWidth="198.0" stylesheets="@css/v2/button.css" />
+              <Button fx:id="game_menu" layoutX="256.0" layoutY="282.0" mnemonicParsing="false" onAction="#openFormGame" prefHeight="51.0" prefWidth="198.0" stylesheets="@css/v2/button.css" />
          </children>
       </AnchorPane>
-      <ImageView fitHeight="151.0" fitWidth="583.0" layoutX="395.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="151.0" fitWidth="583.0" layoutX="382.0" layoutY="-42.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@image/Template%20element/cloud2.png" />
          </image>
