@@ -37,6 +37,10 @@
     -fx-font-family: "Lucida Handwriting";
     -fx-alignment: center;
 }
-#label_information {
-
+#menu_more {
+    -fx-text-fill: #90594b;
+    -fx-font-family: "Lucida Handwriting";
+    -fx-alignment: center;
+    -fx-font-size: 20px;
+    -fx-effect: dropshadow(one-pass-box,white,5,1,3,0);
 }
