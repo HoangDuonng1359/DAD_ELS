@@ -29,3 +29,12 @@
     -fx-background-radius: 50px;
 
 }
+#more {
+    -fx-background-color:#f1e093;
+    -fx-background-radius:  30px;
+    -fx-border-color: #ebd964, #f59a4b; /* Màu viền */
+    -fx-border-width: 5, 5; /* Độ dày của viền */
+    -fx-border-radius: 20, 20; /* Độ cong của viền */
+
+
+}
