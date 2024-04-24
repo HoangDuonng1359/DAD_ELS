@@ -20,3 +20,7 @@
     -fx-background-radius: 15px;
 }
 
+#add_word {
+    -fx-background-color:#f1e093;
+    -fx-background-radius: 50px;
+}
