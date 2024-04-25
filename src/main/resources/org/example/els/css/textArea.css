@@ -1,20 +1,16 @@
 #Text_area_input {
-    -fx-border-color: #ebb721; /* Màu viền */
+    -fx-border-color: #ffbd59; /* Màu viền */
     -fx-border-width: 5px; /* Độ dày của viền */
-    -fx-background-color: #bfb666; /* Màu nền */
-    -fx-background-insets: 0, 1, 2; /* Lề nền */
-    -fx-background-radius: 5, 4, 3; /* Độ cong của viền */
+    -fx-background-radius: 20px;
     -fx-padding: 3px; /* Khoảng cách giữa văn bản và viền */
-    -fx-border-radius: 5px; /* Độ cong của viền */
+    -fx-border-radius: 20px; /* Độ cong của viền */
 
 }
 #Text_area_out {
-    -fx-border-color: #ebb721; /* Màu viền */
+    -fx-border-color: #ffbd59; /* Màu viền */
     -fx-border-width: 5px; /* Độ dày của viền */
-    -fx-background-color: #bfb666; /* Màu nền */
-    -fx-background-insets: 0, 1, 2; /* Lề nền */
-    -fx-background-radius: 5, 4, 3; /* Độ cong của viền */
+    -fx-background-radius: 20px;
     -fx-padding: 3px; /* Khoảng cách giữa văn bản và viền */
-    -fx-border-radius: 5px; /* Độ cong của viền */
+    -fx-border-radius: 20px; /* Độ cong của viền */
 
 }

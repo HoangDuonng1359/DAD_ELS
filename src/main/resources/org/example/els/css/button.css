@@ -175,17 +175,20 @@
     -fx-effect: dropshadow(one-pass-box,#fcd24f,7,1,0,6);
 }
 #buttonTranslate {
-    -fx-background-color: transparent;
-    -fx-background-size: cover;
-
-    -fx-background-repeat: no-repeat;
-    -fx-background-position: center center;
-    -fx-background-image: url("../image/translate.png") ;
+    -fx-background-color: #ffbd59;
+    -fx-background-radius: 10px;
+    -fx-font-family: "Lucida Console";
+    -fx-font-size: 13px;
+    -fx-alignment: center;
+    -fx-effect: dropshadow(one-pass-box,lightgoldenrodyellow,6,1,3,2);
+    -fx-border-color: black;
+    -fx-border-width: 2px;
+    -fx-border-radius: 10px;
 }
 #find {
     -fx-background-color: transparent; /* bỏ đi màu của button cũ*/
     -fx-border-width: 2px;
-    -fx-border-color: #d07328;;
+    -fx-border-color: #ffbd59;
     -fx-border-radius: 100%;
     -fx-background-size: cover; /* Kích thước của hình ảnh theo tỷ lệ */
     -fx-background-repeat: no-repeat; /* Ngăn lặp lại hình ảnh */
@@ -237,4 +240,51 @@
     -fx-border-radius: 10px;
     -fx-font-family: "Lucida Console";
     -fx-effect: dropshadow(one-pass-box,#0b91a0,5,1,3,2);
+}
+#audio_button_out{
+    -fx-background-image: url("../image/sound.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 30px;
+    -fx-background-position: center;
+    -fx-background-color: #ffbd59;
+    -fx-background-radius: 30%;
+    -fx-effect: dropshadow(one-pass-box,lightgoldenrodyellow,6,1,3,2);
+    -fx-border-color: black;
+    -fx-border-width: 2px;
+    -fx-border-radius: 30%;
+}
+#audio_button_in{
+    -fx-background-image: url("../image/sound.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 30px;
+    -fx-background-position: center;
+    -fx-background-color: #ffbd59;
+    -fx-background-radius: 30%;
+    -fx-effect: dropshadow(one-pass-box,lightgoldenrodyellow,6,1,3,2);
+    -fx-border-color: black;
+    -fx-border-width: 2px;
+    -fx-border-radius: 30%;
+}
+#audio_button_in:hover{
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}
+#audio_button_out:hover{
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}
+#commit{
+    -fx-background-color: #ffbd59;
+    -fx-background-radius: 10px;
+    -fx-font-family: "Lucida Console";
+    -fx-font-size: 20px;
+    -fx-alignment: center;
+    -fx-effect: dropshadow(one-pass-box,lightgoldenrodyellow,6,1,3,2);
+    -fx-border-color: black;
+    -fx-border-width: 2px;
+    -fx-border-radius: 10px;
+}
+#commit:hover{
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
 }
