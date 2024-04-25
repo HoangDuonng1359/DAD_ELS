@@ -101,6 +101,7 @@
 }
 
 #game_label{
+
     -fx-background-color: #bec8d1;
     -fx-background-radius: 10%;
     -fx-border-color: #7777d7;
@@ -113,20 +114,45 @@
     -fx-border-radius: 10%;
 }
 #answerA{
-    -fx-font-family: "Times New Roman";
-    -fx-font-size: 15px;
+    -fx-background-color: #f2f2f2;
+    -fx-background-radius: 10px;
+    -fx-font-family: "Quicksand";
+    -fx-font-size: 20px;
+    -fx-text-fill: #0B91A0;
+    -fx-border-color: #0B91A0 ;/* Màu viền */
+    -fx-border-width: 2px;
+    -fx-alignment: center;
 }
 #answerB{
-    -fx-font-family: "Times New Roman";
-    -fx-font-size: 15px;
+    -fx-background-color: #f2f2f2;
+    -fx-background-radius: 10px;
+    -fx-font-family: "Quicksand";
+    -fx-font-size: 20px;
+    -fx-text-fill: #0B91A0;
+    -fx-border-color: #0B91A0 ;/* Màu viền */
+    -fx-border-width: 2px;
+    -fx-alignment: center;
 }
 #answerC{
-    -fx-font-family: "Times New Roman";
-    -fx-font-size: 15px;
+    -fx-background-color: #f2f2f2;
+    -fx-background-radius: 10px;
+    -fx-font-family: "Quicksand";
+    -fx-font-size: 20px;
+    -fx-text-fill: #0B91A0;
+    -fx-border-color: #0B91A0 ;/* Màu viền */
+    -fx-border-width: 2px;
+    -fx-alignment: center;
 }
 #answerD{
-    -fx-font-family: "Times New Roman";
-    -fx-font-size: 15px;
+    -fx-background-color: #f2f2f2;
+    -fx-background-radius: 10px;
+    -fx-font-family: "Quicksand";
+    -fx-font-size: 20px;
+    -fx-text-fill: #0B91A0;
+    -fx-border-color: #0B91A0 ;/* Màu viền */
+    -fx-border-width: 2px;
+    -fx-alignment: center;
+
 }
 
 #multiple_game {
