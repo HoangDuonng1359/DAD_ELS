@@ -53,3 +53,10 @@
     -fx-border-width: 2px;
     -fx-font-family: Copperplate;
 }
+#word {
+    -fx-border-color: #ffbd59;
+    -fx-border-radius: 10%;
+    -fx-background-color: transparent;
+    -fx-border-width: 2px;
+    -fx-font-family: Copperplate;
+}
