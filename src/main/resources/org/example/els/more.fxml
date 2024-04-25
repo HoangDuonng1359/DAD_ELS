@@ -39,9 +39,9 @@
             <Image url="@image/Template%202%20elment/buicay.png" />
          </image>
       </ImageView>
-      <AnchorPane fx:id="more" layoutX="331.0" layoutY="102.0" prefHeight="363.0" prefWidth="660.0">
+      <AnchorPane fx:id="more" layoutX="334.0" layoutY="102.0" prefHeight="363.0" prefWidth="663.0">
          <children>
-            <Label fx:id="menu_more" layoutX="280.0" layoutY="28.0" prefHeight="72.0" prefWidth="128.0" stylesheets="@css/LabelH1.css" text="MENU" />
+            <Label fx:id="menu_more" layoutX="216.0" layoutY="14.0" prefHeight="80.0" prefWidth="256.0" stylesheets="@css/LabelH1.css" text="MENU" />
               <Button fx:id="homeButton" layoutX="23.0" layoutY="108.0" mnemonicParsing="false" onAction="#openFormHome" prefHeight="51.0" prefWidth="191.0" stylesheets="@css/v2/button.css" />
               <Button fx:id="dictionary_menu" layoutX="248.0" layoutY="108.0" mnemonicParsing="false" onAction="#openFormDictionary" prefHeight="51.0" prefWidth="191.0" stylesheets="@css/v2/button.css" />
               <Button fx:id="edit_menu" layoutX="465.0" layoutY="108.0" mnemonicParsing="false" onAction="#openFormAddAndEdit" prefHeight="51.0" prefWidth="191.0" stylesheets="@css/v2/button.css" />

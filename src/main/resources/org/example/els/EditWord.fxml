@@ -58,22 +58,28 @@
          </textFill></Label>
       <AnchorPane fx:id="edit_word" layoutX="237.0" layoutY="91.0" prefHeight="445.0" prefWidth="729.0" stylesheets="@css/AnchorPane.css">
          <children>
-            <HTMLEditor fx:id="v_word" htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" layoutX="187.0" layoutY="139.0" prefHeight="206.0" prefWidth="511.0" stylesheets="@css/HTMLeditor.css" />
-            <CheckBox fx:id="av" layoutX="195.0" layoutY="394.0" mnemonicParsing="false" onAction="#setmodeav" prefHeight="18.0" prefWidth="94.0" text="Anh - Việt" />
-            <CheckBox fx:id="va" layoutX="608.0" layoutY="385.0" mnemonicParsing="false" onAction="#setmodeva" prefHeight="18.0" prefWidth="94.0" text="Việt - Anh" />
-            <Button fx:id="commit" layoutX="385.0" layoutY="374.0" mnemonicParsing="false" onAction="#editWord" prefHeight="40.0" prefWidth="135.0" text="Commit" />
-            <TextField fx:id="e_word" layoutX="274.0" layoutY="63.0" prefHeight="47.0" prefWidth="286.0" stylesheets="@css/textField.css" />
-            <Button fx:id="find" layoutX="608.0" layoutY="55.0" mnemonicParsing="false" onAction="#findWord" prefHeight="63.0" prefWidth="62.0" stylesheets="@css/button.css" />
-            <Label fx:id="label_target" layoutX="7.0" layoutY="63.0" prefHeight="63.0" prefWidth="135.0" stylesheets="@css/LabelH1.css" text="English" />
-            <Label fx:id="label_explain" layoutX="8.0" layoutY="242.0" prefHeight="72.0" prefWidth="145.0" stylesheets="@css/LabelH1.css" text="Vietnamese" />
+            <HTMLEditor fx:id="v_word" htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" layoutX="187.0" layoutY="139.0" prefHeight="206.0" prefWidth="511.0" />
+            <CheckBox fx:id="av" layoutX="161.0" layoutY="394.0" mnemonicParsing="false" onAction="#setmodeav" prefHeight="27.0" prefWidth="96.0" stylesheets="@css/check_box.css" text="Anh - Việt" />
+            <CheckBox fx:id="va" layoutX="53.0" layoutY="394.0" mnemonicParsing="false" onAction="#setmodeva" prefHeight="27.0" prefWidth="88.0" stylesheets="@css/check_box.css" text="Việt - Anh" />
+            <Button fx:id="commit" layoutX="365.0" layoutY="354.0" mnemonicParsing="false" onAction="#editWord" prefHeight="27.0" prefWidth="135.0" stylesheets="@css/button.css" text="Commit" />
+            <TextField fx:id="e_word" layoutX="187.0" layoutY="73.0" prefHeight="40.0" prefWidth="286.0" stylesheets="@css/textField.css" />
+            <Button fx:id="find" layoutX="476.0" layoutY="69.0" mnemonicParsing="false" onAction="#findWord" prefHeight="47.0" prefWidth="48.0" stylesheets="@css/button.css" />
+            <Label fx:id="label_target" layoutX="26.0" layoutY="77.0" prefHeight="27.0" prefWidth="135.0" stylesheets="@css/LabelH1.css" text="English" />
+            <Label fx:id="label_explain" layoutX="26.0" layoutY="222.0" prefHeight="32.0" prefWidth="135.0" stylesheets="@css/LabelH1.css" text="Vietnamese" />
+            <Button fx:id="ava_button" layoutX="648.0" layoutY="28.0" mnemonicParsing="false" onAction="#openProfile" prefHeight="47.0" prefWidth="48.0" stylesheets="@css/button.css" />
+            <ImageView fitHeight="81.0" fitWidth="222.0" layoutX="-42.0" layoutY="-31.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/Template%202%20elment/cloud.png" />
+               </image>
+            </ImageView>
          </children>
       </AnchorPane>
-      <ImageView fitHeight="81.0" fitWidth="222.0" layoutX="721.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="96.0" fitWidth="256.0" layoutX="730.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@image/Template%202%20elment/cloud.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="75.0" fitWidth="173.0" layoutX="317.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="75.0" fitWidth="173.0" layoutX="345.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@image/Template%20element/dictionary/bird.png" />
          </image>
@@ -98,10 +104,14 @@
             <Image url="@image/Template%20element/everyone.png" />
          </image>
       </ImageView>
-      <Button fx:id="ava_button" layoutX="250.0" layoutY="35.0" mnemonicParsing="false" onAction="#openProfile" prefHeight="47.0" prefWidth="48.0" stylesheets="@css/button.css" />
       <ImageView fitHeight="81.0" fitWidth="72.0" layoutX="931.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@image/APP%20LOGO.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="96.0" fitWidth="256.0" layoutX="869.0" layoutY="418.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/Template%202%20elment/cloud.png" />
          </image>
       </ImageView>
     </children>

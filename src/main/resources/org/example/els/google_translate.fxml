@@ -2,6 +2,7 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -9,9 +10,19 @@
 
 <AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="682.0" prefWidth="1000.0" stylesheets="@css/AnchorPane.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.els.GoogleTranslateController">
    <children>
-      <ImageView fitHeight="158.0" fitWidth="190.0" layoutX="828.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="288.0" fitWidth="361.0" layoutX="647.0" layoutY="395.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@image/Template%20element/saobien.png" />
+            <Image url="@image/Template%20element/water2.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="295.0" fitWidth="418.0" layoutX="-2.0" layoutY="391.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/Template%20element/water1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="146.0" fitWidth="112.0" layoutX="311.0" layoutY="547.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/Template%20element/dep.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="394.0" fitWidth="31.0" layoutX="35.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
@@ -30,33 +41,38 @@
       <Button fx:id="edit_menu" layoutX="15.0" layoutY="267.0" mnemonicParsing="false" onAction="#openFormAddAndEdit" prefHeight="47.0" prefWidth="184.0" stylesheets="@css/v2/button.css" />
       <Button fx:id="moreButton" layoutX="15.0" layoutY="335.0" mnemonicParsing="false" onAction="#openFormMore" prefHeight="47.0" prefWidth="184.0" stylesheets="@css/v2/button.css" />
       <Button fx:id="game_menu" layoutX="15.0" layoutY="204.0" mnemonicParsing="false" onAction="#openFormGame" prefHeight="47.0" prefWidth="184.0" stylesheets="@css/v2/button.css" />
-      <TextArea fx:id="Text_area_input" layoutX="233.0" layoutY="119.0" prefHeight="295.0" prefWidth="318.0" stylesheets="@css/textArea.css" />
-      <TextArea fx:id="Text_area_out" layoutX="598.0" layoutY="119.0" prefHeight="295.0" prefWidth="318.0" stylesheets="@css/textArea.css" wrapText="true" />
-      <ComboBox fx:id="comboBox_lang_input" layoutX="313.0" layoutY="64.0" onAction="#comboBoxChanged" prefHeight="26.0" prefWidth="158.0" promptText="Select language" stylesheets="@css/comboBox.css" />
-      <ComboBox fx:id="comboBox_lang_out" layoutX="678.0" layoutY="71.0" prefHeight="30.0" prefWidth="158.0" promptText="Select language " stylesheets="@css/comboBox.css" />
-      <Button fx:id="buttonTranslate" cancelButton="true" layoutX="491.0" layoutY="373.0" mnemonicParsing="false" onAction="#translateEvent" prefHeight="126.0" prefWidth="158.0" stylesheets="@css/button.css" />
-      <Button fx:id="audio_button_out" layoutX="876.0" layoutY="373.0" mnemonicParsing="false" onAction="#playAudioOut" prefHeight="40.0" prefWidth="40.0" stylesheets="@css/v2/button.css" />
-      <Button fx:id="audio_button_in" layoutX="233.0" layoutY="373.0" mnemonicParsing="false" onAction="#playAudioIn" prefHeight="40.0" prefWidth="40.0" stylesheets="@css/v2/button.css" />
-      <ImageView fitHeight="267.0" fitWidth="826.0" layoutY="414.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@image/Template%20element/water1.png" />
-         </image>
-      </ImageView>
       <ImageView fitHeight="47.0" fitWidth="211.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true" />
-      <ImageView fitHeight="312.0" fitWidth="336.0" layoutX="668.0" layoutY="413.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@image/Template%20element/water2.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="205.0" fitWidth="300.0" layoutX="151.0" layoutY="429.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@image/Template%20element/dep.png" />
-         </image>
-      </ImageView>
-      <Button fx:id="ava_button" layoutX="551.0" layoutY="24.0" mnemonicParsing="false" onAction="#openProfile" prefHeight="47.0" prefWidth="48.0" stylesheets="@css/button.css" />
       <ImageView fitHeight="81.0" fitWidth="72.0" layoutX="928.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@image/APP%20LOGO.png" />
+         </image>
+      </ImageView>
+      <AnchorPane fx:id="s_pane" layoutX="236.0" layoutY="48.0" prefHeight="454.0" prefWidth="699.0" stylesheets="@css/AnchorPane.css">
+         <children>
+            <Button fx:id="audio_button_in" layoutX="167.0" layoutY="401.0" mnemonicParsing="false" onAction="#playAudioIn" prefHeight="38.0" prefWidth="41.0" stylesheets="@css/button.css" />
+            <TextArea fx:id="Text_area_input" layoutX="29.0" layoutY="128.0" prefHeight="263.0" prefWidth="318.0" stylesheets="@css/textArea.css" />
+            <ComboBox fx:id="comboBox_lang_out" layoutX="364.0" layoutY="83.0" prefHeight="30.0" prefWidth="191.0" promptText="SELECT LANGUAGE" stylesheets="@css/comboBox.css" />
+            <Button fx:id="audio_button_out" layoutX="500.0" layoutY="397.0" mnemonicParsing="false" onAction="#playAudioOut" prefHeight="42.0" prefWidth="46.0" stylesheets="@css/button.css" />
+            <ComboBox fx:id="comboBox_lang_input" layoutX="29.0" layoutY="83.0" onAction="#comboBoxChanged" prefHeight="30.0" prefWidth="184.0" promptText="SELECT LANGUAGE" stylesheets="@css/comboBox.css" />
+            <Button fx:id="ava_button" layoutX="25.0" layoutY="14.0" mnemonicParsing="false" onAction="#openProfile" prefHeight="47.0" prefWidth="48.0" stylesheets="@css/button.css" />
+            <TextArea fx:id="Text_area_out" layoutX="365.0" layoutY="127.0" prefHeight="263.0" prefWidth="318.0" stylesheets="@css/textArea.css" wrapText="true" />
+            <ImageView fitHeight="113.0" fitWidth="142.0" layoutX="587.0" layoutY="-42.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/Template%20element/saobien.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="game_label" layoutX="254.0" layoutY="9.0" stylesheets="@css/nor_label.css" text="TRANSLATE" />
+            <Button fx:id="buttonTranslate" layoutX="289.0" layoutY="405.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="149.0" stylesheets="@css/button.css" text="Translate" />
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="300.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/Template%20element/cloud2.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="98.0" fitWidth="377.0" layoutX="481.0" layoutY="-33.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/Template%20element/cloud2.png" />
          </image>
       </ImageView>
    </children>

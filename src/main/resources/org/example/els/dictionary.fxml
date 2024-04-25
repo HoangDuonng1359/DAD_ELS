@@ -60,7 +60,7 @@
             <Image url="@image/Template%20element/plane1.png" />
          </image>
       </ImageView>
-      <AnchorPane fx:id="s_pane" layoutX="251.0" layoutY="70.0" prefHeight="458.0" prefWidth="723.0">
+      <AnchorPane fx:id="s_pane" layoutX="251.0" layoutY="61.0" prefHeight="467.0" prefWidth="723.0">
          <children>
               <ListView fx:id="listView" layoutX="21.0" layoutY="75.0" onMouseClicked="#handleMouseClickListView" prefHeight="338.0" prefWidth="270.0" stylesheets="@css/listview.css" />
               <Button fx:id="button_search" layoutX="252.0" layoutY="15.0" minWidth="42.0" mnemonicParsing="false" onMouseClicked="#handleMouseClickButtonSearch" prefHeight="54.0" prefWidth="54.0" stylesheets="@css/button.css" />
@@ -75,8 +75,8 @@
                   <Font size="40.0" />
                </font>
             </Label>
-            <CheckBox fx:id="va" layoutX="291.0" layoutY="424.0" mnemonicParsing="false" onAction="#setmodeva" prefHeight="18.0" prefWidth="94.0" text="Việt - Anh" />
-            <CheckBox fx:id="av" layoutX="176.0" layoutY="424.0" mnemonicParsing="false" onAction="#setmodeav" prefHeight="18.0" prefWidth="94.0" text="Anh - Việt" />
+            <CheckBox fx:id="va" layoutX="164.0" layoutY="425.0" mnemonicParsing="false" onAction="#setmodeva" prefHeight="27.0" prefWidth="114.0" stylesheets="@css/check_box.css" text="Việt - Anh" />
+            <CheckBox fx:id="av" layoutX="48.0" layoutY="425.0" mnemonicParsing="false" onAction="#setmodeav" prefHeight="27.0" prefWidth="108.0" stylesheets="@css/check_box.css" text="Anh - Việt" />
             <Button fx:id="ava_button" layoutX="643.0" layoutY="15.0" mnemonicParsing="false" onAction="#openProfile" prefHeight="54.0" prefWidth="54.0" stylesheets="@css/button.css" />
          </children>
       </AnchorPane>
@@ -85,12 +85,12 @@
             <Image url="@image/Template%20element/plane_blue.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="62.0" fitWidth="226.0" layoutX="390.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="62.0" fitWidth="226.0" layoutX="387.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@image/Template%20element/cloud2.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="94.0" fitWidth="382.0" layoutX="599.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="94.0" fitWidth="382.0" layoutX="599.0" layoutY="-18.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@image/Template%20element/cloud2.png" />
          </image>
