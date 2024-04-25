@@ -8,23 +8,19 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class Record {
-    public static int getScore(String gameColumn, User user) {
+    public static int getScore(String gameColumn, User user) throws SQLException {
         int result = -1; // Khởi tạo kết quả mặc định là -1
         String sql = "SELECT " + gameColumn + " FROM max_score_game WHERE user_id = ?";
-        try (Connection conn = DatabaseConnection.connect("jdbc:sqlite:src\\Data\\database.db");
-             PreparedStatement pr = conn.prepareStatement(sql)) {
-            pr.setInt(1, user.getId());
-            try (ResultSet rs = pr.executeQuery()) {
-                if (rs.next()) {
-                    result = rs.getInt(gameColumn);
-                }
-            } finally {
-                conn.close();
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
+        Connection conn = DatabaseConnection.connect("jdbc:sqlite:src\\Data\\database.db");
+        PreparedStatement pr = conn.prepareStatement(sql);
+        pr.setInt(1, user.getId());
+        ResultSet rs = pr.executeQuery();
+        if (rs.next()) {
+            result = rs.getInt(gameColumn);
         }
-
+        if(conn!=null){
+            conn.close();
+        }
         return result;
     }
 

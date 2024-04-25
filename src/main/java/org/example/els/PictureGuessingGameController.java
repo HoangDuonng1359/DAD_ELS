@@ -62,7 +62,7 @@ public class PictureGuessingGameController extends baseFormController {
         });
     }
     @FXML
-    public void startGame(ActionEvent event) {
+    public void startGame(ActionEvent event) throws SQLException {
         quiz.newQuiz();
         int x = Record.getScore("pgg",user);
         if(x!=-1){
