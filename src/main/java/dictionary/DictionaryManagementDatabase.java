@@ -13,7 +13,7 @@ public class DictionaryManagementDatabase {
     public static final String dict_hh_URL = "jdbc:sqlite:src\\Data\\dict_hh.db";
     public static final String DATABASE_URL = "jdbc:sqlite:src\\Data\\database.db";
 
-    public static ObservableList prexSearch(String text, boolean av) {
+    public static ObservableList prexSearch(String text, boolean av) throws SQLException {
         String NAME_TABLE = null;
         if (av) {
             NAME_TABLE = new String("av");
@@ -23,18 +23,15 @@ public class DictionaryManagementDatabase {
         String sql = "SELECT word FROM " + NAME_TABLE + " WHERE word LIKE ? ORDER BY (CASE  WHEN word = ? THEN 1 ELSE 0 END ) DESC ";
         //SELECT * FROM av WHERE text LIKE ? ORDER BY (CASE WHEN text = ? THEN 1 ELSE 0 END) DESC"
         List<String> res = new ArrayList<String>();
-        try (Connection conn = DatabaseConnection.connect(dict_hh_URL);
-             PreparedStatement pstmt = conn.prepareStatement(sql)) {
-            pstmt.setString(1, "%" + text + "%");// đối tượng thực thi truy vấn
-            pstmt.setString(2, text);
-            ResultSet rs = pstmt.executeQuery(); // lấy kết quả
-            while (rs.next()) {
-                res.add(rs.getString("word"));
-            }
-            conn.close();
-        } catch (SQLException e) {
-            System.out.println(e.getMessage());
+        Connection conn = DatabaseConnection.connect(dict_hh_URL);
+        PreparedStatement pstmt = conn.prepareStatement(sql);
+        pstmt.setString(1, "%" + text + "%");// đối tượng thực thi truy vấn
+        pstmt.setString(2, text);
+        ResultSet rs = pstmt.executeQuery(); // lấy kết quả
+        while (rs.next()) {
+            res.add(rs.getString("word"));
         }
+        conn.close();
         ObservableList<String> result = FXCollections.observableArrayList(res);
         return result;
     }
