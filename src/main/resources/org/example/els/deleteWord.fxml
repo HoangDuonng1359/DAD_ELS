@@ -14,17 +14,17 @@
 
 <AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="682.0" prefWidth="1000.0" stylesheets="@css/AnchorPane.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.els.deleteWord">
     <children>
-      <ImageView fitHeight="72.0" fitWidth="256.0" layoutX="407.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="117.0" fitWidth="297.0" layoutX="407.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@image/Template%202%20elment/cloud.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="72.0" fitWidth="256.0" layoutX="677.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="100.0" fitWidth="257.0" layoutX="657.0" layoutY="-28.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@image/Template%202%20elment/cloud.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="314.0" fitWidth="347.0" layoutX="830.0" layoutY="426.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="314.0" fitWidth="347.0" layoutX="823.0" layoutY="404.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@image/Template%202%20elment/passport.png" />
          </image>
@@ -50,7 +50,7 @@
         <Button fx:id="edit_menu" layoutX="15.0" layoutY="267.0" mnemonicParsing="false" onAction="#openFormAddAndEdit" prefHeight="47.0" prefWidth="184.0" stylesheets="@css/v2/button.css" />
         <Button fx:id="moreButton" layoutX="15.0" layoutY="335.0" mnemonicParsing="false" onAction="#openFormMore" prefHeight="47.0" prefWidth="184.0" stylesheets="@css/v2/button.css" />
         <Button fx:id="game_menu" layoutX="15.0" layoutY="204.0" mnemonicParsing="false" onAction="#openFormGame" prefHeight="47.0" prefWidth="184.0" stylesheets="@css/v2/button.css" />
-      <Label fx:id="label_information" alignment="CENTER" layoutX="424.0" layoutY="49.0" prefHeight="82.0" prefWidth="347.0" stylesheets="@css/LabelH1.css" text="Delete word" textAlignment="CENTER">
+      <Label fx:id="label_information" alignment="CENTER" layoutX="446.0" layoutY="100.0" prefHeight="82.0" prefWidth="347.0" stylesheets="@css/LabelH1.css" text="Delete word" textAlignment="CENTER">
          <font>
             <Font name="MS Outlook" size="25.0" />
          </font>
@@ -70,21 +70,21 @@
                </stops>
             </LinearGradient>
          </textFill></Label>
-      <AnchorPane fx:id="delete_word" layoutX="295.0" layoutY="119.0" prefHeight="326.0" prefWidth="617.0">
+      <AnchorPane fx:id="delete_word" layoutX="347.0" layoutY="174.0" prefHeight="154.0" prefWidth="547.0">
          <children>
-            <TextField fx:id="word" layoutX="96.0" layoutY="106.0" prefHeight="82.0" prefWidth="425.0" />
-            <Label fx:id="label_target" layoutX="231.0" layoutY="31.0" prefHeight="56.0" prefWidth="154.0" stylesheets="@css/LabelH1.css" text="English" />
-            <CheckBox fx:id="av" layoutX="427.0" layoutY="214.0" mnemonicParsing="false" onAction="#setmodeav" prefHeight="18.0" prefWidth="94.0" text="Anh - Việt" />
-            <CheckBox fx:id="va" layoutX="96.0" layoutY="214.0" mnemonicParsing="false" onAction="#setmodeva" prefHeight="18.0" prefWidth="94.0" text="Việt - Anh" />
-            <Button layoutX="263.0" layoutY="208.0" mnemonicParsing="false" onAction="#deleteWord" prefHeight="47.0" prefWidth="105.0" text="Delete" />
+            <TextField fx:id="word" layoutX="255.0" layoutY="29.0" prefHeight="47.0" prefWidth="266.0" stylesheets="@css/textField.css" />
+            <Label fx:id="label_target" layoutX="85.0" layoutY="33.0" prefHeight="39.0" prefWidth="154.0" stylesheets="@css/LabelH1.css" text="English" />
+            <CheckBox fx:id="av" layoutX="44.0" layoutY="99.0" mnemonicParsing="false" onAction="#setmodeav" prefHeight="25.0" prefWidth="94.0" stylesheets="@css/check_box.css" text="Anh - Việt" />
+            <CheckBox fx:id="va" layoutX="152.0" layoutY="98.0" mnemonicParsing="false" onAction="#setmodeva" prefHeight="26.0" prefWidth="102.0" stylesheets="@css/check_box.css" text="Việt - Anh" />
+            <Button fx:id="commit" layoutX="333.0" layoutY="92.0" mnemonicParsing="false" onAction="#deleteWord" prefHeight="37.0" prefWidth="110.0" stylesheets="@css/button.css" text="Delete" />
          </children>
       </AnchorPane>
-      <ImageView fitHeight="75.0" fitWidth="970.0" layoutX="-33.0" layoutY="616.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="165.0" fitWidth="1099.0" layoutX="-164.0" layoutY="607.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@image/Template%202%20elment/doi.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="204.0" fitWidth="369.0" layoutX="726.0" layoutY="547.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="204.0" fitWidth="369.0" layoutX="690.0" layoutY="497.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@image/Template%202%20elment/mayanh.png" />
          </image>
@@ -104,6 +104,26 @@
             <Image url="@image/APP%20LOGO.png" />
          </image>
       </ImageView>
-      <Button fx:id="ava_button" layoutX="806.0" layoutY="67.0" mnemonicParsing="false" onAction="#openProfile" prefHeight="47.0" prefWidth="48.0" stylesheets="@css/button.css" />
+      <Button fx:id="ava_button" layoutX="824.0" layoutY="118.0" mnemonicParsing="false" onAction="#openProfile" prefHeight="47.0" prefWidth="48.0" stylesheets="@css/button.css" />
+      <ImageView fitHeight="154.0" fitWidth="411.0" layoutX="620.0" layoutY="314.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/Template%202%20elment/cloud.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="109.0" fitWidth="361.0" layoutX="207.0" layoutY="328.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/Template%202%20elment/cloud.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="82.0" fitWidth="290.0" layoutX="201.0" layoutY="101.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/Template%202%20elment/cloud.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="72.0" fitWidth="256.0" layoutX="872.0" layoutY="183.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/Template%202%20elment/cloud.png" />
+         </image>
+      </ImageView>
     </children>
 </AnchorPane>
