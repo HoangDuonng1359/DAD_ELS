@@ -9,16 +9,15 @@ import javafx.scene.input.MouseEvent;
 import java.sql.SQLException;
 
 public class ELSController extends baseFormController {
-//    protected static Stage stage;
-//    protected static Scene scene;
-//    protected static Parent root;
-
-
     @FXML
     public void initialize() {
         search_field.textProperty().addListener((observable, oldText, newText) -> {
             // Nếu nội dung của trường tìm kiếm thay đổi, thực hiện đề xuất tìm kiếm
-            handleSearch(newText.trim());
+            try {
+                handleSearch(newText.trim());
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
         });
         av.setSelected(true);
         va.setSelected(false);
@@ -40,7 +39,7 @@ public class ELSController extends baseFormController {
         definitionView.getEngine().loadContent(DictionaryManagementDatabase.Search(target,getmode(av,va)));
         RecentW.addDB(target, getmode(av,va));
     }
-    public void handleSearch(String searchTerm) {
+    public void handleSearch(String searchTerm) throws SQLException {
         if (!searchTerm.isEmpty()) {
             ObservableList<String> searchResult = DictionaryManagementDatabase.prexSearch(searchTerm,getmode(av,va));
             //ObservableList<String> searchResult = DictionaryManagement.prexSearch(searchTerm);

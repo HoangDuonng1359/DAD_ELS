@@ -34,9 +34,9 @@ public class RecentW {
 
     public static void addDB(String s, boolean av) throws SQLException {
         String ex = DictionaryManagementDatabase.Search(s, av);
+        Connection conn = null;
+        PreparedStatement ps = null;
         if (!ex.equals("NO FOUND") && !ex.equals("you have deleted this word")) {
-            Connection conn = null;
-            PreparedStatement ps = null;
             try {
                 conn = DatabaseConnection.connect("jdbc:sqlite:src\\Data\\database.db");
                 String sql = "INSERT INTO RecentList (user_id, target, explain) SELECT ?, ?, ? WHERE NOT EXISTS (SELECT 1 FROM RecentList WHERE target = ? AND user_id = ?)";
@@ -56,6 +56,12 @@ public class RecentW {
                     conn.close();
                 }
             }
+        }
+        if (ps != null) {
+            ps.close();
+        }
+        if (conn != null) {
+            conn.close();
         }
     }
 
