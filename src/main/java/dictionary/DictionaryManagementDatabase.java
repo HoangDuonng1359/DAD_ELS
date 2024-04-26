@@ -20,9 +20,21 @@ public class DictionaryManagementDatabase {
         } else {
             NAME_TABLE = new String("va");
         }
-        String sql = "SELECT word FROM " + NAME_TABLE + " WHERE word LIKE ? ORDER BY (CASE  WHEN word = ? THEN 1 ELSE 0 END ) DESC ";
-        //SELECT * FROM av WHERE text LIKE ? ORDER BY (CASE WHEN text = ? THEN 1 ELSE 0 END) DESC"
         List<String> res = new ArrayList<String>();
+        Connection conn2 = DatabaseConnection.connect(DATABASE_URL);
+        String sql = new String();
+        sql = "SELECT type , target FROM bookmark WHERE target LIKE ? AND type = '+' ORDER BY (CASE  WHEN target = ? THEN 1 ELSE 0 END ) DESC ";
+        PreparedStatement pr = conn2.prepareStatement(sql);
+        pr.setString(1,"%" + text + "%");
+        pr.setString(2,text);
+        ResultSet rs1 = pr.executeQuery(); // lấy kết quả
+        while (rs1.next()) {
+            res.add(rs1.getString("target"));
+        }
+        conn2.close();
+        sql = "SELECT word FROM " + NAME_TABLE + " WHERE word LIKE ? ORDER BY (CASE  WHEN word = ? THEN 1 ELSE 0 END ) DESC ";
+        //SELECT * FROM av WHERE text LIKE ? ORDER BY (CASE WHEN text = ? THEN 1 ELSE 0 END) DESC"
+
         Connection conn = DatabaseConnection.connect(dict_hh_URL);
         PreparedStatement pstmt = conn.prepareStatement(sql);
         pstmt.setString(1, "%" + text + "%");// đối tượng thực thi truy vấn
