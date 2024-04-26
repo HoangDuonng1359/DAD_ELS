@@ -46,7 +46,7 @@ public class PictureGuessingGameController extends baseFormController {
     }
     @FXML
     public void initialize(){
-        player_lable.setText("Player" + user.getName());
+        player_lable.setText("Player: " + user.getName());
         text_input.setOnKeyPressed(event -> {
             if (event.getCode().equals(KeyCode.ENTER)) {
                 try {
@@ -66,7 +66,7 @@ public class PictureGuessingGameController extends baseFormController {
         quiz.newQuiz();
         int x = Record.getScore("pgg",user);
         if(x!=-1){
-            max_score_label.setText("max score: " + x);
+            max_score_label.setText("Max score: " + x);
         }
         image_View.setImage(quiz.getCurrentQuestion().getImage());
         suggest_label.setText(quiz.getCurrentQuestion().getQues());
@@ -78,7 +78,7 @@ public class PictureGuessingGameController extends baseFormController {
         Record.updateMaxScore("pgg",quiz.getScore(),user);
         int x = Record.getScore("pgg",user);
         if(x!=-1){
-            max_score_label.setText("max score: " + x);
+            max_score_label.setText("Max score: " + x);
         }
         image_View.setImage(null);
         suggest_label.setText("");
@@ -115,7 +115,7 @@ public class PictureGuessingGameController extends baseFormController {
         baseSubmit();
         int x = Record.getScore("pgg",user);
         if(x!=-1){
-            max_score_label.setText("max score: " + x);
+            max_score_label.setText("Max score: " + x);
         }
     }
     @FXML

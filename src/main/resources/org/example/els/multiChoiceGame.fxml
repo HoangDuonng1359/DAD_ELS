@@ -50,15 +50,15 @@
             <Image url="@image/APP%20LOGO.png" />
          </image>
       </ImageView>
-      <AnchorPane fx:id="multiple_game" layoutX="267.0" layoutY="55.0" prefHeight="258.0" prefWidth="628.0">
+      <AnchorPane fx:id="multiple_game" layoutX="278.0" layoutY="61.0" prefHeight="258.0" prefWidth="601.0">
          <children>
-              <Label fx:id="question_lable" alignment="TOP_LEFT" layoutX="44.0" layoutY="74.0" prefHeight="169.0" prefWidth="539.0" stylesheets="@css/LabelH1.css" text="Question" wrapText="true">
+              <Label fx:id="question_lable" alignment="TOP_LEFT" layoutX="31.0" layoutY="54.0" prefHeight="169.0" prefWidth="539.0" stylesheets="@css/LabelH1.css" text="Question" wrapText="true">
                <font>
                   <Font size="15.0" />
                </font>
             </Label>
-              <Label fx:id="score_lable" layoutX="430.0" layoutY="38.0" prefHeight="38.0" prefWidth="102.0" stylesheets="@css/LabelH1.css" text="score" />
-            <Label fx:id="max_score_label" layoutX="430.0" layoutY="14.0" prefHeight="38.0" prefWidth="158.0" stylesheets="@css/LabelH1.css" text="max score" />
+              <Label fx:id="score_lable" layoutX="430.0" layoutY="16.0" prefHeight="38.0" prefWidth="102.0" stylesheets="@css/LabelH1.css" text="Score" />
+            <Label fx:id="max_score_label" layoutX="48.0" layoutY="16.0" prefHeight="38.0" prefWidth="195.0" stylesheets="@css/LabelH1.css" text="Max score" />
          </children>
       </AnchorPane>
       <ImageView fitHeight="104.0" fitWidth="722.0" layoutX="-218.0" layoutY="616.0" pickOnBounds="true" preserveRatio="true">
@@ -66,7 +66,6 @@
             <Image url="@image/Template%20element/water.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
       <ImageView fitHeight="150.0" fitWidth="643.0" layoutX="379.0" layoutY="616.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@image/Template%20element/water.png" />
@@ -92,16 +91,17 @@
             <Image url="@image/Template%20element/plane2.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="80.0" fitWidth="241.0" layoutX="649.0" layoutY="-11.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="80.0" fitWidth="241.0" layoutX="666.0" layoutY="-6.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@image/Template%202%20elment/cloud.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="92.0" fitWidth="300.0" layoutX="307.0" layoutY="-24.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="92.0" fitWidth="266.0" layoutX="196.0" layoutY="-12.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@image/Template%202%20elment/cloud.png" />
          </image>
       </ImageView>
-      <Button layoutX="554.0" layoutY="542.0" mnemonicParsing="false" onAction="#endgame" text="End Game" />
+      <Label fx:id="gamelabel" layoutX="437.0" layoutY="9.0" stylesheets="@css/LabelH1.css" text="Mutiple Choice" />
+      <Button fx:id="endgame_button" layoutX="514.0" layoutY="539.0" mnemonicParsing="false" onAction="#endgame" prefHeight="30.0" prefWidth="134.0" stylesheets="@css/button.css" text="End Game" />
     </children>
 </AnchorPane>
