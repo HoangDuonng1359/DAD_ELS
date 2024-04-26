@@ -9,6 +9,11 @@
 
 <AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="682.0" prefWidth="1000.0" stylesheets="@css/AnchorPane.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.els.moreController">
     <children>
+      <ImageView fitHeight="170.0" fitWidth="1014.0" layoutY="521.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/grasss.png" />
+         </image>
+      </ImageView>
       <ImageView fitHeight="404.0" fitWidth="243.0" layoutX="89.0" layoutY="135.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@image/Template%202%20elment/tree2.png" />
@@ -19,17 +24,12 @@
             <Image url="@image/Template%202%20elment/tree1.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="170.0" fitWidth="1014.0" layoutX="-13.0" layoutY="542.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@image/Template%202%20elment/add_word/grass.png" />
-         </image>
-      </ImageView>
       <ImageView fitHeight="357.0" fitWidth="450.0" layoutX="-39.0" layoutY="373.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@image/Template%202%20elment/camp1.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="250.0" fitWidth="450.0" layoutX="202.0" layoutY="455.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="250.0" fitWidth="450.0" layoutX="217.0" layoutY="435.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@image/Template%202%20elment/people1.png" />
          </image>
