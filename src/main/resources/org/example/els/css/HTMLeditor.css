@@ -1,0 +1,12 @@
+#v_word {
+    -fx-border-color: #ebb721; /* Màu viền */
+    -fx-border-width: 5px; /* Độ rộng viền */
+    -fx-border-radius: 10px; /* Độ cong của viền */
+    -fx-padding: 5px; /* Khoảng cách giữa viền và nội dung */
+}
+#v_Textfield {
+    -fx-border-color: #ebb721; /* Màu viền */
+    -fx-border-width: 5px; /* Độ rộng viền */
+    -fx-border-radius: 10px; /* Độ cong của viền */
+    -fx-padding: 5px; /* Khoảng cách giữa viền và nội dung */
+}
