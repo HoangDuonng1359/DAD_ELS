@@ -44,3 +44,9 @@
     -fx-background-color:#f1e093;
     -fx-background-radius: 80px;
 }
+#pictureguessinggame_anchorpane {
+    -fx-background-color:#f1e093;
+    -fx-background-radius: 80px;
+    -fx-border-color: #2cbbaa;
+    -fx-border-radius: 80px;
+}

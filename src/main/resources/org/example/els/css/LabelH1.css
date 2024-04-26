@@ -60,3 +60,16 @@
     -fx-border-color: #23a29b;/* Màu viền */
     -fx-font-size: 20px;
 }
+#score {
+    -fx-text-fill: #90594b;
+    -fx-font-family: "Balabeloo";
+    -fx-font-size: 23px;
+}
+#player_lable {
+    -fx-text-fill: #90594b;
+    -fx-font-family: "Balabeloo";
+    -fx-font-size: 23px;
+}
+#suggest_label {
+    -fx-alignment: center;
+}

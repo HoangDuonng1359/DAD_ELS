@@ -60,3 +60,10 @@
     -fx-border-width: 2px;
     -fx-font-family: Copperplate;
 }
+#text_input {
+    -fx-border-color: #2cbbaa;
+    -fx-border-radius: 10%;
+    -fx-background-color: transparent;
+    -fx-border-width: 2px;
+    -fx-font-family: Lucida Console;
+}
