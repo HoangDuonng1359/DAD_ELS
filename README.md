@@ -1,4 +1,4 @@
-# English Learning Support Applicant in Java
+# English Learning Support Application in Java
 
 ## Author
 Group DAD
