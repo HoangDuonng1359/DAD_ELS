@@ -61,7 +61,14 @@ public class MultiChoiceGameController extends baseFormController {
         answerC.setStyle("-fx-background-color: WHITE");
         answerD.setStyle("-fx-background-color: WHITE");
     }
-
+    public void endgame(ActionEvent event) throws SQLException {
+        StringBuilder str = new StringBuilder("End Game!\n Your score: ");
+        str.append(quiz.getScore());
+        Record.updateMaxScore("multichoice",quiz.getScore(),user);
+        newAlert(stage, "Notification", "", str.toString());
+        quiz.newQuiz();
+        initgame();
+    }
     private String createQuestion(Quiz quiz) {
         StringBuilder str = new StringBuilder();
         str.append("Question ");
@@ -95,7 +102,6 @@ public class MultiChoiceGameController extends baseFormController {
             setQuestion(quiz);
             setChoice(quiz.getCurrentQuestion().getChoice());
             setScore(quiz);
-            System.out.println(createQuestion(quiz));
             answerA.setStyle("-fx-background-color: WHITE");
             answerB.setStyle("-fx-background-color: WHITE");
             answerC.setStyle("-fx-background-color: WHITE");

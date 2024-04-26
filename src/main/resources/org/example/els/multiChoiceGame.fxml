@@ -57,8 +57,8 @@
                   <Font size="15.0" />
                </font>
             </Label>
-              <Label fx:id="score_lable" layoutX="451.0" layoutY="33.0" prefHeight="64.0" prefWidth="101.0" stylesheets="@css/LabelH1.css" text="score" />
-            <Label fx:id="max_score_label" layoutX="451.0" layoutY="-5.0" prefHeight="58.0" prefWidth="122.0" stylesheets="@css/LabelH1.css" text="max score" />
+              <Label fx:id="score_lable" layoutX="430.0" layoutY="38.0" prefHeight="38.0" prefWidth="102.0" stylesheets="@css/LabelH1.css" text="score" />
+            <Label fx:id="max_score_label" layoutX="430.0" layoutY="14.0" prefHeight="38.0" prefWidth="158.0" stylesheets="@css/LabelH1.css" text="max score" />
          </children>
       </AnchorPane>
       <ImageView fitHeight="104.0" fitWidth="722.0" layoutX="-218.0" layoutY="616.0" pickOnBounds="true" preserveRatio="true">
@@ -102,5 +102,6 @@
             <Image url="@image/Template%202%20elment/cloud.png" />
          </image>
       </ImageView>
+      <Button layoutX="554.0" layoutY="542.0" mnemonicParsing="false" onAction="#endgame" text="End Game" />
     </children>
 </AnchorPane>
