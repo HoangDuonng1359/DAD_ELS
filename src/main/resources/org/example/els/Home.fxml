@@ -50,7 +50,7 @@
             <Image url="@image/Template%20element/water.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="319.0" fitWidth="695.0" layoutX="-282.0" layoutY="386.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="319.0" fitWidth="676.0" layoutX="-282.0" layoutY="386.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@image/Template%20element/Wave.png" />
          </image>
