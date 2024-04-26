@@ -30,7 +30,7 @@ public class ELSController extends baseFormController {
         target.delete(0,1);
         target.deleteCharAt(target.length()- 1);
        // definitionView.getEngine().loadContent(dictionaryManagement.Search(target.toString()));
-         definitionView.getEngine().loadContent(DictionaryManagementDatabase.Search(target.toString(),getmode(av,va)));
+        definitionView.getEngine().loadContent(DictionaryManagementDatabase.Search(target.toString(),getmode(av,va)));
         RecentW.addDB(target.toString(),getmode(av,va));
     }
     @FXML
@@ -47,13 +47,9 @@ public class ELSController extends baseFormController {
                 listView.setItems(searchResult);
             } else {
                 listView.getItems().clear();
-                ObservableList<String> items = FXCollections.observableArrayList("");
-                listView.setItems(items);
             }
         } else {
             listView.getItems().clear();
-            ObservableList<String> items = FXCollections.observableArrayList("");
-            listView.setItems(items);
         }
     }
 
