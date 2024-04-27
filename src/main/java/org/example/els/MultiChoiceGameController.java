@@ -2,6 +2,7 @@ package org.example.els;
 
 import Game.MultiChoice.Question;
 import Game.MultiChoice.Quiz;
+import Sound.sound_manage;
 import javafx.animation.KeyFrame;
 import javafx.animation.KeyValue;
 import javafx.animation.Timeline;
@@ -9,6 +10,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.media.Media;
 import javafx.util.Duration;
 import user.Record;
 
@@ -35,6 +37,8 @@ public class MultiChoiceGameController extends baseFormController {
     private Button answerD;
     private List<Question> questions;
     private Quiz quiz ;
+    private final Media mediaWorng = sound_manage.getMediaByNameFormSRC("src/media/worng_sound.mp3");
+    private final Media mediaCorrecct = sound_manage.getMediaByNameFormSRC("src/media/correct_sound.mp3");
 
     @Override
     public void initialize() throws SQLException {
@@ -122,6 +126,7 @@ public class MultiChoiceGameController extends baseFormController {
      * @param button button was selected
      */
     private void correctAnswer(Button button) {
+        sound_manage.playMedia(mediaCorrecct);
         Timeline timeline = new Timeline(
                 new KeyFrame(Duration.seconds(0.5),
                         new KeyValue(button.styleProperty(), "-fx-background-color: WHITE")),
@@ -146,6 +151,7 @@ public class MultiChoiceGameController extends baseFormController {
      * @param button the button was selected
      */
     private void wrongAnswer(Button button, Button correct) {
+        sound_manage.playMedia(mediaWorng);
         Timeline timeline = new Timeline(
                 new KeyFrame(Duration.seconds(0.5),
                         new KeyValue(button.styleProperty(), "-fx-background-color: WHITE; -fx-text-fill: BLACK"),

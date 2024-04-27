@@ -3,6 +3,7 @@ package org.example.els;
 import Game.PictureGuessingGame.Question;
 import Game.PictureGuessingGame.Quiz;
 import Game.PictureGuessingGame.database;
+import Sound.sound_manage;
 import googleTranslate.sound;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -14,6 +15,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.media.Media;
 import javazoom.jl.decoder.JavaLayerException;
 import user.Record;
 
@@ -39,33 +41,29 @@ public class PictureGuessingGameController extends baseFormController {
 
     private List<Question> questionList = database.getAllQuestion("jdbc:sqlite:src\\Data\\database.db");
     private Quiz quiz = new Quiz(questionList);
-    //private List<Image> images = database.getAllImage("jdbc:sqlite:database.db");
 
-    public PictureGuessingGameController() throws SQLException {
+    private final Media mediaWorng = sound_manage.getMediaByNameFormSRC("src/media/worng_sound.mp3");
+    private final Media mediaCorrecct = sound_manage.getMediaByNameFormSRC("src/media/correct_sound.mp3");
 
-    }
     @FXML
-    public void initialize(){
+    public void initialize() {
         player_lable.setText("Player" + user.getName());
         text_input.setOnKeyPressed(event -> {
             if (event.getCode().equals(KeyCode.ENTER)) {
                 try {
                     baseSubmit();
-                } catch (IOException e) {
-                    throw new RuntimeException(e);
-                } catch (JavaLayerException e) {
-                    throw new RuntimeException(e);
-                } catch (SQLException e) {
+                } catch (IOException | JavaLayerException | SQLException e) {
                     throw new RuntimeException(e);
                 }
             }
         });
     }
+
     @FXML
     public void startGame(ActionEvent event) throws SQLException {
         quiz.newQuiz();
-        int x = Record.getScore("pgg",user);
-        if(x!=-1){
+        int x = Record.getScore("pgg", user);
+        if (x != -1) {
             max_score_label.setText("max score: " + x);
         }
         image_View.setImage(quiz.getCurrentQuestion().getImage());
@@ -75,9 +73,9 @@ public class PictureGuessingGameController extends baseFormController {
 
     @FXML
     public void endGame(ActionEvent event) throws SQLException {
-        Record.updateMaxScore("pgg",quiz.getScore(),user);
-        int x = Record.getScore("pgg",user);
-        if(x!=-1){
+        Record.updateMaxScore("pgg", quiz.getScore(), user);
+        int x = Record.getScore("pgg", user);
+        if (x != -1) {
             max_score_label.setText("max score: " + x);
         }
         image_View.setImage(null);
@@ -87,17 +85,17 @@ public class PictureGuessingGameController extends baseFormController {
         image_View.setImage(quiz.getCurrentQuestion().getImage());
         suggest_label.setText(quiz.getCurrentQuestion().getQues());
     }
+
     private void baseSubmit() throws IOException, JavaLayerException, SQLException {
         String answer = text_input.getText();
-        if(quiz.guess(answer)){
-           // sound.get_Audio(quiz.getCurrentQuestion().getResult().toString(),"en");
-        }
-        else{
-           // sound.get_Audio("sai rồi cậu ơi","vi");
+        if (quiz.guess(answer)) {
+            sound_manage.playMedia(mediaCorrecct);
+        } else {
+            sound_manage.playMedia(mediaWorng);
         }
         score.setText("Score:" + String.valueOf(quiz.getScore()));
         if (quiz.isFinished()) {
-            Record.updateMaxScore("pgg",quiz.getScore(),user);
+            Record.updateMaxScore("pgg", quiz.getScore(), user);
             image_View.setImage(null);
             suggest_label.setText("");
             newAlert(stage, "End game", "", "End game \n Your score: " + quiz.getScore());
@@ -109,18 +107,21 @@ public class PictureGuessingGameController extends baseFormController {
             image_View.setImage(quiz.getCurrentQuestion().getImage());
             suggest_label.setText(quiz.getCurrentQuestion().getQues());
         }
+        text_input.clear();
     }
+
     @FXML
     public void submit(ActionEvent event) throws IOException, JavaLayerException, SQLException {
         baseSubmit();
-        int x = Record.getScore("pgg",user);
-        if(x!=-1){
+        int x = Record.getScore("pgg", user);
+        if (x != -1) {
             max_score_label.setText("max score: " + x);
         }
     }
+
     @FXML
     public void key_submit(KeyEvent event) throws IOException, JavaLayerException, SQLException {
-        if(event.getCode() == KeyCode.ENTER){
+        if (event.getCode() == KeyCode.ENTER) {
             baseSubmit();
             System.out.println("hello");
         }
