@@ -1,15 +1,19 @@
 package org.example.els;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.web.WebEngine;
-import javafx.scene.web.WebView;
+import javafx.scene.control.Button;
 
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.net.URL;
+import java.sql.SQLException;
 
 public class HomeController extends baseFormController{
+
+    @FXML
+    private Button ava_button;
+
+    @FXML
+    public void initialize(){
+        SceneManage.setAvatar(ava_button,user.getAvata());
+    }
 
 }

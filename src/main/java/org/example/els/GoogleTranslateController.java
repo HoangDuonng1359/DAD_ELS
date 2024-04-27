@@ -6,31 +6,13 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
-import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
-import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.AnchorPane;
 import javazoom.jl.decoder.JavaLayerException;
-
 import java.io.IOException;
-//import java.util.concurrent.Executor;
-//import java.util.concurrent.Executors;
-//import java.util.concurrent.ScheduledExecutorService;
-//import java.util.concurrent.TimeUnit;
 
 import static googleTranslate.sound.get_Audio;
 
 public class GoogleTranslateController extends baseFormController {
-    @FXML
-    private Button dictionary_menu;
-    @FXML
-    private Button google_translate_menu;
-    @FXML
-    private Button game_menu;
-    @FXML
-    private Button buttonTranslate;
-    @FXML
-    private AnchorPane pane;
     @FXML
     private ComboBox<String> comboBox_lang_input;
     @FXML
@@ -41,6 +23,8 @@ public class GoogleTranslateController extends baseFormController {
     private TextArea Text_area_out;
     protected String lang_input;
     protected String lang_out;
+    @FXML
+    public Button ava_button;
 
     /**
      * khởi tạo combobox
@@ -51,6 +35,7 @@ public class GoogleTranslateController extends baseFormController {
         comboBox_lang_out.setItems(API_Google_translator.listLANGUAGE);
         comboBox_lang_input.setValue("English");
         comboBox_lang_out.setValue("Vietnamese");
+        SceneManage.setAvatar(ava_button,user.getAvata());
         Text_area_input.textProperty().addListener((observable, oldValue, newValue) -> {
             if (!newValue.isEmpty() && newValue.charAt(newValue.length() - 1) != ' ' && !newValue.equals(oldValue)) {
                 if (!oldValue.equals(newValue)) {
