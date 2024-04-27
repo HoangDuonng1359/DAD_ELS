@@ -1,0 +1,16 @@
+#ava_button{
+    -fx-background-color: transparent;
+    -fx-background-repeat: no-repeat;
+    -fx-border-radius: 100%;
+    -fx-effect: dropshadow(one-pass-box,#ea8439,5,1,2,1);
+}
+#ava_button:hover{
+    -fx-scale-x: 1.2;
+    -fx-scale-y: 1.2;
+}
+#ava_button_profile{
+    -fx-background-color: transparent;
+    -fx-background-repeat: no-repeat;
+    -fx-border-radius: 100%;
+    -fx-effect: dropshadow(one-pass-box,#ea8439,5,1,2,1);
+}
