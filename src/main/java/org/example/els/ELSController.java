@@ -5,10 +5,13 @@ import dictionary.DictionaryManagementDatabase;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;
 import java.sql.SQLException;
 
 public class ELSController extends baseFormController {
+    @FXML
+    public Button ava_button;
     @FXML
     public void initialize() {
         search_field.textProperty().addListener((observable, oldText, newText) -> {
@@ -21,6 +24,7 @@ public class ELSController extends baseFormController {
         });
         av.setSelected(true);
         va.setSelected(false);
+        SceneManage.setAvatar(ava_button,user.getAvata());
     }
 
     @FXML

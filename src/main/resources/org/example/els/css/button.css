@@ -259,6 +259,16 @@
     -fx-scale-x: 1.2;
     -fx-scale-y: 1.2;
 }
+#ava_button_profile{
+    -fx-background-image: url(../image/profile_logo.png);
+    -fx-background-size: cover;
+    -fx-border-color: black;
+    -fx-background-color: transparent;
+    -fx-background-repeat: no-repeat;
+    -fx-background-radius: 60px;
+    -fx-border-radius: 60px;
+    -fx-effect: dropshadow(one-pass-box,#ea8439,5,1,2,1);
+}
 #game_button{
     -fx-background-color: #31d4cb;
     -fx-border-color: #1f1347;
