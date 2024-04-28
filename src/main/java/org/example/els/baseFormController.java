@@ -13,14 +13,15 @@ import javafx.fxml.FXML;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.web.WebView;
 import javafx.stage.Stage;
 import user.User;
 
 public class baseFormController extends SceneManage {
-    protected static Stage stage;
-    protected static Scene scene;
-    protected static Parent root;
+    protected Stage stage;
+    protected Scene scene;
+    protected Parent root;
     @FXML
     protected WebView definitionView;
     @FXML
@@ -50,6 +51,14 @@ public class baseFormController extends SceneManage {
 //            throw new RuntimeException(e);
 //        }
 //    }
+    public void setScene(Scene scene) {
+        this.scene = scene;
+    }
+
+    public Scene getScene() {
+        return scene;
+    }
+
     @FXML
     public void openProfile(ActionEvent event) {
         try {

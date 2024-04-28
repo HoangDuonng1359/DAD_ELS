@@ -72,7 +72,7 @@
          </textFill></Label>
       <AnchorPane fx:id="delete_word" layoutX="347.0" layoutY="174.0" prefHeight="154.0" prefWidth="547.0">
          <children>
-            <TextField fx:id="word" layoutX="255.0" layoutY="29.0" prefHeight="47.0" prefWidth="266.0" stylesheets="@css/textField.css" />
+            <TextField fx:id="word" layoutX="255.0" layoutY="29.0" onKeyPressed="#key_delete_enter" prefHeight="47.0" prefWidth="266.0" stylesheets="@css/textField.css" />
             <Label fx:id="label_target" layoutX="85.0" layoutY="33.0" prefHeight="39.0" prefWidth="154.0" stylesheets="@css/LabelH1.css" text="English" />
             <CheckBox fx:id="av" layoutX="44.0" layoutY="99.0" mnemonicParsing="false" onAction="#setmodeav" prefHeight="25.0" prefWidth="94.0" stylesheets="@css/check_box.css" text="Anh - Việt" />
             <CheckBox fx:id="va" layoutX="152.0" layoutY="98.0" mnemonicParsing="false" onAction="#setmodeva" prefHeight="26.0" prefWidth="102.0" stylesheets="@css/check_box.css" text="Việt - Anh" />

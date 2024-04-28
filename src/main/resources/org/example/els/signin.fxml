@@ -35,6 +35,7 @@
             <Image url="@image/Template%202%20elment/wooden_label.png" />
          </image>
       </ImageView>
+      <Button fx:id="signIn_button" defaultButton="true" layoutX="242.0" layoutY="259.0" mnemonicParsing="false" onAction="#sign_submit" stylesheets="@css/nor_label.css" text="SIGN IN" />
       <Button fx:id="nor_button" layoutX="331.0" layoutY="259.0" mnemonicParsing="false" onAction="#openFormSignUp" stylesheets="@css/nor_label.css" text="SIGN UP" />
       <PasswordField fx:id="password" layoutX="292.0" layoutY="206.0" promptText="Enter your password" stylesheets="@css/Signin.css" />
       <TextField fx:id="name" layoutX="292.0" layoutY="148.0" promptText="Enter your username" stylesheets="@css/Signin.css" />
@@ -45,6 +46,5 @@
             <Image url="@image/APP%20LOGO.png" />
          </image>
       </ImageView>
-      <Button fx:id="nor_button" layoutX="242.0" layoutY="259.0" mnemonicParsing="false" onAction="#sign_submit" stylesheets="@css/nor_label.css" text="SIGN IN" />
    </children>
 </AnchorPane>
