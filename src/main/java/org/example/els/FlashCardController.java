@@ -1,8 +1,6 @@
 package org.example.els;
 
-import Game.FlashCard.RecentW;
-import dictionary.DictionaryManagement;
-import dictionary.DictionaryManagementDatabase;
+import Bookmark.RecentW;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
@@ -11,13 +9,12 @@ import javafx.scene.web.WebView;
 import java.io.IOException;
 import java.sql.SQLException;
 
-import static Game.FlashCard.RecentW.getWord;
-
 public class FlashCardController extends baseFormController{
     @FXML
     private Label E_word;
     @FXML
     private WebView V_word;
+
     //static DictionaryManagement a= new DictionaryManagement();
     public void initialize() throws IOException, SQLException {
         initgame();

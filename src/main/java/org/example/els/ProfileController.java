@@ -5,25 +5,20 @@ import dictionary.DictionaryManagementDatabase;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.chart.BarChart;
-import javafx.scene.chart.CategoryAxis;
-import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
-import javafx.stage.FileChooser;
-import javafx.stage.Stage;
 import user.Record;
-
-import java.io.File;
 import java.io.IOException;
 import java.sql.SQLException;
 
+
 public class ProfileController extends baseFormController {
     @FXML
-    private Label name_label;
+    private Button ava_button_profile;
     @FXML
-    private ImageView avata_image;
+    private Label name_label;
     @FXML
     private Label numberEdit;
     @FXML
@@ -42,20 +37,16 @@ public class ProfileController extends baseFormController {
         XYChart.Series<String, Number> series2 = new XYChart.Series<>();
         series2.setName("Series 2");
         series2.getData().add(new XYChart.Data<>("PG game", Record.getScore("pgg",user)));
-
         chart.setTitle("Record game");
         chart.getData().addAll(series1, series2);
         chart.getYAxis().setLabel("Score");
         name_label.setText(user.getName());
-        if (user.getImage() != null) {
-            avata_image.setImage(user.getImage());
+        if (user.getAvata() != null) {
+            SceneManage.setAvatar(ava_button_profile,user.getAvata());
         }
         numberEdit.setText("Word added:" + DictionaryManagementDatabase.numberChange("+") + " words");
         numberAdd.setText("Word edited:" + DictionaryManagementDatabase.numberChange("#") + " words");
         numberRemove.setText("Word removed:" + DictionaryManagementDatabase.numberChange("-") + " words");
-        if(user.getAvata()!=null){
-            avata_image.setImage(user.getImage());
-        }
     }
 
     @FXML
@@ -66,8 +57,8 @@ public class ProfileController extends baseFormController {
     @FXML
     public void changeAvata(ActionEvent event) throws SQLException {
         Image image = user_management.changeAvt(stage);
-        avata_image.setImage(image);
         user.setAvata(image);
+        SceneManage.setAvatar(ava_button_profile,user.getAvata());
     }
 
     @FXML

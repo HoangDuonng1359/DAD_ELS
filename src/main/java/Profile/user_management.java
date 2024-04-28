@@ -26,7 +26,7 @@ public class user_management {
     }
 
     public Image getAvata(){
-        return user.getImage();
+        return user.getAvata();
     }
 
     public User changeName(String name) throws SQLException {
