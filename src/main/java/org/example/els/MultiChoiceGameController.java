@@ -16,8 +16,6 @@ import user.Record;
 
 import java.sql.SQLException;
 import java.util.List;
-
-import static Game.MultiChoice.importData.importFormFileCSV;
 import static Game.MultiChoice.importData.insertFromDB;
 
 public class MultiChoiceGameController extends baseFormController {
@@ -39,7 +37,6 @@ public class MultiChoiceGameController extends baseFormController {
     private Quiz quiz ;
     private final Media mediaWorng = sound_manage.getMediaByNameFormSRC("src/media/worng_sound.mp3");
     private final Media mediaCorrecct = sound_manage.getMediaByNameFormSRC("src/media/correct_sound.mp3");
-
     @Override
     public void initialize() throws SQLException {
         Import_data_form_file();

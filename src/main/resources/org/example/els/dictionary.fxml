@@ -62,12 +62,12 @@
       </ImageView>
       <AnchorPane fx:id="s_pane" layoutX="251.0" layoutY="61.0" prefHeight="467.0" prefWidth="723.0">
          <children>
-              <ListView fx:id="listView" layoutX="21.0" layoutY="75.0" onMouseClicked="#handleMouseClickListView" prefHeight="338.0" prefWidth="270.0" stylesheets="@css/listview.css" />
-              <Button fx:id="button_search" layoutX="252.0" layoutY="15.0" minWidth="42.0" mnemonicParsing="false" onMouseClicked="#handleMouseClickButtonSearch" prefHeight="54.0" prefWidth="54.0" stylesheets="@css/button.css" />
-            <TextField fx:id="search_field" layoutX="21.0" layoutY="22.0" prefHeight="39.0" prefWidth="226.0" stylesheets="@css/textField.css">
+            <TextField fx:id="search_field" layoutX="21.0" layoutY="22.0" onKeyPressed="#key_search" prefHeight="39.0" prefWidth="226.0" promptText="Search" stylesheets="@css/textField.css">
                <font>
                   <Font size="1.0" />
                </font></TextField>
+              <ListView fx:id="listView" layoutX="21.0" layoutY="75.0" onKeyPressed="#key_search_list_view" onMouseClicked="#handleMouseClickListView" prefHeight="338.0" prefWidth="270.0" stylesheets="@css/listview.css" />
+              <Button fx:id="button_search" layoutX="252.0" layoutY="15.0" minWidth="42.0" mnemonicParsing="false" onMouseClicked="#handleMouseClickButtonSearch" prefHeight="54.0" prefWidth="54.0" stylesheets="@css/button.css" />
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="340.0" layoutX="306.0" layoutY="75.0" stroke="#d07328" strokeType="INSIDE" strokeWidth="4.0" width="395.0" />
               <WebView fx:id="definitionView" layoutX="313.0" layoutY="82.0" prefHeight="327.0" prefWidth="382.0" />
             <Label fx:id="heading_label" layoutX="365.0" layoutY="10.0" prefHeight="62.0" prefWidth="278.0" stylesheets="@css/LabelH1.css" text="Dictionary" textAlignment="CENTER" textFill="#1bc7d7" textOverrun="CLIP">

@@ -8,6 +8,8 @@ import googleTranslate.sound;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -16,6 +18,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.media.Media;
+import javafx.stage.Stage;
 import javazoom.jl.decoder.JavaLayerException;
 import user.Record;
 
@@ -44,6 +47,7 @@ public class PictureGuessingGameController extends baseFormController {
 
     private final Media mediaWorng = sound_manage.getMediaByNameFormSRC("src/media/worng_sound.mp3");
     private final Media mediaCorrecct = sound_manage.getMediaByNameFormSRC("src/media/correct_sound.mp3");
+
 
     @FXML
     public void initialize() {
@@ -123,7 +127,6 @@ public class PictureGuessingGameController extends baseFormController {
     public void key_submit(KeyEvent event) throws IOException, JavaLayerException, SQLException {
         if (event.getCode() == KeyCode.ENTER) {
             baseSubmit();
-            System.out.println("hello");
         }
     }
 

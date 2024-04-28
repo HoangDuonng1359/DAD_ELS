@@ -5,10 +5,13 @@ import dictionary.DatabaseConnection;
 import dictionary.DictionaryManagementDatabase;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.web.HTMLEditor;
+import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.sql.Connection;
@@ -26,6 +29,7 @@ public class editWordController extends baseFormController{
     private Label label_target;
     @FXML
     private Label label_explain;
+
     public void initialize() throws IOException, SQLException {
         commit.setVisible(false);
         av.setSelected(true);

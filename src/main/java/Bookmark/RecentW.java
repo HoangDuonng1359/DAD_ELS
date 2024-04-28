@@ -1,9 +1,11 @@
-package Game.FlashCard;
+package Bookmark;
 
 import dictionary.DatabaseConnection;
 import dictionary.DictionaryManagementDatabase;
 import dictionary.Trie;
 import dictionary.Word;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import org.example.els.SceneManage;
 import org.example.els.baseFormController;
 
@@ -31,7 +33,18 @@ public class RecentW {
             System.out.println("IOException");
         }
     }
-
+    public static ObservableList getHistory() throws SQLException {
+        Connection conn = DatabaseConnection.connect("jdbc:sqlite:src\\Data\\database.db");
+        String sql = "SELECT user_id, target, explain FROM RecentList WHERE user_id = ?";
+        PreparedStatement ps = conn.prepareStatement(sql);
+        ps.setInt(1, baseFormController.user.getId());
+        ResultSet rs = ps.executeQuery();
+        while (rs.next()) {
+            historyDB.put(rs.getString("target"), rs.getString("explain"));
+        }
+        conn.close();
+        return FXCollections.observableArrayList(new ArrayList<>(historyDB.keySet()));
+    }
     public static void addDB(String s, boolean av) throws SQLException {
         String ex = DictionaryManagementDatabase.Search(s, av);
         Connection conn = null;

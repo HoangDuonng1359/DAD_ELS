@@ -1,14 +1,12 @@
 #search_field{
-    -fx-border-color: #d07328; ;
+    -fx-border-color: #e76c0e;
     -fx-border-radius: 10%;
     -fx-background-color: transparent;
     -fx-border-width: 2px;
     -fx-font-family: "Courier New";
+    -fx-font-size: 14px;
 }
 #search_field:hover{
-    -fx-border-color: #e76c0e;
-}
-#search_field:focused{
     -fx-border-color: #e76c0e;
 }
 #e_word {

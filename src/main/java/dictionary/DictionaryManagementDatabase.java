@@ -111,7 +111,4 @@ public class DictionaryManagementDatabase {
         conn.close();
         return count;
     }
-
-    public static void main(String[] args) {
-    }
 }

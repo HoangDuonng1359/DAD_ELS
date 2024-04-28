@@ -4,9 +4,12 @@ import googleTranslate.API_Google_translator;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextArea;
+import javafx.stage.Stage;
 import javazoom.jl.decoder.JavaLayerException;
 import java.io.IOException;
 
@@ -25,7 +28,6 @@ public class GoogleTranslateController extends baseFormController {
     protected String lang_out;
     @FXML
     public Button ava_button;
-
     /**
      * khởi tạo combobox
      */

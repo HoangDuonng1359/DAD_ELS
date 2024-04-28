@@ -2,10 +2,19 @@ package org.example.els;
 
 import dictionary.DatabaseConnection;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 import user.User;
 
 import java.io.ByteArrayInputStream;
@@ -17,6 +26,11 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class SigninController extends baseFormController {
+    @FXML
+    private Button signIn_button;
+    @FXML
+    private AnchorPane anchorPane;
+
     @FXML
     public void initialize() {
 
