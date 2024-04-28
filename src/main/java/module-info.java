@@ -6,6 +6,7 @@ module org.example.els {
     requires com.opencsv;
     requires jlayer;
     requires java.sql;
+    requires javafx.media;
     opens org.example.els to javafx.fxml;
     exports org.example.els;
     exports googleTranslate;

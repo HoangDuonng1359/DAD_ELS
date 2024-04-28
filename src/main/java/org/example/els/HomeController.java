@@ -3,9 +3,6 @@ package org.example.els;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 
-import java.io.IOException;
-import java.sql.SQLException;
-
 public class HomeController extends baseFormController{
 
     @FXML
