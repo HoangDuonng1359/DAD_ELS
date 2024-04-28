@@ -22,7 +22,7 @@ public class FlashCardController extends baseFormController{
     public void initgame() throws SQLException {
         RecentW.initDB();
         String target= RecentW.getWord();
-        System.out.println(target);
+        //System.out.println(target);
         E_word.setText(target);
         V_word.getEngine().loadContent(RecentW.getExplain(target));
         //V_word.getEngine().loadContent(DictionaryManagementDatabase.Search(target,true));

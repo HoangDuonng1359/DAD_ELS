@@ -9,6 +9,11 @@
 
 <AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="682.0" prefWidth="1000.0" stylesheets="@css/AnchorPane.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.els.PictureGuessingGameController">
     <children>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="664.0" layoutY="-14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/Template%20element/cloud2.png" />
+         </image>
+      </ImageView>
       <ImageView fitHeight="394.0" fitWidth="31.0" layoutX="35.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
         <image>
           <Image url="@image/line.png" />
@@ -31,17 +36,17 @@
             <Image url="@image/APP%20LOGO.png" />
          </image>
       </ImageView>
-      <AnchorPane fx:id="pictureguessinggame_anchorpane" layoutX="244.0" layoutY="22.0" prefHeight="438.0" prefWidth="572.0">
+      <AnchorPane fx:id="pictureguessinggame_anchorpane" layoutX="243.0" layoutY="59.0" prefHeight="438.0" prefWidth="623.0">
          <children>
-            <TextField fx:id="text_input" layoutX="130.0" layoutY="323.0" prefHeight="31.0" prefWidth="304.0" stylesheets="@css/textField.css" />
-            <Button fx:id="start_game_button" layoutX="63.0" layoutY="370.0" mnemonicParsing="false" onAction="#startGame" prefHeight="31.0" prefWidth="112.0" stylesheets="@css/button.css" text="Start game" />
-            <Button fx:id="submit_button" layoutX="233.0" layoutY="372.0" mnemonicParsing="false" onAction="#submit" onKeyPressed="#key_submit" prefHeight="27.0" prefWidth="97.0" stylesheets="@css/button.css" text="Submit" />
-            <Button fx:id="endgame_button" layoutX="395.0" layoutY="372.0" mnemonicParsing="false" onAction="#endGame" prefHeight="27.0" prefWidth="112.0" stylesheets="@css/button.css" text="End game" />
-            <Label fx:id="max_score_label" layoutX="434.0" layoutY="25.0" prefHeight="39.0" prefWidth="120.0" stylesheets="@css/LabelH1.css" text="Max score" />
-            <Label fx:id="score" layoutX="434.0" layoutY="59.0" prefHeight="34.0" prefWidth="82.0" stylesheets="@css/LabelH1.css" text="Score: " />
-            <Label fx:id="player_lable" layoutX="434.0" layoutY="93.0" prefHeight="34.0" prefWidth="82.0" stylesheets="@css/LabelH1.css" text="Player" />
-            <ImageView fx:id="image_View" fitHeight="256.0" fitWidth="256.0" layoutX="154.0" layoutY="25.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" />
-            <Label fx:id="suggest_label" layoutX="194.0" layoutY="281.0" prefHeight="27.0" prefWidth="184.0" stylesheets="@css/LabelH1.css" />
+            <TextField fx:id="text_input" layoutX="154.0" layoutY="317.0" prefHeight="31.0" prefWidth="304.0" stylesheets="@css/textField.css" />
+            <Button fx:id="start_game_button" layoutX="98.0" layoutY="370.0" mnemonicParsing="false" onAction="#startGame" prefHeight="31.0" prefWidth="112.0" stylesheets="@css/button.css" text="Start game" />
+            <Button fx:id="submit_button" layoutX="257.0" layoutY="372.0" mnemonicParsing="false" onAction="#submit" onKeyPressed="#key_submit" prefHeight="27.0" prefWidth="97.0" stylesheets="@css/button.css" text="Submit" />
+            <Button fx:id="endgame_button" layoutX="402.0" layoutY="372.0" mnemonicParsing="false" onAction="#endGame" prefHeight="27.0" prefWidth="112.0" stylesheets="@css/button.css" text="End game" />
+            <Label fx:id="max_score_label" layoutX="434.0" layoutY="26.0" prefHeight="39.0" prefWidth="184.0" stylesheets="@css/LabelH1.css" text="Max score: " />
+            <Label fx:id="score" layoutX="434.0" layoutY="59.0" prefHeight="34.0" prefWidth="184.0" stylesheets="@css/LabelH1.css" text="Score: " />
+            <Label fx:id="player_lable" layoutX="434.0" layoutY="93.0" prefHeight="34.0" prefWidth="184.0" stylesheets="@css/LabelH1.css" text="Player:" />
+            <ImageView fx:id="image_View" fitHeight="234.0" fitWidth="243.0" layoutX="176.0" layoutY="26.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="suggest_label" layoutX="214.0" layoutY="279.0" prefHeight="27.0" prefWidth="184.0" stylesheets="@css/LabelH1.css" />
          </children>
       </AnchorPane>
       <ImageView fitHeight="98.0" fitWidth="1022.0" layoutX="-11.0" layoutY="601.0" pickOnBounds="true" preserveRatio="true">
@@ -69,7 +74,7 @@
             <Image url="@image/Template%20element/coconut.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="160.0" fitWidth="155.0" layoutX="882.0" layoutY="91.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="160.0" fitWidth="155.0" layoutX="867.0" layoutY="167.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@image/Template%20element/plane1.png" />
          </image>
@@ -82,6 +87,12 @@
       <ImageView fitHeight="195.0" fitWidth="184.0" layoutX="316.0" layoutY="537.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@image/Template%20element/cano.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="gamelabel" layoutX="408.0" layoutY="11.0" stylesheets="@css/LabelH1.css" text="Picture Guessing" />
+      <ImageView fitHeight="64.0" fitWidth="240.0" layoutX="201.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/Template%20element/cloud2.png" />
          </image>
       </ImageView>
     </children>
