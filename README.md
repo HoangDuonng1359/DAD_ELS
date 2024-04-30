@@ -43,6 +43,7 @@ The application is designed to support learning English. The application is writ
 ![image](https://github.com/HoangDuonng1359/DAD_ELS/assets/144660860/3ef62b1e-0ec3-4d2e-896c-45c18c36ee1c)
 ![image](https://github.com/HoangDuonng1359/DAD_ELS/assets/144660860/d9c1a1a1-b2a3-4f51-a740-b3445ef992e2)
 ![image](https://github.com/HoangDuonng1359/DAD_ELS/assets/144660860/7569d451-39c7-40e6-994a-54c06773fa72)
+![image](https://github.com/HoangDuonng1359/DAD_ELS/assets/144660860/80d3b36d-5b1f-42b4-ae87-673061c97303)
 
 
 ## Future improvements
