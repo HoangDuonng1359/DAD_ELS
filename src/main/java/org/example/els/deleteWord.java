@@ -60,7 +60,7 @@ public class deleteWord extends baseFormController {
             word.setText("");
         }
     }
-
+    @FXML
     public void deleteWord(ActionEvent event) {
         bookmarkmanagement.deleteWord(word.getText(), getmode(av, va));
         word.setText("");
