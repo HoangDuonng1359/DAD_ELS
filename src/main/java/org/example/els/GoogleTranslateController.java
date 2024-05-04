@@ -42,6 +42,8 @@ public class GoogleTranslateController extends baseFormController {
             Task<String> task = new Task<String>() {
                 @Override
                 protected String call() throws Exception {
+                    lang_input = API_Google_translator.getLanguage(comboBox_lang_input.getValue());
+                    lang_out = API_Google_translator.getLanguage(comboBox_lang_out.getValue());
                     String res = "";
                     if (Text_area_input.getText().isEmpty()) {
                         res = "";
@@ -81,8 +83,14 @@ public class GoogleTranslateController extends baseFormController {
         if (manager_internet.checkConnect()) {
             lang_input = API_Google_translator.getLanguage(comboBox_lang_input.getValue());
             lang_out = API_Google_translator.getLanguage(comboBox_lang_out.getValue());
+            String old_text_out = Text_area_out.getText();
+            String old_lang_input = comboBox_lang_input.getValue();
+            String old_lang_output = comboBox_lang_out.getValue();
+            comboBox_lang_input.setValue(old_lang_output);
+            comboBox_lang_out.setValue(old_lang_input);
             try {
-                String output = API_Google_translator.translate(Text_area_input.getText(), lang_input, lang_out);
+                Text_area_input.setText(old_text_out);
+                String output = API_Google_translator.translate(Text_area_input.getText(), lang_out, lang_input);
                 Text_area_out.setText(output);
             } catch (IOException e) {
                 throw new RuntimeException(e);
