@@ -21,6 +21,8 @@ public class DictionaryController extends baseFormController {
     public Button ava_button;
     @FXML
     private Button audio_button_in;
+    @FXML
+    private Button button_show_all_word;
 
     private String target;
 
@@ -165,7 +167,11 @@ public class DictionaryController extends baseFormController {
             listView.getItems().clear();
         }
     }
-
+    @FXML
+    public void show_all_word(ActionEvent event) throws SQLException {
+        ObservableList<String> searchResult = DictionaryManagementDatabase.show_all_word(getmode(av,va));
+        listView.setItems(searchResult);
+    }
 }
 
 
