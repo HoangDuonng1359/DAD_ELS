@@ -12,7 +12,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.web.WebView?>
 
-<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="682.0" prefWidth="1000.0" stylesheets="@css/AnchorPane.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.els.ELSController">
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="682.0" prefWidth="1000.0" stylesheets="@css/AnchorPane.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.els.DictionaryController">
     <children>
       <ImageView fitHeight="88.0" fitWidth="892.0" layoutX="351.0" layoutY="607.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -78,6 +78,12 @@
             <CheckBox fx:id="va" layoutX="164.0" layoutY="425.0" mnemonicParsing="false" onAction="#setmodeva" prefHeight="27.0" prefWidth="114.0" stylesheets="@css/check_box.css" text="Việt - Anh" />
             <CheckBox fx:id="av" layoutX="48.0" layoutY="425.0" mnemonicParsing="false" onAction="#setmodeav" prefHeight="27.0" prefWidth="108.0" stylesheets="@css/check_box.css" text="Anh - Việt" />
             <Button fx:id="ava_button" layoutX="643.0" layoutY="15.0" mnemonicParsing="false" onAction="#openProfile" prefHeight="54.0" prefWidth="54.0" stylesheets="@css/button.css" />
+            <Button fx:id="audio_button_in" layoutX="643.0" layoutY="91.0" mnemonicParsing="false" onAction="#playAudio" prefHeight="28.0" prefWidth="31.0" stylesheets="@css/button.css" />
+            <Button fx:id="button_show_all_word" layoutX="308.0" layoutY="425.0" mnemonicParsing="false" onAction="#show_all_word" prefHeight="27.0" prefWidth="114.0" stylesheets="@css/button.css" text="Show all word">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Button>
          </children>
       </AnchorPane>
       <ImageView fitHeight="94.0" fitWidth="184.0" layoutX="206.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">

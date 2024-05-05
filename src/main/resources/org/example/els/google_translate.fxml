@@ -7,6 +7,7 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="682.0" prefWidth="1000.0" stylesheets="@css/AnchorPane.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.els.GoogleTranslateController">
    <children>
@@ -49,19 +50,28 @@
       <AnchorPane fx:id="s_pane" layoutX="236.0" layoutY="48.0" prefHeight="454.0" prefWidth="699.0" stylesheets="@css/AnchorPane.css">
          <children>
             <Button fx:id="audio_button_in" layoutX="167.0" layoutY="401.0" mnemonicParsing="false" onAction="#playAudioIn" prefHeight="38.0" prefWidth="41.0" stylesheets="@css/button.css" />
-            <TextArea fx:id="Text_area_input" layoutX="29.0" layoutY="128.0" prefHeight="263.0" prefWidth="318.0" stylesheets="@css/textArea.css" />
+            <TextArea fx:id="Text_area_input" layoutX="29.0" layoutY="128.0" prefHeight="263.0" prefWidth="318.0" stylesheets="@css/textArea.css">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font></TextArea>
             <ComboBox fx:id="comboBox_lang_out" layoutX="364.0" layoutY="83.0" prefHeight="30.0" prefWidth="191.0" promptText="SELECT LANGUAGE" stylesheets="@css/comboBox.css" />
             <Button fx:id="audio_button_out" layoutX="500.0" layoutY="397.0" mnemonicParsing="false" onAction="#playAudioOut" prefHeight="42.0" prefWidth="46.0" stylesheets="@css/button.css" />
             <ComboBox fx:id="comboBox_lang_input" layoutX="29.0" layoutY="83.0" onAction="#comboBoxChanged" prefHeight="30.0" prefWidth="184.0" promptText="SELECT LANGUAGE" stylesheets="@css/comboBox.css" />
             <Button fx:id="ava_button" layoutX="25.0" layoutY="14.0" mnemonicParsing="false" onAction="#openProfile" prefHeight="47.0" prefWidth="48.0" stylesheets="@css/button.css" />
-            <TextArea fx:id="Text_area_out" layoutX="365.0" layoutY="127.0" prefHeight="263.0" prefWidth="318.0" stylesheets="@css/textArea.css" wrapText="true" />
+            <TextArea fx:id="Text_area_out" layoutX="365.0" layoutY="127.0" prefHeight="263.0" prefWidth="318.0" stylesheets="@css/textArea.css" wrapText="true">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font></TextArea>
             <ImageView fitHeight="113.0" fitWidth="142.0" layoutX="587.0" layoutY="-42.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@image/Template%20element/saobien.png" />
                </image>
             </ImageView>
             <Label fx:id="game_label" layoutX="254.0" layoutY="9.0" stylesheets="@css/nor_label.css" text="TRANSLATE" />
-            <Button fx:id="buttonTranslate" layoutX="289.0" layoutY="405.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="149.0" stylesheets="@css/button.css" text="Translate" />
+            <Button fx:id="buttonTranslate" layoutX="289.0" layoutY="405.0" mnemonicParsing="false" onAction="#translateEvent" prefHeight="30.0" prefWidth="149.0" stylesheets="@css/button.css" text="🔁">
+               <font>
+                  <Font name="Arial" size="43.0" />
+               </font></Button>
          </children>
       </AnchorPane>
       <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="300.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">

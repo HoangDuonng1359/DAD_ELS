@@ -180,12 +180,12 @@ public class baseFormController extends SceneManage {
             alert.showAndWait();
         });
     }
-    public static boolean getmode(CheckBox av, CheckBox va){
-        if(av.isSelected()) return true;
-        else return false;
+    public static String getmode(CheckBox av, CheckBox va){
+        if(av.isSelected()) return "av";
+        else return "va";
     }
     @FXML
-    public void setmodeav(ActionEvent event){
+    public void setmodeav(ActionEvent event) throws SQLException {
         if(av.isSelected()){
             va.setSelected(false);
         }
@@ -196,7 +196,7 @@ public class baseFormController extends SceneManage {
         va.setSelected(false);
     }
     @FXML
-    public void setmodeva(ActionEvent event){
+    public void setmodeva(ActionEvent event) throws SQLException {
         if(va.isSelected()){
             av.setSelected(false);
         }

@@ -36,7 +36,15 @@ The application is designed to support learning English. The application is writ
 10. To exit the application, click the Exit button (Cross icon).
 
 ## Demo
-![Demo](
+![image](https://github.com/HoangDuonng1359/DAD_ELS/assets/144660860/f210edac-63f8-4f75-a109-1d56b7465cff)
+![image](https://github.com/HoangDuonng1359/DAD_ELS/assets/144660860/dea5a2f1-1dbc-434c-b934-72fffca7ee07)
+![image](https://github.com/HoangDuonng1359/DAD_ELS/assets/144660860/db98bb94-a05f-4eb5-a4c5-278f4927dcde)
+![image](https://github.com/HoangDuonng1359/DAD_ELS/assets/144660860/a3ccd610-6d8b-4731-bcb3-162f651910d1)
+![image](https://github.com/HoangDuonng1359/DAD_ELS/assets/144660860/3ef62b1e-0ec3-4d2e-896c-45c18c36ee1c)
+![image](https://github.com/HoangDuonng1359/DAD_ELS/assets/144660860/d9c1a1a1-b2a3-4f51-a740-b3445ef992e2)
+![image](https://github.com/HoangDuonng1359/DAD_ELS/assets/144660860/7569d451-39c7-40e6-994a-54c06773fa72)
+![image](https://github.com/HoangDuonng1359/DAD_ELS/assets/144660860/80d3b36d-5b1f-42b4-ae87-673061c97303)
+
 
 ## Future improvements
 1. Add more dictionaries.

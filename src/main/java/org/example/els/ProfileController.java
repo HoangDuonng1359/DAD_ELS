@@ -32,11 +32,16 @@ public class ProfileController extends baseFormController {
     public void initialize() throws SQLException {
         XYChart.Series<String, Number> series1 = new XYChart.Series<>();
         series1.setName("Series 1");
-        series1.getData().add(new XYChart.Data<>("Multichoice", Record.getScore("multichoice",user)));
-
+        int MultichoiceScore = Record.getScore("multichoice",user);
+        if(MultichoiceScore == -1 ) {
+            MultichoiceScore = 0;
+        }
+        series1.getData().add(new XYChart.Data<>("Multichoice", MultichoiceScore ));
         XYChart.Series<String, Number> series2 = new XYChart.Series<>();
         series2.setName("Series 2");
-        series2.getData().add(new XYChart.Data<>("PG game", Record.getScore("pgg",user)));
+        int pgGame = Record.getScore("pgg",user);
+        if(pgGame == -1 ) pgGame = 0;
+        series2.getData().add(new XYChart.Data<>("PG game", pgGame));
         chart.setTitle("Record game");
         chart.getData().addAll(series1, series2);
         chart.getYAxis().setLabel("Score");
