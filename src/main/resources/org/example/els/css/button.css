@@ -395,3 +395,14 @@
     -fx-scale-x: 1.1;
     -fx-scale-y: 1.1;
 }
+#button_show_all_word {
+    -fx-font-family: "Copperplate";
+    -fx-alignment: center;
+    -fx-background-color: #ffbd59;
+    -fx-effect: dropshadow(one-pass-box,lightgoldenrodyellow,6,1,3,2);
+    -fx-border-color: black;
+    -fx-border-width: 2px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-font-size: 13px;
+}

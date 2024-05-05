@@ -14,12 +14,12 @@
 
 <AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="682.0" prefWidth="1000.0" stylesheets="@css/AnchorPane.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.els.DictionaryController">
     <children>
-      <ImageView fitHeight="88.0" fitWidth="892.0" layoutX="351.0" layoutY="607.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="72.0" fitWidth="880.0" layoutX="349.0" layoutY="616.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@image/Template%20element/dictionary/water.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="265.0" fitWidth="876.0" layoutX="-48.0" layoutY="507.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="231.0" fitWidth="882.0" layoutX="-27.0" layoutY="532.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@image/Template%20element/dictionary/grass.png" />
          </image>
@@ -60,7 +60,7 @@
             <Image url="@image/Template%20element/plane1.png" />
          </image>
       </ImageView>
-      <AnchorPane fx:id="s_pane" layoutX="251.0" layoutY="61.0" prefHeight="467.0" prefWidth="723.0">
+      <AnchorPane fx:id="s_pane" layoutX="237.0" layoutY="69.0" prefHeight="467.0" prefWidth="723.0">
          <children>
             <TextField fx:id="search_field" layoutX="21.0" layoutY="22.0" onKeyPressed="#key_search" prefHeight="39.0" prefWidth="226.0" promptText="Search" stylesheets="@css/textField.css">
                <font>
@@ -75,28 +75,28 @@
                   <Font size="40.0" />
                </font>
             </Label>
-            <CheckBox fx:id="va" layoutX="164.0" layoutY="425.0" mnemonicParsing="false" onAction="#setmodeva" prefHeight="27.0" prefWidth="114.0" stylesheets="@css/check_box.css" text="Việt - Anh" />
-            <CheckBox fx:id="av" layoutX="48.0" layoutY="425.0" mnemonicParsing="false" onAction="#setmodeav" prefHeight="27.0" prefWidth="108.0" stylesheets="@css/check_box.css" text="Anh - Việt" />
+            <CheckBox fx:id="va" layoutX="176.0" layoutY="424.0" mnemonicParsing="false" onAction="#setmodeva" prefHeight="30.0" prefWidth="110.0" stylesheets="@css/check_box.css" text="Việt - Anh" />
+            <CheckBox fx:id="av" layoutX="48.0" layoutY="425.0" mnemonicParsing="false" onAction="#setmodeav" prefHeight="30.0" prefWidth="109.0" stylesheets="@css/check_box.css" text="Anh - Việt" />
             <Button fx:id="ava_button" layoutX="643.0" layoutY="15.0" mnemonicParsing="false" onAction="#openProfile" prefHeight="54.0" prefWidth="54.0" stylesheets="@css/button.css" />
             <Button fx:id="audio_button_in" layoutX="643.0" layoutY="91.0" mnemonicParsing="false" onAction="#playAudio" prefHeight="28.0" prefWidth="31.0" stylesheets="@css/button.css" />
-            <Button fx:id="button_show_all_word" layoutX="308.0" layoutY="425.0" mnemonicParsing="false" onAction="#show_all_word" prefHeight="27.0" prefWidth="114.0" stylesheets="@css/button.css" text="Show all word">
+            <Button fx:id="button_show_all_word" layoutX="303.0" layoutY="423.0" mnemonicParsing="false" onAction="#show_all_word" prefHeight="15.0" prefWidth="123.0" stylesheets="@css/button.css" text="Show all word">
                <font>
                   <Font name="Arial" size="15.0" />
                </font>
             </Button>
          </children>
       </AnchorPane>
-      <ImageView fitHeight="94.0" fitWidth="184.0" layoutX="206.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="94.0" fitWidth="184.0" layoutX="223.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@image/Template%20element/plane_blue.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="62.0" fitWidth="226.0" layoutX="387.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="62.0" fitWidth="226.0" layoutX="396.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@image/Template%20element/cloud2.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="94.0" fitWidth="382.0" layoutX="599.0" layoutY="-18.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="94.0" fitWidth="382.0" layoutX="584.0" layoutY="-11.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@image/Template%20element/cloud2.png" />
          </image>
