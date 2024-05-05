@@ -24,12 +24,13 @@ public class DictionaryController extends baseFormController {
 
     private String target;
 
-    @FXML
+    @Override
     public void initialize() throws SQLException {
         audio_button_in.setVisible(false);
-        listView.setItems(RecentW.getHistory());
+
         search_field.textProperty().addListener((observable, oldText, newText) -> {
             // Nếu nội dung của trường tìm kiếm thay đổi, thực hiện đề xuất tìm kiếm
+            listView.getItems().clear();
             try {
                 handleSearch(newText.trim());
             } catch (SQLException e) {
@@ -37,7 +38,7 @@ public class DictionaryController extends baseFormController {
             }
             if (newText.isEmpty()) {
                 try {
-                    listView.setItems(RecentW.getHistory());
+                    listView.setItems(RecentW.getHistory(getmode(av,va)));
                 } catch (SQLException e) {
                     throw new RuntimeException(e);
                 }
@@ -45,14 +46,36 @@ public class DictionaryController extends baseFormController {
         });
         av.setSelected(true);
         va.setSelected(false);
+        listView.setItems(RecentW.getHistory(getmode(av,va)));
         SceneManage.setAvatar(ava_button, user.getAvata());
     }
+    @Override
+    public void setmodeav(ActionEvent event) throws SQLException {
+        if(av.isSelected()){
+            va.setSelected(false);
+        }
+        else {
+            va.setSelected(true);
+        }
+        listView.getItems().clear();
+        listView.setItems(RecentW.getHistory(getmode(av,va)));
+    }
+    @Override
+    public void setmodeva(ActionEvent event) throws SQLException {
+        if (va.isSelected()) {
+            av.setSelected(false);
 
+        } else {
+            av.setSelected(true);
+        }
+        listView.getItems().clear();
+        listView.setItems(RecentW.getHistory(getmode(av,va)));
+    }
     @FXML
     public void playAudio(ActionEvent event) throws IOException, JavaLayerException {
         if(manager_internet.checkConnect()){
             if (target != null) {
-                sound.get_Audio(target, (getmode(av, va)) ? "en" : "vi");
+                sound.get_Audio(target, (getmode(av, va).equals("av")) ? "en" : "vi");
             }
         }
         else {

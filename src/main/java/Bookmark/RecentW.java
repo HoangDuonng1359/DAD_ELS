@@ -33,11 +33,13 @@ public class RecentW {
             System.out.println("IOException");
         }
     }
-    public static ObservableList getHistory() throws SQLException {
+    public static ObservableList getHistory(String MODE) throws SQLException {
+        historyDB.clear();
         Connection conn = DatabaseConnection.connect("jdbc:sqlite:src\\Data\\database.db");
-        String sql = "SELECT user_id, target, explain FROM RecentList WHERE user_id = ?";
+        String sql = "SELECT user_id, target, explain FROM RecentList WHERE user_id = ? AND mode = ?";
         PreparedStatement ps = conn.prepareStatement(sql);
         ps.setInt(1, baseFormController.user.getId());
+        ps.setString(2,MODE);
         ResultSet rs = ps.executeQuery();
         while (rs.next()) {
             historyDB.put(rs.getString("target"), rs.getString("explain"));
@@ -45,20 +47,22 @@ public class RecentW {
         conn.close();
         return FXCollections.observableArrayList(new ArrayList<>(historyDB.keySet()));
     }
-    public static void addDB(String s, boolean av) throws SQLException {
-        String ex = DictionaryManagementDatabase.Search(s, av);
+    public static void addDB(String s, String MODE) throws SQLException {
+        String ex = DictionaryManagementDatabase.Search(s, MODE);
         Connection conn = null;
         PreparedStatement ps = null;
         if (!ex.equals("NO FOUND") && !ex.equals("you have deleted this word")) {
             try {
                 conn = DatabaseConnection.connect("jdbc:sqlite:src\\Data\\database.db");
-                String sql = "INSERT INTO RecentList (user_id, target, explain) SELECT ?, ?, ? WHERE NOT EXISTS (SELECT 1 FROM RecentList WHERE target = ? AND user_id = ?)";
+                String sql = "INSERT INTO RecentList (user_id, target, explain,mode) SELECT ?, ?, ?,? WHERE NOT EXISTS (SELECT 1 FROM RecentList WHERE target = ? AND user_id = ? AND mode = ?)";
                 ps = conn.prepareStatement(sql);
                 ps.setInt(1, baseFormController.user.getId());
                 ps.setString(2, s);
                 ps.setString(3, ex);
-                ps.setString(4, s);
-                ps.setInt(5,baseFormController.user.getId());
+                ps.setString(4,MODE);
+                ps.setString(5, s);
+                ps.setInt(6,baseFormController.user.getId());
+                ps.setString(7,MODE);
                 ps.executeUpdate();
             } finally {
                 // Đảm bảo rằng kết nối và PreparedStatement được đóng bất kể có lỗi xảy ra hay không
