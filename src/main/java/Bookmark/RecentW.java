@@ -17,11 +17,12 @@ import java.sql.SQLException;
 import java.util.*;
 
 public class RecentW {
-    private static List<String> history ;
+    private static List<String> history;
     private static HashSet<String> check = new HashSet<String>();
     private static BufferedReader in;
     private static BufferedWriter out;
     private static HashMap<String, String> historyDB = new HashMap<>();
+
     public static void add(String s) {
         try {
             if (check.isEmpty() || !check.contains(s)) {
@@ -33,13 +34,14 @@ public class RecentW {
             System.out.println("IOException");
         }
     }
+
     public static ObservableList getHistory(String MODE) throws SQLException {
         historyDB.clear();
         Connection conn = DatabaseConnection.connect("jdbc:sqlite:src\\Data\\database.db");
         String sql = "SELECT user_id, target, explain FROM RecentList WHERE user_id = ? AND mode = ?";
         PreparedStatement ps = conn.prepareStatement(sql);
         ps.setInt(1, baseFormController.user.getId());
-        ps.setString(2,MODE);
+        ps.setString(2, MODE);
         ResultSet rs = ps.executeQuery();
         while (rs.next()) {
             historyDB.put(rs.getString("target"), rs.getString("explain"));
@@ -47,37 +49,24 @@ public class RecentW {
         conn.close();
         return FXCollections.observableArrayList(new ArrayList<>(historyDB.keySet()));
     }
+
     public static void addDB(String s, String MODE) throws SQLException {
         String ex = DictionaryManagementDatabase.Search(s, MODE);
-        Connection conn = null;
+        Connection conn =  conn = DatabaseConnection.connect("jdbc:sqlite:src\\Data\\database.db");;
         PreparedStatement ps = null;
         if (!ex.equals("NO FOUND") && !ex.equals("you have deleted this word")) {
-            try {
-                conn = DatabaseConnection.connect("jdbc:sqlite:src\\Data\\database.db");
-                String sql = "INSERT INTO RecentList (user_id, target, explain,mode) SELECT ?, ?, ?,? WHERE NOT EXISTS (SELECT 1 FROM RecentList WHERE target = ? AND user_id = ? AND mode = ?)";
-                ps = conn.prepareStatement(sql);
-                ps.setInt(1, baseFormController.user.getId());
-                ps.setString(2, s);
-                ps.setString(3, ex);
-                ps.setString(4,MODE);
-                ps.setString(5, s);
-                ps.setInt(6,baseFormController.user.getId());
-                ps.setString(7,MODE);
-                ps.executeUpdate();
-            } finally {
-                // Đảm bảo rằng kết nối và PreparedStatement được đóng bất kể có lỗi xảy ra hay không
-                if (ps != null) {
-                    ps.close();
-                }
-                if (conn != null) {
-                    conn.close();
-                }
-            }
+            String sql = "INSERT INTO RecentList (user_id, target, explain,mode) SELECT ?, ?, ?,? WHERE NOT EXISTS (SELECT 1 FROM RecentList WHERE target = ? AND user_id = ? AND mode = ?)";
+            ps = conn.prepareStatement(sql);
+            ps.setInt(1, baseFormController.user.getId());
+            ps.setString(2, s);
+            ps.setString(3, ex);
+            ps.setString(4, MODE);
+            ps.setString(5, s);
+            ps.setInt(6, baseFormController.user.getId());
+            ps.setString(7, MODE);
+            ps.executeUpdate();
         }
-        if (ps != null) {
-            ps.close();
-        }
-        if (conn != null) {
+        if(conn!=null){
             conn.close();
         }
     }
@@ -129,7 +118,8 @@ public class RecentW {
     public static String getWord() {
         return history.get(randomNum(0, history.size()));
     }
-    public static String getExplain(String s){
+
+    public static String getExplain(String s) {
         return historyDB.get(s);
     }
 }
