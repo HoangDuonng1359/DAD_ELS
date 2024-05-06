@@ -278,6 +278,7 @@
     -fx-border-radius: 10px;
     -fx-font-family: "Lucida Console";
     -fx-effect: dropshadow(one-pass-box, #ea8439, 5, 1, 3, 2);
+    -fx-alignment: center;
 }
 
 #profile_home {
@@ -287,6 +288,16 @@
     -fx-border-radius: 10px;
     -fx-font-family: "Lucida Console";
     -fx-effect: dropshadow(one-pass-box, #1f1347, 5, 1, 0, 2);
+}
+
+#button_reset_default {
+    -fx-background-color: #fcd24f;
+    -fx-border-color: #1f1347;
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+    -fx-font-family: "Lucida Console";
+    -fx-effect: dropshadow(one-pass-box, #ea8439, 5, 1, 3, 2);
+    -fx-alignment: center;
 }
 
 #sea_button {
@@ -457,11 +468,3 @@
     -fx-font-size: 13px;
 }
 
-#button_reset_default {
-    -fx-background-color: #fcd24f;
-    -fx-border-color: #1f1347;
-    -fx-background-radius: 10px;
-    -fx-border-radius: 10px;
-    -fx-font-family: "Lucida Console";
-    -fx-effect: dropshadow(one-pass-box, #ea8439, 5, 1, 3, 2);
-}
