@@ -36,7 +36,7 @@ public class Record {
             pr.executeUpdate();
             conn.close();
         } else {
-            String sql = "INSERT INTO max_score_game (multichoice , user_id) values (?,?)";
+            String sql = "INSERT INTO max_score_game (" + gameColumn + " , user_id) values (?,?)";
             PreparedStatement pr = conn.prepareStatement(sql);
             pr.setInt(1, score);
             pr.setInt(2, user.getId());
