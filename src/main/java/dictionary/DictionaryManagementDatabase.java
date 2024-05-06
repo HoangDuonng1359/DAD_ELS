@@ -55,7 +55,7 @@ public class DictionaryManagementDatabase {
         // -> if "-" then no found
         // -> if "+" or "#" then return explain
         // else bookmark không có -> search av
-        String sql = new String();
+        String sql;
         Connection conn1 = DatabaseConnection.connect(DATABASE_URL);
         sql = "SELECT type, target , explain FROM bookmark WHERE user_id = ? AND target =? AND mode = ?";
         PreparedStatement pr = conn1.prepareStatement(sql);
@@ -77,7 +77,9 @@ public class DictionaryManagementDatabase {
             }
 
         }
-
+        else {
+            conn1.close();
+        }
         sql = "SELECT word, html FROM " + NAME_TABLE + " WHERE word = ?";
         Connection conn = DatabaseConnection.connect(dict_hh_URL);
         PreparedStatement pstmt = conn.prepareStatement(sql);

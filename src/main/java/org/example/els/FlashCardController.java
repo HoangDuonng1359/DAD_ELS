@@ -5,8 +5,6 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.web.WebView;
-
-import java.io.IOException;
 import java.sql.SQLException;
 
 public class FlashCardController extends baseFormController{
@@ -16,11 +14,14 @@ public class FlashCardController extends baseFormController{
     private WebView V_word;
 
     //static DictionaryManagement a= new DictionaryManagement();
-    public void initialize() throws IOException, SQLException {
-        initgame();
-    }
-    public void initgame() throws SQLException {
+
+    @Override
+    public void initialize() throws SQLException {
         RecentW.initDB();
+        initGame();
+    }
+    @FXML
+    public void initGame() throws SQLException {
         String target= RecentW.getWord();
         //System.out.println(target);
         E_word.setText(target);
