@@ -34,7 +34,7 @@ public class baseFormController extends SceneManage {
     public CheckBox va;
     public static String DATABASE_URL = "jdbc:sqlite:src\\Data\\database.db";
    // protected static DictionaryManagement dictionaryManagement = null;
-    protected static BufferedWriter bookwriter;
+   // protected static BufferedWriter bookwriter;
     public static User user = null;
 //    static {
 //        try {
@@ -141,7 +141,7 @@ public class baseFormController extends SceneManage {
         }
     }
     @FXML
-    public void initialize() throws IOException, SQLException {
+    public void initialize()throws IOException, SQLException{
     }
 //    public void syncBookData(){
 //        try {
@@ -163,13 +163,13 @@ public class baseFormController extends SceneManage {
 //            System.out.println("Failed to sync");
 //        }
 //    }
-    public static void closefile(){
-        try {
-            bookwriter.close();
-        } catch (IOException e) {
-            System.out.println("baseFormController closefile IOException");
-        }
-    }
+//    public static void closefile(){
+//        try {
+//            bookwriter.close();
+//        } catch (IOException e) {
+//            System.out.println("baseFormController closefile IOException");
+//        }
+//    }
     public static void newAlert(Stage stage, String title , String headerText , String contentText ){
         Platform.runLater(()->{ // đảm bảo rằng Alert luôn được chạy trên luồng chính
             Alert alert = new Alert(Alert.AlertType.INFORMATION);

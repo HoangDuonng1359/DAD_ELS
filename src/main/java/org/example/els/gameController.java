@@ -20,20 +20,6 @@ public class gameController extends baseFormController{
     protected static Scene scene;
     protected static Parent root;
     @FXML
-    private Label question_lable;
-    @FXML
-    private Label score_lable;
-    @FXML
-    private Button startButton;
-    @FXML
-    private Button answerA;
-    @FXML
-    private Button answerB;
-    @FXML
-    private Button answerC;
-    @FXML
-    private Button answerD;
-    @FXML
     public void openFormMultichoice(ActionEvent event){
         try {
             SceneManage.showScene(root,stage,scene,event,"multiChoiceGame.fxml");
@@ -59,6 +45,7 @@ public class gameController extends baseFormController{
                 System.out.println("lỗi không mở được form" + e.getMessage());
             }
         }
+        conn.close();
     }
     @FXML
     public void openFormPGG(ActionEvent event){
