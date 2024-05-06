@@ -6,7 +6,9 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.chart.BarChart;
 import javafx.scene.chart.XYChart;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import user.Record;
@@ -27,9 +29,14 @@ public class ProfileController extends baseFormController {
     private Label numberRemove;
     @FXML
     private BarChart<String, Number>  chart;
-
+    @FXML
+    private Button button_reset_default;
     @Override
     public void initialize() throws SQLException {
+       init();
+    }
+
+    private void init() throws SQLException {
         XYChart.Series<String, Number> series1 = new XYChart.Series<>();
         series1.setName("Series 1");
         int MultichoiceScore = Record.getScore("multichoice",user);
@@ -71,5 +78,28 @@ public class ProfileController extends baseFormController {
         SceneManage.showScene(root, stage, scene, event, "changePassword.fxml");
     }
 
-
+    @FXML
+    public void reset_default(ActionEvent event){
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Profile");
+        alert.setHeaderText("");
+        alert.setContentText("Do you want to return to default mode?");
+        ButtonType buttonTypeOK = new ButtonType("OK");
+        ButtonType buttonTypeCancel = new ButtonType("CANCEL");
+        alert.getButtonTypes().setAll(buttonTypeOK, buttonTypeCancel);
+        alert.showAndWait().ifPresent(response -> {
+            if (response == buttonTypeOK) {
+                if(user_management.reset_default(user)){
+                    try {
+                        init();
+                    } catch (SQLException e) {
+                        throw new RuntimeException(e);
+                    }
+                    newAlert("Profile","","successful");
+                }else {
+                    newErrorAlert("ProfileEnrror","","An error occurred!");
+                }
+            }
+        });
+    }
 }

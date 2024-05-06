@@ -98,4 +98,46 @@ public class user_management {
             return bytes;
         }
     }
+    public static boolean reset_default(User user){
+        boolean check = true;
+        Connection conn = DatabaseConnection.connect(baseFormController.DATABASE_URL);
+        String sql = "DELETE from bookmark where user_id = ?";
+        PreparedStatement pr = null;
+        try {
+            pr = conn.prepareStatement(sql);
+            pr.setInt(1,user.getId());
+            pr.executeUpdate();
+        } catch (SQLException e) {
+            check = false;
+            throw new RuntimeException(e);
+
+        }
+        sql = "DELETE from RecentList where user_id = ?";
+
+        try{
+            pr = conn.prepareStatement(sql);
+            pr.setInt(1,user.getId());
+            pr.executeUpdate();
+        } catch (SQLException e) {
+            check = false;
+            throw new RuntimeException(e);
+        }
+        sql = "DELETE from max_score_game where user_id = ?";
+
+        try{
+            pr = conn.prepareStatement(sql);
+            pr.setInt(1,user.getId());
+            pr.executeUpdate();
+        } catch (SQLException e) {
+            check = false;
+            throw new RuntimeException(e);
+        }
+        try {
+            conn.close();
+        } catch (SQLException e) {
+            check = false;
+            throw new RuntimeException(e);
+        }
+        return check;
+    }
 }
