@@ -29,8 +29,6 @@ public class ProfileController extends baseFormController {
     private Label numberRemove;
     @FXML
     private BarChart<String, Number>  chart;
-    @FXML
-    private Button button_reset_default;
     @Override
     public void initialize() throws SQLException {
        init();
@@ -92,6 +90,7 @@ public class ProfileController extends baseFormController {
                 if(user_management.reset_default(user)){
                     try {
                         init();
+                        chart.getData().clear();
                     } catch (SQLException e) {
                         throw new RuntimeException(e);
                     }
