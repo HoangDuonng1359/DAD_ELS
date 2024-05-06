@@ -48,4 +48,11 @@ public class SceneManage {
             button.getStylesheets().add(SceneManage.class.getResource("/org/example/els/css/avatar_button.css").toExternalForm());
         }
     }
+    public static void newErrorAlert(String title, String headerText , String ContentText){
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle(title);
+        alert.setHeaderText(headerText);
+        alert.setContentText(ContentText);
+        alert.showAndWait();
+    }
 }
