@@ -15,7 +15,7 @@
          <children>
             <WebView fx:id="V_word" layoutX="35.0" layoutY="29.0" prefHeight="254.0" prefWidth="504.0" />
             <Button fx:id="game_button" layoutX="313.0" layoutY="303.0" mnemonicParsing="false" onAction="#handleMouseClickLabel" prefHeight="38.0" prefWidth="150.0" stylesheets="@css/button.css" text="Rotate" />
-            <Button fx:id="game_button" layoutX="117.0" layoutY="303.0" mnemonicParsing="false" onAction="#initgame" prefHeight="38.0" prefWidth="149.0" stylesheets="@css/button.css" text="Next " />
+            <Button fx:id="game_button" layoutX="117.0" layoutY="303.0" mnemonicParsing="false" onAction="#initGame" prefHeight="38.0" prefWidth="149.0" stylesheets="@css/button.css" text="Next " />
             <Label fx:id="E_word" alignment="CENTER" contentDisplay="CENTER" layoutX="36.0" layoutY="29.0" prefHeight="254.0" prefWidth="504.0" stylesheets="@css/nor_label.css" textAlignment="CENTER" wrapText="true">
                <font>
                   <Font name="Berlin Sans FB" size="48.0" />
