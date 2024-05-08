@@ -84,6 +84,11 @@
                   <Font name="Arial" size="15.0" />
                </font>
             </Button>
+            <Button fx:id="button_add_bookmark" layoutX="442.0" layoutY="425.0" mnemonicParsing="false" onAction="#add_to_bookmark" prefHeight="27.0" prefWidth="135.0" stylesheets="@css/button.css" text="Add to bookmark">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Button>
          </children>
       </AnchorPane>
       <ImageView fitHeight="94.0" fitWidth="184.0" layoutX="223.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">

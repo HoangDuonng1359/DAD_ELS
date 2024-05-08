@@ -2,7 +2,6 @@ package Bookmark;
 
 import dictionary.DatabaseConnection;
 import dictionary.DictionaryManagementDatabase;
-import javafx.event.ActionEvent;
 import org.example.els.baseFormController;
 import user.User;
 
@@ -12,14 +11,13 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import static org.example.els.SceneManage.newAlert;
-import static org.example.els.baseFormController.getmode;
 
-public class bookmarkmanagement {
+public class customDictionary {
     public static boolean targetExists(Connection connection, String targetValue, User user, String MODE) throws SQLException {
         PreparedStatement preparedStatement = null;
         ResultSet resultSet = null;
         try {
-            String selectQuery = "SELECT COUNT(*) FROM bookmark WHERE target = ? AND user_id = ? AND mode= ?";
+            String selectQuery = "SELECT COUNT(*) FROM custom_dictionary WHERE target = ? AND user_id = ? AND mode= ?";
             preparedStatement = connection.prepareStatement(selectQuery);
             preparedStatement.setString(1, targetValue);
             preparedStatement.setInt(2, user.getId());
@@ -49,7 +47,7 @@ public class bookmarkmanagement {
                 //dictionaryManagement.insert(e, v);
                 //bookwriter.append("+ "+e+" "+v+"\n");
                 Connection connection = DatabaseConnection.connect("jdbc:sqlite:src\\Data\\database.db");
-                String insertQuery = "INSERT INTO bookmark (target, type, explain,user_id,mode) VALUES (?, ?, ?, ?, ?)";
+                String insertQuery = "INSERT INTO custom_dictionary (target, type, explain,user_id,mode) VALUES (?, ?, ?, ?, ?)";
                 PreparedStatement insertStatement = connection.prepareStatement(insertQuery);
                 insertStatement.setString(1, target);
                 insertStatement.setString(2, "+");
@@ -68,13 +66,12 @@ public class bookmarkmanagement {
 
     public static void editWord(String target, String explain, User user, String MODE) {
         try {
-            String se = DictionaryManagementDatabase.Search(target, MODE);
             if (!target.isEmpty() && !explain.isEmpty()) {
                 //dictionaryManagement.insert(e, v);
                 //bookwriter.append("+ "+e+" "+v+"\n");
                 Connection connection = DatabaseConnection.connect("jdbc:sqlite:src\\Data\\database.db");
-                if (bookmarkmanagement.targetExists(connection, target, user, MODE)) {
-                    String updateQuery = "UPDATE bookmark SET type = ?, explain = ? WHERE target = ? AND user_id = ? AND mode = ?";
+                if (customDictionary.targetExists(connection, target, user, MODE)) {
+                    String updateQuery = "UPDATE custom_dictionary SET type = ?, explain = ? WHERE target = ? AND user_id = ? AND mode = ?";
                     PreparedStatement updateStatement = connection.prepareStatement(updateQuery);
                     updateStatement.setString(1, "#");
                     updateStatement.setString(2, explain);
@@ -84,7 +81,7 @@ public class bookmarkmanagement {
                     updateStatement.executeUpdate();
                     newAlert("Edit word", "", "Đã sửa thành công");
                 } else {
-                    String insertQuery = "INSERT INTO bookmark (target, type, explain,user_id,mode) VALUES (?, ?, ?,?,?)";
+                    String insertQuery = "INSERT INTO custom_dictionary (target, type, explain,user_id,mode) VALUES (?, ?, ?,?,?)";
                     PreparedStatement insertStatement = connection.prepareStatement(insertQuery);
                     insertStatement.setString(1, target);
                     insertStatement.setString(2, "#");
@@ -112,8 +109,8 @@ public class bookmarkmanagement {
                 newAlert("Delete Word", "", "Không tìm thấy từ");
             } else {
                 Connection conn = DatabaseConnection.connect("jdbc:sqlite:src\\Data\\database.db");
-                if (bookmarkmanagement.targetExists(conn, word, baseFormController.user, MODE)) {
-                    String updateQuery = "UPDATE bookmark SET type = ? WHERE target = ? AND user_id = ? AND mode = ?";
+                if (customDictionary.targetExists(conn, word, baseFormController.user, MODE)) {
+                    String updateQuery = "UPDATE custom_dictionary SET type = ? WHERE target = ? AND user_id = ? AND mode = ?";
                     PreparedStatement updateStatement = conn.prepareStatement(updateQuery);
                     updateStatement.setString(1, "-");
                     updateStatement.setString(2, word);
@@ -125,7 +122,7 @@ public class bookmarkmanagement {
                     //dictionaryManagement.remove(s);
                     newAlert("Delete Word", "", "Xóa từ thành công");
                     //bookwriter.append("- "+s+"\n");
-                    String sql = "INSERT INTO bookmark (user_id,target,type, mode) VALUES (?,?,?,?)";
+                    String sql = "INSERT INTO custom_dictionary (user_id,target,type, mode) VALUES (?,?,?,?)";
                     PreparedStatement pr = conn.prepareStatement(sql);
                     pr.setInt(1, baseFormController.user.getId());
                     pr.setString(2, word);

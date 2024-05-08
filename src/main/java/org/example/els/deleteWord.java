@@ -1,23 +1,14 @@
 package org.example.els;
 
-import Bookmark.bookmarkmanagement;
-import dictionary.DatabaseConnection;
-import dictionary.DictionaryManagementDatabase;
+import Bookmark.customDictionary;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
-import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 public class deleteWord extends baseFormController {
@@ -56,13 +47,13 @@ public class deleteWord extends baseFormController {
     @FXML
     public void key_delete_enter(KeyEvent event) {
         if (event.getCode() == KeyCode.ENTER) {
-            bookmarkmanagement.deleteWord(word.getText(), getmode(av, va));
+            customDictionary.deleteWord(word.getText(), getmode(av, va));
             word.setText("");
         }
     }
     @FXML
     public void deleteWord(ActionEvent event) {
-        bookmarkmanagement.deleteWord(word.getText(), getmode(av, va));
+        customDictionary.deleteWord(word.getText(), getmode(av, va));
         word.setText("");
     }
 }
