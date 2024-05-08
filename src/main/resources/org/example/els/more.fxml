@@ -49,7 +49,7 @@
             <Button fx:id="delete_button" layoutX="248.0" layoutY="196.0" mnemonicParsing="false" onAction="#openFormDelete" prefHeight="51.0" prefWidth="191.0" stylesheets="@css/v2/button.css" />
               <Button fx:id="google_translate_menu" layoutX="465.0" layoutY="196.0" mnemonicParsing="false" onAction="#openFormGoogle" prefHeight="51.0" prefWidth="191.0" stylesheets="@css/v2/button.css" />
               <Button fx:id="game_menu" layoutX="248.0" layoutY="281.0" mnemonicParsing="false" onAction="#openFormGame" prefHeight="51.0" prefWidth="191.0" stylesheets="@css/v2/button.css" />
-            <Button fx:id="bookmark_button" layoutX="23.0" layoutY="281.0" mnemonicParsing="false" onAction="#openFormBookmark" prefHeight="51.0" prefWidth="191.0" stylesheets="@css/v2/button.css" text="Bookmark" />
+            <Button fx:id="bookmark_button" layoutX="23.0" layoutY="281.0" mnemonicParsing="false" onAction="#openFormBookmark" prefHeight="51.0" prefWidth="191.0" stylesheets="@css/button.css" />
          </children>
       </AnchorPane>
       <ImageView fitHeight="151.0" fitWidth="583.0" layoutX="466.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true">
