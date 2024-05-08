@@ -48,7 +48,11 @@ public class bookmarkController extends DictionaryController{
     }
     @FXML
     public void delete_word(ActionEvent event) throws SQLException {
-        String target = listView.getSelectionModel().getSelectedItem().toString();
+        String target = "";
+        if(listView.getSelectionModel().getSelectedItem()!=null)
+        {
+            target= listView.getSelectionModel().getSelectedItem().toString();
+        }
         if(!target.isEmpty()){
             bookmark.deleteWord(target,getmode(av,va),user);
             newAlert("Delete", "", "Đã xóa khỏi bookmark");
