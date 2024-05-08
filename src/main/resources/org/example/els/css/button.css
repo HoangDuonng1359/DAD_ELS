@@ -501,3 +501,15 @@
     -fx-border-radius: 5px;
     -fx-background-radius: 5px;
 }
+
+#profile1_button {
+    -fx-background-color: transparent;
+    -fx-background-image: url("../image/profile.png");
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+
+}
+#profile1_button:hover {
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}
