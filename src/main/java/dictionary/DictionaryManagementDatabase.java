@@ -13,17 +13,18 @@ public class DictionaryManagementDatabase {
     public static final String dict_hh_URL = "jdbc:sqlite:src\\Data\\dict_hh.db";
     public static final String DATABASE_URL = "jdbc:sqlite:src\\Data\\database.db";
 
-    public static ObservableList prexSearch(String text, String MODE) throws SQLException {
+    public static ObservableList prexSearch(String text, String MODE, User user) throws SQLException {
         // long startTime = System.nanoTime();
         String NAME_TABLE = MODE;
         List<String> res = new ArrayList<String>();
         Connection conn2 = DatabaseConnection.connect(DATABASE_URL);
         String sql = new String();
-        sql = "SELECT type, target FROM bookmark WHERE target LIKE ? AND type = '+' AND mode = ? ORDER BY (LENGTH(target) - LENGTH(?)) ASC";
+        sql = "SELECT type, target FROM custom_dictionary WHERE target LIKE ? AND type = '+' AND mode = ? AND user_id = ? ORDER BY (LENGTH(target) - LENGTH(?)) ASC";
         PreparedStatement pr = conn2.prepareStatement(sql);
         pr.setString(1, text + "%");
         pr.setString(2, MODE);
-        pr.setString(3, text);
+        pr.setInt(3,user.getId());
+        pr.setString(4, text);
         ResultSet rs1 = pr.executeQuery(); // lấy kết quả
         while (rs1.next()) {
             res.add(rs1.getString("target"));
@@ -57,7 +58,7 @@ public class DictionaryManagementDatabase {
         // else bookmark không có -> search av
         String sql;
         Connection conn1 = DatabaseConnection.connect(DATABASE_URL);
-        sql = "SELECT type, target , explain FROM bookmark WHERE user_id = ? AND target =? AND mode = ?";
+        sql = "SELECT type, target , explain FROM custom_dictionary WHERE user_id = ? AND target =? AND mode = ?";
         PreparedStatement pr = conn1.prepareStatement(sql);
         pr.setInt(1, baseFormController.user.getId());
         pr.setString(2, text);
@@ -97,7 +98,7 @@ public class DictionaryManagementDatabase {
 
     public static int numberChange(String type) throws SQLException {
         Connection conn = DatabaseConnection.connect(DATABASE_URL);
-        String sql = "SELECT COUNT(*) FROM bookmark WHERE user_id=? and type = ?";
+        String sql = "SELECT COUNT(*) FROM custom_dictionary WHERE user_id=? and type = ?";
         PreparedStatement pr = conn.prepareStatement(sql);
         pr.setInt(1, baseFormController.user.getId());
         pr.setString(2, type);
@@ -116,9 +117,10 @@ public class DictionaryManagementDatabase {
         List<String> res = new ArrayList<String>();
         Connection conn2 = DatabaseConnection.connect(DATABASE_URL);
         String sql = new String();
-        sql = "SELECT target FROM bookmark WHERE type = '+' AND mode = ?";
+        sql = "SELECT target FROM custom_dictionary WHERE type = '+' AND mode = ? AND user_id = ?";
         PreparedStatement pr = conn2.prepareStatement(sql);
         pr.setString(1, MODE);
+        pr.setInt(2,baseFormController.user.getId());
         ResultSet rs1 = pr.executeQuery(); // lấy kết quả
         while (rs1.next()) {
             res.add(rs1.getString("target"));
