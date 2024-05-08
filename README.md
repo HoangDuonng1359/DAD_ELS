@@ -15,7 +15,7 @@ The application is designed to support learning English. The application is writ
 5. The application can use both SQLite database and E_V.txt to save data.
 
 ## UML diagram
-![UML diagram](
+![your-UML-diagram-name](https://github.com/HoangDuonng1359/DAD_ELS/blob/master/UML.png)
 
 ## Installation
 1. Clone the project from the repository.
