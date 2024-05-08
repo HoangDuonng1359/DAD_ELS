@@ -179,7 +179,11 @@ public class DictionaryController extends baseFormController {
     }
     @FXML
     public void add_to_bookmark(ActionEvent event) throws SQLException {
-        String target = listView.getSelectionModel().getSelectedItem().toString();
+        String target="";
+        if(listView.getSelectionModel().getSelectedItem()!=null)
+        {
+            target = listView.getSelectionModel().getSelectedItem().toString();
+        }
         if(!target.isEmpty()){
             String ex = DictionaryManagementDatabase.Search(target,getmode(av,va));
             if (!ex.equals("NO FOUND") && !ex.equals("you have deleted this word")) {
