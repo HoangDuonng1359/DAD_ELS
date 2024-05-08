@@ -5,6 +5,7 @@ import javafx.scene.image.Image;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Random;
 
 public class Question {
     private Image image;
@@ -39,14 +40,22 @@ public class Question {
         List<Character> charList = new ArrayList<>();
         for (char c : characters) {
             charList.add(c);
-            charList.add('/');
+
         }
-        charList.remove(charList.size() - 1); // Loại bỏ dấu '/' cuối cùng
-        Collections.shuffle(charList); // Xáo trộn các kí tự
+        Random random = new Random();
+        for(int i = charList.size() - 1; i > 0 ; i--) {
+            int j = random.nextInt(i + 1);
+            char temp = charList.get(i);
+            charList.set(i, charList.get(j));
+            charList.set(j, temp);
+        }
+
         StringBuilder result = new StringBuilder();
-        for (char c : charList) {
-            result.append(c);
+        for (char s : charList) {
+            result.append(s);
+            result.append('/');
         }
+        result.deleteCharAt(result.length() - 1); // loại bỏ dấu '/' cuối cùng
         this.ques = result.toString();
     }
 
