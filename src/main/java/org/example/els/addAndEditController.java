@@ -18,9 +18,12 @@ public class addAndEditController extends baseFormController {
     @FXML
     private Label label_explain;
     @FXML
+    private Button ava_button;
+    @FXML
     public void initialize() {
         av.setSelected(true);
         va.setSelected(false);
+        SceneManage.setAvatar(ava_button, user.getAvata());
     }
     @Override
     public void setmodeav(ActionEvent event){

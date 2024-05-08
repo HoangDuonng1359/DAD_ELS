@@ -23,11 +23,14 @@ public class editWordController extends baseFormController{
     private Label label_target;
     @FXML
     private Label label_explain;
+    @FXML
+    private Button ava_button;
 
     public void initialize() throws IOException, SQLException {
         commit.setVisible(false);
         av.setSelected(true);
         va.setSelected(false);
+        SceneManage.setAvatar(ava_button, user.getAvata());
     }
     @Override
     public void setmodeav(ActionEvent event){
