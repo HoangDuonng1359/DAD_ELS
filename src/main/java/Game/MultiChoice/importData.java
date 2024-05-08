@@ -78,9 +78,6 @@ public class importData {
     }
 
     public static void main(String[] args) throws SQLException {
-        List<Question> questionList = insertFromDB("jdbc:sqlite:src\\Data\\database.db");
-        for(Question question : questionList){
-            System.out.println(question.getAnswer());
-        }
+        insertToDB();
     }
 }
