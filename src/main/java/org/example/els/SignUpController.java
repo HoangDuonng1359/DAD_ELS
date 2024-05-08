@@ -30,6 +30,11 @@ public class SignUpController extends baseFormController {
     final String DB = "jdbc:sqlite:src\\Data\\database.db";
 
     @FXML
+    public void openFormSignIn(ActionEvent event) throws IOException {
+        SceneManage.showScene(root,stage,scene,event,"signin.fxml");
+    }
+
+    @FXML
     public void signup_submit(ActionEvent event) throws SQLException, IOException {
         if(name.getText().isEmpty()){
             newAlert(stage,"Sign Up","","name isn't empty");
