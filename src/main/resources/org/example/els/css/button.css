@@ -491,4 +491,25 @@
     -fx-scale-x: 1.1;
     -fx-scale-y: 1.1;
 }
+#delete_word_button {
+    -fx-font-family: "Copperplate";
+    -fx-alignment: center;
+    -fx-background-color: #ffbd59;
+    -fx-effect: dropshadow(one-pass-box,lightgoldenrodyellow,6,1,3,2);
+    -fx-border-color: black;
+    -fx-border-width: 2px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+}
 
+#profile1_button {
+    -fx-background-color: transparent;
+    -fx-background-image: url("../image/profile.png");
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+
+}
+#profile1_button:hover {
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}

@@ -140,8 +140,9 @@ public class user_management {
             throw new RuntimeException(e);
         }
         try {
-            check = bookmark.reset(user.getId());
+            bookmark.reset(user.getId());
         } catch (SQLException e) {
+            check = false;
             throw new RuntimeException(e);
         }
         return check;

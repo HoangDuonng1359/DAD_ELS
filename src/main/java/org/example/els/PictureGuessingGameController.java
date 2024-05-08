@@ -41,6 +41,8 @@ public class PictureGuessingGameController extends baseFormController {
     private Label max_score_label;
     @FXML
     private Label player_lable;
+    @FXML
+    private Button ava_button;
 
     private List<Question> questionList = database.getAllQuestion("jdbc:sqlite:src\\Data\\database.db");
     private Quiz quiz = new Quiz(questionList);
@@ -61,6 +63,7 @@ public class PictureGuessingGameController extends baseFormController {
                 }
             }
         });
+        SceneManage.setAvatar(ava_button, user.getAvata());
     }
 
     @FXML

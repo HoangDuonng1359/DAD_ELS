@@ -7,7 +7,7 @@ Group DAD
 3. Tô Tiến Đạt - 23020353
 
 ## Description
-The application is designed to support learning English. The application is written in Java and uses the JavaFX library. The application is based on the MVC model. The application has two types of dictionaries: English-Vietnamese and Vietnamese-English. The application use E_V.txt and V_E.txt files to store data.
+The application is designed to support learning English. The application is written in Java and uses the JavaFX library. The application is based on the MVC model. The application has two types of dictionaries: English-Vietnamese and Vietnamese-English. The application use E_V.txt, V_E.txt and dict_hh.db files to store data.
 1. The application is designed to support learning English.
 2. The application is written in Java and uses the JavaFX library.
 3. The application is based on the MVC model.
@@ -28,23 +28,22 @@ The application is designed to support learning English. The application is writ
 3. To add a new word, click the Add button .
 4. To delete a word, click on More button on the left bar and choose Delete Word button.
 5. To edit a word, click on More button on the left bar and choose Edit Word button (a word must exist to be editted).
+6. To see bookmark, click on More button on the left bar and choose Bookmark button.
 7. To pronounce the word, click the Pronounce button (Speaker icon).
 8. ELS provides 3 games for users to try:
    - FlashCard : after searching for any word in dictionary, users can remind these words in flashcard by looking at English word and guess its meaning then check by clicking rotate button to see the answer.
    - Picture Guessing: ELS will provide users a picture with some shuffled characters, users have to arrange these character in suitable order to make a word that best describe the given picture.
    - Mutiple Choice: Users will be given a sentence that miss some word and provided 4 answers. Users have to choose the correct answer to fill in the missing part.
-10. To exit the application, click the Exit button (Cross icon).
+9. To exit the application, click the Exit button (Cross icon).
 
 ## Demo
-![image](https://github.com/HoangDuonng1359/DAD_ELS/assets/144660860/f210edac-63f8-4f75-a109-1d56b7465cff)
-![image](https://github.com/HoangDuonng1359/DAD_ELS/assets/144660860/dea5a2f1-1dbc-434c-b934-72fffca7ee07)
-![image](https://github.com/HoangDuonng1359/DAD_ELS/assets/144660860/db98bb94-a05f-4eb5-a4c5-278f4927dcde)
-![image](https://github.com/HoangDuonng1359/DAD_ELS/assets/144660860/a3ccd610-6d8b-4731-bcb3-162f651910d1)
-![image](https://github.com/HoangDuonng1359/DAD_ELS/assets/144660860/3ef62b1e-0ec3-4d2e-896c-45c18c36ee1c)
-![image](https://github.com/HoangDuonng1359/DAD_ELS/assets/144660860/d9c1a1a1-b2a3-4f51-a740-b3445ef992e2)
-![image](https://github.com/HoangDuonng1359/DAD_ELS/assets/144660860/7569d451-39c7-40e6-994a-54c06773fa72)
-![image](https://github.com/HoangDuonng1359/DAD_ELS/assets/144660860/80d3b36d-5b1f-42b4-ae87-673061c97303)
-
+![image](https://github.com/HoangDuonng1359/DAD_ELS/assets/144660860/7a452189-b1e8-4b48-b04a-7e6aad0a9735)
+![image](https://github.com/HoangDuonng1359/DAD_ELS/assets/144660860/b0cd618b-7c0d-4ace-bd4e-f4e36f895d34)
+![image](https://github.com/HoangDuonng1359/DAD_ELS/assets/144660860/14034175-4871-4b12-afd6-785697362b18)
+![image](https://github.com/HoangDuonng1359/DAD_ELS/assets/144660860/336eaaa0-eacb-42ec-8fe9-24a209b91088)
+![image](https://github.com/HoangDuonng1359/DAD_ELS/assets/144660860/c2840915-095a-4fd0-afbf-278f5ab724cb)
+![image](https://github.com/HoangDuonng1359/DAD_ELS/assets/144660860/ced5977a-cc48-4546-b619-0fe33ec60573)
+![image](https://github.com/HoangDuonng1359/DAD_ELS/assets/144660860/f3989914-b4dd-474d-9ad1-1d8f02917128)
 
 ## Future improvements
 1. Add more dictionaries.
