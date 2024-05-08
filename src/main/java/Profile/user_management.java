@@ -1,5 +1,6 @@
 package Profile;
 
+import Bookmark.bookmark;
 import dictionary.DatabaseConnection;
 import javafx.scene.image.Image;
 import javafx.stage.FileChooser;
@@ -101,7 +102,7 @@ public class user_management {
     public static boolean reset_default(User user){
         boolean check = true;
         Connection conn = DatabaseConnection.connect(baseFormController.DATABASE_URL);
-        String sql = "DELETE from bookmark where user_id = ?";
+        String sql = "DELETE from custom_dictionary where user_id = ?";
         PreparedStatement pr = null;
         try {
             pr = conn.prepareStatement(sql);
@@ -136,6 +137,11 @@ public class user_management {
             conn.close();
         } catch (SQLException e) {
             check = false;
+            throw new RuntimeException(e);
+        }
+        try {
+            check = bookmark.reset(user.getId());
+        } catch (SQLException e) {
             throw new RuntimeException(e);
         }
         return check;

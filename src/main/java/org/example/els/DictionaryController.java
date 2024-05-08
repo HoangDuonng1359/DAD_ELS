@@ -1,6 +1,7 @@
 package org.example.els;
 
 import Bookmark.RecentW;
+import Bookmark.bookmark;
 import Network.manager_internet;
 import dictionary.DictionaryManagementDatabase;
 import googleTranslate.sound;
@@ -20,11 +21,14 @@ public class DictionaryController extends baseFormController {
     @FXML
     public Button ava_button;
     @FXML
-    private Button audio_button_in;
+    public Button audio_button_in;
     @FXML
-    private Button button_show_all_word;
+    public Button button_show_all_word;
 
-    private String target;
+    public String target;
+    @FXML
+    private static Button button_add_bookmark;
+
 
     @Override
     public void initialize() throws SQLException {
@@ -120,9 +124,10 @@ public class DictionaryController extends baseFormController {
 
     @FXML
     public void handleMouseClickListView(MouseEvent event) throws SQLException {
-        StringBuilder target = new StringBuilder(listView.getSelectionModel().getSelectedItems().toString());
-        target.delete(0, 1);
-        target.deleteCharAt(target.length() - 1);
+        String target="";
+        if(listView.getSelectionModel().getSelectedItem()!=null){
+            target =listView.getSelectionModel().getSelectedItem().toString();
+        }
         if (!target.isEmpty()) {
             String explain = DictionaryManagementDatabase.Search(target.toString(), getmode(av, va));
             definitionView.getEngine().loadContent(explain);
@@ -155,7 +160,7 @@ public class DictionaryController extends baseFormController {
 
     public void handleSearch(String searchTerm) throws SQLException {
         if (!searchTerm.isEmpty()) {
-            ObservableList<String> searchResult = DictionaryManagementDatabase.prexSearch(searchTerm, getmode(av, va));
+            ObservableList<String> searchResult = DictionaryManagementDatabase.prexSearch(searchTerm, getmode(av, va), user);
 
             //ObservableList<String> searchResult = DictionaryManagement.prexSearch(searchTerm);
             if (searchResult != null && !searchResult.isEmpty()) {
@@ -171,6 +176,16 @@ public class DictionaryController extends baseFormController {
     public void show_all_word(ActionEvent event) throws SQLException {
         ObservableList<String> searchResult = DictionaryManagementDatabase.show_all_word(getmode(av,va));
         listView.setItems(searchResult);
+    }
+    @FXML
+    public void add_to_bookmark(ActionEvent event) throws SQLException {
+        String target = listView.getSelectionModel().getSelectedItem().toString();
+        if(!target.isEmpty()){
+            String ex = DictionaryManagementDatabase.Search(target,getmode(av,va));
+            if (!ex.equals("NO FOUND") && !ex.equals("you have deleted this word")) {
+                bookmark.addWord(target,ex,baseFormController.user,getmode(av,va));
+            }
+        }
     }
 }
 

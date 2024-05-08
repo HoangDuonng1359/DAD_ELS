@@ -1,6 +1,6 @@
 package org.example.els;
 
-import Bookmark.bookmarkmanagement;
+import Bookmark.customDictionary;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
@@ -49,6 +49,6 @@ public class addAndEditController extends baseFormController {
         }
     }
     public void addWord(ActionEvent event) {
-       bookmarkmanagement.addWord(e_Textfield.getText(),v_Textfield.getHtmlText(),user,getmode(av,va));
+       customDictionary.addWord(e_Textfield.getText(),v_Textfield.getHtmlText(),user,getmode(av,va));
     }
 }

@@ -1,21 +1,15 @@
 package org.example.els;
 
-import Bookmark.bookmarkmanagement;
-import dictionary.DatabaseConnection;
+import Bookmark.customDictionary;
 import dictionary.DictionaryManagementDatabase;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.web.HTMLEditor;
-import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 public class editWordController extends baseFormController{
@@ -80,7 +74,7 @@ public class editWordController extends baseFormController{
 
     public void editWord(ActionEvent event){
         //bookwriter.append("- "+s+"\n");
-        bookmarkmanagement.editWord(e_word.getText(),v_word.getHtmlText(),user,getmode(av,va));
+        customDictionary.editWord(e_word.getText(),v_word.getHtmlText(),user,getmode(av,va));
         e_word.setText("");
         v_word.setHtmlText("");
     }
