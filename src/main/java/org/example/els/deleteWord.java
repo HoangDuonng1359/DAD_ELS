@@ -3,6 +3,7 @@ package org.example.els;
 import Bookmark.customDictionary;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyCode;
@@ -16,10 +17,13 @@ public class deleteWord extends baseFormController {
     private TextField word;
     @FXML
     private Label label_target;
+    @FXML
+    private Button ava_button;
 
     public void initialize() throws IOException, SQLException {
         av.setSelected(true);
         va.setSelected(false);
+        SceneManage.setAvatar(ava_button, user.getAvata());
     }
 
     @Override

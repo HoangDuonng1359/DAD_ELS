@@ -33,6 +33,8 @@ public class MultiChoiceGameController extends baseFormController {
     private Button answerC;
     @FXML
     private Button answerD;
+    @FXML
+    private Button ava_button;
     private List<Question> questions;
     private Quiz quiz ;
     private final Media mediaWorng = sound_manage.getMediaByNameFormSRC("src/media/worng_sound.mp3");
@@ -41,6 +43,7 @@ public class MultiChoiceGameController extends baseFormController {
     public void initialize() throws SQLException {
         Import_data_form_file();
         initgame();
+        SceneManage.setAvatar(ava_button, user.getAvata());
     }
 
     private void Import_data_form_file() throws SQLException {

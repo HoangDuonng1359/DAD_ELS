@@ -3,6 +3,7 @@ package org.example.els;
 import Bookmark.RecentW;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.web.WebView;
 import java.sql.SQLException;
@@ -12,6 +13,8 @@ public class FlashCardController extends baseFormController{
     private Label E_word;
     @FXML
     private WebView V_word;
+    @FXML
+    private Button ava_button;
 
     //static DictionaryManagement a= new DictionaryManagement();
 
@@ -19,6 +22,7 @@ public class FlashCardController extends baseFormController{
     public void initialize() throws SQLException {
         RecentW.initDB();
         initGame();
+        SceneManage.setAvatar(ava_button, user.getAvata());
     }
     @FXML
     public void initGame() throws SQLException {
