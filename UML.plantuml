@@ -1,0 +1,308 @@
+@startuml
+
+!theme plain
+top to bottom direction
+skinparam linetype ortho
+
+class API_Google_translator {
+  + translate(String, String, String): String
+  + getLanguage(String): String
+  + createURL(String, String, String): String
+  - makeResult(StringBuilder): String
+  + createNewToken(): String
+}
+class DatabaseConnection {
+  + connect(String): Connection
+  + Disconnection(Connection): void
+}
+class DictionaryController {
+  + show_all_word(ActionEvent): void
+  + setmodeav(ActionEvent): void
+  + key_search(KeyEvent): void
+  + handleMouseClickButtonSearch(MouseEvent): void
+  + setmodeva(ActionEvent): void
+  + initialize(): void
+  + key_search_list_view(KeyEvent): void
+  + handleMouseClickListView(MouseEvent): void
+  + handleSearch(String): void
+  + playAudio(ActionEvent): void
+}
+class DictionaryManagement {
+  + insertFromCommandline(): void
+  + insert(String, String): void
+  + remove(String): void
+  + insertFromFile(): void
+  + showAllWords(): ObservableList
+  + prexSearch(String): ObservableList?
+  + Search(String): String
+  + setExplain(String, String): void
+}
+class DictionaryManagementDatabase {
+  + numberChange(String): int
+  + show_all_word(String): ObservableList
+  + prexSearch(String, String): ObservableList
+  + Search(String, String): String
+}
+class ELSApplication {
+  + main(String[]): void
+  + start(Stage): void
+}
+class FlashCardController {
+  + initialize(): void
+  + handleMouseClickLabel(ActionEvent): void
+  + initGame(): void
+}
+class GoogleTranslateController {
+  + comboBoxChanged(ActionEvent): void
+  + playAudioOut(ActionEvent): void
+  + initialize(): void
+  + translateEvent(ActionEvent): void
+  + playAudioIn(ActionEvent): void
+}
+class HomeController {
+  + initialize(): void
+}
+class Main {
+  + main(String[]): void
+}
+class MultiChoiceGameController {
+  - newTurn(): void
+  + checkAnswer(ActionEvent): void
+  - initgame(): void
+  - wrongAnswer(Button, Button): void
+  + endgame(ActionEvent): void
+  - createQuestion(Quiz): String
+  - correctAnswer(Button): void
+  + initialize(): void
+  - Import_data_form_file(): void
+   score: Quiz
+   buttonCorrect: Button
+   question: Quiz
+   choice: String[]
+}
+class PictureGuessingGameController {
+  + startGame(ActionEvent): void
+  + key_submit(KeyEvent): void
+  + endGame(ActionEvent): void
+  - baseSubmit(): void
+  + submit(ActionEvent): void
+  + initialize(): void
+}
+class ProfileController {
+  + changeName(ActionEvent): void
+  + changePassword(ActionEvent): void
+  - init(): void
+  + reset_default(ActionEvent): void
+  + initialize(): void
+  + changeAvata(ActionEvent): void
+}
+class Question {
+  + checkAnswer(String): boolean
+  - createques(String): void
+   result: String
+   image: Image
+   ques: String
+}
+class Question {
+  + checkAnswer(String): boolean
+   question: String
+   answer: String
+   choice: String[]
+}
+class Quiz {
+  + addQuestion(Question): void
+  + newQuiz(): void
+  + guess(String): boolean
+  + nextQuestion(): void
+  - random(): int
+   finished: boolean
+   lengthQuestionList: int
+   questionNumber: int
+   currentQuestion: Question
+   questionIndex: int
+   score: int
+}
+class Quiz {
+  + guess(String): boolean
+  + newQuiz(): void
+  + nextQuestion(): void
+  - random(): int
+  + addQuestion(Question): void
+   finished: boolean
+   lengthQuestionList: int
+   questionNumber: int
+   currentQuestion: Question
+   questionIndex: int
+   score: int
+}
+class RecentW {
+  + addDB(String, String): void
+  + add(String): void
+  + getHistory(String): ObservableList
+  + closefile(): void
+  + initDB(): void
+  + init(): void
+  - randomNum(int, int): int
+  + getExplain(String): String
+   word: String
+}
+class Record {
+  + updateMaxScore(String, int, User): void
+  + getScore(String, User): int
+}
+class SceneManage {
+  + showScene(Parent, Stage, Scene, ActionEvent, String): void
+  + newAlert(String, String, String): void
+  + setAvatar(Button, Image): void
+  + newErrorAlert(String, String, String): void
+}
+class SignUpController {
+  + initialize(): void
+  + signup_submit(ActionEvent): void
+}
+class SigninController {
+  - sign_submit(ActionEvent): void
+  - openFormSignUp(ActionEvent): void
+  + initialize(): void
+}
+class Trie {
+  ~ remove(Trie, String): void
+  ~ insert(Trie, Word): void
+  ~ search(Trie, String): Trie
+  ~ dfs(Trie, ArrayList<String>): void
+   newNode: Trie
+}
+class User {
+   avata: Image
+   name: String
+   pass: String
+   id: int
+}
+class Word {
+  - check(char): boolean
+   explain: String
+   target: String
+}
+class WordListController
+class addAndEditController {
+  + setmodeva(ActionEvent): void
+  + initialize(): void
+  + addWord(ActionEvent): void
+  + setmodeav(ActionEvent): void
+}
+class baseFormController {
+  + openFormDictionary(ActionEvent): void
+  + getmode(CheckBox, CheckBox): String
+  + openFormEdit(ActionEvent): void
+  + setmodeva(ActionEvent): void
+  + openFormGame(ActionEvent): void
+  + initialize(): void
+  + newAlert(Stage, String, String, String): void
+  + setmodeav(ActionEvent): void
+  + openFormHome(ActionEvent): void
+  + openProfile(ActionEvent): void
+  + openFormDelete(ActionEvent): void
+  + openFormMore(ActionEvent): void
+  + openFormAddAndEdit(ActionEvent): void
+  + openFormGoogle(ActionEvent): void
+   scene: Scene
+}
+class bookmarkmanagement {
+  + targetExists(Connection, String, User, String): boolean
+  + editWord(String, String, User, String): void
+  + deleteWord(String, String): void
+  + addWord(String, String, User, String): void
+}
+class changeNameController {
+  + backProfile(ActionEvent): void
+  + changeName(ActionEvent): void
+}
+class changePasswordController {
+  + backProfile(ActionEvent): void
+  + Change_password(ActionEvent): void
+}
+class database {
+  + updateDatabaseWithImages(String): void
+  + insertSoundToDB(String, String, String): void
+  + main(String[]): void
+  + getAllImage(String): List<Image>
+  + insertToDatabase(String, String, String): void
+  + getAllQuestion(String): List<Question>
+}
+class deleteWord {
+  + key_delete_enter(KeyEvent): void
+  + initialize(): void
+  + setmodeva(ActionEvent): void
+  + setmodeav(ActionEvent): void
+  + deleteWord(ActionEvent): void
+}
+class editWordController {
+  + initialize(): void
+  + setmodeva(ActionEvent): void
+  + editWord(ActionEvent): void
+  + setmodeav(ActionEvent): void
+  + findWord(ActionEvent): void
+}
+class game {
+   player: String
+}
+class gameController {
+  + openFormPGG(ActionEvent): void
+  + openFormMultichoice(ActionEvent): void
+  + openFormFlashCard(ActionEvent): void
+}
+class importData {
+  + insertToDB(): void
+  + importFormFileCSV(String): List<Question>?
+  + main(String[]): void
+  + insertFromDB(String): List<Question>
+}
+class manager_internet {
+  + checkConnect(): boolean
+}
+class moreController {
+  + openFormProfile(ActionEvent): void
+}
+class sound {
+  - generateNewToken(): String
+  + main(String[]): void
+  - generateSpeakURL(String, String): String
+  + get_Audio(String, String): void
+  + play(InputStream): void
+  + getAudio(String, String): InputStream
+   instance: sound
+}
+class sound_manage {
+  + getMediaByNameFromDB(String): Media
+  + playMedia(Media): void
+  + getMediaByNameFormSRC(String): Media
+}
+class user_management {
+  + Change_password(String, String): User
+  + changeAvt(Stage): Image
+  + chooseImage(Stage): Image?
+  + reset_default(User): boolean
+  + changeName(String): User
+  + imageToBytes(Image): byte[]
+   avata: Image
+   name: String
+}
+
+DictionaryController           -[#000082,plain]-^  baseFormController            
+FlashCardController            -[#000082,plain]-^  baseFormController            
+GoogleTranslateController      -[#000082,plain]-^  baseFormController            
+HomeController                 -[#000082,plain]-^  baseFormController            
+MultiChoiceGameController      -[#000082,plain]-^  baseFormController            
+PictureGuessingGameController  -[#000082,plain]-^  baseFormController            
+ProfileController              -[#000082,plain]-^  baseFormController            
+SignUpController               -[#000082,plain]-^  baseFormController            
+SigninController               -[#000082,plain]-^  baseFormController            
+addAndEditController           -[#000082,plain]-^  baseFormController            
+baseFormController             -[#000082,plain]-^  SceneManage                   
+changeNameController           -[#000082,plain]-^  baseFormController            
+changePasswordController       -[#000082,plain]-^  baseFormController            
+deleteWord                     -[#000082,plain]-^  baseFormController            
+editWordController             -[#000082,plain]-^  baseFormController            
+gameController                 -[#000082,plain]-^  baseFormController            
+moreController                 -[#000082,plain]-^  baseFormController            
+@enduml
