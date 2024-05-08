@@ -79,7 +79,12 @@
             <CheckBox fx:id="av" layoutX="48.0" layoutY="425.0" mnemonicParsing="false" onAction="#setmodeav" prefHeight="30.0" prefWidth="109.0" stylesheets="@css/check_box.css" text="Anh - Việt" />
             <Button fx:id="ava_button" layoutX="643.0" layoutY="15.0" mnemonicParsing="false" onAction="#openProfile" prefHeight="54.0" prefWidth="54.0" stylesheets="@css/button.css" />
             <Button fx:id="audio_button_in" layoutX="643.0" layoutY="91.0" mnemonicParsing="false" onAction="#playAudio" prefHeight="28.0" prefWidth="31.0" stylesheets="@css/button.css" />
-            <Button fx:id="button_show_all_word" layoutX="303.0" layoutY="423.0" mnemonicParsing="false" onAction="#show_all_word" prefHeight="15.0" prefWidth="123.0" stylesheets="@css/button.css" text="Show all word">
+            <Button fx:id="button_show_all_word" layoutX="306.0" layoutY="424.0" mnemonicParsing="false" onAction="#show_all_word" prefHeight="15.0" prefWidth="123.0" stylesheets="@css/button.css" text="Show all word">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="button_add_bookmark" layoutX="455.0" layoutY="423.0" mnemonicParsing="false" onAction="#add_to_bookmark" prefHeight="27.0" prefWidth="135.0" stylesheets="@css/button.css" text="Add to bookmark">
                <font>
                   <Font name="Arial" size="15.0" />
                </font>
@@ -101,7 +106,7 @@
             <Image url="@image/Template%20element/cloud2.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="120.0" fitWidth="338.0" layoutX="739.0" layoutY="512.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="120.0" fitWidth="338.0" layoutX="739.0" layoutY="532.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@image/Template%20element/dictionary/ship.png" />
          </image>
