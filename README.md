@@ -28,12 +28,13 @@ The application is designed to support learning English. The application is writ
 3. To add a new word, click the Add button .
 4. To delete a word, click on More button on the left bar and choose Delete Word button.
 5. To edit a word, click on More button on the left bar and choose Edit Word button (a word must exist to be editted).
+6. To see bookmark, click on More button on the left bar and choose Bookmark button.
 7. To pronounce the word, click the Pronounce button (Speaker icon).
 8. ELS provides 3 games for users to try:
    - FlashCard : after searching for any word in dictionary, users can remind these words in flashcard by looking at English word and guess its meaning then check by clicking rotate button to see the answer.
    - Picture Guessing: ELS will provide users a picture with some shuffled characters, users have to arrange these character in suitable order to make a word that best describe the given picture.
    - Mutiple Choice: Users will be given a sentence that miss some word and provided 4 answers. Users have to choose the correct answer to fill in the missing part.
-10. To exit the application, click the Exit button (Cross icon).
+9. To exit the application, click the Exit button (Cross icon).
 
 ## Demo
 ![image](https://github.com/HoangDuonng1359/DAD_ELS/assets/144660860/7a452189-b1e8-4b48-b04a-7e6aad0a9735)
